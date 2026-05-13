@@ -19,24 +19,18 @@ def recuperer_post_du_jour():
         jour_cible = "Jour 1" 
         
         for ligne in lecteur:
-            # On regarde si la cellule de la colonne "Jour" correspond
             if ligne.get('Jour') == jour_cible:
-                # On récupère les colonnes exactes du tableau bilingue
                 contenu = ligne.get('Contenu du Post (EN / FR)')
                 mots_cles = ligne.get('Mots-clés')
                 
-                # Sécurité au cas où les colonnes aient un nom légèrement différent
                 if not contenu:
                     print("⚠️ Colonne 'Contenu du Post (EN / FR)' introuvable.")
-                    print(f"Colonnes disponibles : {list(ligne.keys())}")
                     return None
                     
                 texte_complet = f"{contenu}\n\n{mots_cles}"
                 return texte_complet
                 
         print(f"❌ Impossible de trouver la ligne pour : {jour_cible}")
-        if lecteur:
-             print(f"Colonnes détectées dans votre fichier : {list(lecteur[0].keys())}")
         return None
 
     except Exception as e:
@@ -44,15 +38,15 @@ def recuperer_post_du_jour():
         return None
 
 def publier_sur_linkedin(contenu_texte):
-    def publier_sur_linkedin(contenu_texte):
     # --- DEBUT DU DIAGNOSTIC ---
-    print(f"🔎 Diagnostic URN : commence par 'urn:li:' ? -> {AUTHOR_URN.startswith('urn:li:')}")
-    if '"' in AUTHOR_URN or "'" in AUTHOR_URN:
+    urn_test = AUTHOR_URN if AUTHOR_URN else ""
+    print(f"🔎 Diagnostic URN : commence par 'urn:li:' ? -> {urn_test.startswith('urn:li:')}")
+    if '"' in urn_test or "'" in urn_test:
         print("⚠️ DANGER : Présence de guillemets détectée dans l'URN !")
-    if " " in AUTHOR_URN:
+    if " " in urn_test:
         print("⚠️ DANGER : Présence d'un espace détectée dans l'URN !")
     # --- FIN DU DIAGNOSTIC ---
-    
+
     if not ACCESS_TOKEN or not AUTHOR_URN:
         print("❌ Erreur : Les clés d'API (Secrets) sont introuvables.")
         return False
