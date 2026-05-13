@@ -44,6 +44,15 @@ def recuperer_post_du_jour():
         return None
 
 def publier_sur_linkedin(contenu_texte):
+    def publier_sur_linkedin(contenu_texte):
+    # --- DEBUT DU DIAGNOSTIC ---
+    print(f"🔎 Diagnostic URN : commence par 'urn:li:' ? -> {AUTHOR_URN.startswith('urn:li:')}")
+    if '"' in AUTHOR_URN or "'" in AUTHOR_URN:
+        print("⚠️ DANGER : Présence de guillemets détectée dans l'URN !")
+    if " " in AUTHOR_URN:
+        print("⚠️ DANGER : Présence d'un espace détectée dans l'URN !")
+    # --- FIN DU DIAGNOSTIC ---
+    
     if not ACCESS_TOKEN or not AUTHOR_URN:
         print("❌ Erreur : Les clés d'API (Secrets) sont introuvables.")
         return False
