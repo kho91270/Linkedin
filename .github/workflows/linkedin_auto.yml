@@ -5,15 +5,18 @@ on:
     - cron: '30 6 * * 1-5'
   workflow_dispatch: 
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true # Fait disparaître l'avertissement
+
 jobs:
   publier-post:
     runs-on: ubuntu-latest
     steps:
       - name: Récupération du code source
-        uses: actions/checkout@v4 # Mise à jour ici (v4 au lieu de v3)
+        uses: actions/checkout@v4
 
       - name: Configuration de l'environnement Python
-        uses: actions/setup-python@v5 # Mise à jour ici (v5 au lieu de v4)
+        uses: actions/setup-python@v5
         with:
           python-version: '3.10'
 
