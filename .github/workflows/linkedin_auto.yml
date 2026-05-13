@@ -1,0 +1,26 @@
+name: MBK Procurement - Publication LinkedIn
+
+on:
+  schedule:
+    # Planification : Du lundi au vendredi à 06:30 UTC (ce qui correspond à 08:30 heure locale au Luxembourg en heure d'été)
+    - cron: '30 6 * * 1-5'
+  workflow_dispatch: 
+    # Ce paramètre permet de déclencher le script manuellement en un clic depuis l'interface GitHub pour faire un test.
+
+jobs:
+  publier-post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Récupération du code source
+        uses: actions/checkout@v3
+
+      - name: Configuration de l'environnement Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Lancement du bot d'automatisation
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_AUTHOR_URN: ${{ secrets.LINKEDIN_AUTHOR_URN }}
+        run: python bot.py
