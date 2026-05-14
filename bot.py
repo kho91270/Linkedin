@@ -32,16 +32,18 @@ def recuperer_post_du_jour():
         return None
 
 def get_personal_urn():
-    """Récupère automatiquement l'ID du profil personnel lié au jeton."""
+    """Récupère l'ID et ajoute le préfixe URN correct."""
     url = "https://api.linkedin.com/v2/userinfo"
-    headers = {
-        "Authorization": f"Bearer {ACCESS_TOKEN}"
-    }
+    headers = {"Authorization": f"Bearer {ACCESS_TOKEN}"}
     try:
         req = urllib.request.Request(url, headers=headers)
         with urllib.request.urlopen(req) as response:
             user_info = json.loads(response.read().decode('utf-8'))
-            return user_info.get("sub") # Renvoie l'URN personnel
+            sub = user_info.get("sub")
+            if sub:
+                # CORRECTION ICI : Ajout du préfixe urn:li:person:
+                return f"urn:li:person:{sub}"
+            return None
     except Exception as e:
         print(f"❌ Impossible de récupérer l'ID personnel : {e}")
         return None
@@ -51,12 +53,11 @@ def publier_sur_linkedin(contenu_texte):
         print("❌ Erreur : Le jeton d'accès est introuvable.")
         return False
 
-    # Détection automatique de votre identifiant personnel
     AUTHOR_URN = get_personal_urn()
     if not AUTHOR_URN:
         return False
         
-    print(f"👤 Publication en tant que : {AUTHOR_URN}")
+    print(f"👤 Tentative de publication en tant que : {AUTHOR_URN}")
 
     url = "https://api.linkedin.com/v2/ugcPosts"
     headers = {
@@ -85,7 +86,7 @@ def publier_sur_linkedin(contenu_texte):
         req = urllib.request.Request(url, data=json.dumps(payload).encode('utf-8'), headers=headers, method='POST')
         with urllib.request.urlopen(req) as response:
             result = json.loads(response.read().decode('utf-8'))
-            print("✅ Publication réussie sur votre profil personnel !")
+            print("✅ SUCCÈS : Le post est en ligne sur votre profil !")
             return True
     except urllib.error.HTTPError as e:
         print(f"❌ Erreur de publication : {e.code} - {e.read().decode('utf-8')}")
