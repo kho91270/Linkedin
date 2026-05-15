@@ -1,302 +1,438 @@
-import csv
-import urllib.request
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
+import requests
 import json
 import os
 import sys
+from PIL import Image, ImageDraw, ImageFont
+import textwrap
 
 # ============================================================
 # CONFIGURATION
 # ============================================================
-URL_GOOGLE_SHEET = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTTPwa3zExjfj3caHJPqvTl-fIRG2BM1QwKhN3nDi9XsLJFUSx3U2pdfkidi6aglmkCwoTE4R4q_Tox/pub?gid=1251610521&single=true&output=csv"
-ACCESS_TOKEN = os.environ.get("LINKEDIN_ACCESS_TOKEN")
+LINKEDIN_ACCESS_TOKEN = os.environ.get("LINKEDIN_ACCESS_TOKEN")
+LINKEDIN_PERSON_ID = os.environ.get("LINKEDIN_PERSON_ID")
+SHEET_ID = "1k4G-v1-nEgtE256nKUYjq-KfQd4A3CvMn03S1cp8NSE"
+SHEET_NAME = "Calendrier Personnel"
 
-CAROUSEL_DIR = os.environ.get("CAROUSEL_DIR", "./carrousels")
-COUNTER_FILE = os.environ.get("COUNTER_FILE", "./jour_counter.txt")
+# ============================================================
+# CONNEXION GOOGLE SHEETS
+# ============================================================
+def connect_sheets():
+    scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+    creds_json = os.environ.get("GOOGLE_CREDENTIALS")
+    creds_dict = json.loads(creds_json)
+    creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
+    client = gspread.authorize(creds)
+    sheet = client.open_by_key(SHEET_ID).worksheet(SHEET_NAME)
+    return sheet
 
-MAX_RETRIES = 3
-
-COL_JOUR = 0
-COL_CATEGORIE = 1
-COL_SUJET = 2
-COL_FORMAT = 3
-COL_CONTENU = 4
-COL_CTA_EN = 5
-COL_CTA_FR = 6
-COL_HASHTAGS = 7
-
-NL = chr(10)
-
-
-def get_current_day():
+# ============================================================
+# TROUVER LE PROCHAIN JOUR A PUBLIER
+# ============================================================
+def get_next_day(sheet):
+    col_a = sheet.col_values(1)
+    # Chercher la colonne "Publie" (colonne Q = 17)
     try:
-        with open(COUNTER_FILE, 'r') as f:
-            return int(f.read().strip())
-    except (FileNotFoundError, ValueError):
-        return 1
-
-
-def set_day(day_num):
-    with open(COUNTER_FILE, 'w') as f:
-        f.write(str(day_num))
-
-
-def increment_day():
-    current = get_current_day()
-    next_day = current + 1 if current < 150 else 1
-    set_day(next_day)
-    return next_day
-
-
-def recuperer_post_du_jour(jour_num):
-    jour_cible = "Jour " + str(jour_num)
-
-    try:
-        req = urllib.request.Request(URL_GOOGLE_SHEET)
-        with urllib.request.urlopen(req) as response:
-            lignes = [l.decode('utf-8-sig') for l in response.readlines()]
-
-        lecteur = list(csv.reader(lignes))
-        if not lecteur:
-            print("Le Google Sheet semble vide.")
-            return None
-
-        for ligne in lecteur[1:]:
-            if len(ligne) < 8:
+        col_q = sheet.col_values(17)
+    except:
+        col_q = []
+    
+    for i, val in enumerate(col_a):
+        if val.startswith("Jour"):
+            row_index = i + 1
+            # Verifier si deja publie
+            if row_index <= len(col_q) and col_q[row_index - 1].upper() == "OUI":
                 continue
-            if ligne[COL_JOUR].strip().lower() == jour_cible.lower():
-                contenu = ligne[COL_CONTENU].strip()
-                hashtags = ligne[COL_HASHTAGS].strip()
+            return row_index
+    return None
 
-                flag_en = chr(127468) + chr(127463)
-                flag_fr = chr(127467) + chr(127479)
-
-                contenu_pro = contenu.replace("EN:", flag_en + " EN" + NL)
-                contenu_pro = contenu_pro.replace("FR:", NL + NL + flag_fr + " FR" + NL)
-                texte_complet = contenu_pro + NL + NL + "---" + NL + hashtags
-
-                return texte_complet
-
-        print("'" + jour_cible + "' introuvable dans le Google Sheet.")
-        return None
-
-    except Exception as e:
-        print("Erreur lecture Google Sheet : " + str(e))
-        return None
-
-
-def get_personal_urn():
-    url = "https://api.linkedin.com/v2/userinfo"
-    headers = {"Authorization": "Bearer " + ACCESS_TOKEN}
+# ============================================================
+# GENERER IMAGE D'ACCROCHE
+# ============================================================
+def generate_image(hook_text, jour_num):
+    """Genere une image 1080x1080 avec le hook text"""
+    img = Image.new('RGB', (1080, 1080), color='#FFFFFF')
+    draw = ImageDraw.Draw(img)
+    
+    # Bande bleue en haut
+    draw.rectangle([0, 0, 1080, 120], fill='#1B3659')
+    
+    # Bande bleue en bas
+    draw.rectangle([0, 960, 1080, 1080], fill='#1B3659')
+    
+    # Texte "MEHDI | Senior Procurement Consultant" en haut
     try:
-        req = urllib.request.Request(url, headers=headers)
-        with urllib.request.urlopen(req) as response:
-            user_info = json.loads(response.read().decode('utf-8'))
-            sub = user_info.get("sub")
-            if sub:
-                return "urn:li:person:" + sub
-            return None
-    except Exception as e:
-        print("Impossible de recuperer l'ID personnel : " + str(e))
-        return None
+        font_header = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 28)
+        font_main = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf", 52)
+        font_footer = ImageFont.truetype("/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf", 24)
+    except:
+        font_header = ImageFont.load_default()
+        font_main = ImageFont.load_default()
+        font_footer = ImageFont.load_default()
+    
+    # Header text
+    draw.text((540, 60), "MEHDI | Senior Procurement Consultant", font=font_header, fill='#FFFFFF', anchor='mm')
+    
+    # Main hook text (centered, wrapped)
+    wrapper = textwrap.TextWrapper(width=28)
+    lines = wrapper.wrap(text=hook_text)
+    y_start = 540 - (len(lines) * 35)
+    
+    for i, line in enumerate(lines):
+        draw.text((540, y_start + i * 70), line, font=font_main, fill='#1B3659', anchor='mm')
+    
+    # Footer
+    draw.text((540, 1020), f"Jour {jour_num} | #Procurement #Strategy", font=font_footer, fill='#FFFFFF', anchor='mm')
+    
+    # Ligne accent
+    draw.rectangle([100, 440, 980, 444], fill='#2E86AB')
+    draw.rectangle([100, 640, 980, 644], fill='#2E86AB')
+    
+    filepath = f"image_jour_{jour_num}.png"
+    img.save(filepath)
+    return filepath
 
-
-def publier_texte(contenu_texte, author_urn):
-    url = "https://api.linkedin.com/v2/ugcPosts"
-    headers = {
-        "Authorization": "Bearer " + ACCESS_TOKEN,
-        "X-Restli-Protocol-Version": "2.0.0",
-        "Content-Type": "application/json"
-    }
-
-    payload = {
-        "author": author_urn,
-        "lifecycleState": "PUBLISHED",
-        "specificContent": {
-            "com.linkedin.ugc.ShareContent": {
-                "shareCommentary": {"text": contenu_texte},
-                "shareMediaCategory": "NONE"
-            }
-        },
-        "visibility": {
-            "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"
-        }
-    }
-
-    try:
-        req = urllib.request.Request(
-            url, data=json.dumps(payload).encode('utf-8'),
-            headers=headers, method='POST'
-        )
-        with urllib.request.urlopen(req) as response:
-            print("Post TEXTE publie avec succes !")
-            return "SUCCESS"
-    except urllib.error.HTTPError as e:
-        error_body = e.read().decode('utf-8')
-        if "DUPLICATE_POST" in error_body:
-            print("Post duplique detecte (deja publie).")
-            return "DUPLICATE"
-        print("Erreur publication texte : " + str(e.code) + " - " + error_body)
-        return "ERROR"
-
-
-def publier_carrousel(contenu_texte, pdf_path, author_urn):
-    headers = {
-        "Authorization": "Bearer " + ACCESS_TOKEN,
-        "Content-Type": "application/json"
-    }
-
+# ============================================================
+# UPLOAD IMAGE SUR LINKEDIN
+# ============================================================
+def upload_image_linkedin(image_path):
+    """Upload image et retourne l'asset URN"""
+    # Etape 1: Register upload
     register_url = "https://api.linkedin.com/v2/assets?action=registerUpload"
-    register_payload = {
+    headers = {
+        "Authorization": f"Bearer {LINKEDIN_ACCESS_TOKEN}",
+        "Content-Type": "application/json"
+    }
+    register_body = {
         "registerUploadRequest": {
-            "recipes": ["urn:li:digitalmediaRecipe:feedshare-document"],
-            "owner": author_urn,
+            "recipes": ["urn:li:digitalmediaRecipe:feedshare-image"],
+            "owner": f"urn:li:person:{LINKEDIN_PERSON_ID}",
             "serviceRelationships": [{
                 "relationshipType": "OWNER",
                 "identifier": "urn:li:userGeneratedContent"
             }]
         }
     }
-
-    try:
-        req = urllib.request.Request(
-            register_url,
-            data=json.dumps(register_payload).encode('utf-8'),
-            headers=headers, method='POST'
-        )
-        with urllib.request.urlopen(req) as response:
-            result = json.loads(response.read().decode('utf-8'))
-
-        upload_url = result['value']['uploadMechanism']['com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest']['uploadUrl']
-        asset_urn = result['value']['asset']
-        print("  Etape 1/3 : URL d'upload obtenue")
-
-    except Exception as e:
-        print("  Etape 1/3 echouee : " + str(e))
-        return "ERROR"
-
-    try:
-        with open(pdf_path, 'rb') as f:
-            pdf_data = f.read()
-
+    
+    resp = requests.post(register_url, headers=headers, json=register_body)
+    resp.raise_for_status()
+    data = resp.json()
+    
+    upload_url = data["value"]["uploadMechanism"]["com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest"]["uploadUrl"]
+    asset = data["value"]["asset"]
+    
+    # Etape 2: Upload binary
+    with open(image_path, 'rb') as f:
         upload_headers = {
-            "Authorization": "Bearer " + ACCESS_TOKEN,
-            "Content-Type": "application/octet-stream"
+            "Authorization": f"Bearer {LINKEDIN_ACCESS_TOKEN}",
+            "Content-Type": "image/png"
         }
-        req = urllib.request.Request(
-            upload_url, data=pdf_data,
-            headers=upload_headers, method='PUT'
-        )
-        with urllib.request.urlopen(req) as response:
-            pass
-        print("  Etape 2/3 : PDF uploade (" + str(len(pdf_data)) + " bytes)")
+        resp2 = requests.put(upload_url, headers=upload_headers, data=f)
+        resp2.raise_for_status()
+    
+    return asset
 
-    except Exception as e:
-        print("  Etape 2/3 echouee : " + str(e))
-        return "ERROR"
-
-    post_url = "https://api.linkedin.com/v2/ugcPosts"
-    post_headers = {
-        "Authorization": "Bearer " + ACCESS_TOKEN,
-        "X-Restli-Protocol-Version": "2.0.0",
-        "Content-Type": "application/json"
+# ============================================================
+# PUBLIER POST TEXTE + IMAGE
+# ============================================================
+def publish_post_with_image(contenu, image_asset):
+    """Publie un post avec image"""
+    url = "https://api.linkedin.com/v2/ugcPosts"
+    headers = {
+        "Authorization": f"Bearer {LINKEDIN_ACCESS_TOKEN}",
+        "Content-Type": "application/json",
+        "X-Restli-Protocol-Version": "2.0.0"
     }
-    post_payload = {
-        "author": author_urn,
+    body = {
+        "author": f"urn:li:person:{LINKEDIN_PERSON_ID}",
         "lifecycleState": "PUBLISHED",
         "specificContent": {
             "com.linkedin.ugc.ShareContent": {
-                "shareCommentary": {"text": contenu_texte},
-                "shareMediaCategory": "DOCUMENT",
+                "shareCommentary": {"text": contenu},
+                "shareMediaCategory": "IMAGE",
                 "media": [{
                     "status": "READY",
-                    "media": asset_urn,
-                    "title": {"text": "Swipe pour decouvrir"}
+                    "media": image_asset
                 }]
             }
         },
-        "visibility": {
-            "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"
+        "visibility": {"com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"}
+    }
+    
+    resp = requests.post(url, headers=headers, json=body)
+    if resp.status_code == 422 and "DUPLICATE" in resp.text:
+        return "DUPLICATE"
+    resp.raise_for_status()
+    return resp.json().get("id", "OK")
+
+# ============================================================
+# PUBLIER POST CARROUSEL (PDF)
+# ============================================================
+def publish_carousel(contenu, jour_num):
+    """Publie un carrousel depuis le PDF split"""
+    pdf_path = f"carousel_pages/jour_{jour_num}.pdf"
+    
+    if not os.path.exists(pdf_path):
+        print(f"  [!] PDF carrousel non trouve: {pdf_path}")
+        print(f"  [>] Publication en texte+image a la place")
+        return None
+    
+    # Register upload pour document
+    register_url = "https://api.linkedin.com/v2/assets?action=registerUpload"
+    headers = {
+        "Authorization": f"Bearer {LINKEDIN_ACCESS_TOKEN}",
+        "Content-Type": "application/json"
+    }
+    register_body = {
+        "registerUploadRequest": {
+            "recipes": ["urn:li:digitalmediaRecipe:feedshare-document"],
+            "owner": f"urn:li:person:{LINKEDIN_PERSON_ID}",
+            "serviceRelationships": [{
+                "relationshipType": "OWNER",
+                "identifier": "urn:li:userGeneratedContent"
+            }]
         }
     }
+    
+    resp = requests.post(register_url, headers=headers, json=register_body)
+    resp.raise_for_status()
+    data = resp.json()
+    
+    upload_url = data["value"]["uploadMechanism"]["com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest"]["uploadUrl"]
+    asset = data["value"]["asset"]
+    
+    with open(pdf_path, 'rb') as f:
+        upload_headers = {
+            "Authorization": f"Bearer {LINKEDIN_ACCESS_TOKEN}",
+            "Content-Type": "application/pdf"
+        }
+        resp2 = requests.put(upload_url, headers=upload_headers, data=f)
+        resp2.raise_for_status()
+    
+    # Publier
+    url = "https://api.linkedin.com/v2/ugcPosts"
+    body = {
+        "author": f"urn:li:person:{LINKEDIN_PERSON_ID}",
+        "lifecycleState": "PUBLISHED",
+        "specificContent": {
+            "com.linkedin.ugc.ShareContent": {
+                "shareCommentary": {"text": contenu},
+                "shareMediaCategory": "DOCUMENT",
+                "media": [{
+                    "status": "READY",
+                    "media": asset,
+                    "title": {"text": f"Carrousel Jour {jour_num}"}
+                }]
+            }
+        },
+        "visibility": {"com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"}
+    }
+    
+    resp = requests.post(url, headers=headers, json=body)
+    if resp.status_code == 422 and "DUPLICATE" in resp.text:
+        return "DUPLICATE"
+    resp.raise_for_status()
+    return resp.json().get("id", "OK")
 
+# ============================================================
+# PUBLIER SONDAGE (POLL)
+# ============================================================
+def publish_poll(contenu, question, options):
+    """Publie un sondage LinkedIn"""
+    url = "https://api.linkedin.com/rest/posts"
+    headers = {
+        "Authorization": f"Bearer {LINKEDIN_ACCESS_TOKEN}",
+        "Content-Type": "application/json",
+        "LinkedIn-Version": "202401",
+        "X-Restli-Protocol-Version": "2.0.0"
+    }
+    
+    # Construire les options du sondage
+    poll_options = []
+    for opt in options:
+        if opt.strip():
+            poll_options.append({"text": opt.strip()})
+    
+    body = {
+        "author": f"urn:li:person:{LINKEDIN_PERSON_ID}",
+        "commentary": contenu,
+        "visibility": "PUBLIC",
+        "distribution": {
+            "feedDistribution": "MAIN_FEED",
+            "targetEntities": [],
+            "thirdPartyDistributionChannels": []
+        },
+        "content": {
+            "poll": {
+                "question": question,
+                "options": poll_options,
+                "settings": {
+                    "duration": "THREE_DAYS"
+                }
+            }
+        },
+        "lifecycleState": "PUBLISHED"
+    }
+    
+    resp = requests.post(url, headers=headers, json=body)
+    if resp.status_code == 422 and "DUPLICATE" in resp.text:
+        return "DUPLICATE"
+    resp.raise_for_status()
+    return resp.headers.get("x-restli-id", "OK")
+
+# ============================================================
+# POSTER UN COMMENTAIRE
+# ============================================================
+def post_comment(post_urn, comment_text):
+    """Poste un premier commentaire sous le post"""
+    url = "https://api.linkedin.com/v2/socialActions/{}/comments".format(post_urn)
+    headers = {
+        "Authorization": f"Bearer {LINKEDIN_ACCESS_TOKEN}",
+        "Content-Type": "application/json"
+    }
+    body = {
+        "actor": f"urn:li:person:{LINKEDIN_PERSON_ID}",
+        "message": {"text": comment_text}
+    }
+    
     try:
-        req = urllib.request.Request(
-            post_url, data=json.dumps(post_payload).encode('utf-8'),
-            headers=post_headers, method='POST'
-        )
-        with urllib.request.urlopen(req) as response:
-            print("  Etape 3/3 : Post carrousel publie !")
-            return "SUCCESS"
-    except urllib.error.HTTPError as e:
-        error_body = e.read().decode('utf-8')
-        if "DUPLICATE_POST" in error_body:
-            print("  Post carrousel duplique (deja publie).")
-            return "DUPLICATE"
-        print("  Etape 3/3 echouee : " + str(e.code) + " - " + error_body)
-        return "ERROR"
+        resp = requests.post(url, headers=headers, json=body)
+        resp.raise_for_status()
+        print(f"  [OK] Premier commentaire poste!")
+        return True
+    except Exception as e:
+        print(f"  [!] Erreur commentaire: {e}")
+        return False
 
+# ============================================================
+# MARQUER COMME PUBLIE
+# ============================================================
+def mark_published(sheet, row_index):
+    """Marque le jour comme publie dans colonne Q"""
+    sheet.update_cell(row_index, 17, "OUI")
 
-def get_carousel_pdf_path(jour_num):
-    filename = "carousel_jour_" + str(jour_num) + ".pdf"
-    filepath = os.path.join(CAROUSEL_DIR, filename)
-    if os.path.exists(filepath):
-        return filepath
-    return None
+# ============================================================
+# MAIN
+# ============================================================
+def main():
+    print("=" * 50)
+    print("LINKEDIN AUTO-PUBLISHER v3.0")
+    print("Images + Commentaires + Sondages")
+    print("=" * 50)
+    
+    # Connexion
+    sheet = connect_sheets()
+    print("[OK] Connecte a Google Sheets")
+    
+    # Trouver le prochain jour
+    row_index = get_next_day(sheet)
+    if not row_index:
+        print("[!] Tous les jours sont publies!")
+        sys.exit(0)
+    
+    # Lire les donnees du jour
+    row = sheet.row_values(row_index)
+    jour = row[0]  # A: Jour
+    contenu = row[4] if len(row) > 4 else ""  # E: Contenu
+    hashtags = row[7] if len(row) > 7 else ""  # H: Hashtags
+    
+    # Nouvelles colonnes (I=8, J=9, K=10, L=11, M=12, N=13, O=14, P=15)
+    image_hook = row[8] if len(row) > 8 else ""  # I: Image_Hook
+    premier_commentaire = row[9] if len(row) > 9 else ""  # J: Premier_Commentaire
+    type_post = row[10] if len(row) > 10 else "texte+image"  # K: Type_Post
+    sondage_question = row[11] if len(row) > 11 else ""  # L: Sondage_Question
+    sondage_opt1 = row[12] if len(row) > 12 else ""  # M
+    sondage_opt2 = row[13] if len(row) > 13 else ""  # N
+    sondage_opt3 = row[14] if len(row) > 14 else ""  # O
+    sondage_opt4 = row[15] if len(row) > 15 else ""  # P
+    
+    jour_num = int(jour.replace("Jour ", ""))
+    
+    print(f"
+[>] Publication: {jour}")
+    print(f"    Type: {type_post}")
+    print(f"    Hook: {image_hook}")
+    
+    # Formater le contenu
+    contenu_final = contenu
+    if hashtags:
+        contenu_final = contenu + "
 
+" + hashtags
+    
+    # ============================================================
+    # PUBLICATION SELON LE TYPE
+    # ============================================================
+    post_id = None
+    
+    if type_post == "sondage" and sondage_question:
+        # --- SONDAGE ---
+        print(f"    [POLL] Question: {sondage_question}")
+        options = [sondage_opt1, sondage_opt2, sondage_opt3, sondage_opt4]
+        options = [o for o in options if o.strip()]
+        
+        result = publish_poll(contenu_final, sondage_question, options)
+        if result == "DUPLICATE":
+            print(f"  [!] DUPLICATE - On skip {jour}")
+            mark_published(sheet, row_index)
+            print(f"  [>] {jour} marque comme publie, prochain = Jour {jour_num + 1}")
+            return
+        post_id = result
+        print(f"  [OK] Sondage publie!")
+    
+    elif type_post == "carrousel":
+        # --- CARROUSEL ---
+        print(f"    [CAROUSEL] Recherche du PDF...")
+        result = publish_carousel(contenu_final, jour_num)
+        if result == "DUPLICATE":
+            print(f"  [!] DUPLICATE - On skip {jour}")
+            mark_published(sheet, row_index)
+            return
+        if result is None:
+            # Fallback: publier en texte+image
+            print(f"    [FALLBACK] Publication en texte+image")
+            image_path = generate_image(image_hook, jour_num)
+            asset = upload_image_linkedin(image_path)
+            result = publish_post_with_image(contenu_final, asset)
+            if result == "DUPLICATE":
+                mark_published(sheet, row_index)
+                return
+        post_id = result
+        print(f"  [OK] Carrousel publie!")
+    
+    else:
+        # --- TEXTE + IMAGE ---
+        print(f"    [IMAGE] Generation de l'image...")
+        image_path = generate_image(image_hook, jour_num)
+        print(f"    [UPLOAD] Upload sur LinkedIn...")
+        asset = upload_image_linkedin(image_path)
+        result = publish_post_with_image(contenu_final, asset)
+        if result == "DUPLICATE":
+            print(f"  [!] DUPLICATE - On skip {jour}")
+            mark_published(sheet, row_index)
+            print(f"  [>] {jour} marque comme publie, prochain = Jour {jour_num + 1}")
+            return
+        post_id = result
+        print(f"  [OK] Post + image publie!")
+    
+    # ============================================================
+    # PREMIER COMMENTAIRE (boost algo)
+    # ============================================================
+    if post_id and premier_commentaire:
+        import time
+        print(f"
+  [WAIT] Attente 30s avant commentaire (algo LinkedIn)...")
+        time.sleep(30)
+        post_comment(post_id, premier_commentaire)
+    
+    # Marquer comme publie
+    mark_published(sheet, row_index)
+    print(f"
+{'=' * 50}")
+    print(f"[DONE] {jour} publie avec succes!")
+    print(f"{'=' * 50}")
 
 if __name__ == "__main__":
-    print("=" * 50)
-    print("LINKEDIN AUTO-PUBLISHER")
-    print("=" * 50)
+    main()
 
-    if not ACCESS_TOKEN:
-        print("LINKEDIN_ACCESS_TOKEN manquant.")
-        sys.exit(1)
-
-    author_urn = get_personal_urn()
-    if not author_urn:
-        print("Impossible de recuperer l'identite LinkedIn.")
-        sys.exit(1)
-
-    # Boucle : si doublon, passe au jour suivant (max 3 tentatives)
-    attempts = 0
-    while attempts < MAX_RETRIES:
-        jour_num = get_current_day()
-        print("")
-        print("Tentative " + str(attempts + 1) + " - Jour " + str(jour_num) + "/150")
-
-        post_texte = recuperer_post_du_jour(jour_num)
-        if not post_texte:
-            print("Rien a publier pour ce jour. On passe au suivant.")
-            increment_day()
-            attempts += 1
-            continue
-
-        # Verifier si un carrousel existe
-        pdf_path = get_carousel_pdf_path(jour_num)
-
-        if pdf_path:
-            print("Carrousel detecte : " + pdf_path)
-            result = publier_carrousel(post_texte, pdf_path, author_urn)
-        else:
-            print("Post texte simple")
-            result = publier_texte(post_texte, author_urn)
-
-        if result == "SUCCESS":
-            increment_day()
-            next_day = get_current_day()
-            print("")
-            print("Jour " + str(jour_num) + " publie ! Prochain : Jour " + str(next_day))
-            sys.exit(0)
-        elif result == "DUPLICATE":
-            print("Deja publie. Passage au jour suivant...")
-            increment_day()
-            attempts += 1
-        else:
-            print("Echec pour le Jour " + str(jour_num) + ".")
-            sys.exit(1)
-
-    print("")
-    print("Arrete apres " + str(MAX_RETRIES) + " tentatives (tous doublons).")
-    print("Prochain run commencera au Jour " + str(get_current_day()))
-    sys.exit(0)
