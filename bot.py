@@ -13,7 +13,6 @@ ACCESS_TOKEN = os.environ.get("LINKEDIN_ACCESS_TOKEN")
 CAROUSEL_DIR = os.environ.get("CAROUSEL_DIR", "./carrousels")
 COUNTER_FILE = os.environ.get("COUNTER_FILE", "./jour_counter.txt")
 
-# Structure des colonnes du Google Sheet
 COL_JOUR = 0
 COL_CATEGORIE = 1
 COL_SUJET = 2
@@ -23,10 +22,9 @@ COL_CTA_EN = 5
 COL_CTA_FR = 6
 COL_HASHTAGS = 7
 
+NL = chr(10)
 
-# ============================================================
-# GESTION DU COMPTEUR
-# ============================================================
+
 def get_current_day():
     try:
         with open(COUNTER_FILE, 'r') as f:
@@ -42,9 +40,6 @@ def increment_day():
         f.write(str(next_day))
 
 
-# ============================================================
-# LECTURE DU GOOGLE SHEET
-# ============================================================
 def recuperer_post_du_jour():
     jour_num = get_current_day()
     jour_cible = "Jour " + str(jour_num)
@@ -56,7 +51,7 @@ def recuperer_post_du_jour():
 
         lecteur = list(csv.reader(lignes))
         if not lecteur:
-            print("❌ Le Google Sheet semble vide.")
+            print("Le Google Sheet semble vide.")
             return None, jour_num
 
         for ligne in lecteur[1:]:
@@ -66,31 +61,23 @@ def recuperer_post_du_jour():
                 contenu = ligne[COL_CONTENU].strip()
                 hashtags = ligne[COL_HASHTAGS].strip()
 
-                # Mise en forme
-                contenu_pro = contenu.replace("EN:", "\U0001f1ec\U0001f1e7 EN
-")
-                contenu_pro = contenu_pro.replace("FR:", "
+                flag_en = chr(127468) + chr(127463)
+                flag_fr = chr(127467) + chr(127479)
 
-\U0001f1eb\U0001f1f7 FR
-")
-                texte_complet = contenu_pro + "
-
----
-" + hashtags
+                contenu_pro = contenu.replace("EN:", flag_en + " EN" + NL)
+                contenu_pro = contenu_pro.replace("FR:", NL + NL + flag_fr + " FR" + NL)
+                texte_complet = contenu_pro + NL + NL + "---" + NL + hashtags
 
                 return texte_complet, jour_num
 
-        print("❌ '" + jour_cible + "' introuvable dans le Google Sheet.")
+        print("'" + jour_cible + "' introuvable dans le Google Sheet.")
         return None, jour_num
 
     except Exception as e:
-        print("❌ Erreur lecture Google Sheet : " + str(e))
+        print("Erreur lecture Google Sheet : " + str(e))
         return None, jour_num
 
 
-# ============================================================
-# API LINKEDIN - URN
-# ============================================================
 def get_personal_urn():
     url = "https://api.linkedin.com/v2/userinfo"
     headers = {"Authorization": "Bearer " + ACCESS_TOKEN}
@@ -103,13 +90,10 @@ def get_personal_urn():
                 return "urn:li:person:" + sub
             return None
     except Exception as e:
-        print("❌ Impossible de recuperer l'ID personnel : " + str(e))
+        print("Impossible de recuperer l'ID personnel : " + str(e))
         return None
 
 
-# ============================================================
-# PUBLICATION TEXTE SIMPLE
-# ============================================================
 def publier_texte(contenu_texte, author_urn):
     url = "https://api.linkedin.com/v2/ugcPosts"
     headers = {
@@ -138,23 +122,19 @@ def publier_texte(contenu_texte, author_urn):
             headers=headers, method='POST'
         )
         with urllib.request.urlopen(req) as response:
-            print("✅ Post TEXTE publie avec succes !")
+            print("Post TEXTE publie avec succes !")
             return True
     except urllib.error.HTTPError as e:
-        print("❌ Erreur publication texte : " + str(e.code) + " - " + e.read().decode('utf-8'))
+        print("Erreur publication texte : " + str(e.code) + " - " + e.read().decode('utf-8'))
         return False
 
 
-# ============================================================
-# PUBLICATION CARROUSEL (PDF)
-# ============================================================
 def publier_carrousel(contenu_texte, pdf_path, author_urn):
     headers = {
         "Authorization": "Bearer " + ACCESS_TOKEN,
         "Content-Type": "application/json"
     }
 
-    # ETAPE 1 : Initialiser l'upload
     register_url = "https://api.linkedin.com/v2/assets?action=registerUpload"
     register_payload = {
         "registerUploadRequest": {
@@ -178,13 +158,12 @@ def publier_carrousel(contenu_texte, pdf_path, author_urn):
 
         upload_url = result['value']['uploadMechanism']['com.linkedin.digitalmedia.uploading.MediaUploadHttpRequest']['uploadUrl']
         asset_urn = result['value']['asset']
-        print("  ✅ Etape 1/3 : URL d'upload obtenue")
+        print("  Etape 1/3 : URL d'upload obtenue")
 
     except Exception as e:
-        print("  ❌ Etape 1/3 echouee : " + str(e))
+        print("  Etape 1/3 echouee : " + str(e))
         return False
 
-    # ETAPE 2 : Uploader le PDF
     try:
         with open(pdf_path, 'rb') as f:
             pdf_data = f.read()
@@ -199,13 +178,12 @@ def publier_carrousel(contenu_texte, pdf_path, author_urn):
         )
         with urllib.request.urlopen(req) as response:
             pass
-        print("  ✅ Etape 2/3 : PDF uploade (" + str(len(pdf_data)) + " bytes)")
+        print("  Etape 2/3 : PDF uploade (" + str(len(pdf_data)) + " bytes)")
 
     except Exception as e:
-        print("  ❌ Etape 2/3 echouee : " + str(e))
+        print("  Etape 2/3 echouee : " + str(e))
         return False
 
-    # ETAPE 3 : Creer le post avec le document
     post_url = "https://api.linkedin.com/v2/ugcPosts"
     post_headers = {
         "Authorization": "Bearer " + ACCESS_TOKEN,
@@ -237,16 +215,13 @@ def publier_carrousel(contenu_texte, pdf_path, author_urn):
             headers=post_headers, method='POST'
         )
         with urllib.request.urlopen(req) as response:
-            print("  ✅ Etape 3/3 : Post carrousel publie !")
+            print("  Etape 3/3 : Post carrousel publie !")
             return True
     except urllib.error.HTTPError as e:
-        print("  ❌ Etape 3/3 echouee : " + str(e.code) + " - " + e.read().decode('utf-8'))
+        print("  Etape 3/3 echouee : " + str(e.code) + " - " + e.read().decode('utf-8'))
         return False
 
 
-# ============================================================
-# DETECTION CARROUSEL
-# ============================================================
 def get_carousel_pdf_path(jour_num):
     filename = "carousel_jour_" + str(jour_num) + ".pdf"
     filepath = os.path.join(CAROUSEL_DIR, filename)
@@ -255,19 +230,15 @@ def get_carousel_pdf_path(jour_num):
     return None
 
 
-# ============================================================
-# SCRIPT PRINCIPAL
-# ============================================================
 if __name__ == "__main__":
     print("=" * 50)
-    print("🚀 LINKEDIN AUTO-PUBLISHER")
+    print("LINKEDIN AUTO-PUBLISHER")
     print("=" * 50)
 
     if not ACCESS_TOKEN:
-        print("❌ LINKEDIN_ACCESS_TOKEN manquant.")
+        print("LINKEDIN_ACCESS_TOKEN manquant.")
         sys.exit(1)
 
-    # Recuperer le post du jour
     post_texte, jour_num = recuperer_post_du_jour()
 
     if not post_texte:
@@ -275,30 +246,28 @@ if __name__ == "__main__":
         sys.exit(1)
 
     print("")
-    print("📅 Publication du Jour " + str(jour_num) + "/150")
+    print("Publication du Jour " + str(jour_num) + "/150")
 
-    # Recuperer l'URN LinkedIn
     author_urn = get_personal_urn()
     if not author_urn:
-        print("❌ Impossible de recuperer l'identite LinkedIn.")
+        print("Impossible de recuperer l'identite LinkedIn.")
         sys.exit(1)
 
-    # Verifier si un carrousel existe pour ce jour
     pdf_path = get_carousel_pdf_path(jour_num)
 
     if pdf_path:
-        print("📋 Carrousel detecte : " + pdf_path)
+        print("Carrousel detecte : " + pdf_path)
         success = publier_carrousel(post_texte, pdf_path, author_urn)
     else:
-        print("💬 Post texte simple")
+        print("Post texte simple")
         success = publier_texte(post_texte, author_urn)
 
     if success:
         increment_day()
         next_day = jour_num + 1 if jour_num < 150 else 1
         print("")
-        print("🎉 Jour " + str(jour_num) + " publie ! Prochain : Jour " + str(next_day))
+        print("Jour " + str(jour_num) + " publie ! Prochain : Jour " + str(next_day))
     else:
         print("")
-        print("⚠️ Echec pour le Jour " + str(jour_num) + ".")
+        print("Echec pour le Jour " + str(jour_num) + ".")
         sys.exit(1)
