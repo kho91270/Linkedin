@@ -10,52 +10,43 @@ def recuperer_post_du_jour():
     try:
         req = urllib.request.Request(URL_GOOGLE_SHEET)
         with urllib.request.urlopen(req) as response:
-            lignes = [l.decode('utf-8') for l in response.readlines()]
+            # utf-8-sig nettoie automatiquement les caractères invisibles (BOM)
+            lignes = [l.decode('utf-8-sig') for l in response.readlines()]
             
-        lecteur = list(csv.DictReader(lignes))
+        # Lecture simple, on ne se soucie plus du nom des colonnes
+        lecteur = list(csv.reader(lignes)) 
         if not lecteur:
             print("❌ Le fichier Google Sheet semble vide.")
             return None
             
-        jour_cible = "jour 1" 
-        
         for ligne in lecteur:
-            # Recherche robuste du jour (ignore les espaces, la casse, et les étoiles **)
-            jour_actuel = ""
-            for cle, valeur in ligne.items():
-                if cle and cle.strip() == "Jour":
-                    jour_actuel = str(valeur).lower().replace("*", "").strip()
-                    break
+            jour_trouve = False
+            contenu = ""
+            mots_cles = ""
             
-            if jour_cible in jour_actuel:
-                contenu = None
-                mots_cles = ""
+            # On analyse chaque case (cellule) de la ligne
+            for cellule in ligne:
+                cell_min = cellule.lower().replace("*", "").strip()
                 
-                # Recherche robuste des colonnes (tolère les variations de nom)
-                for cle, valeur in ligne.items():
-                    if cle and "Contenu du Post" in cle:
-                        contenu = valeur
-                    elif cle and "Mots-clés" in cle:
-                        mots_cles = valeur
-                
-                if not contenu:
-                    print("⚠️ Ligne 'Jour 1' trouvée, mais la cellule du texte est vide.")
-                    return None
+                # Détection intelligente des éléments
+                if "jour 1" in cell_min:
+                    jour_trouve = True
+                elif "en:" in cellule or "fr:" in cellule or "EN:" in cellule or "FR:" in cellule:
+                    contenu = cellule
+                elif "#" in cellule:
+                    mots_cles = cellule
                     
+            # Si la ligne contient bien le jour 1 ET le texte bilingue
+            if jour_trouve and contenu:
                 # --- MISE EN FORME PROFESSIONNELLE ---
                 contenu_pro = contenu.replace("EN:", "🇬🇧 **EN**\n")
                 contenu_pro = contenu_pro.replace("FR:", "\n\n🇫🇷 **FR**\n")
                 texte_complet = f"{contenu_pro}\n\n---\n{mots_cles}"
                 return texte_complet
                 
-        # Diagnostic si rien n'est trouvé
-        jours_trouves = []
-        for ligne in lecteur:
-            for cle, valeur in ligne.items():
-                if cle and cle.strip() == "Jour":
-                    jours_trouves.append(valeur)
-                    
-        print(f"❌ Impossible de trouver 'Jour 1'. Voici ce que le script a lu dans la colonne Jour : {jours_trouves}")
+        # Si on arrive ici, c'est que rien n'a correspondu
+        print(f"❌ Impossible de trouver la combinaison 'Jour 1' + Texte (EN/FR).")
+        print(f"Aperçu de la première ligne lue par le robot : {lecteur[0] if lecteur else 'Vide'}")
         return None
         
     except Exception as e:
