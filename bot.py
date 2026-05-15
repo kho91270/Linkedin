@@ -3,7 +3,6 @@ import urllib.request
 import json
 import os
 
-# Le lien pointe désormais vers votre Calendrier Personnel d'Expertise
 URL_GOOGLE_SHEET = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTjZqY4aO78EPuGJO-B7RZR8Q0TG1toSa21ff_S-P4xBxlEgF19E5QD9HAfMdkspXU7cv6_Ayh9wc3T/pub?gid=1251610521&single=true&output=csv"
 ACCESS_TOKEN = os.environ.get("LINKEDIN_ACCESS_TOKEN")
 
@@ -14,27 +13,51 @@ def recuperer_post_du_jour():
             lignes = [l.decode('utf-8') for l in response.readlines()]
             
         lecteur = list(csv.DictReader(lignes))
-        jour_cible = "Jour 1" 
+        if not lecteur:
+            print("❌ Le fichier Google Sheet semble vide.")
+            return None
+            
+        jour_cible = "jour 1" 
         
         for ligne in lecteur:
-            if ligne.get('Jour') == jour_cible:
-                contenu = ligne.get('Contenu du Post (EN / FR)')
-                mots_cles = ligne.get('Mots-clés')
+            # Recherche robuste du jour (ignore les espaces, la casse, et les étoiles **)
+            jour_actuel = ""
+            for cle, valeur in ligne.items():
+                if cle and cle.strip() == "Jour":
+                    jour_actuel = str(valeur).lower().replace("*", "").strip()
+                    break
+            
+            if jour_cible in jour_actuel:
+                contenu = None
+                mots_cles = ""
+                
+                # Recherche robuste des colonnes (tolère les variations de nom)
+                for cle, valeur in ligne.items():
+                    if cle and "Contenu du Post" in cle:
+                        contenu = valeur
+                    elif cle and "Mots-clés" in cle:
+                        mots_cles = valeur
                 
                 if not contenu:
+                    print("⚠️ Ligne 'Jour 1' trouvée, mais la cellule du texte est vide.")
                     return None
                     
                 # --- MISE EN FORME PROFESSIONNELLE ---
-                # Ajout des drapeaux et aération du texte pour un rendu Premium
                 contenu_pro = contenu.replace("EN:", "🇬🇧 **EN**\n")
                 contenu_pro = contenu_pro.replace("FR:", "\n\n🇫🇷 **FR**\n")
-                
                 texte_complet = f"{contenu_pro}\n\n---\n{mots_cles}"
-                # -------------------------------------
-
                 return texte_complet
                 
+        # Diagnostic si rien n'est trouvé
+        jours_trouves = []
+        for ligne in lecteur:
+            for cle, valeur in ligne.items():
+                if cle and cle.strip() == "Jour":
+                    jours_trouves.append(valeur)
+                    
+        print(f"❌ Impossible de trouver 'Jour 1'. Voici ce que le script a lu dans la colonne Jour : {jours_trouves}")
         return None
+        
     except Exception as e:
         print(f"Erreur de lecture du Google Sheet : {e}")
         return None
