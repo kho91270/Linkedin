@@ -3,7 +3,8 @@ import urllib.request
 import json
 import os
 
-URL_GOOGLE_SHEET = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTjZqY4aO78EPuGJO-B7RZR8Q0TG1toSa21ff_S-P4xBxlEgF19E5QD9HAfMdkspXU7cv6_Ayh9wc3T/pub?output=csv"
+# Le lien pointe désormais vers votre Calendrier Personnel d'Expertise
+URL_GOOGLE_SHEET = "https://docs.google.com/spreadsheets/d/e/2PACX-1vTjZqY4aO78EPuGJO-B7RZR8Q0TG1toSa21ff_S-P4xBxlEgF19E5QD9HAfMdkspXU7cv6_Ayh9wc3T/pub?gid=1251610521&single=true&output=csv"
 ACCESS_TOKEN = os.environ.get("LINKEDIN_ACCESS_TOKEN")
 
 def recuperer_post_du_jour():
@@ -23,7 +24,14 @@ def recuperer_post_du_jour():
                 if not contenu:
                     return None
                     
-                texte_complet = f"{contenu}\n\n{mots_cles}"
+                # --- MISE EN FORME PROFESSIONNELLE ---
+                # Ajout des drapeaux et aération du texte pour un rendu Premium
+                contenu_pro = contenu.replace("EN:", "🇬🇧 **EN**\n")
+                contenu_pro = contenu_pro.replace("FR:", "\n\n🇫🇷 **FR**\n")
+                
+                texte_complet = f"{contenu_pro}\n\n---\n{mots_cles}"
+                # -------------------------------------
+
                 return texte_complet
                 
         return None
@@ -32,7 +40,6 @@ def recuperer_post_du_jour():
         return None
 
 def get_personal_urn():
-    """Récupère l'ID et ajoute le préfixe URN correct."""
     url = "https://api.linkedin.com/v2/userinfo"
     headers = {"Authorization": f"Bearer {ACCESS_TOKEN}"}
     try:
@@ -41,7 +48,6 @@ def get_personal_urn():
             user_info = json.loads(response.read().decode('utf-8'))
             sub = user_info.get("sub")
             if sub:
-                # CORRECTION ICI : Ajout du préfixe urn:li:person:
                 return f"urn:li:person:{sub}"
             return None
     except Exception as e:
@@ -56,8 +62,6 @@ def publier_sur_linkedin(contenu_texte):
     AUTHOR_URN = get_personal_urn()
     if not AUTHOR_URN:
         return False
-        
-    print(f"👤 Tentative de publication en tant que : {AUTHOR_URN}")
 
     url = "https://api.linkedin.com/v2/ugcPosts"
     headers = {
@@ -86,7 +90,7 @@ def publier_sur_linkedin(contenu_texte):
         req = urllib.request.Request(url, data=json.dumps(payload).encode('utf-8'), headers=headers, method='POST')
         with urllib.request.urlopen(req) as response:
             result = json.loads(response.read().decode('utf-8'))
-            print("✅ SUCCÈS : Le post est en ligne sur votre profil !")
+            print("✅ SUCCÈS : Le post expert est en ligne sur votre profil !")
             return True
     except urllib.error.HTTPError as e:
         print(f"❌ Erreur de publication : {e.code} - {e.read().decode('utf-8')}")
