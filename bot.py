@@ -13,6 +13,8 @@ ACCESS_TOKEN = os.environ.get("LINKEDIN_ACCESS_TOKEN")
 CAROUSEL_DIR = os.environ.get("CAROUSEL_DIR", "./carrousels")
 COUNTER_FILE = os.environ.get("COUNTER_FILE", "./jour_counter.txt")
 
+MAX_RETRIES = 3
+
 COL_JOUR = 0
 COL_CATEGORIE = 1
 COL_SUJET = 2
@@ -33,15 +35,19 @@ def get_current_day():
         return 1
 
 
+def set_day(day_num):
+    with open(COUNTER_FILE, 'w') as f:
+        f.write(str(day_num))
+
+
 def increment_day():
     current = get_current_day()
     next_day = current + 1 if current < 150 else 1
-    with open(COUNTER_FILE, 'w') as f:
-        f.write(str(next_day))
+    set_day(next_day)
+    return next_day
 
 
-def recuperer_post_du_jour():
-    jour_num = get_current_day()
+def recuperer_post_du_jour(jour_num):
     jour_cible = "Jour " + str(jour_num)
 
     try:
@@ -52,7 +58,7 @@ def recuperer_post_du_jour():
         lecteur = list(csv.reader(lignes))
         if not lecteur:
             print("Le Google Sheet semble vide.")
-            return None, jour_num
+            return None
 
         for ligne in lecteur[1:]:
             if len(ligne) < 8:
@@ -68,14 +74,14 @@ def recuperer_post_du_jour():
                 contenu_pro = contenu_pro.replace("FR:", NL + NL + flag_fr + " FR" + NL)
                 texte_complet = contenu_pro + NL + NL + "---" + NL + hashtags
 
-                return texte_complet, jour_num
+                return texte_complet
 
         print("'" + jour_cible + "' introuvable dans le Google Sheet.")
-        return None, jour_num
+        return None
 
     except Exception as e:
         print("Erreur lecture Google Sheet : " + str(e))
-        return None, jour_num
+        return None
 
 
 def get_personal_urn():
@@ -123,10 +129,14 @@ def publier_texte(contenu_texte, author_urn):
         )
         with urllib.request.urlopen(req) as response:
             print("Post TEXTE publie avec succes !")
-            return True
+            return "SUCCESS"
     except urllib.error.HTTPError as e:
-        print("Erreur publication texte : " + str(e.code) + " - " + e.read().decode('utf-8'))
-        return False
+        error_body = e.read().decode('utf-8')
+        if "DUPLICATE_POST" in error_body:
+            print("Post duplique detecte (deja publie).")
+            return "DUPLICATE"
+        print("Erreur publication texte : " + str(e.code) + " - " + error_body)
+        return "ERROR"
 
 
 def publier_carrousel(contenu_texte, pdf_path, author_urn):
@@ -162,7 +172,7 @@ def publier_carrousel(contenu_texte, pdf_path, author_urn):
 
     except Exception as e:
         print("  Etape 1/3 echouee : " + str(e))
-        return False
+        return "ERROR"
 
     try:
         with open(pdf_path, 'rb') as f:
@@ -182,7 +192,7 @@ def publier_carrousel(contenu_texte, pdf_path, author_urn):
 
     except Exception as e:
         print("  Etape 2/3 echouee : " + str(e))
-        return False
+        return "ERROR"
 
     post_url = "https://api.linkedin.com/v2/ugcPosts"
     post_headers = {
@@ -216,10 +226,14 @@ def publier_carrousel(contenu_texte, pdf_path, author_urn):
         )
         with urllib.request.urlopen(req) as response:
             print("  Etape 3/3 : Post carrousel publie !")
-            return True
+            return "SUCCESS"
     except urllib.error.HTTPError as e:
-        print("  Etape 3/3 echouee : " + str(e.code) + " - " + e.read().decode('utf-8'))
-        return False
+        error_body = e.read().decode('utf-8')
+        if "DUPLICATE_POST" in error_body:
+            print("  Post carrousel duplique (deja publie).")
+            return "DUPLICATE"
+        print("  Etape 3/3 echouee : " + str(e.code) + " - " + error_body)
+        return "ERROR"
 
 
 def get_carousel_pdf_path(jour_num):
@@ -239,35 +253,50 @@ if __name__ == "__main__":
         print("LINKEDIN_ACCESS_TOKEN manquant.")
         sys.exit(1)
 
-    post_texte, jour_num = recuperer_post_du_jour()
-
-    if not post_texte:
-        print("Fin du script : rien a publier.")
-        sys.exit(1)
-
-    print("")
-    print("Publication du Jour " + str(jour_num) + "/150")
-
     author_urn = get_personal_urn()
     if not author_urn:
         print("Impossible de recuperer l'identite LinkedIn.")
         sys.exit(1)
 
-    pdf_path = get_carousel_pdf_path(jour_num)
-
-    if pdf_path:
-        print("Carrousel detecte : " + pdf_path)
-        success = publier_carrousel(post_texte, pdf_path, author_urn)
-    else:
-        print("Post texte simple")
-        success = publier_texte(post_texte, author_urn)
-
-    if success:
-        increment_day()
-        next_day = jour_num + 1 if jour_num < 150 else 1
+    # Boucle : si doublon, passe au jour suivant (max 3 tentatives)
+    attempts = 0
+    while attempts < MAX_RETRIES:
+        jour_num = get_current_day()
         print("")
-        print("Jour " + str(jour_num) + " publie ! Prochain : Jour " + str(next_day))
-    else:
-        print("")
-        print("Echec pour le Jour " + str(jour_num) + ".")
-        sys.exit(1)
+        print("Tentative " + str(attempts + 1) + " - Jour " + str(jour_num) + "/150")
+
+        post_texte = recuperer_post_du_jour(jour_num)
+        if not post_texte:
+            print("Rien a publier pour ce jour. On passe au suivant.")
+            increment_day()
+            attempts += 1
+            continue
+
+        # Verifier si un carrousel existe
+        pdf_path = get_carousel_pdf_path(jour_num)
+
+        if pdf_path:
+            print("Carrousel detecte : " + pdf_path)
+            result = publier_carrousel(post_texte, pdf_path, author_urn)
+        else:
+            print("Post texte simple")
+            result = publier_texte(post_texte, author_urn)
+
+        if result == "SUCCESS":
+            increment_day()
+            next_day = get_current_day()
+            print("")
+            print("Jour " + str(jour_num) + " publie ! Prochain : Jour " + str(next_day))
+            sys.exit(0)
+        elif result == "DUPLICATE":
+            print("Deja publie. Passage au jour suivant...")
+            increment_day()
+            attempts += 1
+        else:
+            print("Echec pour le Jour " + str(jour_num) + ".")
+            sys.exit(1)
+
+    print("")
+    print("Arrete apres " + str(MAX_RETRIES) + " tentatives (tous doublons).")
+    print("Prochain run commencera au Jour " + str(get_current_day()))
+    sys.exit(0)
