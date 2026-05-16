@@ -96,17 +96,21 @@ def generate_image(hook_text, jour_num, categorie=""):
         font_main = ImageFont.load_default()
         font_footer = ImageFont.load_default()
     
-    draw.text((540, 60), "MEHDI | Senior Procurement Consultant", font=font_header, fill='#FFFFFF', anchor='mm')
+    # Remplacement du texte hardcodé par Mehdi Bekka
+    draw.text((540, 60), "Mehdi Bekka", font=font_header, fill='#FFFFFF', anchor='mm')
     
     draw.rounded_rectangle([340, 150, 740, 200], radius=10, fill=style["accent"])
     draw.text((540, 175), style["badge"], font=font_badge, fill='#FFFFFF', anchor='mm')
     
-    wrapper = textwrap.TextWrapper(width=30)
+    # Élargissement de la zone de texte (width=38 au lieu de 30) pour supporter l'anglais + français
+    wrapper = textwrap.TextWrapper(width=38)
     lines = wrapper.wrap(text=hook_text)
-    y_start = 540 - (len(lines) * 32)
+    
+    # Ajustement de l'interligne pour les textes plus longs
+    y_start = 540 - (len(lines) * 28)
     
     for i, line in enumerate(lines):
-        draw.text((540, y_start + i * 64), line, font=font_main, fill=style["top"], anchor='mm')
+        draw.text((540, y_start + i * 60), line, font=font_main, fill=style["top"], anchor='mm')
     
     draw.rectangle([100, 440, 980, 444], fill=style["accent"])
     draw.rectangle([100, 640, 980, 644], fill=style["accent"])
@@ -356,7 +360,11 @@ def main():
     jour = row[0] if len(row) > 0 else ""
     sujet_fr = row[2] if len(row) > 2 else ""
     categorie = row[3] if len(row) > 3 else ""
-    contenu = row[4] if len(row) > 4 else ""
+    
+    # NETTOYAGE AUTOMATIQUE DES BALISES <br> POUR LINKEDIN
+    contenu_brut = row[4] if len(row) > 4 else ""
+    contenu = contenu_brut.replace("<br>", "\n").replace("<br/>", "\n").replace("<br >", "\n")
+    
     hashtags = row[7] if len(row) > 7 else ""
     image_hook = row[8] if len(row) > 8 else ""
     premier_commentaire = row[9] if len(row) > 9 else ""
