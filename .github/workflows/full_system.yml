@@ -1,0 +1,128 @@
+name: LinkedIn Full System
+
+on:
+  schedule:
+    # Publication quotidienne a 8h30 Luxembourg (6h30 UTC)
+    - cron: '30 6 * * *'
+  workflow_dispatch:
+    inputs:
+      action:
+        description: 'Action a executer'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - publish_only
+          - analytics_only
+          - engagement_only
+          - veille_only
+          - recycler_only
+
+jobs:
+  # ============================================================
+  # JOB 1 : PUBLICATION QUOTIDIENNE (tous les jours)
+  # ============================================================
+  publish:
+    runs-on: ubuntu-latest
+    if: github.event.inputs.action == 'all' || github.event.inputs.action == 'publish_only' || github.event_name == 'schedule'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install gspread oauth2client requests Pillow
+
+      - name: Publish post
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_ID: ${{ secrets.LINKEDIN_PERSON_ID }}
+        run: python bot.py
+
+  # ============================================================
+  # JOB 2 : ENGAGEMENT (tous les jours apres publication)
+  # ============================================================
+  engagement:
+    runs-on: ubuntu-latest
+    needs: publish
+    if: always() && (github.event.inputs.action == 'all' || github.event.inputs.action == 'engagement_only' || github.event_name == 'schedule')
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install gspread oauth2client
+
+      - name: Generate engagement plan
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+        run: python engagement.py
+
+  # ============================================================
+  # JOB 3 : ANALYTICS (tous les jours)
+  # ============================================================
+  analytics:
+    runs-on: ubuntu-latest
+    needs: publish
+    if: always() && (github.event.inputs.action == 'all' || github.event.inputs.action == 'analytics_only' || github.event_name == 'schedule')
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install gspread oauth2client requests
+
+      - name: Track analytics
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_ID: ${{ secrets.LINKEDIN_PERSON_ID }}
+        run: python analytics.py
+
+  # ============================================================
+  # JOB 4 : VEILLE (seulement le lundi)
+  # ============================================================
+  veille:
+    runs-on: ubuntu-latest
+    if: github.event.inputs.action == 'veille_only' || (github.event_name == 'schedule' && github.event.schedule == '30 6 * * 1')
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install gspread oauth2client feedparser
+
+      - name: Run veille
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+        run: python veille.py
+
+  # ============================================================
+  # JOB 5 : RECYCLAGE (seulement le lundi)
+  # ============================================================
+  recycler:
+    runs-on: ubuntu-latest
+    needs: veille
+    if: always() && (github.event.inputs.action == 'recycler_only' || (github.event_name == 'schedule' && github.event.schedule == '30 6 * * 1'))
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install gspread oauth2client
+
+      - name: Run recycler
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+        run: python recycler.py
