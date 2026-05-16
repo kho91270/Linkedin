@@ -157,15 +157,17 @@ def publish_post_with_image(contenu, image_asset):
         "specificContent": {
             "com.linkedin.ugc.ShareContent": {
                 "shareCommentary": {"text": contenu},
-                "shareMediaCategory": "IMAGE",
-                "media": [{
-                    "status": "READY",
-                    "media": image_asset
-                }]
+                "shareMediaCategory": "IMAGE" if image_asset else "NONE"
             }
         },
         "visibility": {"com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC"}
     }
+    
+    if image_asset:
+        body["specificContent"]["com.linkedin.ugc.ShareContent"]["media"] = [{
+            "status": "READY",
+            "media": image_asset
+        }]
     
     resp = requests.post(url, headers=headers, json=body)
     if resp.status_code == 422 and "DUPLICATE" in resp.text:
@@ -286,7 +288,7 @@ def publish_poll(contenu, question, options):
 # POSTER UN COMMENTAIRE
 # ============================================================
 def post_comment(post_urn, comment_text):
-    url = "https://api.linkedin.com/v2/socialActions/{}/comments".format(post_urn)
+    url = f"https://api.linkedin.com/v2/socialActions/{post_urn}/comments"
     headers = {
         "Authorization": f"Bearer {LINKEDIN_ACCESS_TOKEN}",
         "Content-Type": "application/json"
@@ -333,12 +335,9 @@ def main():
     # Lire les donnees du jour
     row = sheet.row_values(row_index)
     jour = row[0] if len(row) > 0 else ""
-    sujet_en = row[1] if len(row) > 1 else ""
     sujet_fr = row[2] if len(row) > 2 else ""
     categorie = row[3] if len(row) > 3 else ""
     contenu = row[4] if len(row) > 4 else ""
-    format_post = row[5] if len(row) > 5 else ""
-    cta = row[6] if len(row) > 6 else ""
     hashtags = row[7] if len(row) > 7 else ""
     image_hook = row[8] if len(row) > 8 else ""
     premier_commentaire = row[9] if len(row) > 9 else ""
@@ -358,10 +357,11 @@ def main():
     print(f"    Type: {type_post}")
     print(f"    Hook: {image_hook}")
     
-   # Formater le contenu final
-    contenu_final = contenu
+    # Formater le contenu final (correction securisee)
     if hashtags:
-        contenu_final = contenu + "\n\n" + hashtags
+        contenu_final = f"{contenu}\n\n{hashtags}"
+    else:
+        contenu_final = contenu
     
     # ============================================================
     # PUBLICATION SELON LE TYPE
