@@ -358,7 +358,7 @@ def main():
     print(f"    Type: {type_post}")
     print(f"    Hook: {image_hook}")
     
-    # Formater le contenu final
+   # Formater le contenu final
     contenu_final = contenu
     if hashtags:
         contenu_final = contenu + "\n\n" + hashtags
