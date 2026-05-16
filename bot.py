@@ -17,17 +17,24 @@ SHEET_ID = "1k4G-v1-nEgtE256nKUYjq-KfQd4A3CvMn03S1cp8NSE"
 SHEET_NAME = "Calendrier Personnel"
 
 # ============================================================
-# RECUPERATION AUTOMATIQUE ID LINKEDIN (Nouveau !)
+# RECUPERATION AUTOMATIQUE ID LINKEDIN (Double vérification)
 # ============================================================
 def get_my_linkedin_id():
-    url = "https://api.linkedin.com/v2/me"
     headers = {"Authorization": f"Bearer {LINKEDIN_ACCESS_TOKEN}"}
-    resp = requests.get(url, headers=headers)
-    if resp.status_code == 200:
-        return resp.json().get("id")
-    else:
-        print(f"❌ Impossible de recuperer l'ID LinkedIn. Verifie ton TOKEN. ({resp.text})")
-        sys.exit(1)
+    
+    # Tentative 1 : Nouveau systeme (OpenID)
+    resp1 = requests.get("https://api.linkedin.com/v2/userinfo", headers=headers)
+    if resp1.status_code == 200:
+        return resp1.json().get("sub")
+        
+    # Tentative 2 : Ancien systeme
+    resp2 = requests.get("https://api.linkedin.com/v2/me", headers=headers)
+    if resp2.status_code == 200:
+        return resp2.json().get("id")
+        
+    print("❌ Impossible de recuperer l'ID LinkedIn. Verifie les permissions (scopes) de ton TOKEN.")
+    print(f"Detail erreur : {resp1.text}")
+    sys.exit(1)
 
 # ============================================================
 # CONNEXION GOOGLE SHEETS
@@ -326,7 +333,7 @@ def main():
     global LINKEDIN_PERSON_ID
     
     print("=" * 50)
-    print("LINKEDIN AUTO-PUBLISHER v4.0 (Auto-ID)")
+    print("LINKEDIN AUTO-PUBLISHER v4.0 (Auto-ID & Fallback)")
     print("=" * 50)
     
     # 1. Recuperation automatique de l'ID
