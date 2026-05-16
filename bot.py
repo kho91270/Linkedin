@@ -361,9 +361,7 @@ def main():
     # Formater le contenu final
     contenu_final = contenu
     if hashtags:
-        contenu_final = contenu + "
-
-" + hashtags
+        contenu_final = contenu + "\n\n" + hashtags
     
     # ============================================================
     # PUBLICATION SELON LE TYPE
@@ -450,4 +448,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
