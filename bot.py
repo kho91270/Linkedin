@@ -12,9 +12,22 @@ import time
 # CONFIGURATION
 # ============================================================
 LINKEDIN_ACCESS_TOKEN = os.environ.get("LINKEDIN_ACCESS_TOKEN")
-LINKEDIN_PERSON_ID = os.environ.get("LINKEDIN_PERSON_ID")
+LINKEDIN_PERSON_ID = None # Sera trouve AUTOMATIQUEMENT par le script
 SHEET_ID = "1k4G-v1-nEgtE256nKUYjq-KfQd4A3CvMn03S1cp8NSE"
 SHEET_NAME = "Calendrier Personnel"
+
+# ============================================================
+# RECUPERATION AUTOMATIQUE ID LINKEDIN (Nouveau !)
+# ============================================================
+def get_my_linkedin_id():
+    url = "https://api.linkedin.com/v2/me"
+    headers = {"Authorization": f"Bearer {LINKEDIN_ACCESS_TOKEN}"}
+    resp = requests.get(url, headers=headers)
+    if resp.status_code == 200:
+        return resp.json().get("id")
+    else:
+        print(f"❌ Impossible de recuperer l'ID LinkedIn. Verifie ton TOKEN. ({resp.text})")
+        sys.exit(1)
 
 # ============================================================
 # CONNEXION GOOGLE SHEETS
@@ -29,7 +42,7 @@ def connect_sheets():
     return sheet
 
 # ============================================================
-# TROUVER LE PROCHAIN JOUR A PUBLIER (Sécurisé)
+# TROUVER LE PROCHAIN JOUR A PUBLIER
 # ============================================================
 def get_next_day(sheet):
     col_a = sheet.col_values(1)
@@ -38,7 +51,7 @@ def get_next_day(sheet):
     except:
         col_q = []
     
-    # On commence à 1 (et non 0) pour ignorer purement et simplement la ligne d'en-tête
+    # On commence a 1 pour ignorer l'en-tete
     for i in range(1, len(col_a)):
         val = col_a[i]
         if val.startswith("Jour"):
@@ -52,11 +65,9 @@ def get_next_day(sheet):
 # GENERER IMAGE D'ACCROCHE
 # ============================================================
 def generate_image(hook_text, jour_num, categorie=""):
-    """Genere une image 1080x1080 avec le hook text et style adapte"""
     img = Image.new('RGB', (1080, 1080), color='#FFFFFF')
     draw = ImageDraw.Draw(img)
     
-    # Couleurs selon la categorie
     colors = {
         "Framework": {"top": "#1B3659", "accent": "#2E86AB", "badge": "MATRICE V.A.L.U.E."},
         "Mythbusters": {"top": "#8B0000", "accent": "#FF4500", "badge": "PROCUREMENT MYTHBUSTERS"},
@@ -64,9 +75,7 @@ def generate_image(hook_text, jour_num, categorie=""):
     }
     style = colors.get(categorie, {"top": "#1B3659", "accent": "#2E86AB", "badge": "PROCUREMENT INSIGHT"})
     
-    # Bande en haut
     draw.rectangle([0, 0, 1080, 120], fill=style["top"])
-    # Bande en bas
     draw.rectangle([0, 960, 1080, 1080], fill=style["top"])
     
     try:
@@ -80,14 +89,11 @@ def generate_image(hook_text, jour_num, categorie=""):
         font_main = ImageFont.load_default()
         font_footer = ImageFont.load_default()
     
-    # Header
     draw.text((540, 60), "MEHDI | Senior Procurement Consultant", font=font_header, fill='#FFFFFF', anchor='mm')
     
-    # Badge categorie
     draw.rounded_rectangle([340, 150, 740, 200], radius=10, fill=style["accent"])
     draw.text((540, 175), style["badge"], font=font_badge, fill='#FFFFFF', anchor='mm')
     
-    # Main hook text (centered, wrapped)
     wrapper = textwrap.TextWrapper(width=30)
     lines = wrapper.wrap(text=hook_text)
     y_start = 540 - (len(lines) * 32)
@@ -95,11 +101,9 @@ def generate_image(hook_text, jour_num, categorie=""):
     for i, line in enumerate(lines):
         draw.text((540, y_start + i * 64), line, font=font_main, fill=style["top"], anchor='mm')
     
-    # Lignes accent
     draw.rectangle([100, 440, 980, 444], fill=style["accent"])
     draw.rectangle([100, 640, 980, 644], fill=style["accent"])
     
-    # Footer
     draw.text((540, 1020), f"Jour {jour_num} | #Procurement", font=font_footer, fill='#FFFFFF', anchor='mm')
     
     filepath = f"image_jour_{jour_num}.png"
@@ -319,12 +323,18 @@ def mark_published(sheet, row_index):
 # MAIN
 # ============================================================
 def main():
+    global LINKEDIN_PERSON_ID
+    
     print("=" * 50)
-    print("LINKEDIN AUTO-PUBLISHER v4.0")
-    print("180 jours | VALUE + Mythbusters + Storytelling")
+    print("LINKEDIN AUTO-PUBLISHER v4.0 (Auto-ID)")
     print("=" * 50)
     
-    # Connexion
+    # 1. Recuperation automatique de l'ID
+    print("[>] Demarrage...")
+    LINKEDIN_PERSON_ID = get_my_linkedin_id()
+    print(f"[OK] ID LinkedIn trouve automatiquement : {LINKEDIN_PERSON_ID}")
+    
+    # 2. Connexion
     sheet = connect_sheets()
     print("[OK] Connecte a Google Sheets")
     
@@ -350,7 +360,7 @@ def main():
     sondage_opt3 = row[14] if len(row) > 14 else ""
     sondage_opt4 = row[15] if len(row) > 15 else ""
     
-    # Extraction blindée des chiffres du jour (ignore le texte, les espaces, etc.)
+    # Extraction blindee des chiffres
     digits = ''.join(filter(str.isdigit, jour))
     jour_num = int(digits) if digits else 0
     
@@ -361,7 +371,6 @@ def main():
     print(f"    Type: {type_post}")
     print(f"    Hook: {image_hook}")
     
-    # Formater le contenu final (correction securisee)
     if hashtags:
         contenu_final = f"{contenu}\n\n{hashtags}"
     else:
@@ -373,30 +382,25 @@ def main():
     post_id = None
     
     if type_post == "sondage" and sondage_question:
-        # --- SONDAGE ---
         print(f"    [POLL] Question: {sondage_question}")
         options = [sondage_opt1, sondage_opt2, sondage_opt3, sondage_opt4]
         options = [o for o in options if o.strip()]
         
         result = publish_poll(contenu_final, sondage_question, options)
         if result == "DUPLICATE":
-            print(f"  [!] DUPLICATE - Skip {jour}")
             mark_published(sheet, row_index)
-            print(f"  [>] {jour} marque publie, next = Jour {jour_num + 1}")
+            print(f"  [>] {jour} marque publie")
             return
         post_id = result
         print(f"  [OK] Sondage publie!")
     
     elif type_post == "carrousel":
-        # --- CARROUSEL ---
         print(f"    [CAROUSEL] Recherche PDF...")
         result = publish_carousel(contenu_final, jour_num)
         if result == "DUPLICATE":
-            print(f"  [!] DUPLICATE - Skip {jour}")
             mark_published(sheet, row_index)
             return
         if result is None:
-            # Fallback : texte + image
             print(f"    [FALLBACK] Pas de PDF -> texte+image")
             if image_hook:
                 image_path = generate_image(image_hook, jour_num, categorie)
@@ -411,7 +415,6 @@ def main():
         print(f"  [OK] Carrousel publie!")
     
     else:
-        # --- TEXTE + IMAGE ---
         if image_hook:
             print(f"    [IMAGE] Generation image...")
             image_path = generate_image(image_hook, jour_num, categorie)
@@ -419,19 +422,17 @@ def main():
             asset = upload_image_linkedin(image_path)
             result = publish_post_with_image(contenu_final, asset)
         else:
-            # Post texte simple sans image
             result = publish_post_with_image(contenu_final, None)
         
         if result == "DUPLICATE":
-            print(f"  [!] DUPLICATE - Skip {jour}")
             mark_published(sheet, row_index)
-            print(f"  [>] {jour} marque publie, next = Jour {jour_num + 1}")
+            print(f"  [>] {jour} marque publie")
             return
         post_id = result
         print(f"  [OK] Post publie!")
     
     # ============================================================
-    # PREMIER COMMENTAIRE (boost algo LinkedIn)
+    # PREMIER COMMENTAIRE
     # ============================================================
     if post_id and premier_commentaire:
         print(f"")
@@ -445,9 +446,6 @@ def main():
     print(f"")
     print(f"{'=' * 50}")
     print(f"[DONE] {jour} publie avec succes!")
-    print(f"  Categorie: {categorie}")
-    print(f"  Type: {type_post}")
-    print(f"  Prochain: Jour {jour_num + 1}")
     print(f"{'=' * 50}")
 
 if __name__ == "__main__":
