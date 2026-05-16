@@ -29,7 +29,7 @@ def connect_sheets():
     return sheet
 
 # ============================================================
-# TROUVER LE PROCHAIN JOUR A PUBLIER
+# TROUVER LE PROCHAIN JOUR A PUBLIER (Sécurisé)
 # ============================================================
 def get_next_day(sheet):
     col_a = sheet.col_values(1)
@@ -38,7 +38,9 @@ def get_next_day(sheet):
     except:
         col_q = []
     
-    for i, val in enumerate(col_a):
+    # On commence à 1 (et non 0) pour ignorer purement et simplement la ligne d'en-tête
+    for i in range(1, len(col_a)):
+        val = col_a[i]
         if val.startswith("Jour"):
             row_index = i + 1
             if row_index <= len(col_q) and col_q[row_index - 1].upper() == "OUI":
@@ -348,7 +350,9 @@ def main():
     sondage_opt3 = row[14] if len(row) > 14 else ""
     sondage_opt4 = row[15] if len(row) > 15 else ""
     
-    jour_num = int(jour.replace("Jour ", ""))
+    # Extraction blindée des chiffres du jour (ignore le texte, les espaces, etc.)
+    digits = ''.join(filter(str.isdigit, jour))
+    jour_num = int(digits) if digits else 0
     
     print(f"")
     print(f"[>] Publication: {jour}")
