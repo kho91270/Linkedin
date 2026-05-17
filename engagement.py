@@ -36,7 +36,7 @@ TARGET_ACCOUNTS = [
         "role": "Procurement & Cost Modeling",
         "url": "https://www.linkedin.com/in/dipika-sharma-a1306a222/",
         "lang": "en",
-        "tone": "analytique et orienté valeur"
+        "tone": "analytique et oriente valeur"
     },
     {
         "name": "Faiq Ali",
@@ -50,14 +50,14 @@ TARGET_ACCOUNTS = [
         "role": "Founder Procurement Tactics",
         "url": "https://www.linkedin.com/in/marijn-overvest-60683315/",
         "lang": "en",
-        "tone": "pragmatique et orienté résultats"
+        "tone": "pragmatique et oriente resultats"
     },
     {
         "name": "Chandhrika",
         "role": "Procurement Tech & Supplier Data",
         "url": "https://www.linkedin.com/in/chandhrika/",
         "lang": "en",
-        "tone": "technique et orienté process"
+        "tone": "technique et oriente process"
     },
     {
         "name": "SupplyChainAIPRO",
@@ -71,61 +71,83 @@ TARGET_ACCOUNTS = [
         "role": "Sourcing Doctor & Supply Chain",
         "url": "https://www.linkedin.com/in/sourcingdoctor/",
         "lang": "fr",
-        "tone": "académique et expert"
-    }
+        "tone": "academique et expert"
+    },
+    {
+        "name": "Aiman Adeem",
+        "role": "Procurement Expert",
+        "url": "https://www.linkedin.com/in/aimanadeem786/",
+        "lang": "en",
+        "tone": "pragmatique et oriente strategie achats"
+    },
+    {
+        "name": "Magali Pernin",
+        "role": "Experte Achats Publics",
+        "url": "https://www.linkedin.com/in/magali-pernin/",
+        "lang": "fr",
+        "tone": "rigoureuse et orientee marches publics"
+    },
 ]
 
 # ============================================================
-# CONTENU D'EXPERTISE BILINGUE (Orthographe parfaite)
+# CONTENU D'EXPERTISE BILINGUE
 # ============================================================
 CONTENT = {
     "fr": {
         "templates": [
-            "Totalement d'accord {name}. J'ajouterais que {value_add}. Dans mon expérience, {example}.",
-            "Excellente perspective {name}. Ce que je constate aussi sur le terrain : {value_add}. La clé reste {insight}.",
-            "Perspective très intéressante {name}. Je nuancerais cependant : {nuance}. Qu'en pensez-vous ?",
-            "C'est un vrai sujet. Comment gérez-vous le cas où {edge_case} ? Curieux d'avoir votre retour d'expert.",
-            "Les chiffres de l'industrie confirment ce point : {data}. Cela renforce l'idée que {conclusion}."
+            "Totalement d'accord {name}. J'ajouterais que {value_add}. Dans mon experience, {example}.",
+            "Excellente perspective {name}. Ce que je constate aussi sur le terrain : {value_add}. La cle reste {insight}.",
+            "Perspective tres interessante {name}. Je nuancerais cependant : {nuance}. Qu'en pensez-vous ?",
+            "C'est un vrai sujet. Comment gerez-vous le cas ou {edge_case} ? Curieux d'avoir votre retour d'expert.",
+            "Les chiffres de l'industrie confirment ce point : {data}. Cela renforce l'idee que {conclusion}."
         ],
         "value_adds": [
-            "la maturité Achats se mesure aujourd'hui à son influence au COMEX, et non plus aux simples 'savings'",
-            "le 'Should-Cost' modélisé élimine près de 80 % des frictions théâtrales en négociation",
-            "l'adoption technologique prime sur la fonctionnalité : 70 % des échecs digitaux sont d'origine humaine",
-            "l'IA est un excellent copilote analytique, mais la décision finale et le relationnel restent 100 % humains",
-            "une victoire rapide (quick win) à 30 jours suscite plus d'adhésion que 100 slides de stratégie théorique"
+            "la maturite Achats se mesure aujourd'hui a son influence au COMEX, et non plus aux simples savings",
+            "le Should-Cost modelise elimine pres de 80 % des frictions theatrales en negociation",
+            "l'adoption technologique prime sur la fonctionnalite : 70 % des echecs digitaux sont d'origine humaine",
+            "l'IA est un excellent copilote analytique, mais la decision finale et le relationnel restent 100 % humains",
+            "une victoire rapide (quick win) a 30 jours suscite plus d'adhesion que 100 slides de strategie theorique",
+            "dans les marches publics, l'innovation est possible meme dans un cadre reglemente si on maitrise les leviers juridiques",
+            "le dialogue competitif reste le meilleur outil pour introduire de l'innovation dans la commande publique"
         ],
         "examples": [
-            "rationaliser un panel de 2000 à 400 fournisseurs m'a permis de libérer 25 % de temps stratégique pour mes équipes",
-            "introduire 47 secondes de silence intentionnel lors d'une négociation difficile a sécurisé 340K €",
-            "utiliser le 'Value Engineering' a permis de réduire un coût unitaire de 45 € à 28 € sans toucher à la marge du fournisseur",
-            "dire 'non' à un contrat mal aligné m'a fait économiser 1,7M € de TCO sur 3 ans",
-            "lancer un 'Innovation Day' Fournisseurs pour seulement 5K € a généré 400K € de valeur et un nouveau brevet"
+            "rationaliser un panel de 2000 a 400 fournisseurs m'a permis de liberer 25 % de temps strategique pour mes equipes",
+            "introduire 47 secondes de silence intentionnel lors d'une negociation difficile a securise 340K EUR",
+            "utiliser le Value Engineering a permis de reduire un cout unitaire de 45 EUR a 28 EUR sans toucher a la marge du fournisseur",
+            "dire non a un contrat mal aligne m'a fait economiser 1,7M EUR de TCO sur 3 ans",
+            "lancer un Innovation Day Fournisseurs pour seulement 5K EUR a genere 400K EUR de valeur et un nouveau brevet",
+            "un marche public reformule en termes de performance plutot que de moyens a attire 3x plus de candidats innovants"
         ],
         "insights": [
-            "la préparation minutieuse représente 90 % du succès final d'une négociation",
-            "votre réseau interne rapporte souvent bien plus de valeur que vos négociations externes",
-            "le Scope 3 est définitivement le nouveau champ de bataille stratégique de la fonction Achats",
-            "l'influence sans autorité formelle est la compétence numéro un du CPO de demain"
+            "la preparation minutieuse represente 90 % du succes final d'une negociation",
+            "votre reseau interne rapporte souvent bien plus de valeur que vos negociations externes",
+            "le Scope 3 est definitivement le nouveau champ de bataille strategique de la fonction Achats",
+            "l'influence sans autorite formelle est la competence numero un du CPO de demain",
+            "dans le public, la performance achats se mesure aussi a la qualite du service rendu aux usagers"
         ],
         "nuances": [
-            "dans le contexte européen, des réglementations strictes comme le CBAM ou la CSRD modifient complètement cette équation",
-            "l'applicabilité de ce modèle se heurte très souvent au manque de ressources dans les équipes achats de taille moyenne",
-            "il faut impérativement intégrer le facteur culturel et humain avant d'essayer de digitaliser un processus défaillant"
+            "dans le contexte europeen, des reglementations strictes comme le CBAM ou la CSRD modifient completement cette equation",
+            "l'applicabilite de ce modele se heurte tres souvent au manque de ressources dans les equipes achats de taille moyenne",
+            "il faut imperativement integrer le facteur culturel et humain avant d'essayer de digitaliser un processus defaillant",
+            "dans le secteur public, la contrainte reglementaire est un cadre, pas un frein, quand on la maitrise pleinement"
         ],
         "edge_cases": [
-            "le fournisseur clé est en position de monopole et utilise pleinement ce levier de pression",
-            "les prescripteurs internes (stakeholders) court-circuitent systématiquement les procédures d'achats",
-            "le budget alloué est drastiquement coupé mais les attentes de performance du Board restent identiques"
+            "le fournisseur cle est en position de monopole et utilise pleinement ce levier de pression",
+            "les prescripteurs internes (stakeholders) court-circuitent systematiquement les procedures d'achats",
+            "le budget alloue est drastiquement coupe mais les attentes de performance du Board restent identiques",
+            "le code des marches publics impose un formalisme qui ralentit l'acces a l'innovation fournisseur"
         ],
         "data": [
-            "selon la dernière étude Deloitte CPO, plus de 65 % des directions Achats placent la gestion du risque fournisseur en priorité absolue",
-            "Gartner indique que 50 % des entreprises intégreront l'IA générative dans leurs process Source-to-Pay d'ici 2026",
-            "le BCG démontre que les entreprises très performantes en RSE peuvent réduire leur coût du capital de près de 10 %"
+            "selon la derniere etude Deloitte CPO, plus de 65 % des directions Achats placent la gestion du risque fournisseur en priorite absolue",
+            "Gartner indique que 50 % des entreprises integreront l'IA generative dans leurs process Source-to-Pay d'ici 2026",
+            "le BCG demontre que les entreprises tres performantes en RSE peuvent reduire leur cout du capital de pres de 10 %",
+            "selon l'OECD, les marches publics representent en moyenne 12 % du PIB des pays membres, un levier colossal de transformation"
         ],
         "conclusions": [
-            "la fonction Achats évolue massivement d'un centre de coûts vers un véritable rôle d'orchestrateur de la chaîne de valeur",
-            "une donnée fournisseur propre et actionnable vaut infiniment plus qu'un logiciel sophistiqué mais vide",
-            "la durabilité et la rentabilité ne s'opposent plus : elles s'alignent aujourd'hui parfaitement via le prisme du TCO"
+            "la fonction Achats evolue massivement d'un centre de couts vers un veritable role d'orchestrateur de la chaine de valeur",
+            "une donnee fournisseur propre et actionnable vaut infiniment plus qu'un logiciel sophistique mais vide",
+            "la durabilite et la rentabilite ne s'opposent plus : elles s'alignent aujourd'hui parfaitement via le prisme du TCO",
+            "les achats publics sont un formidable levier de politique industrielle quand ils sont pilotes strategiquement"
         ]
     },
     "en": {
@@ -141,14 +163,15 @@ CONTENT = {
             "Should-Cost modeling eliminates nearly 80% of the traditional negotiation theater",
             "User adoption matters more than software features: 70% of digital transformation failures are human-driven",
             "AI is an outstanding analytical co-pilot, but the final strategic decision and relationship-building remain 100% human",
-            "A 30-day quick win builds much more stakeholder trust than 100 slides of theoretical procurement strategy"
+            "A 30-day quick win builds much more stakeholder trust than 100 slides of theoretical procurement strategy",
+            "the best procurement strategies combine analytical rigor with emotional intelligence at the negotiation table"
         ],
         "examples": [
             "rationalizing a supplier base from 2,000 to 400 freed up 25% of my team's time for high-level strategic work",
-            "using 47 seconds of intentional silence during a tough negotiation historically secured €340K in retained value",
-            "applying Value Engineering reduced a specific component cost from €45 to €28 without squeezing the supplier's margin",
-            "saying 'no' to a misaligned CEO mandate effectively saved €1.7M in TCO over a 3-year period",
-            "hosting a €5K Supplier Innovation Day generated €400K in actionable value and a shared patent"
+            "using 47 seconds of intentional silence during a tough negotiation historically secured 340K EUR in retained value",
+            "applying Value Engineering reduced a specific component cost from 45 EUR to 28 EUR without squeezing the supplier's margin",
+            "saying no to a misaligned CEO mandate effectively saved 1.7M EUR in TCO over a 3-year period",
+            "hosting a 5K EUR Supplier Innovation Day generated 400K EUR in actionable value and a shared patent"
         ],
         "insights": [
             "thorough preparation ultimately accounts for 90% of your negotiation success",
@@ -188,12 +211,12 @@ def connect_sheets():
     return client.open_by_key(SHEET_ID)
 
 def generate_comment(target):
-    """Génère un commentaire expert dans la langue de la cible"""
-    lang = target.get("lang", "en")  # Par defaut en anglais si non specifié
+    """Genere un commentaire expert dans la langue de la cible"""
+    lang = target.get("lang", "en")
     content = CONTENT[lang]
-    
+
     template = random.choice(content["templates"])
-    
+
     comment = template.format(
         name=target["name"].split()[0],
         value_add=random.choice(content["value_adds"]),
@@ -204,13 +227,12 @@ def generate_comment(target):
         data=random.choice(content["data"]),
         conclusion=random.choice(content["conclusions"])
     )
-    
-    # Capitalisation propre de la premiere lettre (sécurité)
+
     comment = comment[0].upper() + comment[1:]
     return f"Expert Insight ({lang.upper()})", comment
 
 def generate_daily_plan():
-    """Génère le plan d'engagement du jour : 5 comptes + 2 suggestions expertes"""
+    """Genere le plan d'engagement du jour : 5 comptes + 2 suggestions expertes"""
     today = datetime.now().strftime("%Y-%m-%d")
     day_number = datetime.now().timetuple().tm_yday
 
@@ -224,7 +246,6 @@ def generate_daily_plan():
         type1, comment1 = generate_comment(target)
         type2, comment2 = generate_comment(target)
 
-        # S'assurer que les 2 suggestions sont différentes
         attempts = 0
         while comment1 == comment2 and attempts < 5:
             type2, comment2 = generate_comment(target)
@@ -250,7 +271,7 @@ def write_plan(plan):
 
     try:
         ws = spreadsheet.worksheet("Engagement")
-    except:
+    except Exception:
         ws = spreadsheet.add_worksheet(title="Engagement", rows=500, cols=9)
         ws.update("A1:I1", [["Date", "Compte", "Role", "Type_Comment_1", "Suggestion_1", "Type_Comment_2", "Suggestion_2", "Ton", "Fait"]])
 
@@ -258,7 +279,7 @@ def write_plan(plan):
     next_row = len(existing) + 1
 
     ws.update(f"A{next_row}:I{next_row + len(plan) - 1}", plan)
-    print(f"  [OK] Plan écrit dans le Sheet (lignes {next_row}-{next_row + len(plan) - 1})")
+    print(f"  [OK] Plan ecrit dans le Sheet (lignes {next_row}-{next_row + len(plan) - 1})")
 
 def main():
     print("=" * 50)
@@ -285,7 +306,8 @@ def main():
     write_plan(plan)
 
     print("")
-    print("[DONE] Suggestions générées avec succès en respectant la langue et la typographie.")
+    print("[DONE] Suggestions generees avec succes.")
 
 if __name__ == "__main__":
     main()
+
