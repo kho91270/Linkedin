@@ -87,6 +87,13 @@ TARGET_ACCOUNTS = [
         "lang": "fr",
         "tone": "rigoureuse et orientee marches publics"
     },
+    {
+        "name": "Joel Collin-Demers",
+        "role": "Procurement Expert & Advisor",
+        "url": "https://www.linkedin.com/in/joelcollindemers/",
+        "lang": "fr",
+        "tone": "pragmatique et technologique"
+    }
 ]
 
 # ============================================================
@@ -310,4 +317,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
