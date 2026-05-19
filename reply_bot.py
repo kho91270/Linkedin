@@ -110,7 +110,7 @@ def get_my_recent_posts():
             "LinkedIn-Version": "202401",
             "X-Restli-Protocol-Version": "2.0.0"
         }
-        resp = requests.get(url2, headers=headers2)
+        resp = requests.get(url2, headers2)
         if resp.status_code != 200:
             print(f"  [!] Erreur recup posts: {resp.status_code}")
             return []
@@ -172,30 +172,13 @@ def analyze_sentiment(comment_text):
 
     prompt = (
         "Analyse ce commentaire LinkedIn et reponds UNIQUEMENT par un seul mot: "
-        "positive, neutral, negative, ou spam."
-        "
-
-"
-        "Regles:"
-        "
-"
-        "- positive = compliment, accord, experience partagee"
-        "
-"
-        "- neutral = question, remarque factuelle"
-        "
-"
-        "- negative = critique, insulte, provocation, desaccord agressif"
-        "
-"
-        "- spam = pub, lien suspect, hors-sujet total"
-        "
-
-"
-        "Commentaire: \"" + comment_text + "\""
-        "
-
-"
+        "positive, neutral, negative, ou spam.\n\n"
+        "Regles:\n"
+        "- positive = compliment, accord, experience partagee\n"
+        "- neutral = question, remarque factuelle\n"
+        "- negative = critique, insulte, provocation, desaccord agressif\n"
+        "- spam = pub, lien suspect, hors-sujet total\n\n"
+        f"Commentaire: \"{comment_text}\"\n\n"
         "Reponse (un seul mot):"
     )
 
@@ -235,83 +218,38 @@ def generate_reply(comment_text, post_context=""):
 
     system_prompt = (
         "Tu es Mehdi Bekka, Senior Procurement Consultant base au Luxembourg. "
-        "Tu reponds aux commentaires sur tes posts LinkedIn."
-        "
-
-"
-        "REGLES DE TON:"
-        "
-"
-        "- Professionnel mais accessible"
-        "
-"
-        "- Touche d'humour legere quand c'est approprie (emojis avec moderation : 1-2 max)"
-        "
-"
-        "- Toujours apporter de la valeur ajoutee dans la reponse"
-        "
-"
-        "- Poser une question de suivi pour prolonger la conversation"
-        "
-"
-        "- Repondre dans la MEME LANGUE que le commentaire (FR si FR, EN si EN)"
-        "
-"
-        "- Maximum 3-4 phrases"
-        "
-"
-        "- Ne jamais etre condescendant ou generique"
-        "
-"
-        "- Montrer une vraie expertise procurement/supply chain"
-        "
-"
-        "- Tutoyer si le commentaire tutoie, vouvoyer sinon"
-        "
-
-"
-        "EXEMPLES DE BON TON:"
-        "
-"
+        "Tu reponds aux commentaires sur tes posts LinkedIn.\n\n"
+        "REGLES DE TON:\n"
+        "- Professionnel mais accessible\n"
+        "- Touche d'humour legere quand c'est approprie (emojis avec moderation : 1-2 max)\n"
+        "- Toujours apporter de la valeur ajoutee dans la reponse\n"
+        "- Poser une question de suivi pour prolonger la conversation\n"
+        "- Repondre dans la MEME LANGUE que le commentaire (FR si FR, EN si EN)\n"
+        "- Maximum 3-4 phrases\n"
+        "- Ne jamais etre condescendant ou generique\n"
+        "- Montrer une vraie expertise procurement/supply chain\n"
+        "- Tutoyer si le commentaire tutoie, vouvoyer sinon\n\n"
+        "EXEMPLES DE BON TON:\n"
         "- Exactement ! Et le pire c'est que la plupart des equipes decouvrent ca "
         "apres la signature... Le TCO devrait etre obligatoire dans tout appel "
-        "d'offres. Quel a ete ton facteur de surcout le plus inattendu ?"
-        "
-"
+        "d'offres. Quel a ete ton facteur de surcout le plus inattendu ?\n"
         "- Great point! I've seen this pattern across 3 different industries. "
         "The key is starting small - one category, one supplier, one quick win. "
-        "Then momentum builds itself. What was your first breakthrough?"
-        "
-"
+        "Then momentum builds itself. What was your first breakthrough?\n"
         "- Ha! Le fameux 'oui oui on fera un appel d'offres'... qui se transforme "
-        "en reconduction tacite. Classic. Tu as reussi a casser ce reflexe ?"
-        "
-
-"
-        "INTERDITS:"
-        "
-"
-        "- Ne jamais commencer par 'Merci pour votre commentaire'"
-        "
-"
-        "- Ne jamais dire 'C est une excellente question'"
-        "
-"
+        "en reconduction tacite. Classic. Tu as reussi a casser ce reflexe ?\n\n"
+        "INTERDITS:\n"
+        "- Ne jamais commencer par 'Merci pour votre commentaire'\n"
+        "- Ne jamais dire 'C est une excellente question'\n"
         "- Ne pas faire de reponse de plus de 4 phrases"
     )
 
     user_prompt = (
-        "Contexte du post: " + post_context
-        + "
-
-"
-        + "Commentaire recu: \"" + comment_text + "\""
-        + "
-
-"
-        + "Genere une reponse naturelle, pro + humour leger. "
-        + "3-4 phrases max. Dans la meme langue que le commentaire. "
-        + "Ne mets pas de guillemets autour de ta reponse."
+        f"Contexte du post: {post_context}\n\n"
+        f"Commentaire recu: \"{comment_text}\"\n\n"
+        "Genere une reponse naturelle, pro + humour leger. "
+        "3-4 phrases max. Dans la meme langue que le commentaire. "
+        "Ne mets pas de guillemets autour de ta reponse."
     )
 
     url = "https://api.groq.com/openai/v1/chat/completions"
