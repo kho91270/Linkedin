@@ -4,6 +4,8 @@ on:
   schedule:
     # Publication quotidienne a 8h30 Luxembourg (6h30 UTC)
     - cron: '30 6 * * *'
+    # Reply bot toutes les 2h (8h-20h Luxembourg = 6h-18h UTC)
+    - cron: '0 6,8,10,12,14,16,18 * * *'
   workflow_dispatch:
     inputs:
       action:
@@ -18,14 +20,18 @@ on:
           - engagement_only
           - veille_only
           - recycler_only
+          - reply_only
 
 jobs:
   # ============================================================
-  # JOB 1 : PUBLICATION QUOTIDIENNE (tous les jours)
+  # JOB 1 : PUBLICATION QUOTIDIENNE (tous les jours a 8h30)
   # ============================================================
   publish:
     runs-on: ubuntu-latest
-    if: github.event.inputs.action == 'all' || github.event.inputs.action == 'publish_only' || github.event_name == 'schedule'
+    if: |
+      github.event.inputs.action == 'all' ||
+      github.event.inputs.action == 'publish_only' ||
+      (github.event_name == 'schedule' && github.event.schedule == '30 6 * * *')
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -33,13 +39,14 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install gspread oauth2client requests Pillow
+        run: pip install gspread oauth2client requests
 
       - name: Publish post
         env:
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           LINKEDIN_PERSON_ID: ${{ secrets.LINKEDIN_PERSON_ID }}
+          LEONARDO_API_KEY: ${{ secrets.LEONARDO_API_KEY }}
         run: python bot.py
 
   # ============================================================
@@ -48,7 +55,12 @@ jobs:
   engagement:
     runs-on: ubuntu-latest
     needs: publish
-    if: always() && (github.event.inputs.action == 'all' || github.event.inputs.action == 'engagement_only' || github.event_name == 'schedule')
+    if: |
+      always() && (
+        github.event.inputs.action == 'all' ||
+        github.event.inputs.action == 'engagement_only' ||
+        (github.event_name == 'schedule' && github.event.schedule == '30 6 * * *')
+      )
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -64,12 +76,17 @@ jobs:
         run: python engagement.py
 
   # ============================================================
-  # JOB 3 : ANALYTICS (tous les jours)
+  # JOB 3 : ANALYTICS (tous les jours apres publication)
   # ============================================================
   analytics:
     runs-on: ubuntu-latest
     needs: publish
-    if: always() && (github.event.inputs.action == 'all' || github.event.inputs.action == 'analytics_only' || github.event_name == 'schedule')
+    if: |
+      always() && (
+        github.event.inputs.action == 'all' ||
+        github.event.inputs.action == 'analytics_only' ||
+        (github.event_name == 'schedule' && github.event.schedule == '30 6 * * *')
+      )
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -87,11 +104,45 @@ jobs:
         run: python analytics.py
 
   # ============================================================
-  # JOB 4 : VEILLE (seulement le lundi)
+  # JOB 4 : REPLY BOT (toutes les 2h de 8h a 20h)
+  # ============================================================
+  reply:
+    runs-on: ubuntu-latest
+    if: |
+      github.event.inputs.action == 'reply_only' ||
+      github.event.inputs.action == 'all' ||
+      (github.event_name == 'schedule' && github.event.schedule == '0 6,8,10,12,14,16,18 * * *')
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run reply bot
+        env:
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+        run: python reply_bot.py
+
+      - name: Save tracking file
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "Reply Bot"
+          git add replied_comments.json || true
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update replied tracking"
+          git push || true
+
+  # ============================================================
+  # JOB 5 : VEILLE (seulement le lundi a 8h30)
   # ============================================================
   veille:
     runs-on: ubuntu-latest
-    if: github.event.inputs.action == 'veille_only' || (github.event_name == 'schedule' && github.event.schedule == '30 6 * * 1')
+    if: |
+      github.event.inputs.action == 'veille_only' ||
+      (github.event_name == 'schedule' && github.event.schedule == '30 6 * * 1')
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -107,12 +158,16 @@ jobs:
         run: python veille.py
 
   # ============================================================
-  # JOB 5 : RECYCLAGE (seulement le lundi)
+  # JOB 6 : RECYCLAGE (seulement le lundi apres veille)
   # ============================================================
   recycler:
     runs-on: ubuntu-latest
     needs: veille
-    if: always() && (github.event.inputs.action == 'recycler_only' || (github.event_name == 'schedule' && github.event.schedule == '30 6 * * 1'))
+    if: |
+      always() && (
+        github.event.inputs.action == 'recycler_only' ||
+        (github.event_name == 'schedule' && github.event.schedule == '30 6 * * 1')
+      )
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
