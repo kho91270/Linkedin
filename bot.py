@@ -48,10 +48,7 @@ def connect_sheets():
 def formater_post_linkedin(contenu_brut):
     if not contenu_brut:
         return ""
-    contenu = contenu_brut.replace("<br>", "
-").replace("<br/>", "
-").replace("<br >", "
-")
+    contenu = contenu_brut.replace("<br>", "\n").replace("<br/>", "\n").replace("<br >", "\n")
     en_markers = ["\U0001F1EC\U0001F1E7", "EN:", "EN :", "[EN]"]
     fr_markers = ["\U0001F1EB\U0001F1F7", "FR:", "FR :", "[FR]"]
     has_en = any(m in contenu for m in en_markers)
@@ -76,27 +73,17 @@ def formater_bilingue(contenu):
         return formater_bloc_texte(contenu)
     en_formate = formater_bloc_texte(bloc_en)
     fr_formate = formater_bloc_texte(bloc_fr)
-    separateur = "
-
-\u2014\u2014\u2014
-
-"
+    separateur = "\n\n\u2014\u2014\u2014\n\n"
     return en_formate + separateur + fr_formate
 
 def formater_bloc_texte(texte):
     if not texte:
         return ""
     texte = texte.strip()
-    if "
-
-" in texte:
-        lignes = texte.split("
-
-")
+    if "\n\n" in texte:
+        lignes = texte.split("\n\n")
         lignes_propres = [l.strip() for l in lignes if l.strip()]
-        return "
-
-".join(lignes_propres)
+        return "\n\n".join(lignes_propres)
     phrases = []
     current = ""
     for char in texte:
@@ -113,9 +100,7 @@ def formater_bloc_texte(texte):
         groupe = " ".join(phrases[i:i+2])
         if groupe:
             paragraphes.append(groupe)
-    return "
-
-".join(paragraphes)
+    return "\n\n".join(paragraphes)
 
 # ============================================================
 # GENERER IMAGE VIA LEONARDO AI
@@ -448,9 +433,7 @@ def main():
     # 5. FORMATAGE LINKEDIN LISIBLE
     contenu = formater_post_linkedin(contenu_brut)
     if hashtags:
-        contenu_final = contenu + "
-
-" + hashtags
+        contenu_final = contenu + "\n\n" + hashtags
     else:
         contenu_final = contenu
 
@@ -507,7 +490,7 @@ def main():
         post_id = result
         print(f"  [OK] Post publie!")
 
-    # 7. MARQUER COMME PUBLIE (plus de premier commentaire auto)
+    # 7. MARQUER COMME PUBLIE
     mark_published(sheet, row_index)
 
     print(f"")
@@ -517,4 +500,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
