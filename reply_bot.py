@@ -3,18 +3,28 @@ import json
 import os
 import sys
 import time
+import random
+import gspread
+from oauth2client.service_account import ServiceAccountCredentials
 
 # ============================================================
-# REPLY BOT v3.0 - Repond aux commentaires LinkedIn
+# REPLY BOT v4.0 - Repond aux commentaires LinkedIn
 # IA : Groq (GRATUIT) - Modele Llama 3.3 70B
 # Ton : Professionnel + touche d'humour
-# Anti-doublon : tracking via fichier JSON
+# Fixes : anti-doublon, anti-troll, filtre courts, log Sheet
 # ============================================================
 
 LINKEDIN_ACCESS_TOKEN = os.environ.get("LINKEDIN_ACCESS_TOKEN")
 GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 LINKEDIN_PERSON_ID = None
 TRACKING_FILE = "replied_comments.json"
+SHEET_ID = "1k4G-v1-nEgtE256nKUYjq-KfQd4A3CvMn03S1cp8NSE"
+
+# FIX 5 : Max 5 reponses par run (anti-shadow ban LinkedIn)
+MAX_REPLIES_PER_RUN = 5
+
+# FIX 2 : Longueur minimum pour repondre
+MIN_COMMENT_LENGTH = 15
 
 # ============================================================
 # TRACKING DES COMMENTAIRES DEJA REPONDUS
@@ -26,10 +36,40 @@ def load_replied():
     return []
 
 def save_replied(replied_list):
-    # Garder seulement les 500 derniers pour eviter un fichier trop gros
     replied_list = replied_list[-500:]
     with open(TRACKING_FILE, "w") as f:
         json.dump(replied_list, f)
+
+# ============================================================
+# CONNEXION GOOGLE SHEETS (pour log des reponses)
+# ============================================================
+def connect_sheets():
+    creds_json = os.environ.get("GOOGLE_CREDENTIALS")
+    if not creds_json:
+        return None
+    scope = ["https://spreadsheets.google.com/feeds", "https://www.googleapis.com/auth/drive"]
+    creds_dict = json.loads(creds_json)
+    creds = ServiceAccountCredentials.from_json_keyfile_dict(creds_dict, scope)
+    client = gspread.authorize(creds)
+    spreadsheet = client.open_by_key(SHEET_ID)
+
+    # Creer l'onglet Replies s'il n'existe pas
+    try:
+        sheet = spreadsheet.worksheet("Replies")
+    except gspread.exceptions.WorksheetNotFound:
+        sheet = spreadsheet.add_worksheet(title="Replies", rows=500, cols=6)
+        sheet.update("A1:F1", [["Date", "Post (extrait)", "Commentaire", "Reponse IA", "Langue", "Sentiment"]])
+
+    return sheet
+
+# FIX 7 : Log dans Google Sheet
+def log_reply(sheet, post_text, comment_text, reply_text, langue, sentiment):
+    if not sheet:
+        return
+    from datetime import datetime
+    now = datetime.utcnow().strftime("%Y-%m-%d %H:%M")
+    row = [now, post_text[:80], comment_text[:120], reply_text[:200], langue, sentiment]
+    sheet.append_row(row)
 
 # ============================================================
 # RECUPERATION AUTOMATIQUE ID LINKEDIN
@@ -81,7 +121,7 @@ def get_my_recent_posts():
     return posts
 
 # ============================================================
-# RECUPERER LES COMMENTAIRES D'UN POST
+# RECUPERER LES COMMENTAIRES D'UN POST (premier niveau seulement)
 # ============================================================
 def get_comments(post_urn):
     encoded_urn = requests.utils.quote(post_urn, safe='')
@@ -95,22 +135,95 @@ def get_comments(post_urn):
     if resp.status_code != 200:
         return []
     data = resp.json()
-    return data.get("elements", [])
+    comments = data.get("elements", [])
+
+    # FIX 6 : Garder uniquement les commentaires de premier niveau
+    first_level = []
+    for c in comments:
+        # Les commentaires avec parentComment sont des reponses a d'autres
+        if "parentComment" not in c or not c.get("parentComment"):
+            first_level.append(c)
+
+    return first_level
 
 # ============================================================
-# EXTRAIRE L'URN DU COMMENTAIRE (plusieurs formats possibles)
+# EXTRAIRE L'URN DU COMMENTAIRE
 # ============================================================
 def get_comment_urn(comment):
-    # LinkedIn renvoie l'URN dans differents champs selon la version API
     urn = comment.get("$URN", "")
     if not urn:
         urn = comment.get("urn", "")
     if not urn:
-        # Construire depuis le champ id si disponible
         comment_id = comment.get("id", "")
         if comment_id:
             urn = comment_id
     return urn
+
+# ============================================================
+# FIX 3 : DETECTER TROLL / NEGATIF / SPAM via Groq
+# ============================================================
+def analyze_sentiment(comment_text):
+    """
+    Analyse le sentiment du commentaire.
+    Retourne: 'positive', 'neutral', 'negative', ou 'spam'
+    """
+    if not GROQ_API_KEY:
+        return "neutral"
+
+    prompt = (
+        "Analyse ce commentaire LinkedIn et reponds UNIQUEMENT par un seul mot: "
+        "positive, neutral, negative, ou spam."
+        "
+
+"
+        "Regles:"
+        "
+"
+        "- positive = compliment, accord, experience partagee"
+        "
+"
+        "- neutral = question, remarque factuelle"
+        "
+"
+        "- negative = critique, insulte, provocation, desaccord agressif"
+        "
+"
+        "- spam = pub, lien suspect, hors-sujet total"
+        "
+
+"
+        "Commentaire: \"" + comment_text + "\""
+        "
+
+"
+        "Reponse (un seul mot):"
+    )
+
+    url = "https://api.groq.com/openai/v1/chat/completions"
+    headers = {
+        "Authorization": f"Bearer {GROQ_API_KEY}",
+        "Content-Type": "application/json"
+    }
+    body = {
+        "model": "llama-3.3-70b-versatile",
+        "messages": [{"role": "user", "content": prompt}],
+        "max_tokens": 10,
+        "temperature": 0.1
+    }
+
+    try:
+        resp = requests.post(url, headers=headers, json=body)
+        if resp.status_code == 200:
+            result = resp.json()["choices"][0]["message"]["content"].strip().lower()
+            # Nettoyer la reponse
+            for sentiment in ["positive", "neutral", "negative", "spam"]:
+                if sentiment in result:
+                    return sentiment
+            return "neutral"
+    except:
+        pass
+
+    return "neutral"
 
 # ============================================================
 # GENERER UNE REPONSE VIA GROQ (GRATUIT)
@@ -224,7 +337,6 @@ def generate_reply(comment_text, post_context=""):
     data = resp.json()
     reply = data["choices"][0]["message"]["content"].strip()
 
-    # Nettoyer les guillemets eventuels
     if reply.startswith('"') and reply.endswith('"'):
         reply = reply[1:-1]
     if reply.startswith("'") and reply.endswith("'"):
@@ -257,7 +369,7 @@ def post_reply(post_urn, comment_urn, reply_text):
         print(f"  [OK] Reponse postee!")
         return True
     else:
-        # Fallback : essayer sans parentComment (commentaire de premier niveau)
+        # Fallback sans parentComment
         print(f"  [!] Erreur reply (parentComment): {resp.status_code}")
         print(f"  [>] Tentative sans parentComment...")
         body2 = {
@@ -279,7 +391,7 @@ def main():
     global LINKEDIN_PERSON_ID
 
     print("=" * 50)
-    print("LINKEDIN REPLY BOT v3.0 (Groq GRATUIT + Tracking)")
+    print("LINKEDIN REPLY BOT v4.0 (Groq + Anti-Troll + Log)")
     print("=" * 50)
 
     # 1. ID LinkedIn
@@ -287,20 +399,26 @@ def main():
     my_person_urn = f"urn:li:person:{LINKEDIN_PERSON_ID}"
     print(f"[OK] ID: {LINKEDIN_PERSON_ID}")
 
-    # 2. Charger les commentaires deja traites
+    # 2. Charger tracking
     replied = load_replied()
-    print(f"[OK] {len(replied)} commentaires deja traites en memoire")
+    print(f"[OK] {len(replied)} commentaires deja traites")
 
-    # 3. Recuperer les posts recents
+    # 3. Connexion Google Sheet pour log
+    replies_sheet = connect_sheets()
+    if replies_sheet:
+        print("[OK] Connecte a Google Sheet (onglet Replies)")
+    else:
+        print("[!] Pas de connexion Sheet (log desactive)")
+
+    # 4. Recuperer les posts recents
     posts = get_my_recent_posts()
     if not posts:
         print("[!] Aucun post recent trouve.")
         sys.exit(0)
 
     total_replies = 0
-    max_replies_per_run = 10
 
-    # 4. Pour chaque post, verifier les commentaires
+    # 5. Pour chaque post, verifier les commentaires
     for post in posts:
         post_urn = post.get("id") or post.get("urn") or ""
         post_text = ""
@@ -324,12 +442,12 @@ def main():
             print(f"    Pas de commentaires.")
             continue
 
-        print(f"    {len(comments)} commentaire(s) trouve(s)")
+        print(f"    {len(comments)} commentaire(s) premier niveau")
 
         for comment in comments:
-            if total_replies >= max_replies_per_run:
+            if total_replies >= MAX_REPLIES_PER_RUN:
                 print(f"")
-                print(f"  [LIMIT] Max {max_replies_per_run} reponses atteint.")
+                print(f"  [LIMIT] Max {MAX_REPLIES_PER_RUN} reponses atteint.")
                 break
 
             # Ignorer nos propres commentaires
@@ -343,29 +461,54 @@ def main():
             if not comment_text or not comment_urn:
                 continue
 
-            # ANTI-DOUBLON : verifier si deja traite
+            # ANTI-DOUBLON
             if comment_urn in replied:
                 continue
 
-            print(f"    [NEW] \"{comment_text[:80]}\"")
+            # FIX 2 : Ignorer les commentaires trop courts
+            if len(comment_text.strip()) < MIN_COMMENT_LENGTH:
+                print(f"    [SKIP] Trop court ({len(comment_text)} car): \"{comment_text}\"")
+                replied.append(comment_urn)  # Marquer comme traite pour ne pas re-checker
+                continue
 
-            # Generer la reponse IA via Groq
+            # FIX 3 : Analyser le sentiment
+            print(f"    [ANALYSE] \"{comment_text[:60]}\"...")
+            sentiment = analyze_sentiment(comment_text)
+            print(f"    [SENTIMENT] {sentiment}")
+
+            # Ne pas repondre aux negatifs et spam
+            if sentiment in ["negative", "spam"]:
+                print(f"    [SKIP] Commentaire {sentiment} - pas de reponse")
+                replied.append(comment_urn)
+                # Log quand meme dans le Sheet
+                langue = "FR" if any(c in comment_text for c in ["je", "le", "la", "les", "un", "une"]) else "EN"
+                log_reply(replies_sheet, post_text, comment_text, "[NON REPONDU - " + sentiment + "]", langue, sentiment)
+                continue
+
+            # Generer la reponse IA
             reply = generate_reply(comment_text, post_text)
             if not reply:
                 continue
 
             print(f"    [REPLY] \"{reply[:80]}\"")
 
+            # Detecter la langue pour le log
+            langue = "FR" if any(c in comment_text.lower() for c in [" je ", " le ", " la ", " les ", " un ", " une ", " des "]) else "EN"
+
             # Poster la reponse
             success = post_reply(post_urn, comment_urn, reply)
             if success:
                 total_replies += 1
                 replied.append(comment_urn)
+                # FIX 7 : Log dans Google Sheet
+                log_reply(replies_sheet, post_text, comment_text, reply, langue, sentiment)
 
-            # Pause anti-spam
-            time.sleep(5)
+            # FIX 5 : Delai random entre 5 et 15 secondes (anti-shadow ban)
+            delay = random.randint(5, 15)
+            print(f"    [WAIT] Pause {delay}s...")
+            time.sleep(delay)
 
-    # 5. Sauvegarder le tracking
+    # 6. Sauvegarder le tracking
     save_replied(replied)
     print(f"")
     print(f"[SAVE] Tracking mis a jour ({len(replied)} commentaires)")
