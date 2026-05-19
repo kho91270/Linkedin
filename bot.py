@@ -5,6 +5,7 @@ import json
 import os
 import sys
 import time
+import re
 
 # ============================================================
 # CONFIGURATION
@@ -27,7 +28,6 @@ def get_my_linkedin_id():
     if resp2.status_code == 200:
         return resp2.json().get("id")
     print("  Impossible de recuperer l'ID LinkedIn.")
-    print(f"Detail erreur : {resp1.text}")
     sys.exit(1)
 
 # ============================================================
@@ -43,63 +43,68 @@ def connect_sheets():
     return sheet
 
 # ============================================================
-# FORMATER LE POST POUR LINKEDIN (LISIBILITE)
+# FORMATER LE POST (AERATION AUTOMATIQUE INTELLIGENTE)
 # ============================================================
 def formater_post_linkedin(contenu_brut):
     if not contenu_brut:
         return ""
-    contenu = contenu_brut.replace("<br>", "\n").replace("<br/>", "\n").replace("<br >", "\n")
-    en_markers = ["\U0001F1EC\U0001F1E7", "EN:", "EN :", "[EN]"]
-    fr_markers = ["\U0001F1EB\U0001F1F7", "FR:", "FR :", "[FR]"]
-    has_en = any(m in contenu for m in en_markers)
-    has_fr = any(m in contenu for m in fr_markers)
-    if has_en and has_fr:
-        return formater_bilingue(contenu)
-    else:
-        return formater_bloc_texte(contenu)
+    
+    # 1. Nettoyage initial : on aplatit tout en un seul bloc propre
+    contenu = contenu_brut.replace("<br>", " ").replace("<br/>", " ").replace("\n", " ")
+    contenu = re.sub(r'\s+', ' ', contenu).strip()
 
-def formater_bilingue(contenu):
-    fr_markers = ["\U0001F1EB\U0001F1F7", "FR:", "FR :", "[FR]"]
-    split_point = -1
-    for marker in fr_markers:
-        pos = contenu.find(marker)
-        if pos > 0:
-            split_point = pos
-            break
-    if split_point > 0:
-        bloc_en = contenu[:split_point].strip()
-        bloc_fr = contenu[split_point:].strip()
-    else:
-        return formater_bloc_texte(contenu)
-    en_formate = formater_bloc_texte(bloc_en)
-    fr_formate = formater_bloc_texte(bloc_fr)
-    separateur = "\n\n\u2014\u2014\u2014\n\n"
-    return en_formate + separateur + fr_formate
+    # 2. Chercher le point de bascule entre l'Anglais et le Français
+    match = re.search(r'(\*\*Français|\*\*FR|Français\s*:|FR\s*:|🇫🇷)', contenu, flags=re.IGNORECASE)
+    
+    if match and match.start() > 10:
+        split_idx = match.start()
+        part_en = contenu[:split_idx].strip()
+        part_fr = contenu[split_idx:].strip()
+        
+        en_aere = aerer_texte(part_en)
+        fr_aere = aerer_texte(part_fr)
+        
+        return en_aere + "\n\n➖➖➖➖➖➖➖➖➖➖\n\n" + fr_aere
+    
+    # Si c'est juste une seule langue
+    return aerer_texte(contenu)
 
-def formater_bloc_texte(texte):
-    if not texte:
-        return ""
-    texte = texte.strip()
-    if "\n\n" in texte:
-        lignes = texte.split("\n\n")
-        lignes_propres = [l.strip() for l in lignes if l.strip()]
-        return "\n\n".join(lignes_propres)
-    phrases = []
-    current = ""
-    for char in texte:
-        current += char
-        if char in ".!?" and len(current) > 20:
-            if len(current) > 1 and current[-2].isdigit():
-                continue
-            phrases.append(current.strip())
-            current = ""
-    if current.strip():
-        phrases.append(current.strip())
+def aerer_texte(texte):
+    # Séparer les en-têtes (ex: **English:**) pour qu'ils ne soient pas collés à la phrase
+    texte = re.sub(r'(\*\*(?:English|Français|FR|EN)[^*]*\*\*)\s*', r'\1. ', texte, flags=re.IGNORECASE)
+    texte = texte.replace(".. ", ". ")
+
+    # Découpe intelligente par phrase (après un point/exclamation/interrogation suivi d'une majuscule)
+    phrases = re.split(r'(?<=[.!?])\s+(?=[A-ZÉÀÊ"\'*])', texte)
+    
     paragraphes = []
-    for i in range(0, len(phrases), 2):
-        groupe = " ".join(phrases[i:i+2])
-        if groupe:
-            paragraphes.append(groupe)
+    current_para = []
+    
+    for phrase in phrases:
+        phrase = phrase.strip()
+        if not phrase:
+            continue
+            
+        # Isoler les titres pour qu'ils soient seuls sur leur ligne
+        if phrase.startswith("**") and ("English" in phrase or "Français" in phrase or "FR" in phrase or "EN" in phrase):
+            if phrase.endswith("."):
+                phrase = phrase[:-1]
+            if current_para:
+                paragraphes.append(" ".join(current_para))
+                current_para = []
+            paragraphes.append(phrase)
+            continue
+            
+        current_para.append(phrase)
+        
+        # Regrouper par 2 phrases max pour aérer
+        if len(current_para) >= 2:
+            paragraphes.append(" ".join(current_para))
+            current_para = []
+            
+    if current_para:
+        paragraphes.append(" ".join(current_para))
+        
     return "\n\n".join(paragraphes)
 
 # ============================================================
@@ -326,7 +331,7 @@ def publish_poll(contenu, question, options):
     headers = {
         "Authorization": f"Bearer {LINKEDIN_ACCESS_TOKEN}",
         "Content-Type": "application/json",
-        "LinkedIn-Version": "202604", # CORRECTION ICI : Version d'API à jour
+        "LinkedIn-Version": "202604",
         "X-Restli-Protocol-Version": "2.0.0"
     }
     poll_options = []
@@ -356,6 +361,28 @@ def publish_poll(contenu, question, options):
         return "DUPLICATE"
     resp.raise_for_status()
     return resp.headers.get("x-restli-id", "OK")
+
+# ============================================================
+# POSTER UN COMMENTAIRE
+# ============================================================
+def post_comment(post_urn, comment_text):
+    url = f"https://api.linkedin.com/v2/socialActions/{post_urn}/comments"
+    headers = {
+        "Authorization": f"Bearer {LINKEDIN_ACCESS_TOKEN}",
+        "Content-Type": "application/json"
+    }
+    body = {
+        "actor": f"urn:li:person:{LINKEDIN_PERSON_ID}",
+        "message": {"text": comment_text}
+    }
+    try:
+        resp = requests.post(url, headers=headers, json=body)
+        resp.raise_for_status()
+        print(f"  [OK] Premier commentaire poste!")
+        return True
+    except Exception as e:
+        print(f"  [!] Erreur commentaire: {e}")
+        return False
 
 # ============================================================
 # TROUVER LE PROCHAIN JOUR A PUBLIER
@@ -388,7 +415,7 @@ def main():
     global LINKEDIN_PERSON_ID
 
     print("=" * 50)
-    print("LINKEDIN AUTO-PUBLISHER v5.0 (Leonardo AI + Format)")
+    print("LINKEDIN AUTO-PUBLISHER v5.2 (Aeration Intelligente Regex)")
     print("=" * 50)
 
     # 1. Recuperation automatique de l'ID
@@ -414,6 +441,7 @@ def main():
     contenu_brut = row[4] if len(row) > 4 else ""
     hashtags = row[7] if len(row) > 7 else ""
     image_hook = row[8] if len(row) > 8 else ""
+    premier_commentaire = row[9] if len(row) > 9 else ""
     type_post = row[10] if len(row) > 10 else "texte+image"
     sondage_question = row[11] if len(row) > 11 else ""
     sondage_opt1 = row[12] if len(row) > 12 else ""
@@ -430,7 +458,7 @@ def main():
     print(f"    Categorie: {categorie}")
     print(f"    Type: {type_post}")
 
-    # 5. FORMATAGE LINKEDIN LISIBLE
+    # 5. FORMATAGE LINKEDIN (Découpe intelligente)
     contenu = formater_post_linkedin(contenu_brut)
     if hashtags:
         contenu_final = contenu + "\n\n" + hashtags
@@ -490,7 +518,14 @@ def main():
         post_id = result
         print(f"  [OK] Post publie!")
 
-    # 7. MARQUER COMME PUBLIE
+    # 7. PREMIER COMMENTAIRE
+    if post_id and premier_commentaire:
+        print(f"")
+        print(f"  [WAIT] Attente 30s avant commentaire...")
+        time.sleep(30)
+        post_comment(post_id, premier_commentaire)
+
+    # 8. MARQUER COMME PUBLIE
     mark_published(sheet, row_index)
 
     print(f"")
