@@ -326,7 +326,7 @@ def publish_poll(contenu, question, options):
     headers = {
         "Authorization": f"Bearer {LINKEDIN_ACCESS_TOKEN}",
         "Content-Type": "application/json",
-        "LinkedIn-Version": "202401",
+        "LinkedIn-Version": "202604", # CORRECTION ICI : Version d'API à jour
         "X-Restli-Protocol-Version": "2.0.0"
     }
     poll_options = []
