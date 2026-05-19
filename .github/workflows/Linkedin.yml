@@ -1,3 +1,4 @@
+```yaml
 name: LinkedIn Full System
 
 on:
@@ -5,7 +6,7 @@ on:
     # Publication quotidienne a 8h30 Luxembourg (6h30 UTC)
     - cron: '30 6 * * *'
     # Reply bot toutes les 2h (8h-20h Luxembourg = 6h-18h UTC)
-    - cron: '0 6,8,10,12,14,16,18 * * *'
+    - cron: '0 8,10,12,14,16,18 * * *'
   workflow_dispatch:
     inputs:
       action:
@@ -22,16 +23,48 @@ on:
           - recycler_only
           - reply_only
 
+# FIX 1 : Empecher les executions paralleles (evite conflit git)
+concurrency:
+  group: linkedin-system
+  cancel-in-progress: false
+
 jobs:
+  # ============================================================
+  # DETECTER QUEL CRON A DECLENCHE LE WORKFLOW
+  # ============================================================
+  detect_trigger:
+    runs-on: ubuntu-latest
+    if: github.event_name == 'schedule'
+    outputs:
+      is_publish_time: ${{ steps.check.outputs.is_publish }}
+      is_reply_time: ${{ steps.check.outputs.is_reply }}
+    steps:
+      - name: Detect trigger type
+        id: check
+        run: |
+          HOUR=$(date -u +%H)
+          MINUTE=$(date -u +%M)
+          echo "Current UTC time: ${HOUR}:${MINUTE}"
+          if [ "$HOUR" = "06" ] && [ "$MINUTE" -ge "25" ] && [ "$MINUTE" -le "35" ]; then
+            echo "is_publish=true" >> $GITHUB_OUTPUT
+            echo "is_reply=false" >> $GITHUB_OUTPUT
+          else
+            echo "is_publish=false" >> $GITHUB_OUTPUT
+            echo "is_reply=true" >> $GITHUB_OUTPUT
+          fi
+
   # ============================================================
   # JOB 1 : PUBLICATION QUOTIDIENNE (tous les jours a 8h30)
   # ============================================================
   publish:
     runs-on: ubuntu-latest
+    needs: detect_trigger
     if: |
-      github.event.inputs.action == 'all' ||
-      github.event.inputs.action == 'publish_only' ||
-      (github.event_name == 'schedule' && github.event.schedule == '30 6 * * *')
+      always() && (
+        github.event.inputs.action == 'all' ||
+        github.event.inputs.action == 'publish_only' ||
+        (needs.detect_trigger.outputs.is_publish_time == 'true')
+      )
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -45,7 +78,6 @@ jobs:
         env:
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
-          LINKEDIN_PERSON_ID: ${{ secrets.LINKEDIN_PERSON_ID }}
           LEONARDO_API_KEY: ${{ secrets.LEONARDO_API_KEY }}
         run: python bot.py
 
@@ -59,7 +91,7 @@ jobs:
       always() && (
         github.event.inputs.action == 'all' ||
         github.event.inputs.action == 'engagement_only' ||
-        (github.event_name == 'schedule' && github.event.schedule == '30 6 * * *')
+        (needs.detect_trigger.outputs.is_publish_time == 'true')
       )
     steps:
       - uses: actions/checkout@v4
@@ -85,7 +117,7 @@ jobs:
       always() && (
         github.event.inputs.action == 'all' ||
         github.event.inputs.action == 'analytics_only' ||
-        (github.event_name == 'schedule' && github.event.schedule == '30 6 * * *')
+        (needs.detect_trigger.outputs.is_publish_time == 'true')
       )
     steps:
       - uses: actions/checkout@v4
@@ -100,18 +132,20 @@ jobs:
         env:
           GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
-          LINKEDIN_PERSON_ID: ${{ secrets.LINKEDIN_PERSON_ID }}
         run: python analytics.py
 
   # ============================================================
-  # JOB 4 : REPLY BOT (toutes les 2h de 8h a 20h)
+  # JOB 4 : REPLY BOT (toutes les 2h de 10h a 20h Luxembourg)
   # ============================================================
   reply:
     runs-on: ubuntu-latest
+    needs: detect_trigger
     if: |
-      github.event.inputs.action == 'reply_only' ||
-      github.event.inputs.action == 'all' ||
-      (github.event_name == 'schedule' && github.event.schedule == '0 6,8,10,12,14,16,18 * * *')
+      always() && (
+        github.event.inputs.action == 'reply_only' ||
+        github.event.inputs.action == 'all' ||
+        (needs.detect_trigger.outputs.is_reply_time == 'true')
+      )
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -119,12 +153,13 @@ jobs:
           python-version: '3.11'
 
       - name: Install dependencies
-        run: pip install requests
+        run: pip install gspread oauth2client requests
 
       - name: Run reply bot
         env:
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
         run: python reply_bot.py
 
       - name: Save tracking file
@@ -140,9 +175,12 @@ jobs:
   # ============================================================
   veille:
     runs-on: ubuntu-latest
+    needs: detect_trigger
     if: |
-      github.event.inputs.action == 'veille_only' ||
-      (github.event_name == 'schedule' && github.event.schedule == '30 6 * * 1')
+      always() && (
+        github.event.inputs.action == 'veille_only' ||
+        (needs.detect_trigger.outputs.is_publish_time == 'true' && github.event.schedule == '30 6 * * 1')
+      )
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -166,7 +204,7 @@ jobs:
     if: |
       always() && (
         github.event.inputs.action == 'recycler_only' ||
-        (github.event_name == 'schedule' && github.event.schedule == '30 6 * * 1')
+        (needs.detect_trigger.outputs.is_publish_time == 'true' && github.event.schedule == '30 6 * * 1')
       )
     steps:
       - uses: actions/checkout@v4
