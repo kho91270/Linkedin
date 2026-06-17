@@ -1,7 +1,8 @@
-
+```python
 """
-BOT.PY - Publication Manager avec Validation Email
+BOT.PY - Publication Manager Bilingue (FR + EN) avec Validation Email
 Utilise GROQ pour la generation, Google Credentials pour Gmail, Leonardo pour images.
+Genere 2 posts (FR + EN) pour chaque publication.
 Commandes: generate | approve | publish | force
 """
 
@@ -71,7 +72,7 @@ def send_email(to_email, subject, html_body, text_body):
             msg.attach(MIMEText(html_body, "html"))
             raw = base64.urlsafe_b64encode(msg.as_bytes()).decode()
             service.users().messages().send(userId="me", body={"raw": raw}).execute()
-            print(f"[OK] Email envoye via Gmail API")
+            print("[OK] Email envoye via Gmail API")
             return True
         except Exception as e:
             print(f"[WARN] Gmail API: {e}")
@@ -84,7 +85,7 @@ def send_email(to_email, subject, html_body, text_body):
             with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
                 server.login(SMTP_EMAIL, SMTP_PASSWORD)
                 server.sendmail(SMTP_EMAIL, to_email, msg.as_string())
-            print(f"[OK] Email envoye via SMTP")
+            print("[OK] Email envoye via SMTP")
             return True
         except Exception as e:
             print(f"[ERROR] SMTP: {e}")
@@ -125,7 +126,7 @@ def update_tracker(tracker, post):
     if datetime.strptime(week_start, "%Y-%m-%d").isocalendar()[1] != datetime.now().isocalendar()[1]:
         tracker["posts_this_week"] = 1
         tracker["week_start"] = today
-    tracker["history"].append({"date": today, "pillar": post.get("pillar"), "format": post.get("format")})
+    tracker["history"].append({"date": today, "pillar": post.get("pillar"), "format": post.get("format"), "lang": post.get("lang", "both")})
     tracker["history"] = tracker["history"][-100:]
     return tracker
 
@@ -141,7 +142,7 @@ def determine_pillar(target_date=None):
     return PILLAR_SCHEDULE.get(week_type, {}).get(day_name, None)
 
 
-# --- GENERATION CONTENU (GROQ) ---
+# --- GENERATION CONTENU BILINGUE (GROQ) ---
 
 def generate_post_content(pillar, brief=None):
     if brief is None:
@@ -166,22 +167,25 @@ INFORMATIONS DU BRIEF DE VEILLE:
 """
 
     pillar_instructions = {
-        "terrain": "Tu ecris un post TERRAIN: experience personnelle de Category Manager. Evaluation fournisseur, negociation, scorecard, RFI/RFP, erreurs, lecons. 100% vecu avec details concrets.",
-        "analyste": "Tu ecris un post ANALYSTE PROCURETECH: analyse une startup, un outil, une tendance. Utilise le brief. Donne ton AVIS de praticien. Compare avec ton experience. Sois critique.",
-        "conversation": "Tu ecris un post CONVERSATION: question ouverte qui genere du debat. Polarisante. Mini-contexte personnel en intro.",
-        "insight": "Tu ecris un post INSIGHT: lecon courte et percutante. 1 contexte + 1 insight + 1 question. 200-400 chars.",
+        "terrain": "Experience personnelle de Category Manager. Evaluation fournisseur, negociation, scorecard, RFI/RFP, erreurs, lecons. 100% vecu avec details concrets.",
+        "analyste": "Analyse une startup procuretech, un outil, une tendance. Utilise le brief. Donne ton AVIS de praticien. Compare avec ton experience. Sois critique.",
+        "conversation": "Question ouverte qui genere du debat. Polarisante. Mini-contexte personnel en intro.",
+        "insight": "Lecon courte et percutante. 1 contexte + 1 insight + 1 question. 200-400 chars.",
     }
 
     format_map = {"terrain": "texte", "analyste": "texte", "conversation": "question", "insight": "insight"}
 
-    prompt = f"""Tu es Mehdi, Category Manager en procurement chez un grand groupe.
+    # Generation du post FR
+    prompt_fr = f"""Tu es Mehdi, Category Manager en procurement chez un grand groupe.
 Positionnement LinkedIn: "Praticien terrain + Analyste procuretech".
 
-{pillar_instructions.get(pillar, pillar_instructions['terrain'])}
+PILIER: {pillar.upper()}
+INSTRUCTIONS: {pillar_instructions.get(pillar, pillar_instructions['terrain'])}
 
 {brief_context}
 
 REGLES:
+- Ecris en FRANCAIS
 - Premiere personne (je)
 - Hook percutant < 150 chars en premiere ligne
 - Structure: Hook -> Vecu -> Insight -> Question ouverte
@@ -193,29 +197,67 @@ REGLES:
 - Sauts de ligne pour aerer
 - Phrases courtes
 
-Ecris UNIQUEMENT le post LinkedIn. Rien d'autre."""
+Ecris UNIQUEMENT le post LinkedIn en francais. Rien d'autre."""
+
+    # Generation du post EN
+    prompt_en = f"""You are Mehdi, a Category Manager in procurement at a large corporation.
+LinkedIn positioning: "Field practitioner + Procuretech analyst".
+
+PILLAR: {pillar.upper()}
+INSTRUCTIONS: {pillar_instructions.get(pillar, pillar_instructions['terrain'])}
+
+{brief_context}
+
+RULES:
+- Write in ENGLISH
+- First person (I)
+- Punchy hook < 150 chars on the first line
+- Structure: Hook -> Experience -> Insight -> Open question
+- Length: 800-1500 chars (text), 300-600 (question), 200-400 (insight)
+- End with an open question
+- 3-5 hashtags at the end on a separate line
+- Max 3 emojis
+- Direct tone, no corporate BS
+- Line breaks for readability
+- Short sentences
+- This is NOT a translation of a French post. Write a NATIVE English post with the same theme but adapted for an international procurement audience.
+
+Write ONLY the LinkedIn post in English. Nothing else."""
 
     try:
-        response = client.chat.completions.create(
+        # Generer FR
+        response_fr = client.chat.completions.create(
             model=GROQ_MODEL,
-            messages=[{"role": "user", "content": prompt}],
+            messages=[{"role": "user", "content": prompt_fr}],
             temperature=0.8,
             max_tokens=1500,
         )
-        content = response.choices[0].message.content.strip()
+        content_fr = response_fr.choices[0].message.content.strip()
+
+        # Generer EN (pas une traduction, un post natif)
+        response_en = client.chat.completions.create(
+            model=GROQ_MODEL,
+            messages=[{"role": "user", "content": prompt_en}],
+            temperature=0.8,
+            max_tokens=1500,
+        )
+        content_en = response_en.choices[0].message.content.strip()
+
         return {
-            "content": content,
+            "content_fr": content_fr,
+            "content_en": content_en,
             "pillar": pillar,
             "format": format_map.get(pillar, "texte"),
             "generated_date": datetime.now().strftime("%Y-%m-%d %H:%M"),
             "status": "pending_approval",
+            "lang": "both",
         }
     except Exception as e:
         print(f"[ERROR] Groq: {e}")
         return None
 
 
-# --- LEONARDO AI (images carrousels) ---
+# --- LEONARDO AI ---
 
 def generate_carousel_image(prompt_text):
     if not LEONARDO_API_KEY:
@@ -290,40 +332,61 @@ def approve_post(publish_date):
     return False
 
 
-# --- EMAIL VALIDATION ---
+# --- EMAIL VALIDATION BILINGUE ---
 
 def send_approval_email(post, publish_date):
     if not NOTIFY_EMAIL:
         return False
-    subject = f"[LinkedIn] Post a valider pour le {publish_date} ({post['pillar'].upper()})"
-    html_body = f"""<html><body style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;">
+    subject = f"[LinkedIn] 2 posts a valider pour le {publish_date} ({post['pillar'].upper()})"
+    html_body = f"""<html><body style="font-family:Arial,sans-serif;max-width:700px;margin:0 auto;">
 <div style="background:#1B2A4A;color:white;padding:20px;border-radius:8px 8px 0 0;">
-<h2 style="margin:0;">Post LinkedIn a valider</h2>
-<p style="margin:5px 0 0 0;opacity:0.8;">Publication prevue: <strong>{publish_date}</strong></p></div>
+<h2 style="margin:0;">2 Posts LinkedIn a valider (FR + EN)</h2>
+<p style="margin:5px 0 0 0;opacity:0.8;">Publication prevue: <strong>{publish_date}</strong> | Pilier: <strong>{post['pillar'].upper()}</strong></p></div>
 <div style="border:1px solid #ddd;border-top:none;padding:20px;border-radius:0 0 8px 8px;">
-<p><strong>Pilier:</strong> {post['pillar'].upper()} | <strong>Format:</strong> {post.get('format','texte')}</p>
-<div style="background:#f8f9fa;border-left:4px solid #2E86AB;padding:15px;margin:15px 0;white-space:pre-wrap;font-size:14px;line-height:1.6;">{post['content']}</div>
+<h3 style="color:#2E86AB;">VERSION FRANCAISE</h3>
+<div style="background:#f8f9fa;border-left:4px solid #2E86AB;padding:15px;margin:15px 0;white-space:pre-wrap;font-size:14px;line-height:1.6;">{post['content_fr']}</div>
+<h3 style="color:#E8871E;">ENGLISH VERSION</h3>
+<div style="background:#f8f9fa;border-left:4px solid #E8871E;padding:15px;margin:15px 0;white-space:pre-wrap;font-size:14px;line-height:1.6;">{post['content_en']}</div>
 <hr style="border:none;border-top:1px solid #eee;margin:20px 0;">
-<p style="font-size:14px;color:#666;"><strong>Approuver:</strong> Reponds OK<br><strong>Modifier:</strong> Reponds avec tes corrections<br><strong>Refuser:</strong> Reponds SKIP</p>
+<p style="font-size:14px;color:#666;">
+<strong>Approuver les 2:</strong> Reponds OK<br>
+<strong>Approuver FR seulement:</strong> Reponds OK FR<br>
+<strong>Approuver EN seulement:</strong> Reponds OK EN<br>
+<strong>Modifier:</strong> Reponds avec tes corrections<br>
+<strong>Refuser:</strong> Reponds SKIP</p>
 </div></body></html>"""
-    text_body = f"""POST LINKEDIN A VALIDER
-Publication: {publish_date} | Pilier: {post['pillar'].upper()} | Format: {post.get('format','texte')}
 
---- CONTENU ---
-{post['content']}
---- FIN ---
+    text_body = f"""2 POSTS LINKEDIN A VALIDER
+Publication: {publish_date} | Pilier: {post['pillar'].upper()}
 
-Reponds OK pour approuver / SKIP pour refuser / ou tes corrections."""
+{'='*40}
+VERSION FRANCAISE
+{'='*40}
+{post['content_fr']}
+
+{'='*40}
+ENGLISH VERSION
+{'='*40}
+{post['content_en']}
+
+{'='*40}
+Reponds:
+- OK = approuver les 2
+- OK FR = approuver seulement le francais
+- OK EN = approuver seulement l'anglais
+- SKIP = refuser
+- Ou tes corrections
+"""
     return send_email(NOTIFY_EMAIL, subject, html_body, text_body)
 
 
 # --- PUBLICATION LINKEDIN ---
 
-def publish_to_linkedin(post):
+def publish_to_linkedin(content):
     if not LINKEDIN_ACCESS_TOKEN or not LINKEDIN_PERSON_ID:
         print("[SIMULATE] Publication simulee:")
-        print(f"  {post.get('content', '')[:150]}...")
-        return {"status": "simulated", "id": "sim_" + datetime.now().strftime("%Y%m%d%H%M")}
+        print(f"  {content[:150]}...")
+        return {"status": "simulated", "id": "sim_" + datetime.now().strftime("%Y%m%d%H%M%S")}
     url = "https://api.linkedin.com/v2/ugcPosts"
     headers = {
         "Authorization": f"Bearer {LINKEDIN_ACCESS_TOKEN}",
@@ -335,7 +398,7 @@ def publish_to_linkedin(post):
         "lifecycleState": "PUBLISHED",
         "specificContent": {
             "com.linkedin.ugc.ShareContent": {
-                "shareCommentary": {"text": post["content"]},
+                "shareCommentary": {"text": content},
                 "shareMediaCategory": "NONE",
             }
         },
@@ -355,7 +418,7 @@ def publish_to_linkedin(post):
         return {"status": "error", "message": str(e)}
 
 
-def archive_post(post, result):
+def archive_post(post, result_fr, result_en):
     os.makedirs(PUBLISHED_DIR, exist_ok=True)
     today = datetime.now().strftime("%Y-%m-%d")
     filename = f"post_{today}_{post.get('pillar', 'unknown')}.json"
@@ -365,8 +428,11 @@ def archive_post(post, result):
         "published_time": datetime.now().strftime("%H:%M"),
         "pillar": post.get("pillar"),
         "format": post.get("format"),
-        "content": post.get("content"),
-        "linkedin_response": result,
+        "content_fr": post.get("content_fr"),
+        "content_en": post.get("content_en"),
+        "linkedin_response_fr": result_fr,
+        "linkedin_response_en": result_en,
+        "lang": post.get("lang", "both"),
     }
     with open(filepath, "w", encoding="utf-8") as f:
         json.dump(archive, f, ensure_ascii=False, indent=2)
@@ -395,7 +461,7 @@ def cmd_generate():
     if not post:
         print("[ERROR] Echec generation")
         return
-    print(f"[OK] Post genere ({len(post['content'])} chars)")
+    print(f"[OK] Posts generes FR ({len(post['content_fr'])} chars) + EN ({len(post['content_en'])} chars)")
     save_pending_post(post, publish_date)
     send_approval_email(post, publish_date)
 
@@ -419,9 +485,31 @@ def cmd_publish():
     if tracker.get("last_post_date") == today:
         print("[SKIP] Deja publie aujourd'hui")
         return
-    result = publish_to_linkedin(post)
-    if result.get("status") in ["published", "simulated"]:
-        archive_post(post, result)
+
+    # Determiner quelles langues publier
+    lang_approved = post.get("lang_approved", "both")
+    result_fr = None
+    result_en = None
+
+    # Publier FR
+    if lang_approved in ["both", "fr"] and post.get("content_fr"):
+        print("[PUBLISH] Version francaise...")
+        result_fr = publish_to_linkedin(post["content_fr"])
+    
+    # Publier EN (avec delai si les 2)
+    if lang_approved in ["both", "en"] and post.get("content_en"):
+        print("[PUBLISH] Version anglaise...")
+        result_en = publish_to_linkedin(post["content_en"])
+
+    # Verifier si au moins un a ete publie
+    published = False
+    if result_fr and result_fr.get("status") in ["published", "simulated"]:
+        published = True
+    if result_en and result_en.get("status") in ["published", "simulated"]:
+        published = True
+
+    if published:
+        archive_post(post, result_fr, result_en)
         tracker = update_tracker(tracker, post)
         save_tracker(tracker)
         if filepath and os.path.exists(filepath):
@@ -446,4 +534,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
