@@ -1,7 +1,6 @@
-
 """
 APPROVAL_WEBHOOK.PY - Verifie les reponses email pour approuver/refuser.
-Utilise Gmail API (Google Credentials) ou fallback IMAP.
+Supporte les approbations bilingues: OK, OK FR, OK EN
 """
 
 import os
@@ -38,6 +37,22 @@ def get_gmail_service():
         return None
 
 
+def parse_approval_response(body_text):
+    """Parse la reponse email et determine l'action + langue."""
+    first_line = body_text.strip().split("\n")[0].strip().upper()
+
+    if first_line in ["OK", "APPROVE", "APPROVED", "OUI", "YES", "GO", "VALIDE"]:
+        return {"action": "approve", "lang_approved": "both"}
+    elif first_line in ["OK FR", "APPROVE FR", "OUI FR"]:
+        return {"action": "approve", "lang_approved": "fr"}
+    elif first_line in ["OK EN", "APPROVE EN", "YES EN"]:
+        return {"action": "approve", "lang_approved": "en"}
+    elif first_line in ["SKIP", "REFUSE", "NO", "NON", "REFUSER", "CANCEL"]:
+        return {"action": "reject", "lang_approved": None}
+    else:
+        return {"action": "modify", "lang_approved": None, "body": body_text.strip()}
+
+
 def check_emails_gmail():
     service = get_gmail_service()
     if not service:
@@ -60,19 +75,15 @@ def check_emails_gmail():
                     if part.get("mimeType") == "text/plain" and part.get("body", {}).get("data"):
                         body = base64.urlsafe_b64decode(part["body"]["data"]).decode("utf-8", errors="ignore")
                         break
-            first_line = body.strip().split("\n")[0].strip().upper()
+            parsed = parse_approval_response(body)
             publish_date = None
             if "pour le" in subject.lower():
                 try:
                     publish_date = subject.lower().split("pour le")[1].strip()[:10]
                 except Exception:
                     pass
-            if first_line in ["OK", "APPROVE", "APPROVED", "OUI", "YES", "GO", "VALIDE"]:
-                results.append({"action": "approve", "publish_date": publish_date})
-            elif first_line in ["SKIP", "REFUSE", "NO", "NON", "REFUSER", "CANCEL"]:
-                results.append({"action": "reject", "publish_date": publish_date})
-            else:
-                results.append({"action": "modify", "publish_date": publish_date, "body": body.strip()})
+            parsed["publish_date"] = publish_date
+            results.append(parsed)
     except Exception as e:
         print(f"[ERROR] Gmail API: {e}")
         return check_emails_imap()
@@ -111,19 +122,15 @@ def check_emails_imap():
                         break
             else:
                 body = msg.get_payload(decode=True).decode(errors="ignore")
-            first_line = body.strip().split("\n")[0].strip().upper()
+            parsed = parse_approval_response(body)
             publish_date = None
             if "pour le" in subject.lower():
                 try:
                     publish_date = subject.lower().split("pour le")[1].strip()[:10]
                 except Exception:
                     pass
-            if first_line in ["OK", "APPROVE", "APPROVED", "OUI", "YES", "GO", "VALIDE"]:
-                results.append({"action": "approve", "publish_date": publish_date})
-            elif first_line in ["SKIP", "REFUSE", "NO", "NON", "REFUSER", "CANCEL"]:
-                results.append({"action": "reject", "publish_date": publish_date})
-            else:
-                results.append({"action": "modify", "publish_date": publish_date, "body": body.strip()})
+            parsed["publish_date"] = publish_date
+            results.append(parsed)
         mail.logout()
     except Exception as e:
         print(f"[ERROR] IMAP: {e}")
@@ -133,6 +140,7 @@ def check_emails_imap():
 def process_approval(action_data):
     action = action_data.get("action")
     publish_date = action_data.get("publish_date")
+    lang_approved = action_data.get("lang_approved", "both")
     if not os.path.exists(PENDING_DIR):
         return
     pending_file = None
@@ -153,12 +161,13 @@ def process_approval(action_data):
     if action == "approve":
         os.makedirs(APPROVED_DIR, exist_ok=True)
         post["approval_status"] = "approved"
+        post["lang_approved"] = lang_approved
         post["approved_at"] = datetime.now().strftime("%Y-%m-%d %H:%M")
         approved_path = os.path.join(APPROVED_DIR, pending_file.replace("pending_", "approved_"))
         with open(approved_path, "w", encoding="utf-8") as f:
             json.dump(post, f, ensure_ascii=False, indent=2)
         os.remove(filepath)
-        print(f"[OK] APPROUVE -> {approved_path}")
+        print(f"[OK] APPROUVE ({lang_approved}) -> {approved_path}")
     elif action == "reject":
         os.makedirs(REJECTED_DIR, exist_ok=True)
         post["approval_status"] = "rejected"
@@ -173,7 +182,7 @@ def process_approval(action_data):
         post["modification_date"] = datetime.now().strftime("%Y-%m-%d %H:%M")
         with open(filepath, "w", encoding="utf-8") as f:
             json.dump(post, f, ensure_ascii=False, indent=2)
-        print(f"[OK] MODIFICATION demandee")
+        print("[OK] MODIFICATION demandee")
 
 
 def main():
@@ -186,11 +195,10 @@ def main():
         return
     print("[2/2] Traitement...")
     for action_data in actions:
-        print(f"  Action: {action_data['action']} | Date: {action_data.get('publish_date', '?')}")
+        print(f"  Action: {action_data['action']} | Lang: {action_data.get('lang_approved', '?')} | Date: {action_data.get('publish_date', '?')}")
         process_approval(action_data)
     print("[DONE] Termine.")
 
 
 if __name__ == "__main__":
     main()
-
