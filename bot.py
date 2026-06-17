@@ -1,7 +1,5 @@
-```python
-"""
 BOT.PY - Publication Manager Bilingue (FR + EN) avec Validation Email
-Utilise GROQ pour la generation, Google Credentials pour Gmail, Leonardo pour images.
+Utilise GROQ, Google Credentials pour Gmail, Leonardo pour images.
 Genere 2 posts (FR + EN) pour chaque publication.
 Commandes: generate | approve | publish | force
 """
@@ -39,13 +37,21 @@ BRIEF_DIR = "veille_briefs"
 PENDING_DIR = "pending_approval"
 APPROVED_DIR = "approved_posts"
 
-PILLAR_SCHEDULE = {
-    "even": {"Tuesday": "terrain", "Thursday": "analyste", "Saturday": "conversation"},
-    "odd": {"Tuesday": "analyste", "Thursday": "terrain", "Saturday": "insight"},
-}
+try:
+    from smart_scheduler import get_optimal_pillar_for_date
+except ImportError:
+    get_optimal_pillar_for_date = None
 
+try:
+    from quality_scorer import evaluate_post, format_quality_report, MIN_QUALITY_SCORE
+except ImportError:
+    evaluate_post = None
 
-# --- EMAIL ---
+try:
+    from image_generator import generate_post_image
+except ImportError:
+    generate_post_image = None
+
 
 def get_gmail_service():
     if not GOOGLE_CREDENTIALS:
@@ -92,8 +98,6 @@ def send_email(to_email, subject, html_body, text_body):
     return False
 
 
-# --- TRACKER ---
-
 def load_tracker():
     default = {
         "total_posts": 0, "current_streak": 0, "last_post_date": None,
@@ -131,18 +135,20 @@ def update_tracker(tracker, post):
     return tracker
 
 
-# --- PILIER ---
-
 def determine_pillar(target_date=None):
     if target_date is None:
         target_date = datetime.now()
+    if get_optimal_pillar_for_date:
+        return get_optimal_pillar_for_date(target_date)
     day_name = target_date.strftime("%A")
     week_num = target_date.isocalendar()[1]
+    pillar_schedule = {
+        "even": {"Tuesday": "terrain", "Thursday": "analyste", "Saturday": "conversation"},
+        "odd": {"Tuesday": "analyste", "Thursday": "terrain", "Saturday": "insight"},
+    }
     week_type = "even" if week_num % 2 == 0 else "odd"
-    return PILLAR_SCHEDULE.get(week_type, {}).get(day_name, None)
+    return pillar_schedule.get(week_type, {}).get(day_name, None)
 
-
-# --- GENERATION CONTENU BILINGUE (GROQ) ---
 
 def generate_post_content(pillar, brief=None):
     if brief is None:
@@ -175,7 +181,6 @@ INFORMATIONS DU BRIEF DE VEILLE:
 
     format_map = {"terrain": "texte", "analyste": "texte", "conversation": "question", "insight": "insight"}
 
-    # Generation du post FR
     prompt_fr = f"""Tu es Mehdi, Category Manager en procurement chez un grand groupe.
 Positionnement LinkedIn: "Praticien terrain + Analyste procuretech".
 
@@ -199,7 +204,6 @@ REGLES:
 
 Ecris UNIQUEMENT le post LinkedIn en francais. Rien d'autre."""
 
-    # Generation du post EN
     prompt_en = f"""You are Mehdi, a Category Manager in procurement at a large corporation.
 LinkedIn positioning: "Field practitioner + Procuretech analyst".
 
@@ -225,7 +229,6 @@ RULES:
 Write ONLY the LinkedIn post in English. Nothing else."""
 
     try:
-        # Generer FR
         response_fr = client.chat.completions.create(
             model=GROQ_MODEL,
             messages=[{"role": "user", "content": prompt_fr}],
@@ -234,7 +237,6 @@ Write ONLY the LinkedIn post in English. Nothing else."""
         )
         content_fr = response_fr.choices[0].message.content.strip()
 
-        # Generer EN (pas une traduction, un post natif)
         response_en = client.chat.completions.create(
             model=GROQ_MODEL,
             messages=[{"role": "user", "content": prompt_en}],
@@ -243,7 +245,7 @@ Write ONLY the LinkedIn post in English. Nothing else."""
         )
         content_en = response_en.choices[0].message.content.strip()
 
-        return {
+        post = {
             "content_fr": content_fr,
             "content_en": content_en,
             "pillar": pillar,
@@ -252,39 +254,38 @@ Write ONLY the LinkedIn post in English. Nothing else."""
             "status": "pending_approval",
             "lang": "both",
         }
+
+        # Quality check
+        if evaluate_post:
+            quality_report = evaluate_post(post)
+            post["quality_report"] = quality_report
+            if not quality_report.get("passed"):
+                print("[WARN] Quality check failed, regenerating...")
+                response_fr = client.chat.completions.create(
+                    model=GROQ_MODEL,
+                    messages=[{"role": "user", "content": prompt_fr + "\n\nIMPORTANT: Le post precedent etait trop faible. Fais MIEUX. Hook plus percutant, structure plus claire."}],
+                    temperature=0.9,
+                    max_tokens=1500,
+                )
+                post["content_fr"] = response_fr.choices[0].message.content.strip()
+                response_en = client.chat.completions.create(
+                    model=GROQ_MODEL,
+                    messages=[{"role": "user", "content": prompt_en + "\n\nIMPORTANT: The previous post was too weak. Do BETTER. Punchier hook, clearer structure."}],
+                    temperature=0.9,
+                    max_tokens=1500,
+                )
+                post["content_en"] = response_en.choices[0].message.content.strip()
+
+        # Generate image
+        if generate_post_image:
+            image_result = generate_post_image(post)
+            post["image"] = image_result
+
+        return post
     except Exception as e:
         print(f"[ERROR] Groq: {e}")
         return None
 
-
-# --- LEONARDO AI ---
-
-def generate_carousel_image(prompt_text):
-    if not LEONARDO_API_KEY:
-        return None
-    url = "https://cloud.leonardo.ai/api/rest/v1/generations"
-    headers = {"Authorization": f"Bearer {LEONARDO_API_KEY}", "Content-Type": "application/json"}
-    payload = {
-        "prompt": f"Professional LinkedIn carousel slide, {prompt_text}, clean minimal design, corporate blue",
-        "negative_prompt": "text, words, letters, watermark, blurry",
-        "modelId": "6bef9f1b-29cb-40c7-b9df-32b51c1f67d3",
-        "width": 1080,
-        "height": 1080,
-        "num_images": 1,
-    }
-    try:
-        response = requests.post(url, headers=headers, json=payload, timeout=60)
-        if response.status_code == 200:
-            data = response.json()
-            generation_id = data.get("sdGenerationJob", {}).get("generationId")
-            print(f"[OK] Leonardo generation: {generation_id}")
-            return generation_id
-    except Exception as e:
-        print(f"[ERROR] Leonardo: {e}")
-    return None
-
-
-# --- APPROBATIONS ---
 
 def save_pending_post(post, publish_date):
     os.makedirs(PENDING_DIR, exist_ok=True)
@@ -309,35 +310,37 @@ def check_approval():
                 post = json.load(f)
             if post.get("approval_status") == "approved":
                 return post, filepath
-    return None, None
-
-
-def approve_post(publish_date):
-    os.makedirs(APPROVED_DIR, exist_ok=True)
-    if not os.path.exists(PENDING_DIR):
-        return False
-    for filename in os.listdir(PENDING_DIR):
-        if publish_date in filename and filename.endswith(".json"):
-            filepath = os.path.join(PENDING_DIR, filename)
+    # Check any approved post
+    for filename in sorted(os.listdir(APPROVED_DIR)):
+        if filename.endswith(".json"):
+            filepath = os.path.join(APPROVED_DIR, filename)
             with open(filepath, "r", encoding="utf-8") as f:
                 post = json.load(f)
-            post["approval_status"] = "approved"
-            post["approved_at"] = datetime.now().strftime("%Y-%m-%d %H:%M")
-            approved_path = os.path.join(APPROVED_DIR, filename.replace("pending_", "approved_"))
-            with open(approved_path, "w", encoding="utf-8") as f:
-                json.dump(post, f, ensure_ascii=False, indent=2)
-            os.remove(filepath)
-            print(f"[OK] Approuve: {approved_path}")
-            return True
-    return False
+            if post.get("approval_status") == "approved":
+                return post, filepath
+    return None, None
 
-
-# --- EMAIL VALIDATION BILINGUE ---
 
 def send_approval_email(post, publish_date):
     if not NOTIFY_EMAIL:
         return False
     subject = f"[LinkedIn] 2 posts a valider pour le {publish_date} ({post['pillar'].upper()})"
+
+    quality_text = ""
+    if post.get("quality_report"):
+        qr = post["quality_report"]
+        score_fr = qr.get("score_fr", {}).get("total", "?")
+        score_en = qr.get("score_en", {}).get("total", "?")
+        quality_text = f"\nScore qualite: FR={score_fr}/100 | EN={score_en}/100"
+        if qr.get("hooks_fr"):
+            quality_text += f"\n\nHOOKS ALTERNATIFS FR:"
+            quality_text += f"\n  A: {qr['hooks_fr'].get('hook_a', '')}"
+            quality_text += f"\n  B: {qr['hooks_fr'].get('hook_b', '')}"
+        if qr.get("hooks_en"):
+            quality_text += f"\n\nHOOKS ALTERNATIFS EN:"
+            quality_text += f"\n  A: {qr['hooks_en'].get('hook_a', '')}"
+            quality_text += f"\n  B: {qr['hooks_en'].get('hook_b', '')}"
+
     html_body = f"""<html><body style="font-family:Arial,sans-serif;max-width:700px;margin:0 auto;">
 <div style="background:#1B2A4A;color:white;padding:20px;border-radius:8px 8px 0 0;">
 <h2 style="margin:0;">2 Posts LinkedIn a valider (FR + EN)</h2>
@@ -352,12 +355,15 @@ def send_approval_email(post, publish_date):
 <strong>Approuver les 2:</strong> Reponds OK<br>
 <strong>Approuver FR seulement:</strong> Reponds OK FR<br>
 <strong>Approuver EN seulement:</strong> Reponds OK EN<br>
+<strong>Hook A (FR):</strong> Reponds HOOK A FR<br>
+<strong>Hook B (EN):</strong> Reponds HOOK B EN<br>
 <strong>Modifier:</strong> Reponds avec tes corrections<br>
 <strong>Refuser:</strong> Reponds SKIP</p>
 </div></body></html>"""
 
     text_body = f"""2 POSTS LINKEDIN A VALIDER
 Publication: {publish_date} | Pilier: {post['pillar'].upper()}
+{quality_text}
 
 {'='*40}
 VERSION FRANCAISE
@@ -374,15 +380,14 @@ Reponds:
 - OK = approuver les 2
 - OK FR = approuver seulement le francais
 - OK EN = approuver seulement l'anglais
+- HOOK A FR / HOOK B FR = utiliser le hook alternatif
 - SKIP = refuser
 - Ou tes corrections
 """
     return send_email(NOTIFY_EMAIL, subject, html_body, text_body)
 
 
-# --- PUBLICATION LINKEDIN ---
-
-def publish_to_linkedin(content):
+def publish_to_linkedin(content, image_url=None):
     if not LINKEDIN_ACCESS_TOKEN or not LINKEDIN_PERSON_ID:
         print("[SIMULATE] Publication simulee:")
         print(f"  {content[:150]}...")
@@ -432,14 +437,13 @@ def archive_post(post, result_fr, result_en):
         "content_en": post.get("content_en"),
         "linkedin_response_fr": result_fr,
         "linkedin_response_en": result_en,
-        "lang": post.get("lang", "both"),
+        "lang": post.get("lang_approved", "both"),
+        "image": post.get("image"),
     }
     with open(filepath, "w", encoding="utf-8") as f:
         json.dump(archive, f, ensure_ascii=False, indent=2)
     print(f"[OK] Archive: {filepath}")
 
-
-# --- COMMANDES ---
 
 def cmd_generate():
     print(f"[CMD] generate -- {datetime.now().strftime('%Y-%m-%d %H:%M')}")
@@ -466,48 +470,31 @@ def cmd_generate():
     send_approval_email(post, publish_date)
 
 
-def cmd_approve():
-    today = datetime.now().strftime("%Y-%m-%d")
-    for date in [today, (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")]:
-        if approve_post(date):
-            return
-    print("[INFO] Aucun post a approuver")
-
-
 def cmd_publish():
     print(f"[CMD] publish -- {datetime.now().strftime('%Y-%m-%d %H:%M')}")
     post, filepath = check_approval()
     if not post:
-        print("[SKIP] Aucun post approuve pour aujourd'hui")
+        print("[SKIP] Aucun post approuve")
         return
     tracker = load_tracker()
     today = datetime.now().strftime("%Y-%m-%d")
     if tracker.get("last_post_date") == today:
         print("[SKIP] Deja publie aujourd'hui")
         return
-
-    # Determiner quelles langues publier
     lang_approved = post.get("lang_approved", "both")
     result_fr = None
     result_en = None
-
-    # Publier FR
     if lang_approved in ["both", "fr"] and post.get("content_fr"):
         print("[PUBLISH] Version francaise...")
         result_fr = publish_to_linkedin(post["content_fr"])
-    
-    # Publier EN (avec delai si les 2)
     if lang_approved in ["both", "en"] and post.get("content_en"):
         print("[PUBLISH] Version anglaise...")
         result_en = publish_to_linkedin(post["content_en"])
-
-    # Verifier si au moins un a ete publie
     published = False
     if result_fr and result_fr.get("status") in ["published", "simulated"]:
         published = True
     if result_en and result_en.get("status") in ["published", "simulated"]:
         published = True
-
     if published:
         archive_post(post, result_fr, result_en)
         tracker = update_tracker(tracker, post)
@@ -519,17 +506,31 @@ def cmd_publish():
 
 def cmd_force():
     today = datetime.now().strftime("%Y-%m-%d")
-    approve_post(today)
+    # Move any pending to approved
+    if os.path.exists(PENDING_DIR):
+        os.makedirs(APPROVED_DIR, exist_ok=True)
+        for fn in os.listdir(PENDING_DIR):
+            if fn.endswith(".json"):
+                src = os.path.join(PENDING_DIR, fn)
+                with open(src, "r", encoding="utf-8") as f:
+                    post = json.load(f)
+                post["approval_status"] = "approved"
+                post["lang_approved"] = "both"
+                dst = os.path.join(APPROVED_DIR, fn.replace("pending_", "approved_"))
+                with open(dst, "w", encoding="utf-8") as f:
+                    json.dump(post, f, ensure_ascii=False, indent=2)
+                os.remove(src)
+                break
     cmd_publish()
 
 
 def main():
     command = sys.argv[1] if len(sys.argv) > 1 else "generate"
-    commands = {"generate": cmd_generate, "approve": cmd_approve, "publish": cmd_publish, "force": cmd_force}
+    commands = {"generate": cmd_generate, "publish": cmd_publish, "force": cmd_force}
     if command in commands:
         commands[command]()
     else:
-        print("Usage: python bot.py [generate|approve|publish|force]")
+        print("Usage: python bot.py [generate|publish|force]")
 
 
 if __name__ == "__main__":
