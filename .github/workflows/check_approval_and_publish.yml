@@ -1,6 +1,5 @@
-```python
-```yaml
-name: Check Approval + Publish
+
+name: Check Approval and Publish
 
 on:
   schedule:
