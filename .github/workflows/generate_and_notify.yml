@@ -1,6 +1,5 @@
-```python
-```yaml
-name: Generate Post + Send Approval Email
+
+name: Generate Post and Send Approval Email
 
 on:
   schedule:
