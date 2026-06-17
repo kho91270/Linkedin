@@ -1,0 +1,42 @@
+name: Check Approval + Publish
+
+on:
+  schedule:
+    # Jours de publication: Mardi, Jeudi, Samedi a 6h30 UTC (8h30 Paris)
+    - cron: '30 6 * * 2,4,6'
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - run: pip install openai requests
+
+      - name: Check email approvals
+        env:
+          SMTP_EMAIL: ${{ secrets.SMTP_EMAIL }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+        run: python approval_webhook.py
+
+      - name: Publish approved post
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_ID: ${{ secrets.LINKEDIN_PERSON_ID }}
+        run: python bot.py publish
+
+      - name: Commit results
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+          git add published_posts/ approved_posts/ pending_approval/ tracker.json
+          git diff --staged --quiet || git commit -m "published $(date +%Y-%m-%d)"
+          git push
