@@ -1,6 +1,5 @@
-"""
 APPROVAL_WEBHOOK.PY - Verifie les reponses email pour approuver/refuser.
-Supporte les approbations bilingues: OK, OK FR, OK EN
+Supporte: OK, OK FR, OK EN, HOOK A FR, HOOK B EN, SKIP
 """
 
 import os
@@ -38,7 +37,6 @@ def get_gmail_service():
 
 
 def parse_approval_response(body_text):
-    """Parse la reponse email et determine l'action + langue."""
     first_line = body_text.strip().split("\n")[0].strip().upper()
 
     if first_line in ["OK", "APPROVE", "APPROVED", "OUI", "YES", "GO", "VALIDE"]:
@@ -47,6 +45,14 @@ def parse_approval_response(body_text):
         return {"action": "approve", "lang_approved": "fr"}
     elif first_line in ["OK EN", "APPROVE EN", "YES EN"]:
         return {"action": "approve", "lang_approved": "en"}
+    elif "HOOK A FR" in first_line:
+        return {"action": "approve", "lang_approved": "both", "use_hook": "hook_a_fr"}
+    elif "HOOK B FR" in first_line:
+        return {"action": "approve", "lang_approved": "both", "use_hook": "hook_b_fr"}
+    elif "HOOK A EN" in first_line:
+        return {"action": "approve", "lang_approved": "both", "use_hook": "hook_a_en"}
+    elif "HOOK B EN" in first_line:
+        return {"action": "approve", "lang_approved": "both", "use_hook": "hook_b_en"}
     elif first_line in ["SKIP", "REFUSE", "NO", "NON", "REFUSER", "CANCEL"]:
         return {"action": "reject", "lang_approved": None}
     else:
@@ -137,10 +143,32 @@ def check_emails_imap():
     return results
 
 
+def apply_hook_replacement(post, hook_key):
+    quality_report = post.get("quality_report", {})
+    if "fr" in hook_key:
+        hooks = quality_report.get("hooks_fr", {})
+        key = "hook_a" if "a" in hook_key else "hook_b"
+        new_hook = hooks.get(key, "")
+        if new_hook and post.get("content_fr"):
+            lines = post["content_fr"].split("\n")
+            lines[0] = new_hook
+            post["content_fr"] = "\n".join(lines)
+    elif "en" in hook_key:
+        hooks = quality_report.get("hooks_en", {})
+        key = "hook_a" if "a" in hook_key else "hook_b"
+        new_hook = hooks.get(key, "")
+        if new_hook and post.get("content_en"):
+            lines = post["content_en"].split("\n")
+            lines[0] = new_hook
+            post["content_en"] = "\n".join(lines)
+    return post
+
+
 def process_approval(action_data):
     action = action_data.get("action")
     publish_date = action_data.get("publish_date")
     lang_approved = action_data.get("lang_approved", "both")
+    use_hook = action_data.get("use_hook")
     if not os.path.exists(PENDING_DIR):
         return
     pending_file = None
@@ -160,6 +188,8 @@ def process_approval(action_data):
         post = json.load(f)
     if action == "approve":
         os.makedirs(APPROVED_DIR, exist_ok=True)
+        if use_hook:
+            post = apply_hook_replacement(post, use_hook)
         post["approval_status"] = "approved"
         post["lang_approved"] = lang_approved
         post["approved_at"] = datetime.now().strftime("%Y-%m-%d %H:%M")
@@ -187,15 +217,13 @@ def process_approval(action_data):
 
 def main():
     print(f"[START] Approval Check -- {datetime.now().strftime('%Y-%m-%d %H:%M')}")
-    print("[1/2] Verification des reponses email...")
     actions = check_emails_gmail()
     print(f"       -> {len(actions)} reponses trouvees")
     if not actions:
         print("[DONE] Aucune reponse.")
         return
-    print("[2/2] Traitement...")
     for action_data in actions:
-        print(f"  Action: {action_data['action']} | Lang: {action_data.get('lang_approved', '?')} | Date: {action_data.get('publish_date', '?')}")
+        print(f"  Action: {action_data['action']} | Lang: {action_data.get('lang_approved', '?')}")
         process_approval(action_data)
     print("[DONE] Termine.")
 
