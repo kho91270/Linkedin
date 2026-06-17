@@ -1,7 +1,5 @@
-```python
-"""
 RECYCLER.PY - Content Rotator Intelligent Bilingue
-Utilise GROQ. Identifie les posts recyclables, transforme en FR+EN, envoie pour validation.
+Identifie les posts recyclables, transforme en FR+EN.
 """
 
 import os
@@ -51,10 +49,9 @@ def send_email_notification(to_email, subject, body_text):
             msg["Subject"] = subject
             raw = base64.urlsafe_b64encode(msg.as_bytes()).decode()
             service.users().messages().send(userId="me", body={"raw": raw}).execute()
-            print("[OK] Email envoye (Gmail API)")
             return True
-        except Exception as e:
-            print(f"[WARN] Gmail API: {e}")
+        except Exception:
+            pass
     if SMTP_EMAIL and SMTP_PASSWORD:
         try:
             msg = MIMEText(body_text, "plain", "utf-8")
@@ -64,10 +61,9 @@ def send_email_notification(to_email, subject, body_text):
             with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
                 server.login(SMTP_EMAIL, SMTP_PASSWORD)
                 server.sendmail(SMTP_EMAIL, to_email, msg.as_string())
-            print("[OK] Email envoye (SMTP)")
             return True
-        except Exception as e:
-            print(f"[ERROR] SMTP: {e}")
+        except Exception:
+            pass
     return False
 
 
@@ -127,34 +123,23 @@ def recycle_post(post):
             "Meme histoire, focus sur UNE lecon differente",
             "Transformer en conseil actionnable (framework)",
             "Prendre le contre-pied: ce qui aurait pu mal tourner",
-            "Generaliser: de mon cas a un principe universel",
         ],
         "analyste": [
-            "Update avec nouvelles infos (levee, pivot)",
+            "Update avec nouvelles infos",
             "Comparer avec un concurrent",
             "Retour apres X mois: prediction verifiee ?",
-            "Elargir a un trend plus large",
         ],
         "conversation": [
             "Reformuler avec nouveau contexte",
-            "Synthese des meilleures reponses",
             "Prendre position: donner MA reponse",
         ],
         "insight": [
             "Developper en post terrain complet",
             "Transformer en carrousel avec exemples",
-            "Illustrer avec un cas reel recent",
         ],
     }
 
     strategy = random.choice(strategies.get(pillar, strategies["terrain"]))
-
-    format_instructions = {
-        "texte": "Post texte (800-1500 chars). Hook < 150 chars -> Vecu -> Insight -> Question. 3-5 hashtags.",
-        "carrousel": "SLIDE 1: [hook] / SLIDE 2: [probleme] / SLIDE 3-6: [points] / SLIDE 7: [CTA].",
-        "question": "Post court (300-600 chars). Contexte + Question ouverte. 3-5 hashtags.",
-        "insight": "Post tres court (200-400 chars). 1 contexte + 1 lecon + 1 question. 3-5 hashtags.",
-    }
 
     prompt_fr = f"""Tu es Mehdi, Category Manager en procurement.
 Recycle cet ancien post avec un NOUVEL ANGLE completement different.
@@ -166,7 +151,6 @@ POST ORIGINAL (publie il y a {post.get('_days_since', 90)} jours):
 
 STRATEGIE: "{strategy}"
 FORMAT: {new_format}
-INSTRUCTIONS: {format_instructions.get(new_format, format_instructions['texte'])}
 
 REGLES:
 - Ecris en FRANCAIS
@@ -174,7 +158,8 @@ REGLES:
 - Meme theme, NOUVEL angle
 - Premiere personne, ton direct
 - Le lecteur ne doit PAS reconnaitre un recyclage
-- Accroche < 150 chars
+- 800-1500 chars, hook < 150 chars
+- 3-5 hashtags a la fin
 
 Ecris UNIQUEMENT le nouveau post en francais."""
 
@@ -188,7 +173,6 @@ ORIGINAL POST (published {post.get('_days_since', 90)} days ago):
 
 STRATEGY: "{strategy}"
 FORMAT: {new_format}
-INSTRUCTIONS: {format_instructions.get(new_format, format_instructions['texte'])}
 
 RULES:
 - Write in ENGLISH
@@ -196,8 +180,9 @@ RULES:
 - Same theme, NEW angle
 - First person, direct tone
 - The reader must NOT recognize a recycled post
-- Hook < 150 chars
-- This is NOT a translation. Write a NATIVE English post for an international audience.
+- 800-1500 chars, hook < 150 chars
+- 3-5 hashtags at the end
+- NATIVE English, NOT a translation
 
 Write ONLY the new LinkedIn post in English."""
 
@@ -233,36 +218,24 @@ Write ONLY the new LinkedIn post in English."""
 
 def main():
     print(f"[START] Recycler -- {datetime.now().strftime('%Y-%m-%d %H:%M')}")
-
-    print("\n[1/3] Recherche des posts recyclables...")
     recyclable = find_recyclable_posts()
     print(f"       -> {len(recyclable)} posts recyclables")
-
     if not recyclable:
         print("[DONE] Aucun post a recycler.")
         return
-
-    print("\n[2/3] Recyclage bilingue...")
     recycled_log = load_recycled_log()
-    recycled_count = 0
-
     for post in recyclable[:2]:
-        print(f"\n  --- {post.get('_filename', '?')} ({post.get('_days_since')}j)")
         recycled_post = recycle_post(post)
         if not recycled_post:
-            print("      [FAIL]")
             continue
-
         os.makedirs(PENDING_DIR, exist_ok=True)
         date_str = datetime.now().strftime("%Y-%m-%d")
         filename = f"pending_{date_str}_recycled_{recycled_post['pillar']}.json"
         with open(os.path.join(PENDING_DIR, filename), "w", encoding="utf-8") as f:
             json.dump(recycled_post, f, ensure_ascii=False, indent=2)
-
         if NOTIFY_EMAIL:
             body = f"""POST RECYCLE A VALIDER (FR + EN)
-Pilier: {recycled_post['pillar']} | Format: {recycled_post['format']}
-Strategie: {recycled_post['recycle_strategy']}
+Pilier: {recycled_post['pillar']} | Strategie: {recycled_post['recycle_strategy']}
 
 {'='*40}
 VERSION FRANCAISE
@@ -274,25 +247,16 @@ ENGLISH VERSION
 {'='*40}
 {recycled_post['content_en']}
 
-{'='*40}
-ORIGINAL (comparaison):
-{post.get('content_fr', post.get('content', ''))[:400]}
-
 ---
-Reponds OK (les 2) / OK FR / OK EN / SKIP"""
-            send_email_notification(NOTIFY_EMAIL, f"[LinkedIn Recycle] Post bilingue a valider ({recycled_post['pillar'].upper()})", body)
-
+Reponds OK / OK FR / OK EN / SKIP"""
+            send_email_notification(NOTIFY_EMAIL, f"[LinkedIn Recycle] Post bilingue ({recycled_post['pillar'].upper()})", body)
         recycled_log["recycled"].append({
             "date": date_str,
             "original_filename": post.get("_filename", ""),
             "new_format": recycled_post["format"],
             "strategy": recycled_post["recycle_strategy"],
         })
-        recycled_count += 1
-        print(f"      [OK] FR ({len(recycled_post['content_fr'])} chars) + EN ({len(recycled_post['content_en'])} chars)")
-
     save_recycled_log(recycled_log)
-    print(f"\n[3/3] Resume: {recycled_count} recycles (bilingue)")
     print("[DONE]")
 
 
