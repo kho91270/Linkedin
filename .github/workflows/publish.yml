@@ -1,0 +1,14 @@
+
+name: Publish LinkedIn Post
+
+on:
+  schedule:
+    # Mardi, Jeudi, Samedi a 6h30 UTC (8h30 Paris)
+    - cron: '30 6 * * 2,4,6'
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name
