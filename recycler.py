@@ -1,13 +1,16 @@
+```python
 
 """
 RECYCLER.PY — Content Rotator Intelligent
-Identifie les posts recyclables, les transforme avec un nouvel angle,
-et les remet dans la queue de publication.
+Identifie les posts recyclables, les transforme, et les soumet a validation.
 """
 
 import os
 import json
 import random
+import smtplib
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 from datetime import datetime, timedelta
 from openai import OpenAI
 
@@ -15,21 +18,17 @@ from openai import OpenAI
 # CONFIGURATION
 # ============================================================
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
+SMTP_EMAIL = os.environ.get("SMTP_EMAIL")
+SMTP_PASSWORD = os.environ.get("SMTP_PASSWORD")
+NOTIFY_EMAIL = os.environ.get("NOTIFY_EMAIL")
+
 client = OpenAI(api_key=OPENAI_API_KEY)
 
 PUBLISHED_DIR = "published_posts"
-QUEUE_FILE = "content_queue.json"
+PENDING_DIR = "pending_approval"
 RECYCLED_LOG = "recycled_log.json"
 
-# Delais minimums avant recyclage (en jours)
-RECYCLE_DELAYS = {
-    "terrain": 90,
-    "analyste": 60,
-    "conversation": 45,
-    "insight": 45,
-}
-
-# Transformations possibles par format
+RECYCLE_DELAYS = {"terrain": 90, "analyste": 60, "conversation": 45, "insight": 45}
 FORMAT_TRANSFORMS = {
     "texte": ["carrousel", "question", "insight"],
     "carrousel": ["texte", "insight"],
@@ -39,27 +38,9 @@ FORMAT_TRANSFORMS = {
 
 
 # ============================================================
-# CHARGEMENT DES DONNEES
+# CHARGEMENT
 # ============================================================
-def load_published_posts():
-    """Charge tous les posts publies."""
-    posts = []
-    if not os.path.exists(PUBLISHED_DIR):
-        return posts
-
-    for filename in os.listdir(PUBLISHED_DIR):
-        if filename.endswith(".json"):
-            filepath = os.path.join(PUBLISHED_DIR, filename)
-            with open(filepath, "r", encoding="utf-8") as f:
-                post = json.load(f)
-                post["_filename"] = filename
-                posts.append(post)
-
-    return posts
-
-
 def load_recycled_log():
-    """Charge le log des posts deja recycles."""
     if os.path.exists(RECYCLED_LOG):
         with open(RECYCLED_LOG, "r", encoding="utf-8") as f:
             return json.load(f)
@@ -67,187 +48,120 @@ def load_recycled_log():
 
 
 def save_recycled_log(log):
-    """Sauvegarde le log."""
     with open(RECYCLED_LOG, "w", encoding="utf-8") as f:
         json.dump(log, f, ensure_ascii=False, indent=2)
-
-
-def load_queue():
-    """Charge la queue de contenu."""
-    if os.path.exists(QUEUE_FILE):
-        with open(QUEUE_FILE, "r", encoding="utf-8") as f:
-            return json.load(f)
-    return []
-
-
-def save_queue(queue):
-    """Sauvegarde la queue."""
-    with open(QUEUE_FILE, "w", encoding="utf-8") as f:
-        json.dump(queue, f, ensure_ascii=False, indent=2)
 
 
 # ============================================================
 # IDENTIFICATION DES POSTS RECYCLABLES
 # ============================================================
-def is_recyclable(post, recycled_log):
-    """Determine si un post est recyclable."""
-    published_date = post.get("published_date")
-    if not published_date:
-        return False, "pas de date"
-
-    # Verifier le delai minimum
-    try:
-        pub_date = datetime.strptime(published_date, "%Y-%m-%d")
-    except ValueError:
-        return False, "date invalide"
-
-    pillar = post.get("pillar", "terrain")
-    min_delay = RECYCLE_DELAYS.get(pillar, 90)
-    days_since = (datetime.now() - pub_date).days
-
-    if days_since < min_delay:
-        return False, f"trop recent ({days_since}j < {min_delay}j)"
-
-    # Verifier si deja recycle
-    filename = post.get("_filename", "")
-    already_recycled = any(
-        r.get("original_filename") == filename
-        for r in recycled_log.get("recycled", [])
-    )
-    if already_recycled:
-        return False, "deja recycle"
-
-    # Verifier la blacklist
-    if filename in recycled_log.get("blacklist", []):
-        return False, "blackliste"
-
-    # Post doit avoir du contenu suffisant
-    if not post.get("content") or len(post.get("content", "")) < 100:
-        return False, "contenu insuffisant"
-
-    return True, f"recyclable ({days_since}j)"
-
-
 def find_recyclable_posts():
-    """Trouve tous les posts prets a etre recycles."""
-    posts = load_published_posts()
+    """Trouve les posts prets a recycler."""
     recycled_log = load_recycled_log()
     recyclable = []
 
-    for post in posts:
-        can_recycle, reason = is_recyclable(post, recycled_log)
-        if can_recycle:
-            recyclable.append(post)
-            print(f"  [OK] {post.get('_filename', '?')} -- {reason}")
+    if not os.path.exists(PUBLISHED_DIR):
+        return []
+
+    for fn in os.listdir(PUBLISHED_DIR):
+        if not fn.endswith(".json"):
+            continue
+        with open(os.path.join(PUBLISHED_DIR, fn), "r", encoding="utf-8") as f:
+            post = json.load(f)
+
+        pub_date = post.get("published_date")
+        if not pub_date:
+            continue
+
+        try:
+            days_since = (datetime.now() - datetime.strptime(pub_date, "%Y-%m-%d")).days
+        except ValueError:
+            continue
+
+        pillar = post.get("pillar", "terrain")
+        min_delay = RECYCLE_DELAYS.get(pillar, 90)
+
+        if days_since < min_delay:
+            continue
+
+        already = any(r.get("original_filename") == fn for r in recycled_log.get("recycled", []))
+        if already or fn in recycled_log.get("blacklist", []):
+            continue
+
+        if not post.get("content") or len(post.get("content", "")) < 100:
+            continue
+
+        post["_filename"] = fn
+        post["_days_since"] = days_since
+        recyclable.append(post)
 
     return recyclable
 
 
 # ============================================================
-# TRANSFORMATION DU CONTENU
+# TRANSFORMATION
 # ============================================================
-def determine_new_format(original_format):
-    """Determine le nouveau format pour le recyclage."""
-    options = FORMAT_TRANSFORMS.get(original_format, ["texte"])
-    return random.choice(options)
-
-
-def recycle_post(post, new_format=None):
-    """Recycle un post avec un nouvel angle et/ou format."""
+def recycle_post(post):
+    """Transforme un post avec un nouvel angle."""
     original_content = post.get("content", "")
-    original_pillar = post.get("pillar", "terrain")
+    pillar = post.get("pillar", "terrain")
     original_format = post.get("format", "texte")
-    published_date = post.get("published_date", "2025-01-01")
+    new_format = random.choice(FORMAT_TRANSFORMS.get(original_format, ["texte"]))
 
-    if not new_format:
-        new_format = determine_new_format(original_format)
-
-    # Calculer le nombre de jours depuis publication
-    try:
-        days_ago = (datetime.now() - datetime.strptime(published_date, "%Y-%m-%d")).days
-    except ValueError:
-        days_ago = 90
-
-    # Strategies de recyclage par pilier
     strategies = {
         "terrain": [
-            "Meme histoire mais focus sur UNE seule lecon differente",
-            "Transformer en conseil actionnable (framework/checklist)",
-            "Prendre le contre-pied : qu'est-ce qui aurait pu mal tourner ?",
-            "Contextualiser avec une actualite recente du secteur",
-            "Generaliser la lecon : de mon cas specifique a un principe universel",
+            "Meme histoire, focus sur UNE lecon differente",
+            "Transformer en conseil actionnable (framework)",
+            "Prendre le contre-pied: ce qui aurait pu mal tourner",
+            "Generaliser: de mon cas a un principe universel",
         ],
         "analyste": [
-            "Update avec des nouvelles informations (levee, pivot, acquisition)",
-            "Comparer avec un concurrent ou une alternative",
-            "Donner ton retour apres X mois d'observation",
-            "Elargir l'analyse a un trend plus large",
-            "Prendre position : est-ce que ta prediction s'est verifiee ?",
+            "Update avec nouvelles infos (levee, pivot)",
+            "Comparer avec un concurrent",
+            "Retour apres X mois: prediction verifiee ?",
+            "Elargir a un trend plus large",
         ],
         "conversation": [
-            "Reformuler la question avec un nouveau contexte",
-            "Transformer les meilleures reponses en post de synthese",
-            "Prendre position : donner TA reponse cette fois",
-            "Ajouter un sondage avec des options concretes",
+            "Reformuler la question avec nouveau contexte",
+            "Synthese des meilleures reponses",
+            "Prendre position: donner MA reponse cette fois",
         ],
         "insight": [
-            "Developper l'insight en post terrain complet avec une histoire",
-            "Transformer en carrousel avec exemples concrets",
-            "Combiner avec un autre insight pour un post plus riche",
+            "Developper en post terrain complet",
+            "Transformer en carrousel avec exemples",
             "Illustrer avec un cas reel recent",
         ],
     }
 
-    strategy_options = strategies.get(original_pillar, strategies["terrain"])
-    chosen_strategy = random.choice(strategy_options)
+    strategy = random.choice(strategies.get(pillar, strategies["terrain"]))
 
-    # Instructions par format de sortie
     format_instructions = {
-        "texte": """Post texte LinkedIn (800-1500 caracteres).
-Structure HVIA: Hook (1 ligne choc < 150 chars) -> Vecu/Contexte (3-5 lignes) -> Insight (la lecon) -> Appel (question ouverte)
-Aere avec des sauts de ligne. Max 3 emojis. 3-5 hashtags a la fin.""",
-        "carrousel": """Texte pour un carrousel LinkedIn (slide par slide).
-Format OBLIGATOIRE:
-SLIDE 1: [titre hook percutant - max 10 mots]
-SLIDE 2: [le probleme ou la question]
-SLIDE 3: [point 1]
-SLIDE 4: [point 2]
-SLIDE 5: [point 3]
-SLIDE 6: [recap / synthese]
-SLIDE 7: [CTA - question ouverte + "Enregistre ce post"]
-Chaque slide = 1-3 phrases max. Phrases courtes et percutantes.""",
-        "question": """Post court (300-600 caracteres) qui pose une question ouverte engageante.
-Structure: 2-3 lignes de contexte personnel + LA question + 3-5 hashtags.
-La question doit etre polarisante ou faire reflechir.""",
-        "insight": """Post tres court (200-400 caracteres).
-Structure: 1 phrase de contexte + 1 lecon percutante (en gras possible) + 1 question courte.
-3-5 hashtags a la fin. Max 1 emoji.""",
+        "texte": "Post texte (800-1500 chars). Hook < 150 chars -> Vecu -> Insight -> Question ouverte. 3-5 hashtags.",
+        "carrousel": "Format: SLIDE 1: [hook] / SLIDE 2: [probleme] / SLIDE 3-6: [points] / SLIDE 7: [CTA]. Court par slide.",
+        "question": "Post court (300-600 chars). Contexte + Question ouverte engageante. 3-5 hashtags.",
+        "insight": "Post tres court (200-400 chars). 1 contexte + 1 lecon + 1 question. 3-5 hashtags.",
     }
 
-    prompt = f"""Tu es Mehdi, Category Manager en procurement, expert LinkedIn.
-Tu dois RECYCLER un ancien post avec un nouvel angle COMPLETEMENT DIFFERENT.
+    prompt = f"""Tu es Mehdi, Category Manager en procurement.
+Recycle cet ancien post avec un NOUVEL ANGLE completement different.
 
-POST ORIGINAL (publie il y a {days_ago} jours):
+POST ORIGINAL (publie il y a {post.get('_days_since', 90)} jours):
 ---
 {original_content}
 ---
 
-STRATEGIE DE RECYCLAGE:
-"{chosen_strategy}"
+STRATEGIE: "{strategy}"
+FORMAT: {new_format}
+INSTRUCTIONS: {format_instructions.get(new_format, format_instructions['texte'])}
 
-NOUVEAU FORMAT: {new_format}
-INSTRUCTIONS FORMAT:
-{format_instructions.get(new_format, format_instructions['texte'])}
+REGLES:
+- TRES DIFFERENT de l'original (pas une reformulation)
+- Meme theme, NOUVEL angle
+- Premiere personne, ton direct
+- Le lecteur ne doit PAS reconnaitre un recyclage
+- Accroche < 150 chars
 
-REGLES STRICTES:
-- Le nouveau post doit etre TRES DIFFERENT de l'original (pas une simple reformulation)
-- Garder le meme sujet/theme mais avec un NOUVEL ANGLE selon la strategie
-- Ecrire a la premiere personne (je suis Mehdi, Category Manager)
-- Ton professionnel mais humain, direct, pas de bullshit corporate
-- Ne JAMAIS copier des phrases de l'original
-- Le lecteur ne doit PAS reconnaitre que c'est un recyclage
-
-Ecris UNIQUEMENT le nouveau post. Rien d'autre autour."""
+Ecris UNIQUEMENT le nouveau post."""
 
     try:
         response = client.chat.completions.create(
@@ -256,35 +170,84 @@ Ecris UNIQUEMENT le nouveau post. Rien d'autre autour."""
             temperature=0.85,
             max_tokens=1500,
         )
-        new_content = response.choices[0].message.content.strip()
-
-        recycled_post = {
-            "content": new_content,
-            "pillar": original_pillar,
+        return {
+            "content": response.choices[0].message.content.strip(),
+            "pillar": pillar,
             "format": new_format,
-            "status": "ready",
+            "status": "pending_approval",
             "source": "recycled",
             "original_filename": post.get("_filename", ""),
-            "original_date": post.get("published_date", ""),
-            "recycle_strategy": chosen_strategy,
-            "recycled_date": datetime.now().strftime("%Y-%m-%d"),
+            "recycle_strategy": strategy,
+            "generated_date": datetime.now().strftime("%Y-%m-%d %H:%M"),
         }
-        return recycled_post
-
     except Exception as e:
         print(f"[ERROR] Recyclage: {e}")
         return None
 
 
 # ============================================================
-# AJOUT A LA QUEUE
+# EMAIL DE VALIDATION (recycle)
 # ============================================================
-def add_to_queue(recycled_post):
-    """Ajoute le post recycle a la queue de publication."""
-    queue = load_queue()
-    queue.append(recycled_post)
-    save_queue(queue)
-    return len(queue)
+def send_recycle_approval_email(recycled_post, original_post):
+    """Envoie un email pour valider le post recycle."""
+    if not SMTP_EMAIL or not SMTP_PASSWORD or not NOTIFY_EMAIL:
+        print("[WARN] Email non configure")
+        return False
+
+    subject = f"[LinkedIn Recycle] Post a valider ({recycled_post['pillar'].upper()})"
+
+    body = f"""POST RECYCLE A VALIDER
+{'='*40}
+Pilier: {recycled_post['pillar'].upper()} | Format: {recycled_post.get('format', 'texte')}
+Strategie: {recycled_post.get('recycle_strategy', '?')}
+Original publie il y a {original_post.get('_days_since', '?')} jours
+
+--- NOUVEAU POST ---
+
+{recycled_post['content']}
+
+--- POST ORIGINAL (pour comparaison) ---
+
+{original_post.get('content', '')[:500]}
+
+--- FIN ---
+
+Pour approuver: reponds OK ou APPROVE
+Pour modifier: reponds avec tes corrections
+Pour refuser: reponds SKIP ou REFUSE
+"""
+
+    msg = MIMEText(body, "plain", "utf-8")
+    msg["Subject"] = subject
+    msg["From"] = SMTP_EMAIL
+    msg["To"] = NOTIFY_EMAIL
+
+    try:
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+            server.login(SMTP_EMAIL, SMTP_PASSWORD)
+            server.sendmail(SMTP_EMAIL, NOTIFY_EMAIL, msg.as_string())
+        print(f"[OK] Email de validation recycle envoye")
+        return True
+    except Exception as e:
+        print(f"[ERROR] Email: {e}")
+        return False
+
+
+# ============================================================
+# SAUVEGARDE EN PENDING
+# ============================================================
+def save_as_pending(recycled_post):
+    """Sauvegarde le post recycle en attente de validation."""
+    os.makedirs(PENDING_DIR, exist_ok=True)
+    date_str = datetime.now().strftime("%Y-%m-%d")
+    filename = f"pending_{date_str}_recycled_{recycled_post['pillar']}.json"
+    filepath = os.path.join(PENDING_DIR, filename)
+
+    with open(filepath, "w", encoding="utf-8") as f:
+        json.dump(recycled_post, f, ensure_ascii=False, indent=2)
+
+    print(f"[OK] Sauvegarde en pending: {filepath}")
+    return filepath
 
 
 # ============================================================
@@ -302,47 +265,47 @@ def main():
         print("[DONE] Aucun post a recycler pour le moment.")
         return
 
-    # Recycler les meilleurs candidats (max 2 par execution)
-    print("\n[2/3] Recyclage en cours...")
+    # Recycler max 2 posts
+    print("\n[2/3] Recyclage...")
     recycled_log = load_recycled_log()
     recycled_count = 0
     max_recycle = 2
 
     for post in recyclable[:max_recycle]:
-        print(f"\n  --- Recyclage de: {post.get('_filename', '?')}")
-        print(f"  Original: pilier={post.get('pillar', '?')} | format={post.get('format', '?')}")
-        print(f"  Preview: {post.get('content', '')[:80]}...")
+        print(f"\n  --- Recyclage: {post.get('_filename', '?')}")
+        print(f"      Original: {post.get('pillar', '?')}/{post.get('format', '?')} | {post.get('_days_since', '?')}j")
 
-        new_format = determine_new_format(post.get("format", "texte"))
-        print(f"  Nouveau format: {new_format}")
+        recycled_post = recycle_post(post)
+        if not recycled_post:
+            print(f"      [FAIL] Echec de recyclage")
+            continue
 
-        recycled_post = recycle_post(post, new_format)
-        if recycled_post:
-            # Ajouter a la queue
-            queue_size = add_to_queue(recycled_post)
-            print(f"  [OK] Ajoute a la queue (taille queue: {queue_size})")
-            print(f"  Nouveau post preview: {recycled_post['content'][:100]}...")
+        print(f"      [OK] Nouveau format: {recycled_post['format']}")
+        print(f"      Preview: {recycled_post['content'][:100]}...")
 
-            # Logger le recyclage
-            recycled_log["recycled"].append({
-                "date": datetime.now().strftime("%Y-%m-%d"),
-                "original_filename": post.get("_filename", ""),
-                "original_date": post.get("published_date", ""),
-                "new_format": new_format,
-                "strategy": recycled_post.get("recycle_strategy", ""),
-            })
-            recycled_count += 1
-        else:
-            print(f"  [FAIL] Echec du recyclage")
+        # Sauvegarder en pending
+        save_as_pending(recycled_post)
 
-    # Sauvegarder le log
+        # Envoyer email de validation
+        send_recycle_approval_email(recycled_post, post)
+
+        # Logger
+        recycled_log["recycled"].append({
+            "date": datetime.now().strftime("%Y-%m-%d"),
+            "original_filename": post.get("_filename", ""),
+            "original_date": post.get("published_date", ""),
+            "new_format": recycled_post["format"],
+            "strategy": recycled_post.get("recycle_strategy", ""),
+        })
+        recycled_count += 1
+
     save_recycled_log(recycled_log)
 
     # Resume
     print(f"\n[3/3] Resume")
-    print(f"       Posts recycles cette session: {recycled_count}/{max_recycle}")
-    print(f"       Total recycles (historique): {len(recycled_log['recycled'])}")
-    print(f"       Posts encore recyclables: {len(recyclable) - recycled_count}")
+    print(f"       Recycles cette session: {recycled_count}")
+    print(f"       Total historique: {len(recycled_log['recycled'])}")
+    print(f"       Encore recyclables: {len(recyclable) - recycled_count}")
     print("[DONE] Recycler termine.")
 
 
