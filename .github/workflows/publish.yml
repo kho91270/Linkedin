@@ -1,13 +1,42 @@
-name: Publish LinkedIn Post
+name: LinkedIn Bot
 
 on:
   schedule:
-    # Mardi, Jeudi, Samedi a 6h30 UTC (8h30 Paris)
-    - cron: '30 6 * * 2,4,6'
+    - cron: '0 6 * * *'
   workflow_dispatch:
 
 jobs:
-  publish:
+  run-bot:
     runs-on: ubuntu-latest
     steps:
-      - name
+      - name: Checkout repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: pip install groq requests feedparser google-auth google-auth-oauthlib google-api-python-client
+      - name: Run veille
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
+        run: python veille.py
+      - name: Generate post
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          LEONARDO_API_KEY: ${{ secrets.LEONARDO_API_KEY }}
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+          SMTP_EMAIL: ${{ secrets.SMTP_EMAIL }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          NOTIFY_EMAIL: ${{ secrets.NOTIFY_EMAIL }}
+        run: python bot.py generate
+      - name: Commit results
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "GitHub Action"
+          git add -A.
+          git diff --staged --quiet || git commit -m "bot run"
+          git push
