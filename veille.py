@@ -1,8 +1,7 @@
 
 """
-VEILLE.PY — Intelligence Procuretech Engine
-Scanne les sources procurement automatiquement.
-Genere un brief quotidien pour alimenter la redaction.
+VEILLE.PY - Intelligence Procuretech Engine
+Utilise GROQ pour l'IA. Collecte RSS + NewsAPI, filtre, genere un brief.
 """
 
 import os
@@ -10,15 +9,13 @@ import json
 import requests
 import feedparser
 from datetime import datetime, timedelta
-from openai import OpenAI
+from groq import Groq
 
-# ============================================================
-# CONFIGURATION
-# ============================================================
-OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
+GROQ_API_KEY = os.environ.get("GROQ_API_KEY")
 NEWS_API_KEY = os.environ.get("NEWS_API_KEY")
 
-client = OpenAI(api_key=OPENAI_API_KEY)
+client = Groq(api_key=GROQ_API_KEY)
+GROQ_MODEL = "llama-3.3-70b-versatile"
 
 RSS_FEEDS = {
     "Spend Matters": "https://spendmatters.com/feed/",
@@ -42,14 +39,9 @@ OUTPUT_DIR = "veille_briefs"
 ARCHIVE_DIR = "veille_archive"
 
 
-# ============================================================
-# COLLECTE
-# ============================================================
 def fetch_rss_articles():
-    """Recupere les articles RSS des 48 dernieres heures."""
     articles = []
     cutoff = datetime.now() - timedelta(hours=48)
-
     for source_name, feed_url in RSS_FEEDS.items():
         try:
             feed = feedparser.parse(feed_url)
@@ -61,7 +53,6 @@ def fetch_rss_articles():
                     published = datetime(*entry.updated_parsed[:6])
                 else:
                     published = datetime.now()
-
                 if published >= cutoff:
                     articles.append({
                         "source": source_name,
@@ -72,22 +63,18 @@ def fetch_rss_articles():
                     })
         except Exception as e:
             print(f"[WARN] RSS {source_name}: {e}")
-
     return articles
 
 
 def fetch_news_api():
-    """Recupere les news via NewsAPI."""
     if not NEWS_API_KEY:
         return []
-
     articles = []
     queries = [
         "procurement technology startup funding",
         "procuretech AI sourcing automation",
         "procurement software Series funding",
     ]
-
     for query in queries:
         try:
             url = "https://newsapi.org/v2/everything"
@@ -112,49 +99,34 @@ def fetch_news_api():
                     })
         except Exception as e:
             print(f"[WARN] NewsAPI: {e}")
-
     return articles
 
 
-# ============================================================
-# SCORING & FILTRAGE
-# ============================================================
 def score_article(article):
-    """Score de pertinence procurement."""
     text = f"{article['title']} {article['summary']}".lower()
     score = 0
-
     for keyword in KEYWORDS:
         if keyword.lower() in text:
             score += 2
-
-    funding_words = ["raises", "raised", "funding", "series", "million", "leve", "levee"]
-    for word in funding_words:
+    for word in ["raises", "raised", "funding", "series", "million", "leve", "levee"]:
         if word in text:
             score += 5
-
-    startup_words = ["startup", "launch", "new platform", "announces", "unveils"]
-    for word in startup_words:
+    for word in ["startup", "launch", "new platform", "announces", "unveils"]:
         if word in text:
             score += 3
-
-    ai_words = ["ai", "artificial intelligence", "machine learning", "automation"]
-    for word in ai_words:
+    for word in ["ai", "artificial intelligence", "machine learning", "automation"]:
         if word in text:
             score += 2
-
     return score
 
 
 def filter_and_rank(articles):
-    """Filtre et classe par pertinence."""
     scored = []
     for article in articles:
         s = score_article(article)
         if s >= 4:
             article["relevance_score"] = s
             scored.append(article)
-
     seen = set()
     unique = []
     for a in scored:
@@ -162,26 +134,18 @@ def filter_and_rank(articles):
         if key not in seen:
             seen.add(key)
             unique.append(a)
-
     unique.sort(key=lambda x: x["relevance_score"], reverse=True)
     return unique[:15]
 
 
-# ============================================================
-# GENERATION DU BRIEF
-# ============================================================
 def generate_brief(articles):
-    """Genere un brief structure via OpenAI."""
     if not articles:
         return {"date": datetime.now().strftime("%Y-%m-%d"), "status": "NO_NEWS"}
-
     articles_text = ""
     for i, art in enumerate(articles[:10], 1):
         articles_text += f"\n{i}. [{art['source']}] {art['title']}\n   {art['summary'][:200]}\n"
-
     prompt = f"""Tu es un analyste marche procurement/procuretech.
 Voici les articles pertinents des 48 dernieres heures:
-
 {articles_text}
 
 Genere un brief en JSON:
@@ -202,7 +166,7 @@ Reponds UNIQUEMENT avec le JSON."""
 
     try:
         response = client.chat.completions.create(
-            model="gpt-4o",
+            model=GROQ_MODEL,
             messages=[{"role": "user", "content": prompt}],
             temperature=0.3,
             max_tokens=1500,
@@ -220,48 +184,34 @@ Reponds UNIQUEMENT avec le JSON."""
         return {"date": datetime.now().strftime("%Y-%m-%d"), "status": "ERROR", "error": str(e), "raw_articles": articles[:10]}
 
 
-# ============================================================
-# SAUVEGARDE
-# ============================================================
 def save_brief(brief):
-    """Sauvegarde le brief."""
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     os.makedirs(ARCHIVE_DIR, exist_ok=True)
     date_str = datetime.now().strftime("%Y-%m-%d")
     filename = f"brief_{date_str}.json"
-
     for directory in [OUTPUT_DIR, ARCHIVE_DIR]:
         filepath = os.path.join(directory, filename)
         with open(filepath, "w", encoding="utf-8") as f:
             json.dump(brief, f, ensure_ascii=False, indent=2)
-
     print(f"[OK] Brief sauvegarde: {OUTPUT_DIR}/{filename}")
     return os.path.join(OUTPUT_DIR, filename)
 
 
-# ============================================================
-# MAIN
-# ============================================================
 def main():
     print(f"[START] Veille -- {datetime.now().strftime('%Y-%m-%d %H:%M')}")
-
     print("[1/4] Collecte RSS...")
     rss = fetch_rss_articles()
     print(f"       -> {len(rss)} articles RSS")
-
     print("[2/4] Collecte NewsAPI...")
     news = fetch_news_api()
     print(f"       -> {len(news)} articles NewsAPI")
-
     print("[3/4] Filtrage et scoring...")
     all_articles = rss + news
     top = filter_and_rank(all_articles)
     print(f"       -> {len(top)} articles retenus")
-
     print("[4/4] Generation du brief...")
     brief = generate_brief(top)
     save_brief(brief)
-
     print("[DONE] Veille terminee.")
 
 
