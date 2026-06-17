@@ -1,4 +1,4 @@
-
+```yaml
 name: Daily Veille Procurement
 
 on:
@@ -18,7 +18,8 @@ jobs:
         with:
           python-version: '3.11'
 
-      - run: pip install groq requests feedparser
+      - name: Install dependencies
+        run: pip install groq requests feedparser
 
       - name: Run veille
         env:
@@ -30,7 +31,6 @@ jobs:
         run: |
           git config user.email "action@github.com"
           git config user.name "GitHub Action"
-          git add veille_briefs/ veille_archive/
+          git add -A veille_briefs/ veille_archive/
           git diff --staged --quiet || git commit -m "veille $(date +%Y-%m-%d)"
           git push
-
