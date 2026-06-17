@@ -1,0 +1,34 @@
+[
+  {
+    "content": "J'ai passe 3 semaines a evaluer un fournisseur avec 5 stakeholders.\n\nLe resultat ? Un desaccord total.\n\nVoici ce que j'aurais du faire des le depart :\n\n1. Aligner les criteres AVANT de commencer (pas apres)\n2. Ponderer les KPIs par importance business (pas technique)\n3. Separer le \"nice to have\" du \"deal breaker\"\n4. Faire voter avant de discuter (eviter le biais du leader)\n5. Documenter les raisons, pas juste les notes\n\nAujourd'hui, ma grille tient sur 1 page.\nEt la decision prend 1 reunion au lieu de 5.\n\nQuel est votre process pour aligner vos stakeholders ?\n\n#Procurement #CategoryManagement #Achats #Sourcing #SupplyChain",
+    "pillar": "terrain",
+    "format": "texte",
+    "status": "ready",
+    "source": "manual",
+    "created_date": "2026-06-17"
+  },
+  {
+    "content": "SLIDE 1: Oro Labs leve 100M$ -- Ce que ca change pour nous\nSLIDE 2: Le probleme : 80% des equipes achats operent encore sur Excel et email\nSLIDE 3: La promesse Oro Labs : orchestrer le procurement de bout en bout avec l'IA\nSLIDE 4: Ce qui marche : automatisation des taches repetitives (PO, approbations, relances)\nSLIDE 5: Ce qui reste a prouver : la negociation complexe et la relation fournisseur\nSLIDE 6: Mon avis terrain : l'IA est un accelerateur, pas un remplacant\nSLIDE 7: Et toi ? Tu as deja teste un outil IA procurement ? Quel retour ?",
+    "pillar": "analyste",
+    "format": "carrousel",
+    "status": "ready",
+    "source": "manual",
+    "created_date": "2026-06-17"
+  },
+  {
+    "content": "Le marche de l'IA procurement passe de 4 Mds$ a 39 Mds$ d'ici 2035.\n\nMais soyons honnetes.\n\nAvant d'investir dans un outil IA :\n- Tes process sont-ils clairs ?\n- Tes donnees sont-elles propres ?\n- Tes stakeholders sont-ils alignes ?\n\nSi non, aucun outil ne te sauvera.\n\nL'IA amplifie ce qui existe. Le bon comme le mauvais.\n\nQu'est-ce qui vous bloque le plus dans votre digitalisation achats ?\n\n#Procuretech #AIprocurement #Achats #DigitalTransformation",
+    "pillar": "analyste",
+    "format": "texte",
+    "status": "ready",
+    "source": "manual",
+    "created_date": "2026-06-17"
+  },
+  {
+    "content": "Quel est le plus gros red flag que vous avez vu chez un fournisseur pendant un RFI/RFP ?\n\nPour moi : quand le commercial ne peut pas repondre a une seule question technique sans \"revenir vers vous\".\n\nCa veut dire qu'il n'a pas implique ses equipes. Et ca ne changera pas apres signature.\n\nVos red flags a vous ?\n\n#Procurement #Sourcing #Achats #RFP #SupplyChain",
+    "pillar": "terrain",
+    "format": "question",
+    "status": "ready",
+    "source": "manual",
+    "created_date": "2026-06-17"
+  }
+]
