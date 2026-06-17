@@ -1,8 +1,6 @@
-```python
-
 """
 ANALYTICS.PY - Performance Dashboard + Rapport Email Hebdomadaire
-Utilise Google Credentials pour envoyer le rapport.
+Supporte les posts bilingues (FR + EN). Analyse par langue.
 """
 
 import os
@@ -107,30 +105,36 @@ def update_all_metrics():
     metrics = load_metrics()
     updated = 0
     for post in posts:
-        post_id = post.get("linkedin_response", {}).get("id")
-        if not post_id or post_id.startswith("sim_"):
-            continue
-        analytics = fetch_post_analytics(post_id)
-        if not analytics:
-            continue
-        entry = {
-            "post_id": post_id,
-            "filename": post.get("_filename", ""),
-            "date": post.get("published_date", ""),
-            "pillar": post.get("pillar", "unknown"),
-            "format": post.get("format", "unknown"),
-            "likes": analytics.get("likesSummary", {}).get("totalLikes", 0),
-            "comments": analytics.get("commentsSummary", {}).get("totalComments", 0),
-            "shares": analytics.get("sharesSummary", {}).get("totalShares", 0),
-            "updated_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
-        }
-        entry["score"] = entry["likes"] + entry["comments"] * 3 + entry["shares"] * 5
-        existing = next((i for i, m in enumerate(metrics["posts_metrics"]) if m.get("post_id") == post_id), None)
-        if existing is not None:
-            metrics["posts_metrics"][existing] = entry
-        else:
-            metrics["posts_metrics"].append(entry)
-        updated += 1
+        for lang_key in ["linkedin_response_fr", "linkedin_response_en", "linkedin_response"]:
+            response_data = post.get(lang_key)
+            if not response_data:
+                continue
+            post_id = response_data.get("id")
+            if not post_id or post_id.startswith("sim_"):
+                continue
+            analytics = fetch_post_analytics(post_id)
+            if not analytics:
+                continue
+            lang = "fr" if "fr" in lang_key else ("en" if "en" in lang_key else "unknown")
+            entry = {
+                "post_id": post_id,
+                "filename": post.get("_filename", ""),
+                "date": post.get("published_date", ""),
+                "pillar": post.get("pillar", "unknown"),
+                "format": post.get("format", "unknown"),
+                "lang": lang,
+                "likes": analytics.get("likesSummary", {}).get("totalLikes", 0),
+                "comments": analytics.get("commentsSummary", {}).get("totalComments", 0),
+                "shares": analytics.get("sharesSummary", {}).get("totalShares", 0),
+                "updated_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
+            }
+            entry["score"] = entry["likes"] + entry["comments"] * 3 + entry["shares"] * 5
+            existing = next((i for i, m in enumerate(metrics["posts_metrics"]) if m.get("post_id") == post_id), None)
+            if existing is not None:
+                metrics["posts_metrics"][existing] = entry
+            else:
+                metrics["posts_metrics"].append(entry)
+            updated += 1
     save_metrics(metrics)
     return updated
 
@@ -143,6 +147,7 @@ def analyze(metrics):
     by_pillar = defaultdict(lambda: {"count": 0, "scores": []})
     by_format = defaultdict(lambda: {"count": 0, "scores": []})
     by_day = defaultdict(lambda: {"count": 0, "scores": []})
+    by_lang = defaultdict(lambda: {"count": 0, "scores": []})
 
     for p in posts:
         score = p.get("score", 0)
@@ -150,6 +155,8 @@ def analyze(metrics):
         by_pillar[p.get("pillar", "?")]["scores"].append(score)
         by_format[p.get("format", "?")]["count"] += 1
         by_format[p.get("format", "?")]["scores"].append(score)
+        by_lang[p.get("lang", "?")]["count"] += 1
+        by_lang[p.get("lang", "?")]["scores"].append(score)
         try:
             day = datetime.strptime(p["date"], "%Y-%m-%d").strftime("%A")
             by_day[day]["count"] += 1
@@ -187,6 +194,7 @@ def analyze(metrics):
         "by_pillar": summarize(by_pillar),
         "by_format": summarize(by_format),
         "by_day": summarize(by_day),
+        "by_lang": summarize(by_lang),
         "top_3": sorted_posts[:3],
         "trend": trend,
     }
@@ -206,6 +214,11 @@ def generate_suggestions(analysis):
     if day_data:
         best = max(day_data.items(), key=lambda x: x[1].get("avg_score", 0))
         suggestions.append(f"Meilleur jour: {best[0]} (score moyen {best[1]['avg_score']})")
+    lang_data = analysis.get("by_lang", {})
+    if lang_data and len(lang_data) > 1:
+        best_lang = max(lang_data.items(), key=lambda x: x[1].get("avg_score", 0))
+        worst_lang = min(lang_data.items(), key=lambda x: x[1].get("avg_score", 0))
+        suggestions.append(f"Langue: '{best_lang[0].upper()}' score {best_lang[1]['avg_score']} vs '{worst_lang[0].upper()}' score {worst_lang[1]['avg_score']}")
     trend = analysis.get("trend", {})
     if trend.get("change_pct") is not None:
         if trend["change_pct"] > 0:
@@ -216,7 +229,7 @@ def generate_suggestions(analysis):
 
 
 def build_report_text(analysis, suggestions):
-    body = f"""RAPPORT HEBDOMADAIRE LINKEDIN
+    body = f"""RAPPORT HEBDOMADAIRE LINKEDIN (BILINGUE)
 {'='*50}
 Genere le: {datetime.now().strftime('%Y-%m-%d %H:%M')}
 Periode: {(datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')} -> {datetime.now().strftime('%Y-%m-%d')}
@@ -234,6 +247,13 @@ PERFORMANCE PAR FORMAT:
 """
     for fmt, data in analysis.get("by_format", {}).items():
         body += f"  {fmt:15} | {data['count']} posts | Score moy: {data['avg_score']} | Max: {data['max_score']}\n"
+
+    body += f"""
+PERFORMANCE PAR LANGUE:
+{'-'*30}
+"""
+    for lang, data in analysis.get("by_lang", {}).items():
+        body += f"  {lang.upper():15} | {data['count']} posts | Score moy: {data['avg_score']} | Max: {data['max_score']}\n"
 
     body += f"""
 PERFORMANCE PAR JOUR:
@@ -259,7 +279,7 @@ TOP 3 POSTS:
 {'-'*30}
 """
     for i, p in enumerate(analysis.get("top_3", [])[:3], 1):
-        body += f"  #{i} [{p.get('pillar','?').upper()}] Score: {p.get('score',0)} | {p.get('date','?')} | Likes: {p.get('likes',0)} Comments: {p.get('comments',0)} Shares: {p.get('shares',0)}\n"
+        body += f"  #{i} [{p.get('pillar','?').upper()}] [{p.get('lang','?').upper()}] Score: {p.get('score',0)} | {p.get('date','?')} | Likes: {p.get('likes',0)} Comments: {p.get('comments',0)} Shares: {p.get('shares',0)}\n"
 
     body += f"""
 SUGGESTIONS:
@@ -321,7 +341,12 @@ def main():
 
     print(f"\n--- RESUME ---")
     print(f"Posts analyses: {analysis['total_posts']}")
-    print(f"Meilleur pilier: {max(analysis.get('by_pillar', {'?': {'avg_score': 0}}).items(), key=lambda x: x[1].get('avg_score', 0))[0] if analysis.get('by_pillar') else 'N/A'}")
+    if analysis.get("by_pillar"):
+        best_pillar = max(analysis["by_pillar"].items(), key=lambda x: x[1].get("avg_score", 0))
+        print(f"Meilleur pilier: {best_pillar[0]}")
+    if analysis.get("by_lang"):
+        best_lang = max(analysis["by_lang"].items(), key=lambda x: x[1].get("avg_score", 0))
+        print(f"Meilleure langue: {best_lang[0].upper()}")
     if trend.get("change_pct") is not None:
         print(f"Tendance: {'+' if trend['change_pct'] > 0 else ''}{trend['change_pct']}%")
     print("[DONE] Analytics termine.")
@@ -329,4 +354,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
