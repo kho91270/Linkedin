@@ -11,21 +11,21 @@
   },
   "new_tool": {
     "name": "Merlin Intake",
-    "description": "Outil de Zycus pour l'intake-to-pay"
+    "description": "Outil de gestion de la chaîne d'approvisionnement de Zycus"
   },
   "hot_topic": {
-    "subject": "Chaîne d'approvisionnement",
-    "why_it_matters": "Importance pour les acheteurs de comprendre les dernières tendances et réglementations"
+    "subject": "La chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent être informés des dernières tendances et réglementations pour optimiser leurs processus"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Découvrez les dernières tendances en chaîne d'approvisionnement",
+      "hook": "Découvrez les dernières tendances en matière de chaîne d'approvisionnement",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Comment les nouvelles réglementations douanières affectent-elles vos opérations ?",
+      "hook": "Comment les réglementations douanières affectent-elles vos processus d'approvisionnement ?",
       "format": "question"
     }
   ],
