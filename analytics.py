@@ -1,8 +1,7 @@
 
 """
 ANALYTICS.PY — Performance Dashboard
-Suivi des metriques LinkedIn, analyse des tendances,
-et generation de rapports hebdomadaires avec suggestions.
+Suivi des metriques, analyse des tendances, rapport hebdomadaire.
 """
 
 import os
@@ -16,123 +15,78 @@ from collections import defaultdict
 # ============================================================
 LINKEDIN_ACCESS_TOKEN = os.environ.get("LINKEDIN_ACCESS_TOKEN")
 LINKEDIN_PERSON_ID = os.environ.get("LINKEDIN_PERSON_ID")
+SMTP_EMAIL = os.environ.get("SMTP_EMAIL")
+SMTP_PASSWORD = os.environ.get("SMTP_PASSWORD")
+NOTIFY_EMAIL = os.environ.get("NOTIFY_EMAIL")
 
 PUBLISHED_DIR = "published_posts"
 ANALYTICS_DIR = "analytics_reports"
 METRICS_FILE = "metrics_history.json"
 TRACKER_FILE = "tracker.json"
 
-# Seuils d'alerte
-ALERT_THRESHOLDS = {
-    "impressions_low": 500,
-    "engagement_rate_low": 0.02,
-    "comments_high": 15,
-    "followers_decline_days": 14,
-}
-
 
 # ============================================================
-# COLLECTE DES METRIQUES
+# COLLECTE
 # ============================================================
 def fetch_post_analytics(post_id):
-    """Recupere les analytics d'un post via l'API LinkedIn."""
+    """Recupere les analytics d'un post LinkedIn."""
     if not LINKEDIN_ACCESS_TOKEN:
         return None
-
     url = f"https://api.linkedin.com/v2/socialActions/{post_id}"
-    headers = {
-        "Authorization": f"Bearer {LINKEDIN_ACCESS_TOKEN}",
-        "X-Restli-Protocol-Version": "2.0.0",
-    }
-
+    headers = {"Authorization": f"Bearer {LINKEDIN_ACCESS_TOKEN}", "X-Restli-Protocol-Version": "2.0.0"}
     try:
-        response = requests.get(url, headers=headers, timeout=15)
-        if response.status_code == 200:
-            return response.json()
-    except Exception as e:
-        print(f"[WARN] Fetch analytics: {e}")
+        r = requests.get(url, headers=headers, timeout=15)
+        if r.status_code == 200:
+            return r.json()
+    except Exception:
+        pass
     return None
 
 
-def fetch_profile_followers():
-    """Recupere le nombre de followers."""
-    if not LINKEDIN_ACCESS_TOKEN or not LINKEDIN_PERSON_ID:
-        return None
-
-    url = f"https://api.linkedin.com/v2/networkSizes/urn:li:person:{LINKEDIN_PERSON_ID}"
-    headers = {
-        "Authorization": f"Bearer {LINKEDIN_ACCESS_TOKEN}",
-        "X-Restli-Protocol-Version": "2.0.0",
-    }
-
-    try:
-        response = requests.get(
-            url, headers=headers,
-            params={"edgeType": "CompanyFollowedByMember"},
-            timeout=15
-        )
-        if response.status_code == 200:
-            data = response.json()
-            return data.get("firstDegreeSize", 0)
-    except Exception as e:
-        print(f"[WARN] Fetch followers: {e}")
-    return None
-
-
-# ============================================================
-# CHARGEMENT DES DONNEES
-# ============================================================
-def load_metrics_history():
-    """Charge l'historique des metriques."""
+def load_metrics():
     if os.path.exists(METRICS_FILE):
         with open(METRICS_FILE, "r", encoding="utf-8") as f:
             return json.load(f)
-    return {"daily": [], "weekly_reports": [], "posts_metrics": []}
+    return {"posts_metrics": [], "weekly_reports": []}
 
 
-def save_metrics_history(metrics):
-    """Sauvegarde l'historique."""
+def save_metrics(metrics):
     with open(METRICS_FILE, "w", encoding="utf-8") as f:
         json.dump(metrics, f, ensure_ascii=False, indent=2)
 
 
 def load_published_posts():
-    """Charge les posts publies avec leurs metadonnees."""
     posts = []
     if not os.path.exists(PUBLISHED_DIR):
         return posts
-
-    for filename in sorted(os.listdir(PUBLISHED_DIR)):
-        if not filename.endswith(".json"):
-            continue
-        filepath = os.path.join(PUBLISHED_DIR, filename)
-        with open(filepath, "r", encoding="utf-8") as f:
-            post = json.load(f)
-            post["_filename"] = filename
-            posts.append(post)
+    for fn in sorted(os.listdir(PUBLISHED_DIR)):
+        if fn.endswith(".json"):
+            with open(os.path.join(PUBLISHED_DIR, fn), "r", encoding="utf-8") as f:
+                post = json.load(f)
+                post["_filename"] = fn
+                posts.append(post)
     return posts
 
 
 # ============================================================
-# COLLECTE DES METRIQUES PAR POST
+# MISE A JOUR DES METRIQUES
 # ============================================================
-def update_post_metrics():
-    """Met a jour les metriques de tous les posts publies."""
+def update_all_metrics():
+    """Met a jour les metriques de tous les posts."""
     posts = load_published_posts()
-    metrics_history = load_metrics_history()
-    updated_count = 0
+    metrics = load_metrics()
+    updated = 0
 
     for post in posts:
         post_id = post.get("linkedin_response", {}).get("id")
         if not post_id:
             continue
 
-        # Recuperer les metriques live
         analytics = fetch_post_analytics(post_id)
         if not analytics:
             continue
 
-        metrics = {
+        entry = {
             "post_id": post_id,
             "filename": post.get("_filename", ""),
             "date": post.get("published_date", ""),
@@ -141,305 +95,169 @@ def update_post_metrics():
             "likes": analytics.get("likesSummary", {}).get("totalLikes", 0),
             "comments": analytics.get("commentsSummary", {}).get("totalComments", 0),
             "shares": analytics.get("sharesSummary", {}).get("totalShares", 0),
-            "collected_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
+            "updated_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
         }
+        entry["score"] = entry["likes"] + entry["comments"] * 3 + entry["shares"] * 5
 
-        # Calculer l'engagement (likes + comments*3 + shares*5)
-        metrics["engagement_score"] = (
-            metrics["likes"] + metrics["comments"] * 3 + metrics["shares"] * 5
-        )
-
-        # Ajouter ou mettre a jour dans l'historique
-        existing_idx = None
-        for i, existing in enumerate(metrics_history["posts_metrics"]):
-            if existing.get("post_id") == post_id:
-                existing_idx = i
-                break
-
-        if existing_idx is not None:
-            metrics_history["posts_metrics"][existing_idx] = metrics
+        # Upsert
+        existing = next((i for i, m in enumerate(metrics["posts_metrics"]) if m.get("post_id") == post_id), None)
+        if existing is not None:
+            metrics["posts_metrics"][existing] = entry
         else:
-            metrics_history["posts_metrics"].append(metrics)
+            metrics["posts_metrics"].append(entry)
+        updated += 1
 
-        updated_count += 1
-
-    save_metrics_history(metrics_history)
-    print(f"[INFO] {updated_count} posts mis a jour")
-    return metrics_history
+    save_metrics(metrics)
+    return updated
 
 
 # ============================================================
-# ANALYSE DES PERFORMANCES
+# ANALYSE
 # ============================================================
-def analyze_by_dimension(posts_metrics, dimension):
-    """Analyse les performances selon une dimension (pillar, format, day)."""
-    groups = defaultdict(lambda: {
-        "count": 0, "total_likes": 0, "total_comments": 0,
-        "total_shares": 0, "total_score": 0
-    })
+def analyze(metrics):
+    """Analyse complete des performances."""
+    posts = metrics.get("posts_metrics", [])
+    if not posts:
+        return {"status": "no_data"}
 
-    for post in posts_metrics:
-        if dimension == "day":
-            try:
-                key = datetime.strptime(post["date"], "%Y-%m-%d").strftime("%A")
-            except (ValueError, KeyError):
-                continue
-        else:
-            key = post.get(dimension, "unknown")
+    # Par pilier
+    by_pillar = defaultdict(lambda: {"count": 0, "scores": []})
+    by_format = defaultdict(lambda: {"count": 0, "scores": []})
+    by_day = defaultdict(lambda: {"count": 0, "scores": []})
 
-        groups[key]["count"] += 1
-        groups[key]["total_likes"] += post.get("likes", 0)
-        groups[key]["total_comments"] += post.get("comments", 0)
-        groups[key]["total_shares"] += post.get("shares", 0)
-        groups[key]["total_score"] += post.get("engagement_score", 0)
+    for p in posts:
+        score = p.get("score", 0)
+        by_pillar[p.get("pillar", "?")]["count"] += 1
+        by_pillar[p.get("pillar", "?")]["scores"].append(score)
+        by_format[p.get("format", "?")]["count"] += 1
+        by_format[p.get("format", "?")]["scores"].append(score)
+        try:
+            day = datetime.strptime(p["date"], "%Y-%m-%d").strftime("%A")
+            by_day[day]["count"] += 1
+            by_day[day]["scores"].append(score)
+        except (ValueError, KeyError):
+            pass
 
-    # Calculer les moyennes
-    results = {}
-    for key, data in groups.items():
-        count = data["count"]
-        if count > 0:
-            results[key] = {
-                "count": count,
-                "avg_likes": round(data["total_likes"] / count, 1),
-                "avg_comments": round(data["total_comments"] / count, 1),
-                "avg_shares": round(data["total_shares"] / count, 1),
-                "avg_score": round(data["total_score"] / count, 1),
+    def summarize(groups):
+        result = {}
+        for k, v in groups.items():
+            scores = v["scores"]
+            result[k] = {
+                "count": v["count"],
+                "avg_score": round(sum(scores) / len(scores), 1) if scores else 0,
+                "max_score": max(scores) if scores else 0,
             }
+        return result
 
-    return results
+    # Top posts
+    sorted_posts = sorted(posts, key=lambda x: x.get("score", 0), reverse=True)
 
-
-def get_top_and_worst_posts(posts_metrics, n=5):
-    """Identifie les top et worst posts."""
-    sorted_posts = sorted(
-        posts_metrics,
-        key=lambda x: x.get("engagement_score", 0),
-        reverse=True
-    )
-    return {
-        "top": sorted_posts[:n],
-        "worst": sorted_posts[-n:] if len(sorted_posts) >= n else sorted_posts,
-    }
-
-
-def calculate_trends(posts_metrics):
-    """Calcule les tendances sur les dernieres semaines."""
-    if len(posts_metrics) < 4:
-        return {"status": "insufficient_data", "message": "Pas assez de posts pour analyser les tendances"}
-
-    # Trier par date
-    sorted_posts = sorted(posts_metrics, key=lambda x: x.get("date", ""))
-
-    # Derniere semaine vs semaine precedente
+    # Tendances (semaine actuelle vs precedente)
     now = datetime.now()
-    last_week = [(now - timedelta(days=7)).strftime("%Y-%m-%d"), now.strftime("%Y-%m-%d")]
-    prev_week = [(now - timedelta(days=14)).strftime("%Y-%m-%d"), (now - timedelta(days=7)).strftime("%Y-%m-%d")]
+    this_week = [p for p in posts if p.get("date", "") >= (now - timedelta(days=7)).strftime("%Y-%m-%d")]
+    prev_week = [p for p in posts if (now - timedelta(days=14)).strftime("%Y-%m-%d") <= p.get("date", "") < (now - timedelta(days=7)).strftime("%Y-%m-%d")]
 
-    last_week_posts = [p for p in sorted_posts if last_week[0] <= p.get("date", "") <= last_week[1]]
-    prev_week_posts = [p for p in sorted_posts if prev_week[0] <= p.get("date", "") <= prev_week[1]]
+    trend = {}
+    if this_week:
+        trend["this_week_avg"] = round(sum(p.get("score", 0) for p in this_week) / len(this_week), 1)
+    if prev_week:
+        trend["prev_week_avg"] = round(sum(p.get("score", 0) for p in prev_week) / len(prev_week), 1)
+    if trend.get("this_week_avg") and trend.get("prev_week_avg") and trend["prev_week_avg"] > 0:
+        trend["change_pct"] = round(((trend["this_week_avg"] - trend["prev_week_avg"]) / trend["prev_week_avg"]) * 100, 1)
 
-    trends = {
-        "last_week_posts": len(last_week_posts),
-        "prev_week_posts": len(prev_week_posts),
+    return {
+        "total_posts": len(posts),
+        "by_pillar": summarize(by_pillar),
+        "by_format": summarize(by_format),
+        "by_day": summarize(by_day),
+        "top_3": sorted_posts[:3],
+        "trend": trend,
     }
 
-    if last_week_posts:
-        trends["last_week_avg_score"] = round(
-            sum(p.get("engagement_score", 0) for p in last_week_posts) / len(last_week_posts), 1
-        )
-    if prev_week_posts:
-        trends["prev_week_avg_score"] = round(
-            sum(p.get("engagement_score", 0) for p in prev_week_posts) / len(prev_week_posts), 1
-        )
-
-    # Evolution
-    if trends.get("last_week_avg_score") and trends.get("prev_week_avg_score"):
-        prev = trends["prev_week_avg_score"]
-        if prev > 0:
-            change = ((trends["last_week_avg_score"] - prev) / prev) * 100
-            trends["score_change_pct"] = round(change, 1)
-            trends["trend_direction"] = "up" if change > 0 else "down"
-
-    return trends
-
 
 # ============================================================
-# GENERATION DE SUGGESTIONS
+# SUGGESTIONS
 # ============================================================
-def generate_suggestions(pillar_analysis, format_analysis, day_analysis, trends):
+def generate_suggestions(analysis):
     """Genere des suggestions actionables."""
     suggestions = []
 
-    # Meilleur pilier
-    if pillar_analysis:
-        best_pillar = max(pillar_analysis.items(), key=lambda x: x[1].get("avg_score", 0))
-        suggestions.append({
-            "type": "pillar",
-            "priority": "high",
-            "message": f"Pilier '{best_pillar[0]}' = meilleur engagement (score moy: {best_pillar[1]['avg_score']})",
-            "action": f"Augmenter la frequence du pilier '{best_pillar[0]}'",
-        })
+    pillar_data = analysis.get("by_pillar", {})
+    if pillar_data:
+        best = max(pillar_data.items(), key=lambda x: x[1].get("avg_score", 0))
+        suggestions.append(f"Pilier '{best[0]}' = meilleur score moyen ({best[1]['avg_score']}). Augmente sa frequence.")
 
-    # Meilleur format
-    if format_analysis:
-        best_format = max(format_analysis.items(), key=lambda x: x[1].get("avg_score", 0))
-        suggestions.append({
-            "type": "format",
-            "priority": "medium",
-            "message": f"Format '{best_format[0]}' performe le mieux (score moy: {best_format[1]['avg_score']})",
-            "action": f"Prioriser le format '{best_format[0]}'",
-        })
+    format_data = analysis.get("by_format", {})
+    if format_data:
+        best = max(format_data.items(), key=lambda x: x[1].get("avg_score", 0))
+        suggestions.append(f"Format '{best[0]}' performe le mieux (score {best[1]['avg_score']}). A prioriser.")
 
-    # Meilleur jour
-    if day_analysis:
-        best_day = max(day_analysis.items(), key=lambda x: x[1].get("avg_score", 0))
-        suggestions.append({
-            "type": "timing",
-            "priority": "medium",
-            "message": f"Meilleur jour: {best_day[0]} (score moy: {best_day[1]['avg_score']})",
-            "action": f"Publier tes meilleurs contenus le {best_day[0]}",
-        })
+    day_data = analysis.get("by_day", {})
+    if day_data:
+        best = max(day_data.items(), key=lambda x: x[1].get("avg_score", 0))
+        suggestions.append(f"Meilleur jour: {best[0]} (score moyen {best[1]['avg_score']})")
 
-    # Tendance
-    if trends.get("trend_direction") == "down" and abs(trends.get("score_change_pct", 0)) > 20:
-        suggestions.append({
-            "type": "alert",
-            "priority": "high",
-            "message": f"Engagement en baisse de {abs(trends['score_change_pct'])}% cette semaine",
-            "action": "Revoir la qualite du contenu ou tester un nouveau format",
-        })
-    elif trends.get("trend_direction") == "up":
-        suggestions.append({
-            "type": "positive",
-            "priority": "low",
-            "message": f"Engagement en hausse de {trends.get('score_change_pct', 0)}% !",
-            "action": "Continue sur cette lancee, analyse ce qui a change",
-        })
-
-    # Regularite (via tracker)
-    if os.path.exists(TRACKER_FILE):
-        with open(TRACKER_FILE, "r", encoding="utf-8") as f:
-            tracker = json.load(f)
-        posts_this_week = tracker.get("posts_this_week", 0)
-        target = tracker.get("target_per_week", 3)
-        if posts_this_week < target:
-            suggestions.append({
-                "type": "consistency",
-                "priority": "high",
-                "message": f"Seulement {posts_this_week}/{target} posts cette semaine",
-                "action": "Publier pour maintenir la regularite",
-            })
+    trend = analysis.get("trend", {})
+    if trend.get("change_pct") is not None:
+        if trend["change_pct"] > 0:
+            suggestions.append(f"Engagement en hausse de +{trend['change_pct']}% cette semaine !")
+        elif trend["change_pct"] < -20:
+            suggestions.append(f"Attention: engagement en baisse de {trend['change_pct']}%. Revoir le contenu.")
 
     return suggestions
 
 
 # ============================================================
-# GENERATION DU RAPPORT HEBDOMADAIRE
+# RAPPORT EMAIL
 # ============================================================
-def generate_weekly_report():
-    """Genere le rapport hebdomadaire complet."""
-    metrics_history = load_metrics_history()
-    posts_metrics = metrics_history.get("posts_metrics", [])
+def send_weekly_report(report):
+    """Envoie le rapport par email."""
+    if not SMTP_EMAIL or not SMTP_PASSWORD or not NOTIFY_EMAIL:
+        return False
 
-    # Analyses
-    pillar_analysis = analyze_by_dimension(posts_metrics, "pillar")
-    format_analysis = analyze_by_dimension(posts_metrics, "format")
-    day_analysis = analyze_by_dimension(posts_metrics, "day")
-    top_worst = get_top_and_worst_posts(posts_metrics)
-    trends = calculate_trends(posts_metrics)
-    suggestions = generate_suggestions(pillar_analysis, format_analysis, day_analysis, trends)
+    import smtplib
+    from email.mime.text import MIMEText
 
-    # Followers
-    followers = fetch_profile_followers()
-
-    # Construire le rapport
-    report = {
-        "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
-        "period": f"{(datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')} -> {datetime.now().strftime('%Y-%m-%d')}",
-        "summary": {
-            "total_posts_tracked": len(posts_metrics),
-            "followers": followers,
-        },
-        "performance_by_pillar": pillar_analysis,
-        "performance_by_format": format_analysis,
-        "performance_by_day": day_analysis,
-        "top_posts": top_worst["top"],
-        "worst_posts": top_worst["worst"],
-        "trends": trends,
-        "suggestions": suggestions,
-    }
-
-    # Sauvegarder le rapport
-    os.makedirs(ANALYTICS_DIR, exist_ok=True)
-    report_filename = f"report_{datetime.now().strftime('%Y-%m-%d')}.json"
-    report_filepath = os.path.join(ANALYTICS_DIR, report_filename)
-    with open(report_filepath, "w", encoding="utf-8") as f:
-        json.dump(report, f, ensure_ascii=False, indent=2)
-
-    # Ajouter au historique
-    metrics_history["weekly_reports"].append({
-        "date": datetime.now().strftime("%Y-%m-%d"),
-        "file": report_filepath,
-    })
-    # Garder les 52 derniers rapports
-    metrics_history["weekly_reports"] = metrics_history["weekly_reports"][-52:]
-    save_metrics_history(metrics_history)
-
-    return report
-
-
-# ============================================================
-# AFFICHAGE DU RAPPORT
-# ============================================================
-def print_report(report):
-    """Affiche le rapport de maniere lisible."""
-    print("\n" + "=" * 60)
-    print(f"  RAPPORT HEBDOMADAIRE -- {report['period']}")
-    print("=" * 60)
-
-    # Resume
-    summary = report.get("summary", {})
-    print(f"\n  Posts suivis: {summary.get('total_posts_tracked', 0)}")
-    if summary.get("followers"):
-        print(f"  Followers: {summary['followers']}")
-
-    # Par pilier
-    print(f"\n  --- PERFORMANCE PAR PILIER ---")
-    for pillar, data in report.get("performance_by_pillar", {}).items():
-        print(f"  {pillar:15} | {data['count']} posts | Likes moy: {data['avg_likes']} | Comments moy: {data['avg_comments']} | Score: {data['avg_score']}")
-
-    # Par format
-    print(f"\n  --- PERFORMANCE PAR FORMAT ---")
-    for fmt, data in report.get("performance_by_format", {}).items():
-        print(f"  {fmt:15} | {data['count']} posts | Likes moy: {data['avg_likes']} | Comments moy: {data['avg_comments']} | Score: {data['avg_score']}")
-
-    # Par jour
-    print(f"\n  --- PERFORMANCE PAR JOUR ---")
-    for day, data in report.get("performance_by_day", {}).items():
-        print(f"  {day:15} | {data['count']} posts | Score moy: {data['avg_score']}")
-
-    # Top posts
-    print(f"\n  --- TOP 3 POSTS ---")
-    for i, post in enumerate(report.get("top_posts", [])[:3], 1):
-        print(f"  #{i} [{post.get('pillar', '?')}/{post.get('format', '?')}] Score: {post.get('engagement_score', 0)} | {post.get('date', '?')}")
-
-    # Tendances
-    trends = report.get("trends", {})
-    if trends.get("score_change_pct") is not None:
-        direction = "+" if trends["score_change_pct"] > 0 else ""
-        print(f"\n  --- TENDANCE ---")
-        print(f"  Evolution: {direction}{trends['score_change_pct']}% vs semaine precedente")
-
-    # Suggestions
+    analysis = report.get("analysis", {})
     suggestions = report.get("suggestions", [])
-    if suggestions:
-        print(f"\n  --- SUGGESTIONS ({len(suggestions)}) ---")
-        for s in suggestions:
-            priority_icon = {"high": "!!!", "medium": " ! ", "low": "   "}.get(s["priority"], "   ")
-            print(f"  [{priority_icon}] {s['message']}")
-            print(f"        -> Action: {s['action']}")
 
-    print("\n" + "=" * 60)
+    body = f"""RAPPORT HEBDOMADAIRE LINKEDIN
+{'='*40}
+Periode: {report.get('period', '?')}
+Posts suivis: {analysis.get('total_posts', 0)}
+
+PERFORMANCE PAR PILIER:
+"""
+    for pillar, data in analysis.get("by_pillar", {}).items():
+        body += f"  {pillar}: {data['count']} posts | Score moy: {data['avg_score']}\n"
+
+    body += f"\nTENDANCE:\n"
+    trend = analysis.get("trend", {})
+    if trend.get("change_pct") is not None:
+        body += f"  Evolution: {'+' if trend['change_pct'] > 0 else ''}{trend['change_pct']}% vs semaine precedente\n"
+
+    body += f"\nSUGGESTIONS:\n"
+    for s in suggestions:
+        body += f"  -> {s}\n"
+
+    body += f"\nTOP 3 POSTS:\n"
+    for i, p in enumerate(analysis.get("top_3", [])[:3], 1):
+        body += f"  #{i} [{p.get('pillar','?')}] Score: {p.get('score',0)} | {p.get('date','?')}\n"
+
+    msg = MIMEText(body)
+    msg["Subject"] = f"[LinkedIn Analytics] Rapport semaine {datetime.now().strftime('%W')}"
+    msg["From"] = SMTP_EMAIL
+    msg["To"] = NOTIFY_EMAIL
+
+    try:
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+            server.login(SMTP_EMAIL, SMTP_PASSWORD)
+            server.sendmail(SMTP_EMAIL, NOTIFY_EMAIL, msg.as_string())
+        print("[OK] Rapport envoye par email")
+        return True
+    except Exception as e:
+        print(f"[ERROR] Email: {e}")
+        return False
 
 
 # ============================================================
@@ -448,23 +266,36 @@ def print_report(report):
 def main():
     print(f"[START] Analytics -- {datetime.now().strftime('%Y-%m-%d %H:%M')}")
 
-    # Mise a jour des metriques
-    print("\n[1/3] Mise a jour des metriques...")
-    if LINKEDIN_ACCESS_TOKEN:
-        update_post_metrics()
-    else:
-        print("       [SIMULATE] Pas de token LinkedIn -- metriques locales uniquement")
+    print("[1/4] Mise a jour des metriques...")
+    updated = update_all_metrics()
+    print(f"       -> {updated} posts mis a jour")
 
-    # Generation du rapport
-    print("\n[2/3] Generation du rapport hebdomadaire...")
-    report = generate_weekly_report()
+    print("[2/4] Analyse...")
+    metrics = load_metrics()
+    analysis = analyze(metrics)
 
-    # Affichage
-    print("\n[3/3] Rapport:")
-    print_report(report)
+    print("[3/4] Suggestions...")
+    suggestions = generate_suggestions(analysis)
+    for s in suggestions:
+        print(f"       -> {s}")
 
-    print("\n[DONE] Analytics termine.")
-    print(f"       Rapport sauvegarde dans: {ANALYTICS_DIR}/")
+    # Sauvegarder le rapport
+    report = {
+        "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
+        "period": f"{(datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')} -> {datetime.now().strftime('%Y-%m-%d')}",
+        "analysis": analysis,
+        "suggestions": suggestions,
+    }
+
+    os.makedirs(ANALYTICS_DIR, exist_ok=True)
+    report_file = os.path.join(ANALYTICS_DIR, f"report_{datetime.now().strftime('%Y-%m-%d')}.json")
+    with open(report_file, "w", encoding="utf-8") as f:
+        json.dump(report, f, ensure_ascii=False, indent=2)
+
+    print(f"[4/4] Envoi du rapport email...")
+    send_weekly_report(report)
+
+    print(f"\n[DONE] Analytics termine. Rapport: {report_file}")
 
 
 if __name__ == "__main__":
