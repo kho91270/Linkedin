@@ -1,20 +1,25 @@
+```python
 
 """
-ANALYTICS.PY — Performance Dashboard
-Suivi des metriques, analyse des tendances, rapport hebdomadaire.
+ANALYTICS.PY - Performance Dashboard + Rapport Email Hebdomadaire
+Utilise Google Credentials pour envoyer le rapport.
 """
 
 import os
 import json
+import smtplib
 import requests
+import base64
+from email.mime.text import MIMEText
 from datetime import datetime, timedelta
 from collections import defaultdict
+from google.oauth2.credentials import Credentials
+from google.auth.transport.requests import Request
+from googleapiclient.discovery import build
 
-# ============================================================
-# CONFIGURATION
-# ============================================================
 LINKEDIN_ACCESS_TOKEN = os.environ.get("LINKEDIN_ACCESS_TOKEN")
 LINKEDIN_PERSON_ID = os.environ.get("LINKEDIN_PERSON_ID")
+GOOGLE_CREDENTIALS = os.environ.get("GOOGLE_CREDENTIALS")
 SMTP_EMAIL = os.environ.get("SMTP_EMAIL")
 SMTP_PASSWORD = os.environ.get("SMTP_PASSWORD")
 NOTIFY_EMAIL = os.environ.get("NOTIFY_EMAIL")
@@ -25,11 +30,40 @@ METRICS_FILE = "metrics_history.json"
 TRACKER_FILE = "tracker.json"
 
 
-# ============================================================
-# COLLECTE
-# ============================================================
+def send_report_email(to_email, subject, body_text):
+    if GOOGLE_CREDENTIALS:
+        try:
+            creds_data = json.loads(GOOGLE_CREDENTIALS)
+            creds = Credentials.from_authorized_user_info(creds_data)
+            if creds and creds.expired and creds.refresh_token:
+                creds.refresh(Request())
+            service = build("gmail", "v1", credentials=creds)
+            msg = MIMEText(body_text, "plain", "utf-8")
+            msg["To"] = to_email
+            msg["Subject"] = subject
+            raw = base64.urlsafe_b64encode(msg.as_bytes()).decode()
+            service.users().messages().send(userId="me", body={"raw": raw}).execute()
+            print("[OK] Rapport envoye (Gmail API)")
+            return True
+        except Exception as e:
+            print(f"[WARN] Gmail API: {e}")
+    if SMTP_EMAIL and SMTP_PASSWORD:
+        try:
+            msg = MIMEText(body_text, "plain", "utf-8")
+            msg["Subject"] = subject
+            msg["From"] = SMTP_EMAIL
+            msg["To"] = to_email
+            with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+                server.login(SMTP_EMAIL, SMTP_PASSWORD)
+                server.sendmail(SMTP_EMAIL, to_email, msg.as_string())
+            print("[OK] Rapport envoye (SMTP)")
+            return True
+        except Exception as e:
+            print(f"[ERROR] SMTP: {e}")
+    return False
+
+
 def fetch_post_analytics(post_id):
-    """Recupere les analytics d'un post LinkedIn."""
     if not LINKEDIN_ACCESS_TOKEN:
         return None
     url = f"https://api.linkedin.com/v2/socialActions/{post_id}"
@@ -68,24 +102,17 @@ def load_published_posts():
     return posts
 
 
-# ============================================================
-# MISE A JOUR DES METRIQUES
-# ============================================================
 def update_all_metrics():
-    """Met a jour les metriques de tous les posts."""
     posts = load_published_posts()
     metrics = load_metrics()
     updated = 0
-
     for post in posts:
         post_id = post.get("linkedin_response", {}).get("id")
-        if not post_id:
+        if not post_id or post_id.startswith("sim_"):
             continue
-
         analytics = fetch_post_analytics(post_id)
         if not analytics:
             continue
-
         entry = {
             "post_id": post_id,
             "filename": post.get("_filename", ""),
@@ -98,29 +125,21 @@ def update_all_metrics():
             "updated_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
         }
         entry["score"] = entry["likes"] + entry["comments"] * 3 + entry["shares"] * 5
-
-        # Upsert
         existing = next((i for i, m in enumerate(metrics["posts_metrics"]) if m.get("post_id") == post_id), None)
         if existing is not None:
             metrics["posts_metrics"][existing] = entry
         else:
             metrics["posts_metrics"].append(entry)
         updated += 1
-
     save_metrics(metrics)
     return updated
 
 
-# ============================================================
-# ANALYSE
-# ============================================================
 def analyze(metrics):
-    """Analyse complete des performances."""
     posts = metrics.get("posts_metrics", [])
     if not posts:
-        return {"status": "no_data"}
+        return {"status": "no_data", "total_posts": 0}
 
-    # Par pilier
     by_pillar = defaultdict(lambda: {"count": 0, "scores": []})
     by_format = defaultdict(lambda: {"count": 0, "scores": []})
     by_day = defaultdict(lambda: {"count": 0, "scores": []})
@@ -149,10 +168,8 @@ def analyze(metrics):
             }
         return result
 
-    # Top posts
     sorted_posts = sorted(posts, key=lambda x: x.get("score", 0), reverse=True)
 
-    # Tendances (semaine actuelle vs precedente)
     now = datetime.now()
     this_week = [p for p in posts if p.get("date", "") >= (now - timedelta(days=7)).strftime("%Y-%m-%d")]
     prev_week = [p for p in posts if (now - timedelta(days=14)).strftime("%Y-%m-%d") <= p.get("date", "") < (now - timedelta(days=7)).strftime("%Y-%m-%d")]
@@ -175,94 +192,89 @@ def analyze(metrics):
     }
 
 
-# ============================================================
-# SUGGESTIONS
-# ============================================================
 def generate_suggestions(analysis):
-    """Genere des suggestions actionables."""
     suggestions = []
-
     pillar_data = analysis.get("by_pillar", {})
     if pillar_data:
         best = max(pillar_data.items(), key=lambda x: x[1].get("avg_score", 0))
         suggestions.append(f"Pilier '{best[0]}' = meilleur score moyen ({best[1]['avg_score']}). Augmente sa frequence.")
-
     format_data = analysis.get("by_format", {})
     if format_data:
         best = max(format_data.items(), key=lambda x: x[1].get("avg_score", 0))
-        suggestions.append(f"Format '{best[0]}' performe le mieux (score {best[1]['avg_score']}). A prioriser.")
-
+        suggestions.append(f"Format '{best[0]}' performe le mieux (score {best[1]['avg_score']}).")
     day_data = analysis.get("by_day", {})
     if day_data:
         best = max(day_data.items(), key=lambda x: x[1].get("avg_score", 0))
         suggestions.append(f"Meilleur jour: {best[0]} (score moyen {best[1]['avg_score']})")
-
     trend = analysis.get("trend", {})
     if trend.get("change_pct") is not None:
         if trend["change_pct"] > 0:
             suggestions.append(f"Engagement en hausse de +{trend['change_pct']}% cette semaine !")
         elif trend["change_pct"] < -20:
-            suggestions.append(f"Attention: engagement en baisse de {trend['change_pct']}%. Revoir le contenu.")
-
+            suggestions.append(f"Attention: engagement en baisse de {trend['change_pct']}%.")
     return suggestions
 
 
-# ============================================================
-# RAPPORT EMAIL
-# ============================================================
-def send_weekly_report(report):
-    """Envoie le rapport par email."""
-    if not SMTP_EMAIL or not SMTP_PASSWORD or not NOTIFY_EMAIL:
-        return False
-
-    import smtplib
-    from email.mime.text import MIMEText
-
-    analysis = report.get("analysis", {})
-    suggestions = report.get("suggestions", [])
-
+def build_report_text(analysis, suggestions):
     body = f"""RAPPORT HEBDOMADAIRE LINKEDIN
-{'='*40}
-Periode: {report.get('period', '?')}
+{'='*50}
+Genere le: {datetime.now().strftime('%Y-%m-%d %H:%M')}
+Periode: {(datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')} -> {datetime.now().strftime('%Y-%m-%d')}
 Posts suivis: {analysis.get('total_posts', 0)}
 
 PERFORMANCE PAR PILIER:
+{'-'*30}
 """
     for pillar, data in analysis.get("by_pillar", {}).items():
-        body += f"  {pillar}: {data['count']} posts | Score moy: {data['avg_score']}\n"
+        body += f"  {pillar.upper():15} | {data['count']} posts | Score moy: {data['avg_score']} | Max: {data['max_score']}\n"
 
-    body += f"\nTENDANCE:\n"
+    body += f"""
+PERFORMANCE PAR FORMAT:
+{'-'*30}
+"""
+    for fmt, data in analysis.get("by_format", {}).items():
+        body += f"  {fmt:15} | {data['count']} posts | Score moy: {data['avg_score']} | Max: {data['max_score']}\n"
+
+    body += f"""
+PERFORMANCE PAR JOUR:
+{'-'*30}
+"""
+    for day, data in analysis.get("by_day", {}).items():
+        body += f"  {day:15} | {data['count']} posts | Score moy: {data['avg_score']}\n"
+
+    body += f"""
+TENDANCE:
+{'-'*30}
+"""
     trend = analysis.get("trend", {})
+    if trend.get("this_week_avg"):
+        body += f"  Cette semaine: {trend['this_week_avg']} (score moyen)\n"
+    if trend.get("prev_week_avg"):
+        body += f"  Semaine precedente: {trend['prev_week_avg']}\n"
     if trend.get("change_pct") is not None:
-        body += f"  Evolution: {'+' if trend['change_pct'] > 0 else ''}{trend['change_pct']}% vs semaine precedente\n"
+        body += f"  Evolution: {'+' if trend['change_pct'] > 0 else ''}{trend['change_pct']}%\n"
 
-    body += f"\nSUGGESTIONS:\n"
+    body += f"""
+TOP 3 POSTS:
+{'-'*30}
+"""
+    for i, p in enumerate(analysis.get("top_3", [])[:3], 1):
+        body += f"  #{i} [{p.get('pillar','?').upper()}] Score: {p.get('score',0)} | {p.get('date','?')} | Likes: {p.get('likes',0)} Comments: {p.get('comments',0)} Shares: {p.get('shares',0)}\n"
+
+    body += f"""
+SUGGESTIONS:
+{'-'*30}
+"""
     for s in suggestions:
         body += f"  -> {s}\n"
 
-    body += f"\nTOP 3 POSTS:\n"
-    for i, p in enumerate(analysis.get("top_3", [])[:3], 1):
-        body += f"  #{i} [{p.get('pillar','?')}] Score: {p.get('score',0)} | {p.get('date','?')}\n"
-
-    msg = MIMEText(body)
-    msg["Subject"] = f"[LinkedIn Analytics] Rapport semaine {datetime.now().strftime('%W')}"
-    msg["From"] = SMTP_EMAIL
-    msg["To"] = NOTIFY_EMAIL
-
-    try:
-        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
-            server.login(SMTP_EMAIL, SMTP_PASSWORD)
-            server.sendmail(SMTP_EMAIL, NOTIFY_EMAIL, msg.as_string())
-        print("[OK] Rapport envoye par email")
-        return True
-    except Exception as e:
-        print(f"[ERROR] Email: {e}")
-        return False
+    body += f"""
+{'='*50}
+Genere automatiquement par LinkedIn Bot Analytics
+"""
+    return body
 
 
-# ============================================================
-# MAIN
-# ============================================================
 def main():
     print(f"[START] Analytics -- {datetime.now().strftime('%Y-%m-%d %H:%M')}")
 
@@ -274,12 +286,18 @@ def main():
     metrics = load_metrics()
     analysis = analyze(metrics)
 
+    if analysis.get("status") == "no_data":
+        print("[SKIP] Pas encore de donnees a analyser.")
+        return
+
     print("[3/4] Suggestions...")
     suggestions = generate_suggestions(analysis)
     for s in suggestions:
         print(f"       -> {s}")
 
-    # Sauvegarder le rapport
+    print("[4/4] Generation et envoi du rapport...")
+    report_text = build_report_text(analysis, suggestions)
+
     report = {
         "generated_at": datetime.now().strftime("%Y-%m-%d %H:%M"),
         "period": f"{(datetime.now() - timedelta(days=7)).strftime('%Y-%m-%d')} -> {datetime.now().strftime('%Y-%m-%d')}",
@@ -291,11 +309,22 @@ def main():
     report_file = os.path.join(ANALYTICS_DIR, f"report_{datetime.now().strftime('%Y-%m-%d')}.json")
     with open(report_file, "w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=2)
+    print(f"       Rapport sauvegarde: {report_file}")
 
-    print(f"[4/4] Envoi du rapport email...")
-    send_weekly_report(report)
+    if NOTIFY_EMAIL:
+        subject = f"[LinkedIn Analytics] Rapport semaine {datetime.now().strftime('%W')} - {datetime.now().strftime('%Y')}"
+        sent = send_report_email(NOTIFY_EMAIL, subject, report_text)
+        if sent:
+            print("       Rapport envoye par email")
+        else:
+            print("       [WARN] Email non envoye")
 
-    print(f"\n[DONE] Analytics termine. Rapport: {report_file}")
+    print(f"\n--- RESUME ---")
+    print(f"Posts analyses: {analysis['total_posts']}")
+    print(f"Meilleur pilier: {max(analysis.get('by_pillar', {'?': {'avg_score': 0}}).items(), key=lambda x: x[1].get('avg_score', 0))[0] if analysis.get('by_pillar') else 'N/A'}")
+    if trend.get("change_pct") is not None:
+        print(f"Tendance: {'+' if trend['change_pct'] > 0 else ''}{trend['change_pct']}%")
+    print("[DONE] Analytics termine.")
 
 
 if __name__ == "__main__":
