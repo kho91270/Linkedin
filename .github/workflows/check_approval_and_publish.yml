@@ -1,4 +1,5 @@
-
+```python
+```yaml
 name: Check Approval + Publish
 
 on:
@@ -18,7 +19,8 @@ jobs:
         with:
           python-version: '3.11'
 
-      - run: pip install groq requests google-auth google-auth-oauthlib google-api-python-client
+      - name: Install dependencies
+        run: pip install groq requests google-auth google-auth-oauthlib google-api-python-client
 
       - name: Check email approvals
         env:
@@ -38,7 +40,6 @@ jobs:
         run: |
           git config user.email "action@github.com"
           git config user.name "GitHub Action"
-          git add published_posts/ approved_posts/ pending_approval/ rejected_posts/ tracker.json
+          git add -A published_posts/ approved_posts/ pending_approval/ rejected_posts/ tracker.json
           git diff --staged --quiet || git commit -m "published $(date +%Y-%m-%d)"
           git push
-
