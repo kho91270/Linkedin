@@ -1,72 +1,108 @@
 
 """
-APPROVAL_WEBHOOK.PY — Serveur de validation par email
-Verifie les reponses email pour approuver/refuser les posts.
-Utilise IMAP pour lire les reponses a l'email de validation.
+APPROVAL_WEBHOOK.PY - Verifie les reponses email pour approuver/refuser.
+Utilise Gmail API (Google Credentials) ou fallback IMAP.
 """
 
 import os
 import json
 import imaplib
 import email
+import base64
 from email.header import decode_header
 from datetime import datetime, timedelta
+from google.oauth2.credentials import Credentials
+from google.auth.transport.requests import Request
+from googleapiclient.discovery import build
 
-# ============================================================
-# CONFIGURATION
-# ============================================================
-IMAP_EMAIL = os.environ.get("SMTP_EMAIL")
-IMAP_PASSWORD = os.environ.get("SMTP_PASSWORD")
-IMAP_SERVER = "imap.gmail.com"
+GOOGLE_CREDENTIALS = os.environ.get("GOOGLE_CREDENTIALS")
+SMTP_EMAIL = os.environ.get("SMTP_EMAIL")
+SMTP_PASSWORD = os.environ.get("SMTP_PASSWORD")
 
 PENDING_DIR = "pending_approval"
 APPROVED_DIR = "approved_posts"
 REJECTED_DIR = "rejected_posts"
 
 
-# ============================================================
-# LECTURE DES EMAILS
-# ============================================================
-def check_approval_emails():
-    """Verifie les emails de reponse pour approbation."""
-    if not IMAP_EMAIL or not IMAP_PASSWORD:
-        print("[ERROR] Credentials email non configurees")
-        return []
-
-    results = []
-
+def get_gmail_service():
+    if not GOOGLE_CREDENTIALS:
+        return None
     try:
-        mail = imaplib.IMAP4_SSL(IMAP_SERVER)
-        mail.login(IMAP_EMAIL, IMAP_PASSWORD)
-        mail.select("inbox")
+        creds_data = json.loads(GOOGLE_CREDENTIALS)
+        creds = Credentials.from_authorized_user_info(creds_data)
+        if creds and creds.expired and creds.refresh_token:
+            creds.refresh(Request())
+        return build("gmail", "v1", credentials=creds)
+    except Exception as e:
+        print(f"[WARN] Gmail service: {e}")
+        return None
 
-        # Chercher les emails recents avec le sujet de validation
+
+def check_emails_gmail():
+    service = get_gmail_service()
+    if not service:
+        return check_emails_imap()
+    results = []
+    try:
+        query = 'subject:"Re: [LinkedIn]" newer_than:2d'
+        response = service.users().messages().list(userId="me", q=query, maxResults=10).execute()
+        messages = response.get("messages", [])
+        for msg_meta in messages:
+            msg = service.users().messages().get(userId="me", id=msg_meta["id"], format="full").execute()
+            headers = msg.get("payload", {}).get("headers", [])
+            subject = next((h["value"] for h in headers if h["name"].lower() == "subject"), "")
+            body = ""
+            payload = msg.get("payload", {})
+            if payload.get("body", {}).get("data"):
+                body = base64.urlsafe_b64decode(payload["body"]["data"]).decode("utf-8", errors="ignore")
+            elif payload.get("parts"):
+                for part in payload["parts"]:
+                    if part.get("mimeType") == "text/plain" and part.get("body", {}).get("data"):
+                        body = base64.urlsafe_b64decode(part["body"]["data"]).decode("utf-8", errors="ignore")
+                        break
+            first_line = body.strip().split("\n")[0].strip().upper()
+            publish_date = None
+            if "pour le" in subject.lower():
+                try:
+                    publish_date = subject.lower().split("pour le")[1].strip()[:10]
+                except Exception:
+                    pass
+            if first_line in ["OK", "APPROVE", "APPROVED", "OUI", "YES", "GO", "VALIDE"]:
+                results.append({"action": "approve", "publish_date": publish_date})
+            elif first_line in ["SKIP", "REFUSE", "NO", "NON", "REFUSER", "CANCEL"]:
+                results.append({"action": "reject", "publish_date": publish_date})
+            else:
+                results.append({"action": "modify", "publish_date": publish_date, "body": body.strip()})
+    except Exception as e:
+        print(f"[ERROR] Gmail API: {e}")
+        return check_emails_imap()
+    return results
+
+
+def check_emails_imap():
+    if not SMTP_EMAIL or not SMTP_PASSWORD:
+        print("[ERROR] Pas de credentials email")
+        return []
+    results = []
+    try:
+        mail = imaplib.IMAP4_SSL("imap.gmail.com")
+        mail.login(SMTP_EMAIL, SMTP_PASSWORD)
+        mail.select("inbox")
         since_date = (datetime.now() - timedelta(days=2)).strftime("%d-%b-%Y")
         status, messages = mail.search(None, f'(SINCE "{since_date}" SUBJECT "[LinkedIn]")')
-
         if status != "OK":
-            print("[WARN] Pas de messages trouves")
             mail.logout()
             return []
-
-        message_ids = messages[0].split()
-
-        for msg_id in message_ids[-10:]:  # Derniers 10 max
+        for msg_id in messages[0].split()[-10:]:
             status, msg_data = mail.fetch(msg_id, "(RFC822)")
             if status != "OK":
                 continue
-
             msg = email.message_from_bytes(msg_data[0][1])
-
-            # Verifier que c'est une reponse (Re:)
             subject = decode_header(msg["Subject"])[0][0]
             if isinstance(subject, bytes):
                 subject = subject.decode()
-
             if "Re:" not in subject and "RE:" not in subject:
                 continue
-
-            # Extraire le corps
             body = ""
             if msg.is_multipart():
                 for part in msg.walk():
@@ -75,48 +111,30 @@ def check_approval_emails():
                         break
             else:
                 body = msg.get_payload(decode=True).decode(errors="ignore")
-
-            body_clean = body.strip().split("\n")[0].strip().upper()
-
-            # Extraire la date de publication du sujet
+            first_line = body.strip().split("\n")[0].strip().upper()
             publish_date = None
             if "pour le" in subject.lower():
                 try:
-                    date_part = subject.lower().split("pour le")[1].strip()[:10]
-                    publish_date = date_part
+                    publish_date = subject.lower().split("pour le")[1].strip()[:10]
                 except Exception:
                     pass
-
-            # Determiner l'action
-            if body_clean in ["OK", "APPROVE", "APPROVED", "OUI", "YES", "GO", "VALIDE"]:
-                results.append({"action": "approve", "publish_date": publish_date, "body": body})
-            elif body_clean in ["SKIP", "REFUSE", "NO", "NON", "REFUSER", "CANCEL"]:
-                results.append({"action": "reject", "publish_date": publish_date, "body": body})
+            if first_line in ["OK", "APPROVE", "APPROVED", "OUI", "YES", "GO", "VALIDE"]:
+                results.append({"action": "approve", "publish_date": publish_date})
+            elif first_line in ["SKIP", "REFUSE", "NO", "NON", "REFUSER", "CANCEL"]:
+                results.append({"action": "reject", "publish_date": publish_date})
             else:
-                # C'est une modification
-                results.append({"action": "modify", "publish_date": publish_date, "body": body})
-
+                results.append({"action": "modify", "publish_date": publish_date, "body": body.strip()})
         mail.logout()
-
     except Exception as e:
         print(f"[ERROR] IMAP: {e}")
-
     return results
 
 
-# ============================================================
-# TRAITEMENT DES APPROBATIONS
-# ============================================================
 def process_approval(action_data):
-    """Traite une approbation/rejet/modification."""
     action = action_data.get("action")
     publish_date = action_data.get("publish_date")
-
     if not os.path.exists(PENDING_DIR):
-        print("[WARN] Pas de dossier pending")
         return
-
-    # Trouver le post pending
     pending_file = None
     for filename in os.listdir(PENDING_DIR):
         if filename.endswith(".json"):
@@ -126,71 +144,51 @@ def process_approval(action_data):
             elif not publish_date:
                 pending_file = filename
                 break
-
     if not pending_file:
-        print(f"[WARN] Pas de post pending trouve pour {publish_date}")
+        print(f"[WARN] Pas de post pending pour {publish_date}")
         return
-
     filepath = os.path.join(PENDING_DIR, pending_file)
     with open(filepath, "r", encoding="utf-8") as f:
         post = json.load(f)
-
     if action == "approve":
-        # Deplacer vers approved
         os.makedirs(APPROVED_DIR, exist_ok=True)
         post["approval_status"] = "approved"
         post["approved_at"] = datetime.now().strftime("%Y-%m-%d %H:%M")
-
-        approved_file = pending_file.replace("pending_", "approved_")
-        approved_path = os.path.join(APPROVED_DIR, approved_file)
+        approved_path = os.path.join(APPROVED_DIR, pending_file.replace("pending_", "approved_"))
         with open(approved_path, "w", encoding="utf-8") as f:
             json.dump(post, f, ensure_ascii=False, indent=2)
         os.remove(filepath)
-        print(f"[OK] Post APPROUVE -> {approved_path}")
-
+        print(f"[OK] APPROUVE -> {approved_path}")
     elif action == "reject":
-        # Deplacer vers rejected
         os.makedirs(REJECTED_DIR, exist_ok=True)
         post["approval_status"] = "rejected"
         post["rejected_at"] = datetime.now().strftime("%Y-%m-%d %H:%M")
-
-        rejected_file = pending_file.replace("pending_", "rejected_")
-        rejected_path = os.path.join(REJECTED_DIR, rejected_file)
+        rejected_path = os.path.join(REJECTED_DIR, pending_file.replace("pending_", "rejected_"))
         with open(rejected_path, "w", encoding="utf-8") as f:
             json.dump(post, f, ensure_ascii=False, indent=2)
         os.remove(filepath)
-        print(f"[OK] Post REFUSE -> {rejected_path}")
-
+        print(f"[OK] REFUSE -> {rejected_path}")
     elif action == "modify":
-        # Garder en pending mais noter la demande de modification
         post["modification_requested"] = action_data.get("body", "")
         post["modification_date"] = datetime.now().strftime("%Y-%m-%d %H:%M")
         with open(filepath, "w", encoding="utf-8") as f:
             json.dump(post, f, ensure_ascii=False, indent=2)
-        print(f"[OK] Modification demandee -- post reste en pending")
-        print(f"     Demande: {action_data.get('body', '')[:200]}")
+        print(f"[OK] MODIFICATION demandee")
 
 
-# ============================================================
-# MAIN
-# ============================================================
 def main():
-    print(f"[START] Approval Webhook -- {datetime.now().strftime('%Y-%m-%d %H:%M')}")
-
-    print("[1/2] Verification des emails de reponse...")
-    actions = check_approval_emails()
+    print(f"[START] Approval Check -- {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+    print("[1/2] Verification des reponses email...")
+    actions = check_emails_gmail()
     print(f"       -> {len(actions)} reponses trouvees")
-
     if not actions:
-        print("[DONE] Aucune reponse a traiter.")
+        print("[DONE] Aucune reponse.")
         return
-
-    print("[2/2] Traitement des approbations...")
+    print("[2/2] Traitement...")
     for action_data in actions:
-        print(f"\n  Action: {action_data['action']} | Date: {action_data.get('publish_date', '?')}")
+        print(f"  Action: {action_data['action']} | Date: {action_data.get('publish_date', '?')}")
         process_approval(action_data)
-
-    print("\n[DONE] Approval Webhook termine.")
+    print("[DONE] Termine.")
 
 
 if __name__ == "__main__":
