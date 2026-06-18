@@ -1,0 +1,90 @@
+name: LinkedIn Bot
+
+on:
+  schedule:
+    - cron: '0 17 * * 0,2,4'
+    - cron: '30 6 * * 1,3,5'
+  workflow_dispatch:
+    inputs:
+      command:
+        description: 'Command to run'
+        required: true
+        default: 'generate'
+        type: choice
+        options:
+          - generate
+          - publish
+          - force
+
+jobs:
+  run-bot:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Determine command
+        id: cmd
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "command=${{ github.event.inputs.command }}" >> $GITHUB_OUTPUT
+          else
+            HOUR=$(date -u +%H)
+            if [ "$HOUR" -ge "12" ]; then
+              echo "command=generate" >> $GITHUB_OUTPUT
+            else
+              echo "command=publish" >> $GITHUB_OUTPUT
+            fi
+          fi
+
+      - name: Check approval
+        if: steps.cmd.outputs.command == 'publish'
+        run: python approval_webhook.py
+        env:
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+          SMTP_EMAIL: ${{ secrets.SMTP_EMAIL }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+
+      - name: Run bot
+        run: python bot.py ${{ steps.cmd.outputs.command }}
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          LEONARDO_API_KEY: ${{ secrets.LEONARDO_API_KEY }}
+          GOOGLE_CREDENTIALS: ${{ secrets.GOOGLE_CREDENTIALS }}
+          SMTP_EMAIL: ${{ secrets.SMTP_EMAIL }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          NOTIFY_EMAIL: ${{ secrets.NOTIFY_EMAIL }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_ID: ${{ secrets.LINKEDIN_PERSON_ID }}
+
+      - name: Run reply bot
+        if: steps.cmd.outputs.command == 'publish'
+        run: python reply_bot.py
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_ID: ${{ secrets.LINKEDIN_PERSON_ID }}
+
+      - name: Run engagement bot
+        if: steps.cmd.outputs.command == 'publish'
+        run: python engagement_bot.py
+        env:
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
+          LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
+          LINKEDIN_PERSON_ID: ${{ secrets.LINKEDIN_PERSON_ID }}
+
+      - name: Commit changes
+        run: |
+          git config user.email "action@github.com"
+          git config user.name "LinkedIn Bot"
+          git add -A
+          git diff --staged --quiet || git commit -m "bot run $(date +%Y-%m-%d)"
+          git push
