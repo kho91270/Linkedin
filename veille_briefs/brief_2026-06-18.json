@@ -1,5 +1,5 @@
 {
-  "date": "2024-06-18",
+  "date": "2024-02-20",
   "funding_alert": {
     "startup": null,
     "amount": null,
@@ -7,15 +7,15 @@
   },
   "key_stat": {
     "value": "des délais de passation de commande réduits de mois à semaines",
-    "context": "Bristol Myers a réussi à réduire ses délais de passation de commande grâce à l'intelligence artificielle"
+    "context": "chez Bristol Myers grâce à l'intelligence artificielle"
   },
   "new_tool": {
     "name": "Merlin Intake de Zycus",
-    "description": "plateforme d'intake-to-pay pour améliorer les processus de passation de commande"
+    "description": "plateforme d'intake-to-pay"
   },
   "hot_topic": {
-    "subject": "l'intelligence artificielle dans la passation de commande",
-    "why_it_matters": "les acheteurs peuvent réduire les délais et améliorer l'efficacité de leurs processus grâce à l'intelligence artificielle"
+    "subject": "l'intelligence artificielle dans les processus de passation de commande",
+    "why_it_matters": "pour accélérer les délais et améliorer l'efficacité"
   },
   "post_angles": [
     {
@@ -25,7 +25,7 @@
     },
     {
       "pillar": "terrain",
-      "hook": "Découvrez comment Bristol Myers a réussi à réduire ses délais de passation de commande grâce à l'intelligence artificielle",
+      "hook": "Découvrez comment Bristol Myers a réussi à réduire ses délais de passation de commande grâce à l'IA",
       "format": "carrousel"
     }
   ],
@@ -64,22 +64,6 @@
       "link": "https://www.supplychaindive.com/news/inside-bristol-myers-ai-powered-procurement-overhaul/822840/",
       "summary": "<p>The pharmaceutical giant cut procurement timelines from months to weeks while challenging conventional wisdom on AI data readiness.</p>",
       "published": "2026-06-17T10:00:00",
-      "relevance_score": 4
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "EU gives final approval to install US tariff deal",
-      "link": "https://www.supplychaindive.com/news/eu-gives-final-approval-to-install-us-tariff-deal/822994/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/_D_U_U-_VsoBPK3QXVvzI-T2cE6SHFkZqH_r0XPlVh4/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjI3MjUxOTgxLmpwZw==.webp\" /></div></figure><p>The bloc plans to remove tariffs and begin providing preferential market access for a range of U.S. goods by the end of the month, EU officials told Supply Chain Dive.</p>",
-      "published": "2026-06-16T12:49:47",
-      "relevance_score": 4
-    },
-    {
-      "source": "CPO Rising",
-      "title": "NEW WEBINAR: Ardent Partners & xSuite – The State of AP 2026: AI Rising",
-      "link": "https://cporising.com/2026/06/16/new-webinar-ardent-partners-xsuite-the-state-of-ap-2026-ai-rising/?utm_source=rss&utm_medium=rss&utm_campaign=new-webinar-ardent-partners-xsuite-the-state-of-ap-2026-ai-rising",
-      "summary": "<p>Join Ardent Partners and xSuite on June 23rd (10 AM ET) as they discuss The State of AP 2026: AI Rising. Accounts payable is entering a pivotal new era. As&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/06/16/new-webinar-ardent-partners-xsuite-the-state-of-ap-2026-ai-rising/\">NEW WEBINAR: Ardent Partners &#038; xSuite – The State of AP 2026: AI Rising</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY ",
-      "published": "2026-06-16T10:02:01",
       "relevance_score": 4
     }
   ]
