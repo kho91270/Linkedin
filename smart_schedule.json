@@ -1,0 +1,21 @@
+{
+  "slots": [
+    {
+      "day": "Tuesday",
+      "time": "07:00",
+      "pillar": "terrain"
+    },
+    {
+      "day": "Thursday",
+      "time": "08:30",
+      "pillar": "analyste"
+    },
+    {
+      "day": "Saturday",
+      "time": "09:00",
+      "pillar": "conversation"
+    }
+  ],
+  "optimizations": [],
+  "last_updated": "2026-06-18 09:34"
+}
