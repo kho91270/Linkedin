@@ -1,5 +1,5 @@
 {
-  "date": "2024-09-16",
+  "date": "2024-02-20",
   "funding_alert": {
     "startup": null,
     "amount": null,
@@ -7,15 +7,15 @@
   },
   "key_stat": {
     "value": "des délais de passation de commande réduits de mois à semaines",
-    "context": "Bristol Myers a réussi à réduire ses délais de passation de commande grâce à l'intelligence artificielle"
+    "context": "chez Bristol Myers grâce à l'intelligence artificielle"
   },
   "new_tool": {
     "name": "Merlin Intake de Zycus",
-    "description": "plateforme d'intake-to-pay pour améliorer les processus de passation de commande"
+    "description": "plateforme d'intake-to-pay"
   },
   "hot_topic": {
     "subject": "l'intelligence artificielle dans la passation de commande",
-    "why_it_matters": "les acheteurs peuvent gagner en efficacité et en rapidité grâce à l'automatisation et à l'analyse de données"
+    "why_it_matters": "pour accélérer les processus et améliorer l'efficacité"
   },
   "post_angles": [
     {
@@ -25,8 +25,8 @@
     },
     {
       "pillar": "terrain",
-      "hook": "Quels sont les défis et les opportunités de mise en œuvre de l'intelligence artificielle dans la passation de commande ?",
-      "format": "question"
+      "hook": "Découvrez comment Bristol Myers a réussi à réduire ses délais de passation de commande grâce à l'IA",
+      "format": "carrousel"
     }
   ],
   "sources": [
@@ -40,14 +40,6 @@
       "link": "https://www.supplychaindive.com/news/burlington-opens-high-tech-distribution-center-in-georgia/823075/",
       "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/2lJTooPQ69rR-NCAH1n4HtvLetiGi_qyAz1ygk-4wII/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9DcmVkaXRfQnVybGluZ3Rvbl9TdG9yZXNfRWxsYWJlbGxfR0FfRGlzdHJpYnV0aW9uX0NlbnRlcl9BYm92ZS5wbmc=.webp\" /></div></figure><p>The 2 million-square-foot facility features sortation and automated systems along with custom software to increase supply chain speed and throughput.</p>",
       "published": "2026-06-17T13:14:00",
-      "relevance_score": 9
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "Trump is shaking up customs rules. What should shippers know?",
-      "link": "https://www.supplychaindive.com/news/trump-is-shaking-up-customs-rules-what-should-shippers-know/822731/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/GT4mxBGy_Uan7Vp41wok0X2IDkryDKpjhupx6K2bx-g/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy04ODYyNjUwMDIuanBn.webp\" /></div></figure><p>Companies must evaluate their importer of record arrangements and ensure they have deep levels of supply chain visibility ahead of the changes, experts said.</p>",
-      "published": "2026-06-16T19:42:31",
       "relevance_score": 9
     },
     {
