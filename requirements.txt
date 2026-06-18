@@ -1,4 +1,3 @@
-```text
 groq>=0.4.0
 requests>=2.31.0
 feedparser>=6.0.10
