@@ -1,3 +1,4 @@
+"""
 VEILLE.PY - Intelligence Procuretech Engine
 Utilise GROQ pour l'IA. Collecte RSS + NewsAPI, filtre, genere un brief.
 """
