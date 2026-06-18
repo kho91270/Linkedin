@@ -1,3 +1,4 @@
+"""
 RECYCLER.PY - Content Rotator Intelligent Bilingue
 Identifie les posts recyclables, transforme en FR+EN.
 """
