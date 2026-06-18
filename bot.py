@@ -1,3 +1,4 @@
+"""
 BOT.PY - Publication Manager Bilingue (FR + EN) avec Validation Email
 Utilise GROQ, Google Credentials pour Gmail, Leonardo pour images.
 Genere 2 posts (FR + EN) pour chaque publication.
