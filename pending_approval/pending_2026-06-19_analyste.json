@@ -1,0 +1,56 @@
+{
+  "content_fr": "L'IA révolutionne la passation de commande !\n\nJe viens de découvrir l'outil Merlin Intake de Zycus, une plateforme d'intake-to-pay qui améliore les processus de passation de commande. C'est intéressant, car j'ai déjà pu constater que l'intelligence artificielle peut réduire les délais de passation de commande de mois à semaines, comme c'est le cas pour Bristol Myers.\n\nJ'ai moi-même vécu des situations où les délais de passation de commande étaient trop longs, ce qui pouvait ralentir tout le processus d'approvisionnement. L'utilisation de l'IA peut donc être un vrai game-changer.\n\nMais qu'est-ce qui m'interpelle le plus, c'est la capacité de l'IA à améliorer l'efficacité des processus de passation de commande. Cela me fait réfléchir à la manière dont nous pourrions mettre en place de tels outils dans notre entreprise pour améliorer nos propres processus.\n\nComment pouvez-vous utiliser l'intelligence artificielle pour optimiser vos processus de passation de commande ?\n#ProcureTech #IntelligenceArtificielle #PassationDeCommande 💡",
+  "content_en": "AI revolutionizing procurement?\nI've seen it firsthand as a Category Manager. \nMy experience with procuretech tools has shown me the power of automation and intelligence in streamlining processes. \nThe case of Bristol Myers reducing their order processing time from months to weeks using AI is impressive. \nInsight: the key to success lies in implementing the right tools, like Merlin Intake by Zycus, to improve intake-to-pay processes. \nWhat's the next step for procurement teams to fully leverage AI and transform their operations? \n#procuretech #artificialintelligence #procurementinnovation 🤖",
+  "pillar": "analyste",
+  "format": "texte",
+  "generated_date": "2026-06-18 09:40",
+  "status": "pending_approval",
+  "lang": "both",
+  "quality_report": {
+    "timestamp": "2026-06-18 09:40",
+    "passed": true,
+    "score_fr": {
+      "total": 87,
+      "details": {
+        "hook": 20,
+        "structure": 25,
+        "longueur": 20,
+        "engagement": 11,
+        "authenticite": 11
+      },
+      "char_count": 1041
+    },
+    "unique_fr": true,
+    "hooks_fr": {
+      "original": "L'IA révolutionne la passation de commande !",
+      "hook_a": "J'ai réduit mes délais de commande de 90% !",
+      "hook_b": "Je passe de la paperasse à l'automatisation !"
+    },
+    "score_en": {
+      "total": 73,
+      "details": {
+        "hook": 25,
+        "structure": 17,
+        "longueur": 5,
+        "engagement": 15,
+        "authenticite": 11
+      },
+      "char_count": 597
+    },
+    "unique_en": true,
+    "hooks_en": {
+      "original": "AI revolutionizing procurement?",
+      "hook_a": "I've automated procurement",
+      "hook_b": "My procuretech epiphany"
+    }
+  },
+  "image": {
+    "status": "complete",
+    "url": "https://cdn.leonardo.ai/users/3d14e72a-e0c9-46d3-a916-e31db4054e4b/generations/0ef3cadd-5948-4dcd-a877-49a6ca790d09/Leonardo_Creative_Generate_an_image_of_a_navy_blue_gears_syste_0.jpg",
+    "local_path": "generated_images/img_20260618_0940_analyste.png",
+    "prompt": "Generate an image of a navy blue gears system with light blue accents, transforming into a streamlined, white arrow, symbolizing efficient procurement process, on a clean white background."
+  },
+  "publish_date": "2026-06-19",
+  "approval_status": "pending",
+  "created_at": "2026-06-18 09:40"
+}
