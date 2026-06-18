@@ -1,7 +1,4 @@
-
-"""
-REPLY_BOT.PY - Reponse automatique aux commentaires sur tes posts LinkedIn
-"""
+# reply_bot.py - Reponse automatique aux commentaires sur tes posts LinkedIn
 
 import os
 import json
@@ -35,8 +32,8 @@ def save_reply_log(log):
 def get_post_comments(post_id):
     if not LINKEDIN_ACCESS_TOKEN:
         return []
-    url = f"https://api.linkedin.com/v2/socialActions/{post_id}/comments"
-    headers = {"Authorization": f"Bearer {LINKEDIN_ACCESS_TOKEN}", "X-Restli-Protocol-Version": "2.0.0"}
+    url = "https://api.linkedin.com/v2/socialActions/" + post_id + "/comments"
+    headers = {"Authorization": "Bearer " + LINKEDIN_ACCESS_TOKEN, "X-Restli-Protocol-Version": "2.0.0"}
     try:
         r = requests.get(url, headers=headers, timeout=15)
         if r.status_code == 200:
@@ -55,38 +52,35 @@ def detect_language(text):
 
 def generate_reply(comment_text, post_content, lang="fr"):
     if lang == "fr":
-        prompt = f"""Tu es Mehdi, Category Manager en procurement.
-Quelqu'un a commente ton post LinkedIn.
-
-TON POST (extrait): {post_content[:200]}
-COMMENTAIRE: {comment_text}
-
-Ecris une REPONSE courte et engageante:
-- Remercie ou reagis au point specifique
-- Ajoute de la valeur
-- Pose une question de relance si pertinent
-- 1-3 phrases MAX
-- Ton naturel
-- PAS de hashtags
-
-Ecris UNIQUEMENT la reponse."""
+        prompt = (
+            "Tu es Mehdi, Category Manager en procurement.\n"
+            "Quelqu un a commente ton post LinkedIn.\n\n"
+            "TON POST (extrait): " + post_content[:200] + "\n"
+            "COMMENTAIRE: " + comment_text + "\n\n"
+            "Ecris une REPONSE courte et engageante:\n"
+            "- Remercie ou reagis au point specifique\n"
+            "- Ajoute de la valeur\n"
+            "- Pose une question de relance si pertinent\n"
+            "- 1-3 phrases MAX\n"
+            "- Ton naturel\n"
+            "- PAS de hashtags\n\n"
+            "Ecris UNIQUEMENT la reponse."
+        )
     else:
-        prompt = f"""You are Mehdi, a Category Manager in procurement.
-Someone commented on your LinkedIn post.
-
-YOUR POST (excerpt): {post_content[:200]}
-COMMENT: {comment_text}
-
-Write a SHORT engaging REPLY:
-- Acknowledge their specific point
-- Add value
-- Ask a follow-up question if relevant
-- 1-3 sentences MAX
-- Natural tone
-- NO hashtags
-
-Write ONLY the reply."""
-
+        prompt = (
+            "You are Mehdi, a Category Manager in procurement.\n"
+            "Someone commented on your LinkedIn post.\n\n"
+            "YOUR POST (excerpt): " + post_content[:200] + "\n"
+            "COMMENT: " + comment_text + "\n\n"
+            "Write a SHORT engaging REPLY:\n"
+            "- Acknowledge their specific point\n"
+            "- Add value\n"
+            "- Ask a follow-up question if relevant\n"
+            "- 1-3 sentences MAX\n"
+            "- Natural tone\n"
+            "- NO hashtags\n\n"
+            "Write ONLY the reply."
+        )
     try:
         response = client.chat.completions.create(
             model=GROQ_MODEL,
@@ -96,22 +90,22 @@ Write ONLY the reply."""
         )
         return response.choices[0].message.content.strip()
     except Exception as e:
-        print(f"[ERROR] Generate reply: {e}")
+        print("[ERROR] Generate reply: " + str(e))
         return None
 
 
 def post_reply(post_id, comment_id, reply_text):
     if not LINKEDIN_ACCESS_TOKEN or not LINKEDIN_PERSON_ID:
-        print(f"[SIMULATE] Reply: {reply_text[:80]}...")
+        print("[SIMULATE] Reply: " + reply_text[:80] + "...")
         return {"status": "simulated"}
-    url = f"https://api.linkedin.com/v2/socialActions/{post_id}/comments"
+    url = "https://api.linkedin.com/v2/socialActions/" + post_id + "/comments"
     headers = {
-        "Authorization": f"Bearer {LINKEDIN_ACCESS_TOKEN}",
+        "Authorization": "Bearer " + LINKEDIN_ACCESS_TOKEN,
         "Content-Type": "application/json",
         "X-Restli-Protocol-Version": "2.0.0",
     }
     payload = {
-        "actor": f"urn:li:person:{LINKEDIN_PERSON_ID}",
+        "actor": "urn:li:person:" + LINKEDIN_PERSON_ID,
         "message": {"text": reply_text},
         "parentComment": comment_id,
     }
@@ -126,14 +120,12 @@ def post_reply(post_id, comment_id, reply_text):
 
 
 def main():
-    print(f"[START] Reply Bot -- {datetime.now().strftime('%Y-%m-%d %H:%M')}")
+    print("[START] Reply Bot -- " + datetime.now().strftime("%Y-%m-%d %H:%M"))
     log = load_reply_log()
     already_replied = set(r.get("comment_id", "") for r in log.get("replies_sent", []))
-
     if not os.path.exists(PUBLISHED_DIR):
         print("[SKIP] Aucun post publie.")
         return
-
     recent_posts = []
     for fn in sorted(os.listdir(PUBLISHED_DIR), reverse=True)[:5]:
         if fn.endswith(".json"):
@@ -141,7 +133,6 @@ def main():
                 post = json.load(f)
                 post["_filename"] = fn
                 recent_posts.append(post)
-
     replies_made = 0
     for post in recent_posts:
         for lang_key in ["linkedin_response_fr", "linkedin_response_en"]:
@@ -151,10 +142,8 @@ def main():
             post_id = response_data.get("id")
             if not post_id or post_id.startswith("sim_"):
                 continue
-
             comments = get_post_comments(post_id)
             post_content = post.get("content_fr") or post.get("content_en") or ""
-
             for comment in comments:
                 comment_id = comment.get("$URN", comment.get("id", ""))
                 if comment_id in already_replied:
@@ -162,16 +151,13 @@ def main():
                 actor = comment.get("actor", "")
                 if LINKEDIN_PERSON_ID and LINKEDIN_PERSON_ID in actor:
                     continue
-
                 comment_text = comment.get("message", {}).get("text", "")
                 if not comment_text or len(comment_text) < 5:
                     continue
-
                 lang = detect_language(comment_text)
                 reply_text = generate_reply(comment_text, post_content, lang)
                 if not reply_text:
                     continue
-
                 result = post_reply(post_id, comment_id, reply_text)
                 log["replies_sent"].append({
                     "comment_id": comment_id,
@@ -187,13 +173,11 @@ def main():
                     break
         if replies_made >= 10:
             break
-
     log["last_check"] = datetime.now().strftime("%Y-%m-%d %H:%M")
     log["replies_sent"] = log["replies_sent"][-200:]
     save_reply_log(log)
-    print(f"[DONE] {replies_made} replies envoyees.")
+    print("[DONE] " + str(replies_made) + " replies envoyees.")
 
 
 if __name__ == "__main__":
     main()
-
