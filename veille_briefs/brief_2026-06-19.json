@@ -6,8 +6,8 @@
     "focus": null
   },
   "key_stat": {
-    "value": "augmentation des frais de carburant",
-    "context": "FedEx modifie ses frais de carburant pour les expéditions à l'exportation"
+    "value": "FedEx fuel surcharge change",
+    "context": "Augmentation des frais de carburant pour les envois à l'exportation"
   },
   "new_tool": {
     "name": null,
@@ -15,18 +15,18 @@
   },
   "hot_topic": {
     "subject": "Gestion des coûts logistiques",
-    "why_it_matters": "Les acheteurs doivent prendre en compte les coûts logistiques pour maintenir leur compétitivité"
+    "why_it_matters": "Les acheteurs doivent être conscients des changements dans les frais de carburant pour gérer leurs coûts et leurs délais de livraison"
   },
   "post_angles": [
     {
-      "pillar": "procurement",
-      "hook": "Comment les changements de frais de carburant affectent-ils vos coûts logistiques ?",
-      "format": "question"
+      "pillar": "Logistique",
+      "hook": "Comment les changements dans les frais de carburant affectent-ils vos envois à l'exportation ?",
+      "format": "texte"
     },
     {
-      "pillar": "supply chain",
-      "hook": "Les défis de la gestion des coûts logistiques dans un environnement en constante évolution",
-      "format": "texte"
+      "pillar": "Achats",
+      "hook": "Quels sont les impacts des changements dans les frais de carburant sur vos coûts et vos délais de livraison ?",
+      "format": "carrousel"
     }
   ],
   "sources": [
