@@ -6,32 +6,31 @@
     "focus": null
   },
   "key_stat": {
-    "value": "des délais de passation de commande réduits de mois à semaines",
-    "context": "chez Bristol Myers grâce à l'intelligence artificielle"
+    "value": "1600",
+    "context": "La taille de l'image de l'entrepôt high-tech de Burlington en Géorgie"
   },
   "new_tool": {
-    "name": "Merlin Intake de Zycus",
-    "description": "plateforme d'intake-to-pay"
+    "name": null,
+    "description": null
   },
   "hot_topic": {
-    "subject": "l'intelligence artificielle dans les processus de passation de commande",
-    "why_it_matters": "pour accélérer les délais de passation de commande et améliorer l'efficacité"
+    "subject": "Les changements dans les frais de carburant pour les expéditions",
+    "why_it_matters": "Cela peut avoir un impact significatif sur les coûts et les délais de livraison pour les acheteurs"
   },
   "post_angles": [
     {
-      "pillar": "analyste",
-      "hook": "Comment l'intelligence artificielle peut-elle révolutionner vos processus de passation de commande ?",
+      "pillar": "procuretech",
+      "hook": "Découvrez comment les entreprises comme Burlington optimisent leurs chaînes d'approvisionnement avec des entrepôts high-tech !",
       "format": "texte"
     },
     {
-      "pillar": "terrain",
-      "hook": "Découvrez comment Bristol Myers a réussi à réduire ses délais de passation de commande grâce à l'IA",
-      "format": "carrousel"
+      "pillar": "logistique",
+      "hook": "Les changements dans les frais de carburant de FedEx peuvent-ils affecter vos expéditions ?",
+      "format": "question"
     }
   ],
   "sources": [
-    "Supply Chain Dive",
-    "CPO Rising"
+    "Supply Chain Dive"
   ],
   "raw_articles": [
     {
@@ -49,22 +48,6 @@
       "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/A7RWI3z0EaOTIzwBq9j5tLmNAKi3_3iTDi7GfXQpUwY/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy00NTU3MzkxMjguanBn.webp\" /></div></figure><p>Shippers&rsquo; exports will face higher fuel fee percentages, while imports will see lower rates once the adjustment takes place June 22.</p>",
       "published": "2026-06-18T15:18:41",
       "relevance_score": 7
-    },
-    {
-      "source": "CPO Rising",
-      "title": "The Control Tower Bet: Ardent Partners on Intake-to-Pay and the Zycus Approach (Part Two)",
-      "link": "https://cporising.com/2026/06/17/the-control-tower-bet-ardent-partners-on-intake-to-pay-and-the-zycus-approach-part-two/?utm_source=rss&utm_medium=rss&utm_campaign=the-control-tower-bet-ardent-partners-on-intake-to-pay-and-the-zycus-approach-part-two",
-      "summary": "<p>In Part One of this series, I covered my February briefing and live demo with Bikash Mohanty, VP of Solution Consulting and Product Strategy at Zycus, on  Merlin Intake, Zycus’&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/06/17/the-control-tower-bet-ardent-partners-on-intake-to-pay-and-the-zycus-approach-part-two/\">The Control Tower Bet: Ardent Partners on Intake-to-Pay and the Zycus Approach (Part Two)</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE ",
-      "published": "2026-06-17T10:02:14",
-      "relevance_score": 7
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "Inside Bristol Myers’ AI-powered procurement overhaul",
-      "link": "https://www.supplychaindive.com/news/inside-bristol-myers-ai-powered-procurement-overhaul/822840/",
-      "summary": "<p>The pharmaceutical giant cut procurement timelines from months to weeks while challenging conventional wisdom on AI data readiness.</p>",
-      "published": "2026-06-17T10:00:00",
-      "relevance_score": 4
     }
   ]
 }
