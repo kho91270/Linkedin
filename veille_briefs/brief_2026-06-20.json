@@ -1,45 +1,4 @@
 {
-  "date": "2024-02-20",
-  "funding_alert": {
-    "startup": null,
-    "amount": null,
-    "focus": null
-  },
-  "key_stat": {
-    "value": "FedEx fuel surcharge change",
-    "context": "Augmentation des frais de carburant pour les envois à l'exportation"
-  },
-  "new_tool": {
-    "name": null,
-    "description": null
-  },
-  "hot_topic": {
-    "subject": "Gestion des chaînes d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent être attentifs aux changements de tarifs et de frais pour optimiser leurs coûts et leurs délais de livraison"
-  },
-  "post_angles": [
-    {
-      "pillar": "Procurement",
-      "hook": "Comment les changements de tarifs de carburant affectent-ils vos stratégies d'approvisionnement ?",
-      "format": "question"
-    },
-    {
-      "pillar": "Logistique",
-      "hook": "Découvrez comment optimiser vos coûts de transport en tenant compte des changements de tarifs de carburant",
-      "format": "texte"
-    }
-  ],
-  "sources": [
-    "Supply Chain Dive"
-  ],
-  "raw_articles": [
-    {
-      "source": "Supply Chain Dive",
-      "title": "FedEx fuel surcharge change raises heat on export shipments",
-      "link": "https://www.supplychaindive.com/news/fedex-fuel-surcharge-change-raises-heat-on-export-shipments/823062/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/A7RWI3z0EaOTIzwBq9j5tLmNAKi3_3iTDi7GfXQpUwY/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy00NTU3MzkxMjguanBn.webp\" /></div></figure><p>Shippers&rsquo; exports will face higher fuel fee percentages, while imports will see lower rates once the adjustment takes place June 22.</p>",
-      "published": "2026-06-18T15:18:41",
-      "relevance_score": 7
-    }
-  ]
+  "date": "2026-06-20",
+  "status": "NO_NEWS"
 }
