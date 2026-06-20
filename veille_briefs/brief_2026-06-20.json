@@ -14,19 +14,19 @@
     "description": null
   },
   "hot_topic": {
-    "subject": "Gestion des coûts de transport",
-    "why_it_matters": "Les acheteurs doivent prendre en compte les variations de coûts de transport pour optimiser leurs chaînes d'approvisionnement"
+    "subject": "Gestion des chaînes d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent être attentifs aux changements de tarifs et de frais pour optimiser leurs coûts et leurs délais de livraison"
   },
   "post_angles": [
     {
       "pillar": "Procurement",
-      "hook": "Comment les changements de frais de carburant affectent-ils vos coûts de transport ?",
+      "hook": "Comment les changements de tarifs de carburant affectent-ils vos stratégies d'approvisionnement ?",
       "format": "question"
     },
     {
-      "pillar": "Supply Chain",
-      "hook": "5 conseils pour gérer les coûts de transport dans un marché en constante évolution",
-      "format": "carrousel"
+      "pillar": "Logistique",
+      "hook": "Découvrez comment optimiser vos coûts de transport en tenant compte des changements de tarifs de carburant",
+      "format": "texte"
     }
   ],
   "sources": [
