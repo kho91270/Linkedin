@@ -51,6 +51,8 @@
     "prompt": "A stylized navy blue and white maze with a light blue thread navigated through it, symbolizing finding order in complex procurement data, with clean lines and minimal design."
   },
   "publish_date": "2026-06-22",
-  "approval_status": "pending",
-  "created_at": "2026-06-21 20:30"
+  "approval_status": "approved",
+  "created_at": "2026-06-21 20:30",
+  "lang_approved": "both",
+  "approved_at": "2026-06-21 20:31"
 }
