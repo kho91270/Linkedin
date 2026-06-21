@@ -61,7 +61,7 @@ def check_emails_imap():
         mail.select("inbox")
 
         # Cherche les emails NON LUS avec "Posts a valider" dans le sujet
-        status, messages = mail.search(None, '(UNSEEN SUBJECT "Posts a valider")')
+        status, messages = mail.search(None, '(SUBJECT "Posts a valider")')
         email_ids = messages[0].split()
 
         for e_id in email_ids:
