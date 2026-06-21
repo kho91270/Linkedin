@@ -75,7 +75,7 @@ jobs:
 
       - name: Run engagement bot
         if: steps.cmd.outputs.command == 'publish'
-        run: python engagement_bot.py
+        run: python engagement.py
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           LINKEDIN_ACCESS_TOKEN: ${{ secrets.LINKEDIN_ACCESS_TOKEN }}
