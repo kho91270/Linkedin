@@ -87,5 +87,5 @@ jobs:
           git config user.name "LinkedIn Bot"
           git add -A
           git diff --staged --quiet || git commit -m "bot run $(date +%Y-%m-%d)"
-          git pull --rebase origin main
+          git pull origin main --no-rebase -s recursive -X ours
           git push
