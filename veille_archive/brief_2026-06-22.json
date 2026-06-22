@@ -7,7 +7,7 @@
   },
   "key_stat": {
     "value": "100%",
-    "context": "Les chaînes d'approvisionnement utilisant l'IA peuvent s'adapter à 100% aux perturbations"
+    "context": "Les chaînes d'approvisionnement intégrant l'IA peuvent s'adapter à 100% aux perturbations"
   },
   "new_tool": {
     "name": null,
@@ -15,17 +15,17 @@
   },
   "hot_topic": {
     "subject": "Chaînes d'approvisionnement adaptatives",
-    "why_it_matters": "Les acheteurs peuvent réduire les risques et améliorer la résilience de leur chaîne d'approvisionnement en utilisant l'IA"
+    "why_it_matters": "Les acheteurs doivent intégrer l'IA pour renforcer la résilience de leurs chaînes d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "ProcureTech",
-      "hook": "Comment les chaînes d'approvisionnement utilisant l'IA peuvent-elles vous aider à vous adapter aux perturbations ?",
+      "hook": "Comment les chaînes d'approvisionnement peuvent-elles résister aux perturbations ?",
       "format": "texte"
     },
     {
-      "pillar": "Acheteur",
-      "hook": "Découvrez comment les chaînes d'approvisionnement adaptatives peuvent vous aider à réduire les risques et à améliorer la résilience",
+      "pillar": "Analyse de marché",
+      "hook": "L'IA au service de la résilience des chaînes d'approvisionnement",
       "format": "carrousel"
     }
   ],
@@ -37,7 +37,7 @@
       "source": "Supply Chain Dive",
       "title": "Built to bend: How AI-first supply chains adapt when disruption hits",
       "link": "https://www.supplychaindive.com/spons/built-to-bend-how-ai-first-supply-chains-adapt-when-disruption-hits/823237/",
-      "summary": "<p>Disruption is inevitable. Breaking isn't. Build an adaptable, AI-first supply chain today</p>",
+      "summary": "<p>Disruption is inevitable. Breaking isn't. Build an adaptable, AI-first supply chain today.</p>",
       "published": "2026-06-22T09:00:00",
       "relevance_score": 4
     }
