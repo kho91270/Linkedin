@@ -95,7 +95,7 @@ def generate_reply(comment_text, post_content, lang="fr"):
 
 
 def post_reply(post_id, comment_id, reply_text):
-    if not LINKEDIN_ACCESS_TOKEN or not LINKEDIN_PERSON_ID:
+    if not LINKEDIN_ACCESS_TOKEN or not LINKEDIN__ID:
         print("[SIMULATE] Reply: " + reply_text[:80] + "...")
         return {"status": "simulated"}
     url = "https://api.linkedin.com/v2/socialActions/" + post_id + "/comments"
@@ -105,7 +105,7 @@ def post_reply(post_id, comment_id, reply_text):
         "X-Restli-Protocol-Version": "2.0.0",
     }
     payload = {
-        "actor": "urn:li:person:" + LINKEDIN_PERSON_ID,
+        "actor": "urn:li:member:" + LINKEDIN_PERSON_ID,
         "message": {"text": reply_text},
         "parentComment": comment_id,
     }
