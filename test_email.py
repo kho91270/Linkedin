@@ -2,18 +2,16 @@ import os
 import requests
 
 token = os.environ.get("LINKEDIN_ACCESS_TOKEN")
+headers = {"Authorization": f"Bearer {token}"}
 
-if not token:
-    print("[ERROR] Pas de LINKEDIN_ACCESS_TOKEN trouvé.")
+# Test 1 : Nouvelle méthode (OpenID)
+r1 = requests.get("https://api.linkedin.com/v2/userinfo", headers=headers)
+if r1.status_code == 200:
+    print(f"\n✅ TON VRAI ID EST : {r1.json().get('sub')}\n")
 else:
-    url = "https://api.linkedin.com/v2/me"
-    headers = {"Authorization": f"Bearer {token}"}
-    response = requests.get(url, headers=headers)
-    
-    if response.status_code == 200:
-        data = response.json()
-        print("\n" + "="*50)
-        print(f"✅ TON VRAI LINKEDIN_PERSON_ID EST : {data.get('id')}")
-        print("="*50 + "\n")
+    # Test 2 : Ancienne méthode
+    r2 = requests.get("https://api.linkedin.com/v2/me", headers=headers)
+    if r2.status_code == 200:
+        print(f"\n✅ TON VRAI ID EST : {r2.json().get('id')}\n")
     else:
-        print(f"Erreur API: {response.status_code} - {response.text}")
+        print(f"Erreur : {r1.text} | {r2.text}")
