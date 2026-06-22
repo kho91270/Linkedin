@@ -400,7 +400,7 @@ def publish_to_linkedin(content, image_url=None):
         "X-Restli-Protocol-Version": "2.0.0",
     }
     payload = {
-        "author": f"urn:li:person:{LINKEDIN_PERSON_ID}",
+        "author": f"urn:li:member:{LINKEDIN_PERSON_ID}",
         "lifecycleState": "PUBLISHED",
         "specificContent": {
             "com.linkedin.ugc.ShareContent": {
