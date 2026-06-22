@@ -1,16 +1,22 @@
 {
-  "total_posts": 1,
+  "total_posts": 2,
   "current_streak": 0,
-  "last_post_date": "2026-06-21",
+  "last_post_date": "2026-06-22",
   "last_pillar": "conversation",
   "next_pillar": "terrain",
   "queue_size": 0,
   "posts_this_week": 1,
   "target_per_week": 3,
-  "week_start": "2026-06-17",
+  "week_start": "2026-06-22",
   "history": [
     {
       "date": "2026-06-21",
+      "pillar": "conversation",
+      "format": "question",
+      "lang": "both"
+    },
+    {
+      "date": "2026-06-22",
       "pillar": "conversation",
       "format": "question",
       "lang": "both"
