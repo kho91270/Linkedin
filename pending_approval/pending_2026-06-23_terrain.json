@@ -1,0 +1,56 @@
+{
+  "content_fr": "Je me suis fait avoir par un fournisseur !\n\nJ'ai passé des mois à négocier un contrat avec une société qui semblait tout à fait fiable. Je leur avais même donné un score élevé dans mon évaluation fournisseur. Mais lors de la mise en œuvre, j'ai réalisé que leurs promesses n'étaient que du vent.\n\nJ'avais oublié de vérifier leurs références et de lancer un RFI/RFP plus approfondi. C'était une erreur coûteuse !\n\nJ'ai appris que la confiance doit toujours être vérifiée. Maintenant, je fais toujours une analyse approfondie avant de prendre une décision.\n\nQuelles sont les erreurs les plus coûteuses que vous avez commises dans votre carrière de Category Manager ?\n#Procurement #Fournisseur #ErreurCoûteuse 📊",
+  "content_en": "I've been burned by suppliers before.\n \nAs a Category Manager, I've had my fair share of experiences with supplier evaluation, negotiation, and management. I recall a particular instance where I had to issue an RFI/RFP for a critical category. I thought I had done my due diligence, but ended up with a supplier who didn't meet our expectations.\n\nThe lesson I learned was to always prioritize thorough reference checks and site visits. A simple scorecard can't capture everything. I've since made it a point to include more stringent evaluation criteria and ongoing performance monitoring.\n\nWhat's the most critical factor you consider when evaluating a supplier, and how do you ensure it's met throughout the contract term? \n#procurement #supplychain #categorymanagement 💼📊👍",
+  "pillar": "terrain",
+  "format": "texte",
+  "generated_date": "2026-06-22 12:30",
+  "status": "pending_approval",
+  "lang": "both",
+  "quality_report": {
+    "timestamp": "2026-06-22 12:30",
+    "passed": true,
+    "score_fr": {
+      "total": 88,
+      "details": {
+        "hook": 25,
+        "structure": 25,
+        "longueur": 12,
+        "engagement": 11,
+        "authenticite": 15
+      },
+      "char_count": 708
+    },
+    "unique_fr": true,
+    "hooks_fr": {
+      "original": "Je me suis fait avoir par un fournisseur !",
+      "hook_a": "J'ai payé cher mon manque de vigilance !",
+      "hook_b": "Ma confiance a été trahie..."
+    },
+    "score_en": {
+      "total": 78,
+      "details": {
+        "hook": 15,
+        "structure": 25,
+        "longueur": 12,
+        "engagement": 11,
+        "authenticite": 15
+      },
+      "char_count": 775
+    },
+    "unique_en": true,
+    "hooks_en": {
+      "original": "I've been burned by suppliers before.",
+      "hook_a": "I've made supplier mistakes",
+      "hook_b": "My worst supplier fail"
+    }
+  },
+  "image": {
+    "status": "complete",
+    "url": "https://cdn.leonardo.ai/users/3d14e72a-e0c9-46d3-a916-e31db4054e4b/generations/3947c2e3-3f9f-4fb3-aad1-8d8543f621c1/Leonardo_Creative_A_broken_pillar_on_unstable_terrain_with_a_f_0.jpg",
+    "local_path": "generated_images/img_20260622_1231_terrain.png",
+    "prompt": "A broken pillar on unstable terrain, with a few scattered navy blue and light blue fragments, set against a clean white background, symbolizing a failed partnership."
+  },
+  "publish_date": "2026-06-23",
+  "approval_status": "pending",
+  "created_at": "2026-06-22 12:31"
+}
