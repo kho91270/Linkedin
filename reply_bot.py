@@ -105,7 +105,7 @@ def post_reply(post_id, comment_id, reply_text):
         "X-Restli-Protocol-Version": "2.0.0",
     }
     payload = {
-        "actor": "urn:li:member:" + LINKEDIN_PERSON_ID,
+        "actor": "urn:li:person:" + LINKEDIN_PERSON_ID,
         "message": {"text": reply_text},
         "parentComment": comment_id,
     }
