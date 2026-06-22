@@ -51,6 +51,8 @@
     "prompt": "A navy blue landscape with a subtle, winding road, representing a supply chain, and a small, overlooked pothole, symbolizing hidden costs, with a few light blue accents to convey a sense of professionalism and a white horizon to suggest a lesson learned."
   },
   "publish_date": "2026-06-23",
-  "approval_status": "pending",
-  "created_at": "2026-06-22 09:51"
+  "approval_status": "approved",
+  "created_at": "2026-06-22 09:51",
+  "lang_approved": "both",
+  "approved_at": "2026-06-22 10:00"
 }
