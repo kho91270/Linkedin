@@ -6,26 +6,26 @@
     "focus": null
   },
   "key_stat": {
-    "value": "80%",
-    "context": "Des entreprises utilisent l'IA pour améliorer leur chaîne d'approvisionnement"
+    "value": "100%",
+    "context": "Les chaînes d'approvisionnement utilisant l'IA peuvent s'adapter à 100% aux perturbations"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Chaînes d'approvisionnement basées sur l'IA",
-    "why_it_matters": "Les acheteurs peuvent améliorer leur résilience face aux perturbations en adoptant des solutions basées sur l'IA"
+    "subject": "Chaînes d'approvisionnement adaptatives",
+    "why_it_matters": "Les acheteurs doivent être en mesure de gérer les perturbations pour maintenir la continuité de leur entreprise"
   },
   "post_angles": [
     {
-      "pillar": "ProcureTech",
-      "hook": "Comment les chaînes d'approvisionnement basées sur l'IA peuvent-elles vous aider à résister aux perturbations ?",
+      "pillar": "procuretech",
+      "hook": "Comment les chaînes d'approvisionnement utilisant l'IA peuvent-elles vous aider à gérer les perturbations ?",
       "format": "texte"
     },
     {
-      "pillar": "Achats",
-      "hook": "Découvrez comment l'IA peut améliorer votre chaîne d'approvisionnement et vous aider à rester compétitif",
+      "pillar": "acheteur",
+      "hook": "Découvrez comment les chaînes d'approvisionnement adaptatives peuvent vous aider à maintenir la continuité de votre entreprise",
       "format": "carrousel"
     }
   ],
