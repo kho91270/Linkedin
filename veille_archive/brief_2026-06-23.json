@@ -14,18 +14,18 @@
     "description": null
   },
   "hot_topic": {
-    "subject": "Impact des prix bas sur les conditions de travail des fournisseurs",
-    "why_it_matters": "Les acheteurs doivent considérer l'impact de leurs décisions d'achat sur les conditions de travail des fournisseurs"
+    "subject": "Chaînes d'approvisionnement adaptatives et intelligence artificielle",
+    "why_it_matters": "Les acheteurs doivent être conscients de l'impact des prix bas sur les conditions de travail des fournisseurs et de l'importance de la résilience de la chaîne d'approvisionnement"
   },
   "post_angles": [
     {
-      "pillar": "acheteur",
+      "pillar": "procuretech",
       "hook": "Comment les prix bas des T-shirts impactent les conditions de travail des fournisseurs ?",
       "format": "texte"
     },
     {
       "pillar": "supply chain",
-      "hook": "Comment les chaînes d'approvisionnement utilisant l'IA peuvent s'adapter aux perturbations ?",
+      "hook": "Comment les chaînes d'approvisionnement utilisant l'intelligence artificielle peuvent s'adapter aux perturbations ?",
       "format": "carrousel"
     }
   ],
