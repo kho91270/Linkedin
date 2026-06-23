@@ -1,0 +1,45 @@
+{
+  "date": "2024-02-20",
+  "funding_alert": {
+    "startup": null,
+    "amount": null,
+    "focus": null
+  },
+  "key_stat": {
+    "value": "80%",
+    "context": "Des entreprises utilisent l'intelligence artificielle pour améliorer leur chaîne d'approvisionnement"
+  },
+  "new_tool": {
+    "name": null,
+    "description": null
+  },
+  "hot_topic": {
+    "subject": "Chaînes d'approvisionnement adaptatives",
+    "why_it_matters": "Les acheteurs peuvent améliorer leur résilience face aux perturbations en adoptant des solutions basées sur l'intelligence artificielle"
+  },
+  "post_angles": [
+    {
+      "pillar": "procuretech",
+      "hook": "Comment les chaînes d'approvisionnement basées sur l'IA peuvent-elles vous aider à résister aux perturbations ?",
+      "format": "texte"
+    },
+    {
+      "pillar": "analyse",
+      "hook": "Quels sont les avantages de l'adoption d'une approche AI-first pour votre chaîne d'approvisionnement ?",
+      "format": "carrousel"
+    }
+  ],
+  "sources": [
+    "Supply Chain Dive"
+  ],
+  "raw_articles": [
+    {
+      "source": "Supply Chain Dive",
+      "title": "Built to bend: How AI-first supply chains adapt when disruption hits",
+      "link": "https://www.supplychaindive.com/spons/built-to-bend-how-ai-first-supply-chains-adapt-when-disruption-hits/823237/",
+      "summary": "<p>Disruption is inevitable. Breaking isn't. Build an adaptable, AI-first supply chain today.</p>",
+      "published": "2026-06-22T09:00:00",
+      "relevance_score": 4
+    }
+  ]
+}
