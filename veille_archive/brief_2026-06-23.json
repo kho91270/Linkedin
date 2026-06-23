@@ -15,17 +15,17 @@
   },
   "hot_topic": {
     "subject": "Chaînes d'approvisionnement adaptatives",
-    "why_it_matters": "Les acheteurs doivent être en mesure de gérer les perturbations pour maintenir la continuité de leur entreprise"
+    "why_it_matters": "Les acheteurs peuvent réduire les risques et améliorer la résilience de leur chaîne d'approvisionnement en utilisant l'IA"
   },
   "post_angles": [
     {
       "pillar": "procuretech",
-      "hook": "Comment les chaînes d'approvisionnement utilisant l'IA peuvent-elles vous aider à gérer les perturbations ?",
+      "hook": "Comment les chaînes d'approvisionnement utilisant l'IA peuvent-elles vous aider à résister aux perturbations ?",
       "format": "texte"
     },
     {
       "pillar": "acheteur",
-      "hook": "Découvrez comment les chaînes d'approvisionnement adaptatives peuvent vous aider à maintenir la continuité de votre entreprise",
+      "hook": "Découvrez comment l'IA peut améliorer la résilience de votre chaîne d'approvisionnement",
       "format": "carrousel"
     }
   ],
