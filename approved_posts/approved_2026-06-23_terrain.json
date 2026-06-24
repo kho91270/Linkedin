@@ -51,6 +51,8 @@
     "prompt": "A broken pillar on unstable terrain, with a few scattered navy blue and light blue fragments, set against a clean white background, symbolizing a failed partnership."
   },
   "publish_date": "2026-06-23",
-  "approval_status": "pending",
-  "created_at": "2026-06-22 12:31"
+  "approval_status": "approved",
+  "created_at": "2026-06-22 12:31",
+  "lang_approved": "both",
+  "approved_at": "2026-06-24 09:55"
 }
