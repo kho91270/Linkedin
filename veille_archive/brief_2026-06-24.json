@@ -6,26 +6,26 @@
     "focus": null
   },
   "key_stat": {
-    "value": "Kroger et Kraft Heinz optimisent leurs chaînes d'approvisionnement",
-    "context": "Deux géants de l'industrie alimentaire améliorent leurs processus d'approvisionnement"
+    "value": "Kroger et Kraft Heinz optimisent leurs processus",
+    "context": "Deux géants de l'industrie agroalimentaire optimisent leurs processus d'approvisionnement"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Optimisation des chaînes d'approvisionnement",
-    "why_it_matters": "Pour réduire les coûts et améliorer l'efficacité"
+    "subject": "Optimisation des coûts et des processus d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent être en mesure de gérer efficacement les coûts et les processus pour rester compétitifs"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment les entreprises peuvent-elles optimiser leurs chaînes d'approvisionnement ?",
+      "hook": "Comment les entreprises peuvent-elles optimiser leurs coûts et leurs processus d'approvisionnement ?",
       "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Découvrez comment Kroger et Kraft Heinz améliorent leurs processus d'approvisionnement",
+      "hook": "Découvrez comment Kroger et Kraft Heinz améliorent leurs opérations d'approvisionnement",
       "format": "texte"
     }
   ],
