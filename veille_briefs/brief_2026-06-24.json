@@ -15,17 +15,17 @@
   },
   "hot_topic": {
     "subject": "Impact des prix bas sur les conditions de travail des fournisseurs",
-    "why_it_matters": "Les acheteurs doivent considérer les conséquences éthiques de leurs décisions d'achat"
+    "why_it_matters": "Les acheteurs doivent considérer l'impact de leurs décisions d'achat sur les conditions de travail des fournisseurs"
   },
   "post_angles": [
     {
       "pillar": "acheteur",
-      "hook": "Comment les prix bas des T-shirts affectent-ils les conditions de travail des fournisseurs ?",
+      "hook": "Comment les prix bas des T-shirts impactent-ils les conditions de travail des fournisseurs ?",
       "format": "texte"
     },
     {
-      "pillar": "procuretech",
-      "hook": "Comment l'intelligence artificielle peut-elle aider les chaînes d'approvisionnement à s'adapter aux perturbations ?",
+      "pillar": "analyse",
+      "hook": "L'adaptabilité des chaînes d'approvisionnement est-elle la clé pour faire face aux perturbations ?",
       "format": "carrousel"
     }
   ],
