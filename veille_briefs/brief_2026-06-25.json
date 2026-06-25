@@ -1,0 +1,70 @@
+{
+  "date": "2026-06-25",
+  "funding_alert": {
+    "startup": null,
+    "amount": null,
+    "focus": null
+  },
+  "key_stat": {
+    "value": "Kroger optimise les coûts avec ses fournisseurs",
+    "context": "L'optimisation des coûts est une priorité pour les entreprises"
+  },
+  "new_tool": {
+    "name": null,
+    "description": null
+  },
+  "hot_topic": {
+    "subject": "L'optimisation des coûts dans la chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent être conscients de l'impact des coûts sur la chaîne d'approvisionnement"
+  },
+  "post_angles": [
+    {
+      "pillar": "analyste",
+      "hook": "Comment les entreprises peuvent-elles optimiser leurs coûts dans la chaîne d'approvisionnement ?",
+      "format": "question"
+    },
+    {
+      "pillar": "terrain",
+      "hook": "Découvrez comment Kroger et Kraft Heinz améliorent leur chaîne d'approvisionnement",
+      "format": "texte"
+    }
+  ],
+  "sources": [
+    "Supply Chain Dive",
+    "CPO Rising"
+  ],
+  "raw_articles": [
+    {
+      "source": "Supply Chain Dive",
+      "title": "Kroger is working with suppliers to optimize costs",
+      "link": "https://www.supplychaindive.com/news/kroger-is-working-with-suppliers-to-optimize-costs/823545/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/2my75Ddo8ew-TYL_qC8s6V0VElTPwyePcKzMUp0T7D0/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9Lcm9nZXJfTWFya2V0cGxhY2VfZXh0ZXJpb3IuanBn.webp\" /></div></figure><p>The grocery retailer is pushing negotiations and intentionally leveraging direct sourcing to optimize the cost of goods.</p>",
+      "published": "2026-06-24T14:28:56",
+      "relevance_score": 11
+    },
+    {
+      "source": "CPO Rising",
+      "title": "Procurement News — June 24, 2026",
+      "link": "https://cporising.com/2026/06/24/procurement-news-june-24-2026/?utm_source=rss&utm_medium=rss&utm_campaign=procurement-news-june-24-2026",
+      "summary": "<p>Welcome to Procurement News, part of our ongoing aggregate news series covering recent supply management headlines and trends pertinent to Chief Procurement Officers and other procurement leaders! Contact us with&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/06/24/procurement-news-june-24-2026/\">Procurement News — June 24, 2026</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a>.</p>",
+      "published": "2026-06-24T10:02:25",
+      "relevance_score": 7
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Kraft Heinz merges procurement and supply chain units",
+      "link": "https://www.supplychaindive.com/news/kraft-heinz-merges-procurement-and-supply-chain-units/823436/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/aXRYjcifDH0Vdkn7UBh0HXU-PKYt5IHSNvW60CTBPU0/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjMzMzkxNjk1LmpwZw==.webp\" /></div></figure><p>The company named Janelle Aydin global chief procurement and supply chain officer, effective July 1, as it reorganizes its global operational model.</p>",
+      "published": "2026-06-23T14:30:00",
+      "relevance_score": 6
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "How low T-shirt pricing impacts supplier labor conditions",
+      "link": "https://www.supplychaindive.com/news/how-low-t-shirt-pricing-impacts-supplier-labor-conditions/823396/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/zTRuVjQsGKiXrIg9lKyKSSDqp12qvpKaHv4k37QGkos/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMjMzODE1OTEwLmpwZw==.webp\" /></div></figure><p>Despite inflation, reduced costs for the apparel staple spur negative consequences for workers&rsquo; wages and safety, per nonprofits Clean Clothes Campaign and Public Eye.</p>",
+      "published": "2026-06-23T15:35:28",
+      "relevance_score": 4
+    }
+  ]
+}
