@@ -7,15 +7,15 @@
   },
   "key_stat": {
     "value": "Kroger optimise les coûts avec ses fournisseurs",
-    "context": "L'optimisation des coûts est une priorité pour les entreprises"
+    "context": "L'entreprise américaine de distribution travaille avec ses fournisseurs pour réduire les coûts"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "L'optimisation des coûts dans la chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent être conscients de l'impact des coûts sur la chaîne d'approvisionnement"
+    "subject": "Optimisation des coûts dans la chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent être en mesure de gérer les coûts pour maintenir la compétitivité de leur entreprise"
   },
   "post_angles": [
     {
@@ -25,7 +25,7 @@
     },
     {
       "pillar": "terrain",
-      "hook": "Découvrez comment Kroger et Kraft Heinz améliorent leur chaîne d'approvisionnement",
+      "hook": "Découvrez comment Kroger et Kraft Heinz réorganisent leurs stratégies d'approvisionnement pour améliorer leur efficacité",
       "format": "texte"
     }
   ],
