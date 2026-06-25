@@ -15,18 +15,18 @@
   },
   "hot_topic": {
     "subject": "Optimisation de la chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs peuvent améliorer leur efficacité et réduire les coûts en optimisant leur chaîne d'approvisionnement"
+    "why_it_matters": "Permet aux acheteurs de réduire les coûts et d'améliorer l'efficacité"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Découvrez comment Kroger optimise ses coûts avec ses fournisseurs !",
+      "hook": "Découvrez comment Kroger optimise ses coûts avec ses fournisseurs",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Le tunnel de Howard Street est désormais opérationnel, quels sont les avantages pour les transporteurs ?",
-      "format": "question"
+      "hook": "Le tunnel de Howard Street est désormais opérationnel, qu'est-ce que cela signifie pour les transporteurs ?",
+      "format": "carrousel"
     }
   ],
   "sources": [
