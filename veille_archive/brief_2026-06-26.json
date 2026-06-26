@@ -15,17 +15,17 @@
   },
   "hot_topic": {
     "subject": "Optimisation de la chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs peuvent améliorer leur efficacité et réduire les coûts"
+    "why_it_matters": "Pour améliorer l'efficacité et réduire les coûts"
   },
   "post_angles": [
     {
-      "pillar": "procurement",
-      "hook": "Comment Kroger optimise-t-il ses coûts avec ses fournisseurs ?",
+      "pillar": "analyste",
+      "hook": "Comment les entreprises comme Kroger optimisent-elles leurs coûts ?",
       "format": "texte"
     },
     {
-      "pillar": "logistique",
-      "hook": "Le tunnel de Baltimore est désormais opérationnel, quels sont les avantages pour les expéditeurs ?",
+      "pillar": "terrain",
+      "hook": "Quels sont les bénéfices de l'expansion du tunnel de Baltimore pour les transporteurs ?",
       "format": "carrousel"
     }
   ],
