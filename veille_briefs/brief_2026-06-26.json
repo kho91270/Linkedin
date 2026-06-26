@@ -1,12 +1,12 @@
 {
-  "date": "2026-06-26",
+  "date": "2024-02-20",
   "funding_alert": {
     "startup": null,
     "amount": null,
     "focus": null
   },
   "key_stat": {
-    "value": "495 million",
+    "value": "495 millions",
     "context": "Coût du développement du tunnel Howard Street"
   },
   "new_tool": {
@@ -19,13 +19,13 @@
   },
   "post_angles": [
     {
-      "pillar": "Procurement",
-      "hook": "Découvrez comment Kroger optimise ses coûts avec ses fournisseurs",
+      "pillar": "procurement",
+      "hook": "Comment Kroger optimise-t-il ses coûts avec ses fournisseurs ?",
       "format": "texte"
     },
     {
-      "pillar": "Logistique",
-      "hook": "Le tunnel de Baltimore est désormais opérationnel, qu'est-ce que cela signifie pour les transporteurs ?",
+      "pillar": "logistique",
+      "hook": "Le tunnel de Baltimore est désormais opérationnel, quels sont les avantages pour les expéditeurs ?",
       "format": "carrousel"
     }
   ],
@@ -52,11 +52,11 @@
     },
     {
       "source": "CPO Rising",
-      "title": "Procurement News — June 24, 2026",
-      "link": "https://cporising.com/2026/06/24/procurement-news-june-24-2026/?utm_source=rss&utm_medium=rss&utm_campaign=procurement-news-june-24-2026",
-      "summary": "<p>Welcome to Procurement News, part of our ongoing aggregate news series covering recent supply management headlines and trends pertinent to Chief Procurement Officers and other procurement leaders! Contact us with&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/06/24/procurement-news-june-24-2026/\">Procurement News — June 24, 2026</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a>.</p>",
-      "published": "2026-06-24T10:02:25",
-      "relevance_score": 7
+      "title": "Winning 2026: The CPO 45-Second Briefing – “All that Glitters Is Not Gold: The AI Market Bubble”",
+      "link": "https://cporising.com/2026/06/26/winning-2026-the-cpo-45-second-briefing-all-that-glitters-is-not-gold-the-ai-market-bubble/?utm_source=rss&utm_medium=rss&utm_campaign=winning-2026-the-cpo-45-second-briefing-all-that-glitters-is-not-gold-the-ai-market-bubble",
+      "summary": "<p>Andrew Bartolini, founder and chief research officer for Ardent Partners, has been tracking how procurement evolves for 20 years and publishing an annual report for the past decade to help&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/06/26/winning-2026-the-cpo-45-second-briefing-all-that-glitters-is-not-gold-the-ai-market-bubble/\">Winning 2026: The CPO 45-Second Briefing &#8211; &#8220;All that Glitters Is Not Gold: The AI Market Bubble&#8221;</a> appeared first on <a href=\"http",
+      "published": "2026-06-26T10:02:56",
+      "relevance_score": 4
     }
   ]
 }
