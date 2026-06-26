@@ -1,11 +1,11 @@
 {
-  "total_posts": 4,
+  "total_posts": 5,
   "current_streak": 0,
-  "last_post_date": "2026-06-24",
+  "last_post_date": "2026-06-26",
   "last_pillar": "terrain",
   "next_pillar": "terrain",
   "queue_size": 0,
-  "posts_this_week": 3,
+  "posts_this_week": 4,
   "target_per_week": 3,
   "week_start": "2026-06-22",
   "history": [
@@ -29,6 +29,12 @@
     },
     {
       "date": "2026-06-24",
+      "pillar": "terrain",
+      "format": "texte",
+      "lang": "both"
+    },
+    {
+      "date": "2026-06-26",
       "pillar": "terrain",
       "format": "texte",
       "lang": "both"
