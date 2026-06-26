@@ -7,7 +7,7 @@
   },
   "key_stat": {
     "value": "495 million",
-    "context": "Coût du développement du tunnel de Howard Street"
+    "context": "Coût du développement du tunnel Howard Street"
   },
   "new_tool": {
     "name": null,
@@ -15,17 +15,17 @@
   },
   "hot_topic": {
     "subject": "Optimisation de la chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs peuvent améliorer leur efficacité et réduire les coûts en optimisant leur chaîne d'approvisionnement"
+    "why_it_matters": "Les acheteurs peuvent améliorer leur efficacité et réduire les coûts"
   },
   "post_angles": [
     {
-      "pillar": "procuretech",
+      "pillar": "Procurement",
       "hook": "Découvrez comment Kroger optimise ses coûts avec ses fournisseurs",
       "format": "texte"
     },
     {
-      "pillar": "supply chain",
-      "hook": "Le tunnel de Howard Street est désormais opérationnel, quels sont les avantages pour les transporteurs ?",
+      "pillar": "Logistique",
+      "hook": "Le tunnel de Baltimore est désormais opérationnel, qu'est-ce que cela signifie pour les transporteurs ?",
       "format": "carrousel"
     }
   ],
