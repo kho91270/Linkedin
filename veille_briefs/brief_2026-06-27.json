@@ -6,7 +6,7 @@
     "focus": null
   },
   "key_stat": {
-    "value": "495 million",
+    "value": "495 millions",
     "context": "Coût du développement du tunnel Howard Street"
   },
   "new_tool": {
@@ -15,18 +15,18 @@
   },
   "hot_topic": {
     "subject": "Optimisation de la chaîne d'approvisionnement",
-    "why_it_matters": "Amélioration de l'efficacité et de la réduction des coûts pour les acheteurs"
+    "why_it_matters": "Amélioration de l'efficacité et de la rentabilité pour les acheteurs"
   },
   "post_angles": [
     {
       "pillar": "procuretech",
-      "hook": "Comment les entreprises comme Duluth Trading améliorent leur santé des stocks ?",
+      "hook": "Découvrez comment Duluth Trading a amélioré sa santé des stocks grâce à la réduction des SKU et à la planification d'entreprise",
       "format": "texte"
     },
     {
       "pillar": "logistique",
-      "hook": "Le tunnel Howard Street est-il un exemple de modernisation de la chaîne d'approvisionnement ?",
-      "format": "carrousel"
+      "hook": "Le tunnel Howard Street est désormais opérationnel, qu'est-ce que cela signifie pour les expéditeurs ?",
+      "format": "question"
     }
   ],
   "sources": [
