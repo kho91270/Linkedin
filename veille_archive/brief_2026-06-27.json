@@ -14,19 +14,19 @@
     "description": null
   },
   "hot_topic": {
-    "subject": "Intégration de l'IA dans la chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent être conscients des avantages et des limites de l'IA pour prendre des décisions éclairées"
+    "subject": "Optimisation de la chaîne d'approvisionnement",
+    "why_it_matters": "Amélioration de l'efficacité et de la réduction des coûts pour les acheteurs"
   },
   "post_angles": [
     {
-      "pillar": "analyste",
-      "hook": "Comment l'IA peut-elle améliorer votre chaîne d'approvisionnement ?",
-      "format": "question"
+      "pillar": "procuretech",
+      "hook": "Comment les entreprises comme Duluth Trading améliorent leur santé des stocks ?",
+      "format": "texte"
     },
     {
-      "pillar": "terrain",
-      "hook": "Découvrez comment Duluth Trading a amélioré sa santé des stocks grâce à la planification d'entreprise",
-      "format": "texte"
+      "pillar": "logistique",
+      "hook": "Le tunnel Howard Street est-il un exemple de modernisation de la chaîne d'approvisionnement ?",
+      "format": "carrousel"
     }
   ],
   "sources": [
