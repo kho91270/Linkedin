@@ -7,7 +7,7 @@
   },
   "key_stat": {
     "value": "20 ans",
-    "context": "Andrew Bartolini suit l'évolution de l'approvisionnement depuis 20 ans"
+    "context": "Durée pendant laquelle Andrew Bartolini a suivi l'évolution de l'approvisionnement"
   },
   "new_tool": {
     "name": null,
@@ -15,18 +15,18 @@
   },
   "hot_topic": {
     "subject": "Bulle du marché de l'IA",
-    "why_it_matters": "Les acheteurs doivent être prudents lors de l'adoption de solutions d'IA"
+    "why_it_matters": "Les acheteurs doivent être prudents lors de l'adoption de solutions basées sur l'IA"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "L'IA est-elle surévaluée ?",
+      "hook": "L'IA n'est pas toujours la solution miracle pour les acheteurs",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Comment améliorer la santé de vos stocks ?",
-      "format": "carrousel"
+      "hook": "Comment éviter les pièges de la bulle du marché de l'IA dans l'approvisionnement ?",
+      "format": "question"
     }
   ],
   "sources": [
