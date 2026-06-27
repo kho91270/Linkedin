@@ -6,27 +6,27 @@
     "focus": null
   },
   "key_stat": {
-    "value": "495 millions",
-    "context": "Coût du développement du tunnel Howard Street"
+    "value": "20 ans",
+    "context": "Andrew Bartolini suit l'évolution de l'approvisionnement depuis 20 ans"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Optimisation de la chaîne d'approvisionnement",
-    "why_it_matters": "Amélioration de l'efficacité et de la rentabilité pour les acheteurs"
+    "subject": "Bulle du marché de l'IA",
+    "why_it_matters": "Les acheteurs doivent être prudents lors de l'adoption de solutions d'IA"
   },
   "post_angles": [
     {
-      "pillar": "procuretech",
-      "hook": "Découvrez comment Duluth Trading a amélioré sa santé des stocks grâce à la réduction des SKU et à la planification d'entreprise",
+      "pillar": "analyste",
+      "hook": "L'IA est-elle surévaluée ?",
       "format": "texte"
     },
     {
-      "pillar": "logistique",
-      "hook": "Le tunnel Howard Street est désormais opérationnel, qu'est-ce que cela signifie pour les expéditeurs ?",
-      "format": "question"
+      "pillar": "terrain",
+      "hook": "Comment améliorer la santé de vos stocks ?",
+      "format": "carrousel"
     }
   ],
   "sources": [
@@ -40,14 +40,6 @@
       "link": "https://www.supplychaindive.com/news/duluth-trading-boosts-inventory-health-with-sku-cuts-enterprise-planning/823796/",
       "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/u4CV2yVyGX7YqlxJpUcuEJJjvv8PVS8uPaDI2J5g9mA/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xNTUzMjUwNDU5LmpwZw==.webp\" /></div></figure><p>The workwear retailer reported a 25% year-over-year decline in inventory levels due to rightsizing buys, clearing excess stock and optimizing receipt scheduling.</p>",
       "published": "2026-06-26T14:33:45",
-      "relevance_score": 7
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "CSX completes Baltimore tunnel expansion, shipper benefits expected",
-      "link": "https://www.supplychaindive.com/news/csx-completes-baltimore-tunnel-expansion-shipper-benefits-expected/823680/",
-      "summary": "<p>The $495 million development of the 1.7-mile Howard Street Tunnel has allowed for full clearance of double-stacked rail services at the Port of Baltimore.</p>",
-      "published": "2026-06-25T15:16:09",
       "relevance_score": 7
     },
     {
