@@ -7,25 +7,25 @@
   },
   "key_stat": {
     "value": "20 ans",
-    "context": "Durée d'analyse de l'évolution de la fonction achat par Andrew Bartolini"
+    "context": "Durée d'analyse de l'évolution de la fonction achats par Andrew Bartolini"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Bulle du marché de l'IA",
-    "why_it_matters": "Les acheteurs doivent être prudents lors de l'adoption de solutions basées sur l'IA"
+    "subject": "Intelligence Artificielle dans la fonction achats",
+    "why_it_matters": "L'IA peut améliorer l'efficacité et la précision des processus d'approvisionnement"
   },
   "post_angles": [
     {
-      "pillar": "procuretech",
-      "hook": "L'IA est-elle surévaluée dans la fonction achat ?",
+      "pillar": "Ardent Partners",
+      "hook": "L'IA dans la fonction achats : mythe ou réalité ?",
       "format": "texte"
     },
     {
-      "pillar": "analyse de marché",
-      "hook": "Quels sont les véritables bénéfices de l'IA pour les acheteurs ?",
+      "pillar": "Duluth Trading",
+      "hook": "Comment réduire les coûts et améliorer la santé des stocks ?",
       "format": "carrousel"
     }
   ],
