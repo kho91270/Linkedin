@@ -1,0 +1,58 @@
+{
+  "content_fr": "La procuretech révolutionne mon quotidien !\n\nJe suis Category Manager en procurement et j'ai constaté que les outils de données prédictives permettent désormais de mieux anticiper les besoins et les tendances.\n\nMon insight : les données sont le nouveau pétrole de la fonction achats !\n\nQuel rôle les données joueront-elles dans l'optimisation de vos processus achats ?\n\n#procuretech #datadriven #achatsintelligents 💡",
+  "content_en": "Procurement's digital revolution is here!\nAs a Category Manager, I've seen firsthand the impact of technology on procurement processes. \nMy experience has taught me that data-driven insights are key to informed decision-making.\nWhat's the most significant hurdle you're facing in leveraging procuretech to drive business value? \n#procuretech #digitalprocurement #procurementmatters 💻📊🔍",
+  "content_x_fr": "\"Les processus RFI/RFP gagnent en efficacité avec les outils de procuretech, réduisant les délais de 30%. Quel est l'impact sur vos coûts ? #procuretech\"",
+  "content_x_en": "\"Procurement inefficiency: 1 in 5 suppliers underperform. What's the root cause of this waste?\" #procurement",
+  "pillar": "insight",
+  "format": "insight",
+  "generated_date": "2026-06-28 18:03",
+  "status": "pending_approval",
+  "lang": "both",
+  "quality_report": {
+    "timestamp": "2026-06-28 18:03",
+    "passed": true,
+    "score_fr": {
+      "total": 83,
+      "details": {
+        "hook": 20,
+        "structure": 25,
+        "longueur": 12,
+        "engagement": 11,
+        "authenticite": 15
+      },
+      "char_count": 416
+    },
+    "unique_fr": true,
+    "hooks_fr": {
+      "original": "La procuretech révolutionne mon quotidien !",
+      "hook_a": "Je booster mes achats avec les données !",
+      "hook_b": "Mon quotidien achats, réinventé !"
+    },
+    "score_en": {
+      "total": 75,
+      "details": {
+        "hook": 20,
+        "structure": 17,
+        "longueur": 20,
+        "engagement": 11,
+        "authenticite": 7
+      },
+      "char_count": 385
+    },
+    "unique_en": true,
+    "hooks_en": {
+      "original": "Procurement's digital revolution is here!",
+      "hook_a": "I'm transforming procurement!",
+      "hook_b": "My procuretech journey"
+    }
+  },
+  "image": {
+    "status": "complete",
+    "url": "https://cdn.leonardo.ai/users/3d14e72a-e0c9-46d3-a916-e31db4054e4b/generations/20c2d480-06ca-4d48-92bd-9135767403bc/Leonardo_Creative_Generate_an_image_of_a_navy_blue_oil_drop_tr_0.jpg",
+    "local_path": "generated_images/img_20260628_1803_insight.png",
+    "prompt": "Generate an image of a navy blue oil drop transforming into a light blue glowing insight symbol, with subtle white and light blue accents, on a clean and minimal background, representing data as the new valuable resource in procurement."
+  },
+  "publish_date": "2026-06-29",
+  "approval_status": "pending",
+  "created_at": "2026-06-28 18:03"
+}
