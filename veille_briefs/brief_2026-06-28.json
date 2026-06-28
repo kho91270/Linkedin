@@ -7,7 +7,7 @@
   },
   "key_stat": {
     "value": "amélioration de la santé des stocks",
-    "context": "Duluth Trading améliore la santé de ses stocks grâce à la réduction des références produits et à la planification d'entreprise"
+    "context": "Duluth Trading a amélioré la santé de ses stocks grâce à la réduction de ses références produits (SKU) et à la planification d'entreprise"
   },
   "new_tool": {
     "name": null,
@@ -15,18 +15,18 @@
   },
   "hot_topic": {
     "subject": "optimisation de la chaîne d'approvisionnement",
-    "why_it_matters": "les acheteurs peuvent améliorer leur efficacité et réduire les coûts en optimisant leur chaîne d'approvisionnement"
+    "why_it_matters": "Les acheteurs doivent optimiser leur chaîne d'approvisionnement pour améliorer la santé de leurs stocks et réduire les coûts"
   },
   "post_angles": [
     {
       "pillar": "procuretech",
       "hook": "Comment améliorer la santé de vos stocks ?",
-      "format": "texte"
+      "format": "question"
     },
     {
       "pillar": "supply chain",
-      "hook": "Les 3 clés pour optimiser votre chaîne d'approvisionnement",
-      "format": "carrousel"
+      "hook": "Découvrez comment Duluth Trading a amélioré sa chaîne d'approvisionnement",
+      "format": "texte"
     }
   ],
   "sources": [
