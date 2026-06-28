@@ -6,32 +6,31 @@
     "focus": null
   },
   "key_stat": {
-    "value": "20 ans",
-    "context": "Durée d'analyse de l'évolution de la fonction achats par Andrew Bartolini"
+    "value": "amélioration de la santé des stocks",
+    "context": "Duluth Trading améliore la santé de ses stocks grâce à la réduction des références produits et à la planification d'entreprise"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Intelligence Artificielle dans la fonction achats",
-    "why_it_matters": "L'IA peut améliorer l'efficacité et la précision des processus d'approvisionnement"
+    "subject": "optimisation de la chaîne d'approvisionnement",
+    "why_it_matters": "les acheteurs peuvent améliorer leur efficacité et réduire les coûts en optimisant leur chaîne d'approvisionnement"
   },
   "post_angles": [
     {
-      "pillar": "Ardent Partners",
-      "hook": "L'IA dans la fonction achats : mythe ou réalité ?",
+      "pillar": "procuretech",
+      "hook": "Comment améliorer la santé de vos stocks ?",
       "format": "texte"
     },
     {
-      "pillar": "Duluth Trading",
-      "hook": "Comment réduire les coûts et améliorer la santé des stocks ?",
+      "pillar": "supply chain",
+      "hook": "Les 3 clés pour optimiser votre chaîne d'approvisionnement",
       "format": "carrousel"
     }
   ],
   "sources": [
-    "Supply Chain Dive",
-    "CPO Rising"
+    "Supply Chain Dive"
   ],
   "raw_articles": [
     {
@@ -41,14 +40,6 @@
       "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/u4CV2yVyGX7YqlxJpUcuEJJjvv8PVS8uPaDI2J5g9mA/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xNTUzMjUwNDU5LmpwZw==.webp\" /></div></figure><p>The workwear retailer reported a 25% year-over-year decline in inventory levels due to rightsizing buys, clearing excess stock and optimizing receipt scheduling.</p>",
       "published": "2026-06-26T14:33:45",
       "relevance_score": 7
-    },
-    {
-      "source": "CPO Rising",
-      "title": "Winning 2026: The CPO 45-Second Briefing – “All that Glitters Is Not Gold: The AI Market Bubble”",
-      "link": "https://cporising.com/2026/06/26/winning-2026-the-cpo-45-second-briefing-all-that-glitters-is-not-gold-the-ai-market-bubble/?utm_source=rss&utm_medium=rss&utm_campaign=winning-2026-the-cpo-45-second-briefing-all-that-glitters-is-not-gold-the-ai-market-bubble",
-      "summary": "<p>Andrew Bartolini, founder and chief research officer for Ardent Partners, has been tracking how procurement evolves for 20 years and publishing an annual report for the past decade to help&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/06/26/winning-2026-the-cpo-45-second-briefing-all-that-glitters-is-not-gold-the-ai-market-bubble/\">Winning 2026: The CPO 45-Second Briefing &#8211; &#8220;All that Glitters Is Not Gold: The AI Market Bubble&#8221;</a> appeared first on <a href=\"http",
-      "published": "2026-06-26T10:02:56",
-      "relevance_score": 4
     }
   ]
 }
