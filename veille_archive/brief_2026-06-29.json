@@ -1,4 +1,53 @@
 {
-  "date": "2026-06-29",
-  "status": "NO_NEWS"
+  "date": "2024-02-20",
+  "funding_alert": {
+    "startup": null,
+    "amount": null,
+    "focus": null
+  },
+  "key_stat": {
+    "value": "48 heures",
+    "context": "Période de référence pour les articles pertinents"
+  },
+  "new_tool": {
+    "name": null,
+    "description": null
+  },
+  "hot_topic": {
+    "subject": "Chaîne d'approvisionnement",
+    "why_it_matters": "Importance pour les acheteurs en raison des ajustements dans la chaîne d'approvisionnement et les exigences de données pour les importations postales"
+  },
+  "post_angles": [
+    {
+      "pillar": "analyste",
+      "hook": "Découvrez comment les ajustements de la chaîne d'approvisionnement de Toyota North America pourraient impacter vos stratégies d'approvisionnement",
+      "format": "texte"
+    },
+    {
+      "pillar": "terrain",
+      "hook": "Comment les nouvelles exigences de données pour les importations postales vont-elles affecter vos processus de procurement ?",
+      "format": "question"
+    }
+  ],
+  "sources": [
+    "Supply Chain Dive"
+  ],
+  "raw_articles": [
+    {
+      "source": "Supply Chain Dive",
+      "title": "CBP readies more stringent data requirements for postal imports",
+      "link": "https://www.supplychaindive.com/news/cbp-readies-more-stringent-data-requirements-for-postal-imports/823923/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/9mivfkk6Ch7ii3MCQn9cWQECymCp8PsSpiuSl99xOjc/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMTk5MTY2NzUzXzEuanBn.webp\" /></div></figure><p>A new rule could result in more than $100 million in additional duties per year, although the agency said it may deter some import activity.</p>",
+      "published": "2026-06-29T12:17:00",
+      "relevance_score": 7
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Toyota North America adjusts supply chain, manufacturing leadership",
+      "link": "https://www.supplychaindive.com/news/toyota-north-america-adjusts-supply-chain-manufacturing-leadership/823798/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/xOQQba6gc7uUfxx5s0k0HuOFXJmr9m8UWGYWBmeJaJ8/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9UTU5BLUhlYWRxdWFydGVycy1FeHRlcmlvci1FbnRyYW5jZS0xNTAweDEwNjEuanBn.webp\" /></div></figure><p>Changes include expanded roles for Group VP of Supply Chain Kevin Austin and Group VP of Vehicle Supply Chain Kensuke Morita.</p>",
+      "published": "2026-06-29T15:06:37",
+      "relevance_score": 4
+    }
+  ]
 }
