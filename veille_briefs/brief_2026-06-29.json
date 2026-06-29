@@ -7,26 +7,26 @@
   },
   "key_stat": {
     "value": "48 heures",
-    "context": "Période de référence pour les articles pertinents"
+    "context": "Période de veille sur les articles pertinents"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Chaîne d'approvisionnement",
-    "why_it_matters": "Importance pour les acheteurs en raison des ajustements dans la chaîne d'approvisionnement et les exigences de données pour les importations postales"
+    "subject": "Évolution de la chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent s'adapter aux changements réglementaires et aux ajustements de la chaîne d'approvisionnement pour maintenir leur compétitivité"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Découvrez comment les ajustements de la chaîne d'approvisionnement de Toyota North America pourraient impacter vos stratégies d'approvisionnement",
-      "format": "texte"
+      "hook": "Quels sont les défis de la chaîne d'approvisionnement que vous rencontrez ?",
+      "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Comment les nouvelles exigences de données pour les importations postales vont-elles affecter vos processus de procurement ?",
-      "format": "question"
+      "hook": "Découvrez comment les entreprises comme Toyota ajustent leur chaîne d'approvisionnement pour rester compétitives",
+      "format": "texte"
     }
   ],
   "sources": [
