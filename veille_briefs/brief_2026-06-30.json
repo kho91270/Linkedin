@@ -6,8 +6,8 @@
     "focus": null
   },
   "key_stat": {
-    "value": "plus de données exigées pour les importations postales",
-    "context": "Les exigences de données pour les importations postales aux États-Unis vont devenir plus strictes"
+    "value": "48 heures",
+    "context": "Période de référence pour les articles pertinents"
   },
   "new_tool": {
     "name": null,
@@ -20,12 +20,12 @@
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment les nouvelles exigences de données pour les importations postales vont-elles impacter votre chaîne d'approvisionnement ?",
+      "hook": "Quels sont les défis de la chaîne d'approvisionnement que vous rencontrez ?",
       "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Découvrez comment Toyota North America ajuste sa chaîne d'approvisionnement et sa direction de fabrication pour rester compétitif",
+      "hook": "Découvrez comment les entreprises comme Toyota ajustent leur chaîne d'approvisionnement pour rester compétitives",
       "format": "texte"
     }
   ],
