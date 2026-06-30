@@ -6,27 +6,27 @@
     "focus": null
   },
   "key_stat": {
-    "value": "48 heures",
-    "context": "Période de référence pour les articles pertinents"
+    "value": "plus de exigences de données pour les importations postales",
+    "context": "Les douanes américaines renforcent les exigences de données pour les importations postales"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Évolution de la chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent s'adapter aux nouvelles exigences réglementaires et aux changements de leadership dans les entreprises pour maintenir leur compétitivité"
+    "subject": "Sécurité de la chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent être conscients des changements réglementaires pour éviter les retards et les coûts supplémentaires"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Découvrez comment les dernières actualités impactent votre chaîne d'approvisionnement",
-      "format": "texte"
+      "hook": "Comment les changements réglementaires affectent-ils votre chaîne d'approvisionnement ?",
+      "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Quels sont les défis et les opportunités pour les acheteurs dans le contexte actuel ?",
-      "format": "question"
+      "hook": "Toyota ajuste sa chaîne d'approvisionnement en Amérique du Nord, qu'est-ce que cela signifie pour les fournisseurs ?",
+      "format": "texte"
     }
   ],
   "sources": [
