@@ -7,25 +7,25 @@
   },
   "key_stat": {
     "value": "1.4B",
-    "context": "Le montant de l'acquisition de l'unité de logistique contractuelle de FedEx par CMA CGM"
+    "context": "Prix d'acquisition de l'unité de logistique contractuelle de FedEx par CMA CGM"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "L'acquisition de l'unité de logistique contractuelle de FedEx par CMA CGM",
-    "why_it_matters": "Cette acquisition peut avoir un impact significatif sur le marché de la logistique et du transport"
+    "subject": "Refund de tarifs douaniers",
+    "why_it_matters": "Les acheteurs peuvent récupérer des tarifs douaniers pour les entrées en attente de réconciliation de leurs calculs de droits de douane finals"
   },
   "post_angles": [
     {
-      "pillar": "procuretech",
-      "hook": "Découvrez comment l'acquisition de l'unité de logistique contractuelle de FedEx par CMA CGM va changer le marché de la logistique",
+      "pillar": "ProcureTech",
+      "hook": "Découvrez comment CMA CGM va changer le jeu de la logistique avec son acquisition de 1,4B$",
       "format": "texte"
     },
     {
-      "pillar": "acheteur",
-      "hook": "Comment cette acquisition va-t-elle impacter vos stratégies d'approvisionnement ?",
+      "pillar": "Acheteur",
+      "hook": "Comment les acheteurs peuvent profiter du nouveau portail de remboursement de tarifs douaniers de CBP ?",
       "format": "question"
     }
   ],
