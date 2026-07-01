@@ -6,26 +6,26 @@
     "focus": null
   },
   "key_stat": {
-    "value": "15 juillet",
-    "context": "Date du webinar sur l'évolutivité de la comptabilité fournisseurs"
+    "value": "1.4B",
+    "context": "Le montant de l'acquisition de l'unité de logistique contractuelle de FedEx par CMA CGM"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Évolutivité de la comptabilité fournisseurs",
-    "why_it_matters": "Les acheteurs doivent gérer efficacement leur chaîne d'approvisionnement pour maintenir la compétitivité"
+    "subject": "L'acquisition de l'unité de logistique contractuelle de FedEx par CMA CGM",
+    "why_it_matters": "Cette acquisition peut avoir un impact significatif sur le marché de la logistique et du transport"
   },
   "post_angles": [
     {
-      "pillar": "acheteur",
-      "hook": "Découvrez comment évoluer votre comptabilité fournisseurs sans complexifier vos processus !",
+      "pillar": "procuretech",
+      "hook": "Découvrez comment l'acquisition de l'unité de logistique contractuelle de FedEx par CMA CGM va changer le marché de la logistique",
       "format": "texte"
     },
     {
-      "pillar": "analyste",
-      "hook": "Quels sont les défis de l'évolutivité de la comptabilité fournisseurs pour les entreprises en croissance ?",
+      "pillar": "acheteur",
+      "hook": "Comment cette acquisition va-t-elle impacter vos stratégies d'approvisionnement ?",
       "format": "question"
     }
   ],
@@ -36,10 +36,18 @@
   "raw_articles": [
     {
       "source": "Supply Chain Dive",
-      "title": "Toyota North America adjusts supply chain, manufacturing leadership",
-      "link": "https://www.supplychaindive.com/news/toyota-north-america-adjusts-supply-chain-manufacturing-leadership/823798/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/xOQQba6gc7uUfxx5s0k0HuOFXJmr9m8UWGYWBmeJaJ8/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9UTU5BLUhlYWRxdWFydGVycy1FeHRlcmlvci1FbnRyYW5jZS0xNTAweDEwNjEuanBn.webp\" /></div></figure><p>Changes include expanded roles for Group VP of Supply Chain Kevin Austin and Group VP of Vehicle Supply Chain Kensuke Morita.</p>",
-      "published": "2026-06-29T15:06:37",
+      "title": "CBP launches first of 2 tariff refund expansions",
+      "link": "https://www.supplychaindive.com/news/cbp-launches-first-of-2-tariff-refund-expansions/824121/",
+      "summary": "<p>The agency&rsquo;s refund portal now covers entries awaiting reconciliation of their final duty calculations.</p>",
+      "published": "2026-06-30T15:01:00",
+      "relevance_score": 5
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "CMA CGM to buy FedEx’s contract logistics unit for $1.4B",
+      "link": "https://www.supplychaindive.com/news/cma-cgm-to-buy-fedexs-contract-logistics-unit-for-14b/824222/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/b4426jrapKwQEQhj38HQgmuevoqs_LGrQ_gC2yBYuhM/g:nowe:0:0/c:1024:578/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjgyOTkzODgxLmpwZw==.webp\" /></div></figure><p>Once the deal for FedEx Supply Chain is complete, the two companies also plan to solidify multiyear ocean and air freight agreements.</p>",
+      "published": "2026-07-01T15:30:00",
       "relevance_score": 4
     },
     {
