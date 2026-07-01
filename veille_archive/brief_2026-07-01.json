@@ -14,18 +14,18 @@
     "description": null
   },
   "hot_topic": {
-    "subject": "Évolution de la chaîne d'approvisionnement",
-    "why_it_matters": "Les ajustements de la chaîne d'approvisionnement et de la fabrication peuvent avoir un impact significatif sur les acheteurs"
+    "subject": "Chaîne d'approvisionnement",
+    "why_it_matters": "Les ajustements dans la chaîne d'approvisionnement et la fabrication peuvent avoir un impact significatif sur les acheteurs"
   },
   "post_angles": [
     {
-      "pillar": "procuretech",
-      "hook": "Comment les entreprises comme Toyota ajustent-elles leur chaîne d'approvisionnement ?",
+      "pillar": "Procurement",
+      "hook": "Découvrez comment les ajustements de Toyota North America dans sa chaîne d'approvisionnement pourraient vous inspirer !",
       "format": "texte"
     },
     {
-      "pillar": "analyse",
-      "hook": "Quels sont les défis et les opportunités liés à l'évolution de la chaîne d'approvisionnement ?",
+      "pillar": "Supply Chain",
+      "hook": "Les exigences de données pour les importations postales vont devenir plus strictes : êtes-vous prêt ?",
       "format": "carrousel"
     }
   ],
