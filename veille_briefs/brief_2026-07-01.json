@@ -1,52 +1,53 @@
 {
-  "date": "2024-02-20",
+  "date": "2024-07-01",
   "funding_alert": {
     "startup": null,
     "amount": null,
     "focus": null
   },
   "key_stat": {
-    "value": "48 heures",
-    "context": "Période de référence pour les articles pertinents"
+    "value": "15 juillet",
+    "context": "Date du webinar sur l'évolutivité de la comptabilité fournisseurs"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Chaîne d'approvisionnement",
-    "why_it_matters": "Les ajustements dans la chaîne d'approvisionnement et la fabrication peuvent avoir un impact significatif sur les acheteurs"
+    "subject": "Évolutivité de la comptabilité fournisseurs",
+    "why_it_matters": "Les acheteurs doivent gérer efficacement leur chaîne d'approvisionnement pour maintenir la compétitivité"
   },
   "post_angles": [
     {
-      "pillar": "Procurement",
-      "hook": "Découvrez comment les ajustements de Toyota North America dans sa chaîne d'approvisionnement pourraient vous inspirer !",
+      "pillar": "acheteur",
+      "hook": "Découvrez comment évoluer votre comptabilité fournisseurs sans complexifier vos processus !",
       "format": "texte"
     },
     {
-      "pillar": "Supply Chain",
-      "hook": "Les exigences de données pour les importations postales vont devenir plus strictes : êtes-vous prêt ?",
-      "format": "carrousel"
+      "pillar": "analyste",
+      "hook": "Quels sont les défis de l'évolutivité de la comptabilité fournisseurs pour les entreprises en croissance ?",
+      "format": "question"
     }
   ],
   "sources": [
-    "Supply Chain Dive"
+    "Supply Chain Dive",
+    "CPO Rising"
   ],
   "raw_articles": [
-    {
-      "source": "Supply Chain Dive",
-      "title": "CBP readies more stringent data requirements for postal imports",
-      "link": "https://www.supplychaindive.com/news/cbp-readies-more-stringent-data-requirements-for-postal-imports/823923/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/9mivfkk6Ch7ii3MCQn9cWQECymCp8PsSpiuSl99xOjc/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMTk5MTY2NzUzXzEuanBn.webp\" /></div></figure><p>A new rule could result in more than $100 million in additional duties per year, although the agency said it may deter some import activity.</p>",
-      "published": "2026-06-29T12:17:00",
-      "relevance_score": 7
-    },
     {
       "source": "Supply Chain Dive",
       "title": "Toyota North America adjusts supply chain, manufacturing leadership",
       "link": "https://www.supplychaindive.com/news/toyota-north-america-adjusts-supply-chain-manufacturing-leadership/823798/",
       "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/xOQQba6gc7uUfxx5s0k0HuOFXJmr9m8UWGYWBmeJaJ8/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9UTU5BLUhlYWRxdWFydGVycy1FeHRlcmlvci1FbnRyYW5jZS0xNTAweDEwNjEuanBn.webp\" /></div></figure><p>Changes include expanded roles for Group VP of Supply Chain Kevin Austin and Group VP of Vehicle Supply Chain Kensuke Morita.</p>",
       "published": "2026-06-29T15:06:37",
+      "relevance_score": 4
+    },
+    {
+      "source": "CPO Rising",
+      "title": "NEW WEBINAR: Scaling AP Without Scaling Complexity",
+      "link": "https://cporising.com/2026/07/01/new-webinar-scaling-ap-without-scaling-complexity/?utm_source=rss&utm_medium=rss&utm_campaign=new-webinar-scaling-ap-without-scaling-complexity",
+      "summary": "<p>Join Ardent Partners, Ramp, and FirstCash on July 15th (2 PM ET) as they discuss Scaling AP Without Scaling Complexity. As organizations grow, AP and P2P become more difficult to&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/01/new-webinar-scaling-ap-without-scaling-complexity/\">NEW WEBINAR: Scaling AP Without Scaling Complexity</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a>.</p>",
+      "published": "2026-07-01T10:02:35",
       "relevance_score": 4
     }
   ]
