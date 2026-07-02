@@ -1,58 +1,29 @@
 {
+  "published_date": "2026-07-02",
+  "published_time": "21:24",
+  "pillar": "conversation",
+  "format": "question",
   "content_fr": "Le coût de 495 millions pour le tunnel de Howard Street, était-il justifié ?\n\nJe me souviens avoir travaillé sur des projets d'infrastructure similaires en tant que Category Manager, et je me demande toujours si les coûts sont optimisés. En tant que praticien terrain, j'ai constaté que les délais et les coûts peuvent varier considérablement en fonction de la chaîne d'approvisionnement.\n\nCela m'a fait réfléchir à l'importance de l'optimisation de la chaîne d'approvisionnement, qui peut avoir un impact significatif sur les coûts et l'efficacité. En tant qu'analyste procuretech, je suis convaincu que les outils et les technologies peuvent aider à améliorer cette optimisation.\n\nMais quels sont les facteurs clés pour une optimisation réussie de la chaîne d'approvisionnement ? \n\n#OptimisationDeLaChaineDapprovisionnement #Procuretech #Logistique 💡📈💻",
   "content_en": "Supply chain disruption ahead!\nAs a Category Manager, I've seen firsthand the impact of inefficient logistics on our bottom line. Recently, I was struck by the $495 million cost of developing the Howard Street tunnel - a massive investment aimed at streamlining transportation.\nThis experience got me thinking: what if we could optimize our supply chain to reduce costs and boost efficiency? I've been following Kroger's efforts to optimize costs with their suppliers, and it's fascinating to see the results.\nBut here's the question: what's the most critical factor in optimizing your supply chain - technology, supplier relationships, or something else? \n#supplychainoptimization #procurement #logistics 🚚💡📈",
   "content_x_fr": "\"Optimisation chaîne d'approvisionnement : 495 millions pour le tunnel Howard Street, mais quels gains pour les transporteurs ? #ProcureTech\"",
   "content_x_en": "\"Kroger cuts costs 10% via supplier optimization. Can your supply chain do the same? #procurement\"",
-  "pillar": "conversation",
-  "format": "question",
-  "generated_date": "2026-06-25 19:04",
-  "status": "pending_approval",
-  "lang": "both",
-  "quality_report": {
-    "timestamp": "2026-06-25 19:04",
-    "passed": true,
-    "score_fr": {
-      "total": 75,
-      "details": {
-        "hook": 20,
-        "structure": 25,
-        "longueur": 0,
-        "engagement": 15,
-        "authenticite": 15
-      },
-      "char_count": 854
-    },
-    "unique_fr": true,
-    "hooks_fr": {
-      "original": "Le coût de 495 millions pour le tunnel de Howard Street, était-il justifié ?",
-      "hook_a": "Je vois des coûts démesurés partout !",
-      "hook_b": "Prix excessif ou bonne affaire ?"
-    },
-    "score_en": {
-      "total": 71,
-      "details": {
-        "hook": 20,
-        "structure": 17,
-        "longueur": 12,
-        "engagement": 15,
-        "authenticite": 7
-      },
-      "char_count": 709
-    },
-    "unique_en": true,
-    "hooks_en": {
-      "original": "Supply chain disruption ahead!",
-      "hook_a": "I'm predicting a supply chain storm!",
-      "hook_b": "My supply chain alarm is sounding"
-    }
+  "linkedin_response_fr": {
+    "status": "published",
+    "id": "urn:li:share:7478559317034598401"
   },
+  "linkedin_response_en": {
+    "status": "published",
+    "id": "urn:li:share:7478559318930382848"
+  },
+  "x_responses": {
+    "status": "error",
+    "message": "401 Unauthorized\nUnauthorized"
+  },
+  "lang": "both",
   "image": {
     "status": "complete",
     "url": "https://cdn.leonardo.ai/users/3d14e72a-e0c9-46d3-a916-e31db4054e4b/generations/32d8c82c-dff5-46f7-b056-dba6cdb93bfb/Leonardo_Creative_A_minimalist_illustration_of_a_tunnel_with_a_0.jpg",
     "local_path": "generated_images/img_20260625_1904_conversation.png",
     "prompt": "A minimalist illustration of a tunnel with a subtle navy blue background, a white tunnel outline, and light blue accents representing optimized cost management, with a few abstract shapes suggesting infrastructure and procurement elements."
-  },
-  "publish_date": "2026-06-26",
-  "approval_status": "pending",
-  "created_at": "2026-06-25 19:04"
+  }
 }
