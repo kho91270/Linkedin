@@ -7,25 +7,25 @@
   },
   "key_stat": {
     "value": "1.4B",
-    "context": "Le montant de l'acquisition de l'unité de logistique contractuelle de FedEx par CMA CGM"
+    "context": "CMA CGM acquiert l'unité de logistique contractuelle de FedEx pour 1,4 milliard de dollars"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "L'acquisition de l'unité de logistique contractuelle de FedEx par CMA CGM",
-    "why_it_matters": "Cette acquisition peut avoir un impact significatif sur le marché de la logistique et de la chaîne d'approvisionnement"
+    "subject": "Réduction des tarifs douaniers",
+    "why_it_matters": "Les acheteurs peuvent bénéficier de remboursements de tarifs douaniers pour les entrées en attente de réconciliation de leurs calculs de droits de douane finals"
   },
   "post_angles": [
     {
       "pillar": "procuretech",
-      "hook": "Découvrez comment l'acquisition de l'unité de logistique contractuelle de FedEx par CMA CGM peut impacter votre chaîne d'approvisionnement",
+      "hook": "Découvrez comment les dernières actualités en matière de tarifs douaniers peuvent impacter vos processus d'approvisionnement",
       "format": "texte"
     },
     {
-      "pillar": "analyse de marché",
-      "hook": "Quels sont les avantages et les défis de cette acquisition pour les acheteurs ?",
+      "pillar": "acheteur",
+      "hook": "Comment les acquisitions et les partenariats dans le secteur de la logistique peuvent influencer vos stratégies d'approvisionnement",
       "format": "carrousel"
     }
   ],
