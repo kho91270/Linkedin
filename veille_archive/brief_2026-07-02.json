@@ -6,27 +6,27 @@
     "focus": null
   },
   "key_stat": {
-    "value": "1.4B",
-    "context": "CMA CGM acquiert l'unité de logistique contractuelle de FedEx pour 1,4 milliard de dollars"
+    "value": "1,4 milliard",
+    "context": "Le montant de l'acquisition de l'unité de logistique contractuelle de FedEx par CMA CGM"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Réduction des tarifs douaniers",
-    "why_it_matters": "Les acheteurs peuvent bénéficier de remboursements de tarifs douaniers pour les entrées en attente de réconciliation de leurs calculs de droits de douane finals"
+    "subject": "L'automatisation de la chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent suivre les tendances de l'automatisation pour améliorer l'efficacité et la résilience de leur chaîne d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "procuretech",
-      "hook": "Découvrez comment les dernières actualités en matière de tarifs douaniers peuvent impacter vos processus d'approvisionnement",
+      "hook": "Découvrez comment les jumeaux numériques et la maturité des logiciels conduisent les tendances de l'automatisation manufacturière",
       "format": "texte"
     },
     {
-      "pillar": "acheteur",
-      "hook": "Comment les acquisitions et les partenariats dans le secteur de la logistique peuvent influencer vos stratégies d'approvisionnement",
-      "format": "carrousel"
+      "pillar": "logistique",
+      "hook": "CMA CGM rachète l'unité de logistique contractuelle de FedEx pour 1,4 milliard : qu'est-ce que cela signifie pour l'avenir de la logistique ?",
+      "format": "question"
     }
   ],
   "sources": [
@@ -36,11 +36,11 @@
   "raw_articles": [
     {
       "source": "Supply Chain Dive",
-      "title": "CBP launches first of 2 tariff refund expansions",
-      "link": "https://www.supplychaindive.com/news/cbp-launches-first-of-2-tariff-refund-expansions/824121/",
-      "summary": "<p>The agency&rsquo;s refund portal now covers entries awaiting reconciliation of their final duty calculations.</p>",
-      "published": "2026-06-30T15:01:00",
-      "relevance_score": 5
+      "title": "Digital twins, software maturity lead manufacturing automation trends",
+      "link": "https://www.supplychaindive.com/news/digital-twins-software-maturity-lead-manufacturing-automation-trends/824288/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/l4pd77-AJRa8gPFvaiRlTRepApxNVjgdMu--YKX3YrA/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9BQkJfLV9OdmlkaWFfSW1hZ2VfMi4yNS5qcGc=.webp\" /></div></figure><p>AI-powered simulation and other types of robotics technologies&nbsp;are becoming more powerful and cost-effective, per speakers at the Automate conference.</p>",
+      "published": "2026-07-02T14:44:00",
+      "relevance_score": 4
     },
     {
       "source": "Supply Chain Dive",
