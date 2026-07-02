@@ -1,0 +1,58 @@
+{
+  "content_fr": "L'automatisation de la chaîne d'approvisionnement est en marche !\n\nEn tant que Category Manager, j'ai constaté que l'efficacité et la résilience de la chaîne d'approvisionnement sont cruciales pour les entreprises. Le rachat de l'unité de logistique contractuelle de FedEx par CMA CGM pour 1,4 milliard est un exemple concret de cette tendance.\n\nJ'ai l'impression que les entreprises qui investissent dans l'automatisation de leur chaîne d'approvisionnement seront les premières à bénéficier d'une meilleure efficacité et d'une réduction des coûts.\n\nQuels sont les principaux défis que les acheteurs doivent relever pour mettre en place une chaîne d'approvisionnement automatisée ?\n\n#procuretech #logistique #automatisation 👍💻📈",
+  "content_en": "Game-changer in logistics! \nAs a Category Manager, I've seen how crucial efficient supply chains are. \nI find it insightful that CMA CGM's $1.4 billion acquisition of FedEx's contract logistics unit highlights the importance of logistics automation. \nWhat does this mean for the future of supply chain resilience? \n#logistics #procuretech #supplychain 💰🚚💻",
+  "content_x_fr": "\"L'automatisation de la chaîne d'approvisionnement est cruciale. 1,4 milliard : acquisition de l'unité logistique de FedEx par CMA CGM. Quel impact sur les processus RFI/RFP ? #procuretech\"",
+  "content_x_en": "\"CMA CGM buys FedEx's contract logistics unit for $1.4B. What's next for logistics automation?\" #procuretech",
+  "pillar": "insight",
+  "format": "insight",
+  "generated_date": "2026-07-02 18:24",
+  "status": "pending_approval",
+  "lang": "both",
+  "quality_report": {
+    "timestamp": "2026-07-02 18:24",
+    "passed": true,
+    "score_fr": {
+      "total": 71,
+      "details": {
+        "hook": 20,
+        "structure": 25,
+        "longueur": 0,
+        "engagement": 11,
+        "authenticite": 15
+      },
+      "char_count": 727
+    },
+    "unique_fr": true,
+    "hooks_fr": {
+      "original": "L'automatisation de la chaîne d'approvisionnement est en marche !",
+      "hook_a": "Je révolutionne ma chaîne d'approvisionnement !",
+      "hook_b": "Mon expérience : l'automatisation change tout !"
+    },
+    "score_en": {
+      "total": 74,
+      "details": {
+        "hook": 15,
+        "structure": 17,
+        "longueur": 20,
+        "engagement": 11,
+        "authenticite": 11
+      },
+      "char_count": 355
+    },
+    "unique_en": true,
+    "hooks_en": {
+      "original": "Game-changer in logistics! ",
+      "hook_a": "I'm witnessing a logistics revolution!",
+      "hook_b": "My take on logistics' future"
+    }
+  },
+  "image": {
+    "status": "complete",
+    "url": "https://cdn.leonardo.ai/users/3d14e72a-e0c9-46d3-a916-e31db4054e4b/generations/2af391bf-444f-4b36-8a42-a1c5ef377080/Leonardo_Creative_A_stylized_minimalist_illustration_of_interc_0.jpg",
+    "local_path": "generated_images/img_20260702_1824_insight.png",
+    "prompt": "A stylized, minimalist illustration of interconnected gears and circles in navy blue, with light blue accents, on a white background, representing a smooth and efficient supply chain, with a subtle hint of a globe or map in the design."
+  },
+  "publish_date": "2026-07-03",
+  "approval_status": "pending",
+  "created_at": "2026-07-02 18:24"
+}
