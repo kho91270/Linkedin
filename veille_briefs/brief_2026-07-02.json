@@ -1,0 +1,62 @@
+{
+  "date": "2024-02-20",
+  "funding_alert": {
+    "startup": null,
+    "amount": null,
+    "focus": null
+  },
+  "key_stat": {
+    "value": "1,4 milliard",
+    "context": "Prix d'acquisition de l'unité de logistique contractuelle de FedEx par CMA CGM"
+  },
+  "new_tool": {
+    "name": null,
+    "description": null
+  },
+  "hot_topic": {
+    "subject": "Refund de tarifs douaniers",
+    "why_it_matters": "Les acheteurs peuvent récupérer des tarifs douaniers sur les entrées en attente de réconciliation de leurs calculs de droits de douane finals"
+  },
+  "post_angles": [
+    {
+      "pillar": "procuretech",
+      "hook": "Découvrez comment CMA CGM va booster son offre logistique avec l'acquisition de l'unité de logistique contractuelle de FedEx !",
+      "format": "texte"
+    },
+    {
+      "pillar": "supply chain",
+      "hook": "Les tarifs douaniers peuvent-ils être remboursés ? Découvrez les dernières actualités sur le sujet !",
+      "format": "carrousel"
+    }
+  ],
+  "sources": [
+    "Supply Chain Dive",
+    "CPO Rising"
+  ],
+  "raw_articles": [
+    {
+      "source": "Supply Chain Dive",
+      "title": "CBP launches first of 2 tariff refund expansions",
+      "link": "https://www.supplychaindive.com/news/cbp-launches-first-of-2-tariff-refund-expansions/824121/",
+      "summary": "<p>The agency&rsquo;s refund portal now covers entries awaiting reconciliation of their final duty calculations.</p>",
+      "published": "2026-06-30T15:01:00",
+      "relevance_score": 5
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "CMA CGM to buy FedEx’s contract logistics unit for $1.4B",
+      "link": "https://www.supplychaindive.com/news/cma-cgm-to-buy-fedexs-contract-logistics-unit-for-14b/824222/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/b4426jrapKwQEQhj38HQgmuevoqs_LGrQ_gC2yBYuhM/g:nowe:0:0/c:1024:578/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjgyOTkzODgxLmpwZw==.webp\" /></div></figure><p>Once the deal for FedEx Supply Chain is complete, the two companies also plan to solidify multiyear ocean and air freight agreements.</p>",
+      "published": "2026-07-01T15:30:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "CPO Rising",
+      "title": "NEW WEBINAR: Scaling AP Without Scaling Complexity",
+      "link": "https://cporising.com/2026/07/01/new-webinar-scaling-ap-without-scaling-complexity/?utm_source=rss&utm_medium=rss&utm_campaign=new-webinar-scaling-ap-without-scaling-complexity",
+      "summary": "<p>Join Ardent Partners, Ramp, and FirstCash on July 15th (2 PM ET) as they discuss Scaling AP Without Scaling Complexity. As organizations grow, AP and P2P become more difficult to&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/01/new-webinar-scaling-ap-without-scaling-complexity/\">NEW WEBINAR: Scaling AP Without Scaling Complexity</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a>.</p>",
+      "published": "2026-07-01T10:02:35",
+      "relevance_score": 4
+    }
+  ]
+}
