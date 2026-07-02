@@ -6,27 +6,27 @@
     "focus": null
   },
   "key_stat": {
-    "value": "1,4 milliard",
-    "context": "Prix d'acquisition de l'unité de logistique contractuelle de FedEx par CMA CGM"
+    "value": "1.4B",
+    "context": "Le montant de l'acquisition de l'unité de logistique contractuelle de FedEx par CMA CGM"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Refund de tarifs douaniers",
-    "why_it_matters": "Les acheteurs peuvent récupérer des tarifs douaniers pour les entrées en attente de réconciliation de leurs calculs de droits de douane finals"
+    "subject": "L'acquisition de l'unité de logistique contractuelle de FedEx par CMA CGM",
+    "why_it_matters": "Cette acquisition peut avoir un impact significatif sur le marché de la logistique et de la chaîne d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "procuretech",
-      "hook": "Découvrez comment les dernières actualités en matière de tarifs douaniers et de logistique contractuelle impactent vos stratégies d'approvisionnement",
+      "hook": "Découvrez comment l'acquisition de l'unité de logistique contractuelle de FedEx par CMA CGM peut impacter votre chaîne d'approvisionnement",
       "format": "texte"
     },
     {
-      "pillar": "acheteur",
-      "hook": "Comment optimiser vos processus d'approvisionnement pour profiter des dernières tendances en matière de refund de tarifs douaniers ?",
-      "format": "question"
+      "pillar": "analyse de marché",
+      "hook": "Quels sont les avantages et les défis de cette acquisition pour les acheteurs ?",
+      "format": "carrousel"
     }
   ],
   "sources": [
