@@ -1,5 +1,5 @@
 {
-  "date": "2024-02-20",
+  "date": "2024-07-02",
   "funding_alert": {
     "startup": null,
     "amount": null,
@@ -15,18 +15,18 @@
   },
   "hot_topic": {
     "subject": "Refund de tarifs douaniers",
-    "why_it_matters": "Les acheteurs peuvent récupérer des tarifs douaniers sur les entrées en attente de réconciliation de leurs calculs de droits de douane finals"
+    "why_it_matters": "Les acheteurs peuvent récupérer des tarifs douaniers pour les entrées en attente de réconciliation de leurs calculs de droits de douane finals"
   },
   "post_angles": [
     {
       "pillar": "procuretech",
-      "hook": "Découvrez comment CMA CGM va booster son offre logistique avec l'acquisition de l'unité de logistique contractuelle de FedEx !",
+      "hook": "Découvrez comment les dernières actualités en matière de tarifs douaniers et de logistique contractuelle impactent vos stratégies d'approvisionnement",
       "format": "texte"
     },
     {
-      "pillar": "supply chain",
-      "hook": "Les tarifs douaniers peuvent-ils être remboursés ? Découvrez les dernières actualités sur le sujet !",
-      "format": "carrousel"
+      "pillar": "acheteur",
+      "hook": "Comment optimiser vos processus d'approvisionnement pour profiter des dernières tendances en matière de refund de tarifs douaniers ?",
+      "format": "question"
     }
   ],
   "sources": [
