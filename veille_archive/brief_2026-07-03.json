@@ -6,7 +6,7 @@
     "focus": null
   },
   "key_stat": {
-    "value": "1.4B",
+    "value": "1,4 milliard",
     "context": "CMA CGM achète l'unité de logistique contractuelle de FedEx pour 1,4 milliard de dollars"
   },
   "new_tool": {
@@ -15,7 +15,7 @@
   },
   "hot_topic": {
     "subject": "L'automatisation de la chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent être conscients de l'évolution de la chaîne d'approvisionnement pour rester compétitifs"
+    "why_it_matters": "Les acheteurs doivent être conscients des dernières tendances en matière d'automatisation pour améliorer l'efficacité et la résilience de leur chaîne d'approvisionnement"
   },
   "post_angles": [
     {
@@ -25,7 +25,7 @@
     },
     {
       "pillar": "terrain",
-      "hook": "Comment les acheteurs peuvent-ils tirer parti de l'acquisition de FedEx par CMA CGM pour améliorer leur chaîne d'approvisionnement ?",
+      "hook": "Comment les acheteurs peuvent-ils tirer parti de l'acquisition de l'unité de logistique contractuelle de FedEx par CMA CGM ?",
       "format": "question"
     }
   ],
