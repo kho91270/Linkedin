@@ -7,26 +7,26 @@
   },
   "key_stat": {
     "value": "28M",
-    "context": "Le groupe McCormick reçoit un remboursement de droits de douane de 28 millions de dollars"
+    "context": "Le groupe McCormick a reçu un remboursement de droits de douane de 28 millions de dollars"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Digitalisation de la chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent suivre les tendances de la digitalisation pour améliorer leur efficacité et leur compétitivité"
+    "subject": "Les jumeaux numériques et la maturité des logiciels",
+    "why_it_matters": "Ces tendances sont importantes pour les acheteurs car elles peuvent améliorer l'automatisation de la chaîne d'approvisionnement"
   },
   "post_angles": [
     {
-      "pillar": "procuretech",
-      "hook": "Comment la digitalisation de la chaîne d'approvisionnement peut-elle vous aider à réduire les coûts ?",
+      "pillar": "analyste",
+      "hook": "Découvrez comment les jumeaux numériques peuvent révolutionner votre chaîne d'approvisionnement",
       "format": "texte"
     },
     {
-      "pillar": "supply chain",
-      "hook": "Découvrez comment les jumeaux numériques et la maturité des logiciels peuvent améliorer l'automatisation de la fabrication",
-      "format": "carrousel"
+      "pillar": "terrain",
+      "hook": "Comment les droits de douane peuvent-ils impacter votre entreprise ?",
+      "format": "question"
     }
   ],
   "sources": [
