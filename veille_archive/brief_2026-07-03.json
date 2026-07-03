@@ -15,18 +15,18 @@
   },
   "hot_topic": {
     "subject": "Automatisation de la chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent être conscients de l'impact de l'automatisation sur la chaîne d'approvisionnement pour rester compétitifs"
+    "why_it_matters": "Les acheteurs doivent suivre les tendances en matière d'automatisation pour améliorer l'efficacité et la résilience de leur chaîne d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Quels sont les avantages de l'automatisation de la chaîne d'approvisionnement ?",
-      "format": "question"
+      "hook": "Découvrez comment les géants de la logistique investissent dans l'automatisation pour améliorer leur compétitivité",
+      "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Découvrez comment CMA CGM va intégrer l'unité de logistique contractuelle de FedEx pour améliorer son offre",
-      "format": "texte"
+      "hook": "Quels sont les défis et les opportunités de l'automatisation de la chaîne d'approvisionnement pour votre entreprise ?",
+      "format": "question"
     }
   ],
   "sources": [
