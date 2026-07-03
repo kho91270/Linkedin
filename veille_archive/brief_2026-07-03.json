@@ -6,27 +6,27 @@
     "focus": null
   },
   "key_stat": {
-    "value": "1,4 milliard",
-    "context": "CMA CGM achète l'unité de logistique contractuelle de FedEx pour 1,4 milliard de dollars"
+    "value": "28M",
+    "context": "Le groupe McCormick reçoit un remboursement de droits de douane de 28 millions de dollars"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Automatisation de la chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent suivre les tendances en matière d'automatisation pour améliorer l'efficacité et la résilience de leur chaîne d'approvisionnement"
+    "subject": "Digitalisation de la chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent suivre les tendances de la digitalisation pour améliorer leur efficacité et leur compétitivité"
   },
   "post_angles": [
     {
-      "pillar": "analyste",
-      "hook": "Découvrez comment les géants de la logistique investissent dans l'automatisation pour améliorer leur compétitivité",
+      "pillar": "procuretech",
+      "hook": "Comment la digitalisation de la chaîne d'approvisionnement peut-elle vous aider à réduire les coûts ?",
       "format": "texte"
     },
     {
-      "pillar": "terrain",
-      "hook": "Quels sont les défis et les opportunités de l'automatisation de la chaîne d'approvisionnement pour votre entreprise ?",
-      "format": "question"
+      "pillar": "supply chain",
+      "hook": "Découvrez comment les jumeaux numériques et la maturité des logiciels peuvent améliorer l'automatisation de la fabrication",
+      "format": "carrousel"
     }
   ],
   "sources": [
@@ -47,14 +47,6 @@
       "link": "https://www.supplychaindive.com/news/digital-twins-software-maturity-lead-manufacturing-automation-trends/824288/",
       "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/l4pd77-AJRa8gPFvaiRlTRepApxNVjgdMu--YKX3YrA/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9BQkJfLV9OdmlkaWFfSW1hZ2VfMi4yNS5qcGc=.webp\" /></div></figure><p>AI-powered simulation and other types of robotics technologies&nbsp;are becoming more powerful and cost-effective, per speakers at the Automate conference.</p>",
       "published": "2026-07-02T14:44:00",
-      "relevance_score": 4
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "CMA CGM to buy FedEx’s contract logistics unit for $1.4B",
-      "link": "https://www.supplychaindive.com/news/cma-cgm-to-buy-fedexs-contract-logistics-unit-for-14b/824222/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/b4426jrapKwQEQhj38HQgmuevoqs_LGrQ_gC2yBYuhM/g:nowe:0:0/c:1024:578/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjgyOTkzODgxLmpwZw==.webp\" /></div></figure><p>Once the deal for FedEx Supply Chain is complete, the two companies also plan to solidify multiyear ocean and air freight agreements.</p>",
-      "published": "2026-07-01T15:30:00",
       "relevance_score": 4
     }
   ]
