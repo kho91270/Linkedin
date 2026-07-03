@@ -1,0 +1,70 @@
+{
+  "date": "2024-07-03",
+  "funding_alert": {
+    "startup": null,
+    "amount": null,
+    "focus": null
+  },
+  "key_stat": {
+    "value": "1.4B",
+    "context": "CMA CGM achète l'unité de logistique contractuelle de FedEx pour 1,4 milliard de dollars"
+  },
+  "new_tool": {
+    "name": null,
+    "description": null
+  },
+  "hot_topic": {
+    "subject": "L'automatisation de la chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent être conscients de l'évolution de la chaîne d'approvisionnement pour rester compétitifs"
+  },
+  "post_angles": [
+    {
+      "pillar": "analyste",
+      "hook": "Découvrez comment les jumeaux numériques et la maturité des logiciels conduisent les tendances de l'automatisation de la fabrication",
+      "format": "texte"
+    },
+    {
+      "pillar": "terrain",
+      "hook": "Comment les acheteurs peuvent-ils tirer parti de l'acquisition de FedEx par CMA CGM pour améliorer leur chaîne d'approvisionnement ?",
+      "format": "question"
+    }
+  ],
+  "sources": [
+    "Supply Chain Dive",
+    "CPO Rising"
+  ],
+  "raw_articles": [
+    {
+      "source": "Supply Chain Dive",
+      "title": "McCormick gets $28M tariff refund as Iran war raises costs",
+      "link": "https://www.supplychaindive.com/news/mccormick-gets-28m-tariff-refund-as-iran-war-raises-costs/824294/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/Fs-R98S6xQED8MtcThdDBkrVIySuPGOw-10mhj3z5pk/g:nowe:0:163/c:2015:1138/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9JTUdfMjc0Ny5qcGc=.webp\" /></div></figure><p>The spice and ingredients maker plans to use the returned funds to help mitigate higher logistics and material costs tied to the conflict.</p>",
+      "published": "2026-07-02T17:58:00",
+      "relevance_score": 7
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Digital twins, software maturity lead manufacturing automation trends",
+      "link": "https://www.supplychaindive.com/news/digital-twins-software-maturity-lead-manufacturing-automation-trends/824288/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/l4pd77-AJRa8gPFvaiRlTRepApxNVjgdMu--YKX3YrA/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9BQkJfLV9OdmlkaWFfSW1hZ2VfMi4yNS5qcGc=.webp\" /></div></figure><p>AI-powered simulation and other types of robotics technologies&nbsp;are becoming more powerful and cost-effective, per speakers at the Automate conference.</p>",
+      "published": "2026-07-02T14:44:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "CMA CGM to buy FedEx’s contract logistics unit for $1.4B",
+      "link": "https://www.supplychaindive.com/news/cma-cgm-to-buy-fedexs-contract-logistics-unit-for-14b/824222/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/b4426jrapKwQEQhj38HQgmuevoqs_LGrQ_gC2yBYuhM/g:nowe:0:0/c:1024:578/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjgyOTkzODgxLmpwZw==.webp\" /></div></figure><p>Once the deal for FedEx Supply Chain is complete, the two companies also plan to solidify multiyear ocean and air freight agreements.</p>",
+      "published": "2026-07-01T15:30:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "CPO Rising",
+      "title": "NEW WEBINAR: Scaling AP Without Scaling Complexity",
+      "link": "https://cporising.com/2026/07/01/new-webinar-scaling-ap-without-scaling-complexity/?utm_source=rss&utm_medium=rss&utm_campaign=new-webinar-scaling-ap-without-scaling-complexity",
+      "summary": "<p>Join Ardent Partners, Ramp, and FirstCash on July 15th (2 PM ET) as they discuss Scaling AP Without Scaling Complexity. As organizations grow, AP and P2P become more difficult to&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/01/new-webinar-scaling-ap-without-scaling-complexity/\">NEW WEBINAR: Scaling AP Without Scaling Complexity</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a>.</p>",
+      "published": "2026-07-01T10:02:35",
+      "relevance_score": 4
+    }
+  ]
+}
