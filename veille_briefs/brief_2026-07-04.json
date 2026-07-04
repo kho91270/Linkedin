@@ -7,26 +7,26 @@
   },
   "key_stat": {
     "value": "28M",
-    "context": "McCormick reçoit un remboursement de droits de douane de 28 millions de dollars"
+    "context": "McCormick reçoit un remboursement de tarif de 28 millions de dollars en raison de la guerre en Iran"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Impact des événements géopolitiques sur les chaînes d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent être conscients des risques potentiels liés aux événements géopolitiques pour gérer efficacement leurs chaînes d'approvisionnement"
+    "subject": "Chaîne d'approvisionnement et automation",
+    "why_it_matters": "Les acheteurs doivent être conscients des tendances en matière d'automatisation de la chaîne d'approvisionnement pour optimiser leurs processus"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment les événements géopolitiques comme la guerre en Iran peuvent-ils impacter vos coûts ?",
+      "hook": "Découvrez comment les jumeaux numériques et la maturité des logiciels conduisent les tendances en matière d'automatisation de la fabrication",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Quels sont les avantages de l'automatisation de la fabrication pour améliorer la résilience de votre chaîne d'approvisionnement ?",
-      "format": "carrousel"
+      "hook": "Comment la guerre en Iran affecte-t-elle vos coûts de chaîne d'approvisionnement ?",
+      "format": "question"
     }
   ],
   "sources": [
