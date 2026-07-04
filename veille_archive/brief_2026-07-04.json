@@ -7,26 +7,26 @@
   },
   "key_stat": {
     "value": "28M",
-    "context": "Le géant de l'agroalimentaire McCormick reçoit un remboursement de droits de douane de 28 millions de dollars"
+    "context": "McCormick reçoit un remboursement de droits de douane de 28 millions de dollars"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Les jumeaux numériques et la maturité des logiciels",
-    "why_it_matters": "Ces tendances dans l'automatisation de la fabrication permettent d'améliorer l'efficacité et la précision dans les chaînes d'approvisionnement"
+    "subject": "Impact des événements géopolitiques sur les chaînes d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent être conscients des risques potentiels liés aux événements géopolitiques pour gérer efficacement leurs chaînes d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Découvrez comment les jumeaux numériques révolutionnent l'industrie manufacturière !",
+      "hook": "Comment les événements géopolitiques comme la guerre en Iran peuvent-ils impacter vos coûts ?",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Les droits de douane peuvent-ils impacter votre chaîne d'approvisionnement ?",
-      "format": "question"
+      "hook": "Quels sont les avantages de l'automatisation de la fabrication pour améliorer la résilience de votre chaîne d'approvisionnement ?",
+      "format": "carrousel"
     }
   ],
   "sources": [
