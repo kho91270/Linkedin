@@ -19,14 +19,14 @@
   },
   "post_angles": [
     {
-      "pillar": "acheteur",
-      "hook": "Comment réduire les coûts de carburant dans votre chaîne d'approvisionnement ?",
-      "format": "question"
+      "pillar": "procuretech",
+      "hook": "Comment les entreprises peuvent-elles utiliser le fret contractuel pour réduire les coûts de carburant ?",
+      "format": "texte"
     },
     {
-      "pillar": "procuretech",
-      "hook": "Les solutions de fret contractuel pour naviguer dans les coûts de carburant élevés",
-      "format": "texte"
+      "pillar": "acheteur",
+      "hook": "Quels sont les défis et les opportunités de la gestion des coûts de carburant dans la chaîne d'approvisionnement ?",
+      "format": "carrousel"
     }
   ],
   "sources": [
