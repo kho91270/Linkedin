@@ -20,13 +20,13 @@
   "post_angles": [
     {
       "pillar": "acheteur",
-      "hook": "Comment les acheteurs peuvent-ils naviguer dans les coûts de carburant plus élevés ?",
+      "hook": "Comment réduire les coûts de carburant dans votre chaîne d'approvisionnement ?",
       "format": "question"
     },
     {
       "pillar": "procuretech",
-      "hook": "Les solutions de fret contractuel pour réduire les coûts de carburant",
-      "format": "carrousel"
+      "hook": "Les solutions de fret contractuel pour naviguer dans les coûts de carburant élevés",
+      "format": "texte"
     }
   ],
   "sources": [
