@@ -1,0 +1,45 @@
+{
+  "date": "2024-02-20",
+  "funding_alert": {
+    "startup": null,
+    "amount": null,
+    "focus": null
+  },
+  "key_stat": {
+    "value": "hauteurs des coûts de carburant",
+    "context": "Les coûts de carburant élevés impactent la chaîne d'approvisionnement de Lovesac"
+  },
+  "new_tool": {
+    "name": null,
+    "description": null
+  },
+  "hot_topic": {
+    "subject": "Gestion des coûts de transport",
+    "why_it_matters": "Les acheteurs doivent trouver des solutions pour naviguer les coûts de carburant élevés et maintenir la rentabilité"
+  },
+  "post_angles": [
+    {
+      "pillar": "acheteur",
+      "hook": "Comment les entreprises comme Lovesac gèrent-elles les coûts de carburant élevés ?",
+      "format": "texte"
+    },
+    {
+      "pillar": "procuretech",
+      "hook": "Quels outils technologiques peuvent aider les acheteurs à optimiser leurs coûts de transport ?",
+      "format": "carrousel"
+    }
+  ],
+  "sources": [
+    "Supply Chain Dive"
+  ],
+  "raw_articles": [
+    {
+      "source": "Supply Chain Dive",
+      "title": "Lovesac taps contract freight to navigate higher fuel costs",
+      "link": "https://www.supplychaindive.com/news/lovesac-taps-contract-freight-to-navigate-higher-fuel-costs/824255/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/gDKFB0UBWFc-U_LePFgfzmXDi7SjXU2K-wHVLJqluNM/g:nowe:52:221/c:1202:679/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9Mb3Zlc2FjX3N0b3JlLmpwZWc=.webp\" /></div></figure><p>The furniture company leveraged cargo partnerships to secure capacity at a contractual rate as a way to offset higher oil prices and spot market volatility.</p>",
+      "published": "2026-07-06T14:38:26",
+      "relevance_score": 5
+    }
+  ]
+}
