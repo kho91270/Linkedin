@@ -6,25 +6,25 @@
     "focus": null
   },
   "key_stat": {
-    "value": "augmentation des coûts de carburant",
-    "context": "Lovesac utilise le fret contractuel pour naviguer dans les coûts de carburant plus élevés"
+    "value": "hauteurs des coûts de carburant",
+    "context": "Les entreprises comme Lovesac utilisent le fret contractuel pour naviguer dans les coûts de carburant élevés"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "gestion des coûts de carburant dans la chaîne d'approvisionnement",
-    "why_it_matters": "les acheteurs doivent trouver des solutions pour réduire les coûts de carburant et maintenir la rentabilité"
+    "subject": "USMCA et gestion de la chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent être conscients des accords commerciaux pour prendre des décisions éclairées"
   },
   "post_angles": [
     {
       "pillar": "acheteur",
-      "hook": "Comment gérer les coûts de carburant dans votre chaîne d'approvisionnement ?",
+      "hook": "Comment les accords commerciaux comme l'USMCA impactent-ils votre chaîne d'approvisionnement ?",
       "format": "question"
     },
     {
-      "pillar": "analyse de marché",
+      "pillar": "analyste",
       "hook": "Découvrez comment Lovesac utilise le fret contractuel pour réduire les coûts de carburant",
       "format": "texte"
     }
@@ -40,6 +40,14 @@
       "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/gDKFB0UBWFc-U_LePFgfzmXDi7SjXU2K-wHVLJqluNM/g:nowe:52:221/c:1202:679/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9Mb3Zlc2FjX3N0b3JlLmpwZWc=.webp\" /></div></figure><p>The furniture company leveraged cargo partnerships to secure capacity at a contractual rate as a way to offset higher oil prices and spot market volatility.</p>",
       "published": "2026-07-06T14:38:26",
       "relevance_score": 5
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "USMCA: Retail, manufacturing and apparel groups call for preservation",
+      "link": "https://www.supplychaindive.com/news/usmca-retail-manufacturing-and-apparel-groups-call-for-preservation/824502/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/Qm9c4WjQ79nu0kG3cvr6r-LuHAf4BdAQ7tHkVAX56yw/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjc3MTgwNDc0X1Q0aTZVejAuanBn.webp\" /></div></figure><p>Trade groups backed the pact's annual review, but stressed its importance to North America supply chains.</p>",
+      "published": "2026-07-07T14:28:25",
+      "relevance_score": 4
     }
   ]
 }
