@@ -14,18 +14,18 @@
     "description": null
   },
   "hot_topic": {
-    "subject": "gestion des coûts de fret",
-    "why_it_matters": "les acheteurs doivent trouver des solutions pour réduire les coûts de fret dans un contexte de hausse des prix du carburant"
+    "subject": "gestion des coûts de carburant dans la chaîne d'approvisionnement",
+    "why_it_matters": "les acheteurs doivent trouver des solutions pour réduire les coûts de carburant et maintenir la rentabilité"
   },
   "post_angles": [
     {
-      "pillar": "procuretech",
-      "hook": "Comment les entreprises peuvent-elles réduire leurs coûts de fret ?",
+      "pillar": "acheteur",
+      "hook": "Comment gérer les coûts de carburant dans votre chaîne d'approvisionnement ?",
       "format": "question"
     },
     {
-      "pillar": "supply chain",
-      "hook": "Lovesac innove pour faire face à la hausse des coûts de carburant",
+      "pillar": "analyse de marché",
+      "hook": "Découvrez comment Lovesac utilise le fret contractuel pour réduire les coûts de carburant",
       "format": "texte"
     }
   ],
