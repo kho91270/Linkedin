@@ -6,26 +6,26 @@
     "focus": null
   },
   "key_stat": {
-    "value": "50%",
-    "context": "augmentation des coûts de carburant pour les entreprises de logistique"
+    "value": "Les coûts de carburant plus élevés",
+    "context": "Les entreprises comme Lovesac utilisent le fret contractuel pour naviguer dans les coûts de carburant plus élevés"
   },
   "new_tool": {
     "name": "Cobots",
-    "description": "robots collaboratifs intelligents avec IA"
+    "description": "Les cobots deviennent plus simples et plus intelligents avec l'IA"
   },
   "hot_topic": {
-    "subject": "Transition vers les véhicules électriques",
-    "why_it_matters": "impact sur la résilience de la chaîne d'approvisionnement automobile"
+    "subject": "La transition vers les véhicules électriques",
+    "why_it_matters": "La transition vers les véhicules électriques présente des défis pour la résilience de la chaîne d'approvisionnement automobile"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment les entreprises de logistique peuvent-elles naviguer les coûts de carburant élevés ?",
+      "hook": "Comment les entreprises peuvent-elles naviguer dans les coûts de carburant plus élevés ?",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Quels sont les défis de la transition vers les véhicules électriques pour la chaîne d'approvisionnement automobile ?",
+      "hook": "Quels sont les avantages de l'utilisation de cobots dans la chaîne d'approvisionnement ?",
       "format": "carrousel"
     }
   ],
