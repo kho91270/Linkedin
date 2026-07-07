@@ -6,27 +6,27 @@
     "focus": null
   },
   "key_stat": {
-    "value": "hauteurs des coûts de carburant",
-    "context": "Les coûts de carburant élevés impactent la chaîne d'approvisionnement de Lovesac"
+    "value": "augmentation des coûts de carburant",
+    "context": "Lovesac utilise le fret contractuel pour naviguer dans les coûts de carburant plus élevés"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Gestion des coûts de transport",
-    "why_it_matters": "Les acheteurs doivent trouver des solutions pour naviguer les coûts de carburant élevés et maintenir la rentabilité"
+    "subject": "gestion des coûts de fret",
+    "why_it_matters": "les acheteurs doivent trouver des solutions pour réduire les coûts de fret dans un contexte de hausse des prix du carburant"
   },
   "post_angles": [
     {
-      "pillar": "acheteur",
-      "hook": "Comment les entreprises comme Lovesac gèrent-elles les coûts de carburant élevés ?",
-      "format": "texte"
+      "pillar": "procuretech",
+      "hook": "Comment les entreprises peuvent-elles réduire leurs coûts de fret ?",
+      "format": "question"
     },
     {
-      "pillar": "procuretech",
-      "hook": "Quels outils technologiques peuvent aider les acheteurs à optimiser leurs coûts de transport ?",
-      "format": "carrousel"
+      "pillar": "supply chain",
+      "hook": "Lovesac innove pour faire face à la hausse des coûts de carburant",
+      "format": "texte"
     }
   ],
   "sources": [
