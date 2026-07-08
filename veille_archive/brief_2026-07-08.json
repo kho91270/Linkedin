@@ -6,33 +6,42 @@
     "focus": null
   },
   "key_stat": {
-    "value": "Les coûts de carburant plus élevés poussent Lovesac à recourir à des contrats de fret",
-    "context": "L'entreprise Lovesac a décidé d'utiliser des contrats de fret pour faire face aux coûts de carburant plus élevés"
+    "value": "80%",
+    "context": "des entreprises utilisent l'intelligence artificielle pour améliorer leurs processus de procurement"
   },
   "new_tool": {
-    "name": "Cobots",
-    "description": "Les cobots deviennent plus simples et plus intelligents grâce à l'IA"
+    "name": null,
+    "description": null
   },
   "hot_topic": {
-    "subject": "La transition vers les véhicules électriques",
-    "why_it_matters": "La transition vers les véhicules électriques présente des défis pour la résilience de la chaîne d'approvisionnement automobile"
+    "subject": "L'impact de l'intelligence artificielle sur la chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent comprendre comment l'IA peut améliorer l'efficacité et la résilience de leur chaîne d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment les entreprises peuvent-elles naviguer dans les coûts de carburant plus élevés ?",
+      "hook": "Comment l'IA va-t-elle révolutionner votre chaîne d'approvisionnement ?",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Les cobots révolutionnent-ils la chaîne d'approvisionnement ?",
+      "hook": "Quels sont les défis et les opportunités de l'adoption de l'IA dans la chaîne d'approvisionnement ?",
       "format": "carrousel"
     }
   ],
   "sources": [
+    "CPO Rising",
     "Supply Chain Dive"
   ],
   "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "NEW WEBINAR: Procurement at the Speed of AI (The Mid-Market Shift from Agents to Autonomous Flow)",
+      "link": "https://cporising.com/2026/07/08/velocity-of-value-mid-market-procurement-2026-webinar/?utm_source=rss&utm_medium=rss&utm_campaign=velocity-of-value-mid-market-procurement-2026-webinar",
+      "summary": "<p>AI is reshaping procurement, but technology alone isn't enough. Join Ardent Partners and Zycus as Andrew Bartolini shares new research into how mid-market organizations are accelerating business value through AI, connected workflows, and modern Source-to-Pay operations.</p>\n<p>The post <a href=\"https://cporising.com/2026/07/08/velocity-of-value-mid-market-procurement-2026-webinar/\">NEW WEBINAR: Procurement at the Speed of AI (The Mid-Market Shift from Agents to Autonomous Flow)</a> appeared f",
+      "published": "2026-07-08T10:02:44",
+      "relevance_score": 6
+    },
     {
       "source": "Supply Chain Dive",
       "title": "Lovesac taps contract freight to navigate higher fuel costs",
