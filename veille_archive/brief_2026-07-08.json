@@ -1,39 +1,47 @@
 {
-  "date": "2024-02-20",
+  "date": "2024-09-16",
   "funding_alert": {
     "startup": null,
     "amount": null,
     "focus": null
   },
   "key_stat": {
-    "value": "mid-market organizations",
-    "context": "accélèrent leurs activités grâce à l'IA"
+    "value": "1 milliard de dollars",
+    "context": "Nike attend une remise de droits de douane IEEPA"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "l'intelligence artificielle dans la chaîne d'approvisionnement",
-    "why_it_matters": "permet aux acheteurs d'accélérer leurs processus et d'améliorer leur efficacité"
+    "subject": "Intelligence artificielle dans la chaîne d'approvisionnement",
+    "why_it_matters": "L'IA peut accélérer les processus d'approvisionnement et améliorer la résilience de la chaîne d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'IA révolutionne la chaîne d'approvisionnement ?",
+      "hook": "L'IA révolutionne la chaîne d'approvisionnement !",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Quels sont les défis de la transition vers des véhicules électriques pour la chaîne d'approvisionnement ?",
+      "hook": "Comment les cobots peuvent améliorer votre chaîne d'approvisionnement ?",
       "format": "question"
     }
   ],
   "sources": [
-    "CPO Rising",
-    "Supply Chain Dive"
+    "Supply Chain Dive",
+    "CPO Rising"
   ],
   "raw_articles": [
+    {
+      "source": "Supply Chain Dive",
+      "title": "Nike expects nearly $1B in IEEPA tariff refunds",
+      "link": "https://www.supplychaindive.com/news/nike-expects-nearly-1b-in-ieepa-tariff-refunds/824492/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/v4JOluo2x3YHpx9hc_tZbRDdHWP2NiyAiRkV133RKyw/g:nowe:0:0/c:2500:1412/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMDE2MTMxNzY0LmpwZw==.webp\" /></div></figure><p>The sportswear brand has collected more than $300 million in refunds for the invalidated levies, as of the quarter ending May 31.</p>",
+      "published": "2026-07-08T15:43:00",
+      "relevance_score": 7
+    },
     {
       "source": "CPO Rising",
       "title": "NEW WEBINAR: Procurement at the Speed of AI (The Mid-Market Shift from Agents to Autonomous Flow)",
@@ -41,14 +49,6 @@
       "summary": "<p>AI is reshaping procurement, but technology alone isn't enough. Join Ardent Partners and Zycus as Andrew Bartolini shares new research into how mid-market organizations are accelerating business value through AI, connected workflows, and modern Source-to-Pay operations.</p>\n<p>The post <a href=\"https://cporising.com/2026/07/08/velocity-of-value-mid-market-procurement-2026-webinar/\">NEW WEBINAR: Procurement at the Speed of AI (The Mid-Market Shift from Agents to Autonomous Flow)</a> appeared f",
       "published": "2026-07-08T10:02:44",
       "relevance_score": 6
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "Lovesac taps contract freight to navigate higher fuel costs",
-      "link": "https://www.supplychaindive.com/news/lovesac-taps-contract-freight-to-navigate-higher-fuel-costs/824255/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/gDKFB0UBWFc-U_LePFgfzmXDi7SjXU2K-wHVLJqluNM/g:nowe:52:221/c:1202:679/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9Mb3Zlc2FjX3N0b3JlLmpwZWc=.webp\" /></div></figure><p>The furniture company leveraged cargo partnerships to secure capacity at a contractual rate as a way to offset higher oil prices and spot market volatility.</p>",
-      "published": "2026-07-06T14:38:26",
-      "relevance_score": 5
     },
     {
       "source": "Supply Chain Dive",
