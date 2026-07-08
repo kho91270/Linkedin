@@ -6,27 +6,27 @@
     "focus": null
   },
   "key_stat": {
-    "value": "80%",
-    "context": "des entreprises utilisent l'intelligence artificielle pour améliorer leurs processus de procurement"
+    "value": "mid-market organizations",
+    "context": "accélèrent leurs activités grâce à l'IA"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "L'impact de l'intelligence artificielle sur la chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent comprendre comment l'IA peut améliorer l'efficacité et la résilience de leur chaîne d'approvisionnement"
+    "subject": "l'intelligence artificielle dans la chaîne d'approvisionnement",
+    "why_it_matters": "permet aux acheteurs d'accélérer leurs processus et d'améliorer leur efficacité"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'IA va-t-elle révolutionner votre chaîne d'approvisionnement ?",
+      "hook": "Comment l'IA révolutionne la chaîne d'approvisionnement ?",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Quels sont les défis et les opportunités de l'adoption de l'IA dans la chaîne d'approvisionnement ?",
-      "format": "carrousel"
+      "hook": "Quels sont les défis de la transition vers des véhicules électriques pour la chaîne d'approvisionnement ?",
+      "format": "question"
     }
   ],
   "sources": [
