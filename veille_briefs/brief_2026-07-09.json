@@ -7,26 +7,26 @@
   },
   "key_stat": {
     "value": "1 milliard de dollars",
-    "context": "Nike s'attend à recevoir près de 1 milliard de dollars en remboursement de tarifs IEEPA"
+    "context": "Nike s'attend à recevoir près de 1 milliard de dollars de remboursement de droits de douane"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Transition vers les véhicules électriques",
-    "why_it_matters": "La transition vers les véhicules électriques pose des défis à la chaîne d'approvisionnement automobile en termes de résilience"
+    "subject": "Intelligence artificielle dans les chaînes d'approvisionnement",
+    "why_it_matters": "L'IA peut accélérer les processus d'approvisionnement et améliorer la résilience de la chaîne d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'intelligence artificielle révolutionne la fonction achats ?",
+      "hook": "Comment l'IA peut-elle révolutionner vos processus d'approvisionnement ?",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Quels sont les facteurs clés pour une chaîne d'approvisionnement résiliente ?",
-      "format": "carrousel"
+      "hook": "Quels sont les défis de la transition vers les véhicules électriques pour les chaînes d'approvisionnement ?",
+      "format": "question"
     }
   ],
   "sources": [
