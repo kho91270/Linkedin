@@ -7,26 +7,26 @@
   },
   "key_stat": {
     "value": "1 milliard de dollars",
-    "context": "Nike prévoit de recevoir près de 1 milliard de dollars de remboursements de tarifs IEEPA"
+    "context": "Nike attend des remboursements de tarifs IEEPA"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Intelligence artificielle dans la chaîne d'approvisionnement",
-    "why_it_matters": "L'IA peut accélérer les processus de procurement et améliorer l'efficacité"
+    "subject": "Intelligence artificielle dans les chaînes d'approvisionnement",
+    "why_it_matters": "Les acheteurs peuvent accélérer leurs processus grâce à l'IA"
   },
   "post_angles": [
     {
-      "pillar": "procurement",
-      "hook": "Découvrez comment l'IA peut révolutionner votre chaîne d'approvisionnement",
+      "pillar": "procuretech",
+      "hook": "Découvrez comment l'IA révolutionne les chaînes d'approvisionnement",
       "format": "texte"
     },
     {
-      "pillar": "technologie",
-      "hook": "Comment les entreprises comme Nike et Scotts Miracle-Gro utilisent l'IA pour améliorer leur chaîne d'approvisionnement",
-      "format": "carrousel"
+      "pillar": "analyse de marché",
+      "hook": "Quels sont les avantages de l'adoption de l'IA dans la fonction achats ?",
+      "format": "question"
     }
   ],
   "sources": [
