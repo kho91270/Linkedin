@@ -7,26 +7,26 @@
   },
   "key_stat": {
     "value": "1 milliard de dollars",
-    "context": "Nike s'attend à recevoir près de 1 milliard de dollars de remboursement de droits de douane"
+    "context": "Nike attend des remboursements de tarifs IEEPA"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Intelligence artificielle dans les chaînes d'approvisionnement",
+    "subject": "Intelligence artificielle dans la chaîne d'approvisionnement",
     "why_it_matters": "L'IA peut accélérer les processus d'approvisionnement et améliorer la résilience de la chaîne d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'IA peut-elle révolutionner vos processus d'approvisionnement ?",
+      "hook": "Comment l'IA peut-elle révolutionner votre approvisionnement ?",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Quels sont les défis de la transition vers les véhicules électriques pour les chaînes d'approvisionnement ?",
-      "format": "question"
+      "hook": "Les défis de la transition vers les véhicules électriques : comment votre chaîne d'approvisionnement peut-elle s'adapter ?",
+      "format": "carrousel"
     }
   ],
   "sources": [
@@ -52,34 +52,18 @@
     },
     {
       "source": "Supply Chain Dive",
+      "title": "Scotts Miracle-Gro widens tech partnership for supply chain AI",
+      "link": "https://www.supplychaindive.com/news/scotts-miracle-gro-widens-tech-partnership-for-supply-chain-ai/824764/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/GjmbItBC9bCkJsPo9jWEU2Fd3XIPwPq1kzMPVjMP4Ks/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9TY290dHNfUGFwZXJfU09TX2JhZy5wZGYuanBn.webp\" /></div></figure><p>The lawn and garden care brand&rsquo;s broader use of Kinaxis technology aims to unify planning, decision-making and execution into a single platform.</p>",
+      "published": "2026-07-09T14:57:24",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
       "title": "EV transition challenges auto supply chain resilience, Moody’s says",
       "link": "https://www.supplychaindive.com/news/ev-transition-challenges-auto-supply-chain-resilience-moodys-says/824595/",
       "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/--2mNr43uurbxoELE6Som48pydUz6N0f74OHW13q-V8/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9Ub3lvdGFBdXJpc0h5YnJpZEJ1cm5hc3RvblVLLmpwZw==.webp\" /></div></figure><p>Legacy automakers have the added complexity of having to run different supply chains for internal combustion engine, hybrid and EV powertrains.</p>",
       "published": "2026-07-07T15:30:00",
-      "relevance_score": 4
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "DHL Supply Chain exec highlights what distinguishes the best teams",
-      "link": "https://www.supplychaindive.com/news/dhl-supply-chain-exec-highlights-what-distinguishes-the-best-teams/824402/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/TkMcaOGD7zPKgywqmZRBeIf7aQsT-MxdwfzaUjuGVGc/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9kaGxfc3VwcGx5Y2hhaW5fd2FyZWhvdXNlX21hbmFnZW1lbnQuanBn.webp\" /></div></figure><p>&ldquo;I don&rsquo;t think you get to become a leader unless you&rsquo;re good at encouraging diverse teams,&rdquo; Global CIO Sally Miller told Supply Chain Dive.</p>",
-      "published": "2026-07-07T15:04:03",
-      "relevance_score": 4
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "USMCA: Retail, manufacturing and apparel groups call for preservation",
-      "link": "https://www.supplychaindive.com/news/usmca-retail-manufacturing-and-apparel-groups-call-for-preservation/824502/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/Qm9c4WjQ79nu0kG3cvr6r-LuHAf4BdAQ7tHkVAX56yw/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjc3MTgwNDc0X1Q0aTZVejAuanBn.webp\" /></div></figure><p>Trade groups backed the pact&rsquo;s annual review but stressed its importance to North America supply chains.</p>",
-      "published": "2026-07-07T14:28:25",
-      "relevance_score": 4
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "Cobots become simpler, smarter with AI",
-      "link": "https://www.supplychaindive.com/news/cobots-become-simpler-smarter-with-ai/824289/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/l100fvvKHlQOa7YSMmkJEOYzdOLBWqHCpBGdEqC-dDg/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9hdXRvbWF0ZS5qcGc=.webp\" /></div></figure><p>Collaborative robots have taken off in recent years as artificial intelligence makes them useful for a wider variety of applications.</p>",
-      "published": "2026-07-07T11:41:00",
       "relevance_score": 4
     }
   ]
