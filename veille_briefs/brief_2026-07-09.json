@@ -1,5 +1,5 @@
 {
-  "date": "2024-09-16",
+  "date": "2024-02-20",
   "funding_alert": {
     "startup": null,
     "amount": null,
@@ -7,25 +7,25 @@
   },
   "key_stat": {
     "value": "1 milliard de dollars",
-    "context": "Nike attend des remboursements de tarifs IEEPA"
+    "context": "Nike s'attend à recevoir près de 1 milliard de dollars en remboursement de tarifs IEEPA"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Intelligence artificielle dans la chaîne d'approvisionnement",
-    "why_it_matters": "L'IA peut accélérer les processus d'approvisionnement et améliorer la résilience de la chaîne d'approvisionnement"
+    "subject": "Transition vers les véhicules électriques",
+    "why_it_matters": "La transition vers les véhicules électriques pose des défis à la chaîne d'approvisionnement automobile en termes de résilience"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "L'IA révolutionne la chaîne d'approvisionnement !",
+      "hook": "Comment l'intelligence artificielle révolutionne la fonction achats ?",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Comment les cobots peuvent simplifier vos processus de production ?",
+      "hook": "Quels sont les facteurs clés pour une chaîne d'approvisionnement résiliente ?",
       "format": "carrousel"
     }
   ],
