@@ -15,18 +15,18 @@
   },
   "hot_topic": {
     "subject": "Intelligence artificielle dans les chaînes d'approvisionnement",
-    "why_it_matters": "L'IA peut accélérer les processus d'approvisionnement et améliorer l'efficacité"
+    "why_it_matters": "L'IA peut accélérer les processus de procurement et améliorer l'efficacité"
   },
   "post_angles": [
     {
-      "pillar": "procuretech",
-      "hook": "Découvrez comment l'IA révolutionne les chaînes d'approvisionnement",
+      "pillar": "procurement",
+      "hook": "Découvrez comment l'IA peut révolutionner vos processus de procurement",
       "format": "texte"
     },
     {
-      "pillar": "analyse de marché",
-      "hook": "Quels sont les avantages de l'adoption de l'IA dans les processus d'approvisionnement ?",
-      "format": "question"
+      "pillar": "supply chain",
+      "hook": "Comment les entreprises comme Nike et Scotts Miracle-Gro utilisent l'IA pour optimiser leurs chaînes d'approvisionnement",
+      "format": "carrousel"
     }
   ],
   "sources": [
