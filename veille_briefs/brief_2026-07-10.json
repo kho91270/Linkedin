@@ -7,7 +7,7 @@
   },
   "key_stat": {
     "value": "1 milliard de dollars",
-    "context": "Nike s'attend à recevoir près de 1 milliard de dollars de remboursements de tarifs IEEPA"
+    "context": "Nike s'attend à recevoir près de 1 milliard de dollars de remboursements de droits de douane IEEPA"
   },
   "new_tool": {
     "name": null,
@@ -15,18 +15,18 @@
   },
   "hot_topic": {
     "subject": "Intelligence artificielle dans la chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs peuvent améliorer leur efficacité et leur prévisibilité en utilisant l'IA pour analyser et optimiser leurs chaînes d'approvisionnement"
+    "why_it_matters": "Les acheteurs doivent être attentifs aux partenariats technologiques pour améliorer leur chaîne d'approvisionnement"
   },
   "post_angles": [
     {
-      "pillar": "Procuretech",
-      "hook": "Découvrez comment les géants de l'industrie utilisent l'IA pour révolutionner leur chaîne d'approvisionnement",
-      "format": "texte"
+      "pillar": "procuretech",
+      "hook": "Comment l'IA peut-elle améliorer votre chaîne d'approvisionnement ?",
+      "format": "question"
     },
     {
-      "pillar": "Achats",
-      "hook": "Comment les remboursements de tarifs IEEPA peuvent-ils impacter vos stratégies d'approvisionnement ?",
-      "format": "question"
+      "pillar": "supply chain",
+      "hook": "Découvrez comment Nike et Scotts Miracle-Gro utilisent la technologie pour optimiser leur chaîne d'approvisionnement",
+      "format": "texte"
     }
   ],
   "sources": [
