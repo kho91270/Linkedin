@@ -6,8 +6,8 @@
     "focus": null
   },
   "key_stat": {
-    "value": "Scotts Miracle-Gro",
-    "context": "L'entreprise a élargi son partenariat technologique pour l'intelligence artificielle dans sa chaîne d'approvisionnement"
+    "value": "Scotts Miracle-Gro élargit son partenariat technologique",
+    "context": "Pour améliorer sa chaîne d'approvisionnement avec l'IA"
   },
   "new_tool": {
     "name": null,
@@ -15,17 +15,17 @@
   },
   "hot_topic": {
     "subject": "Intelligence artificielle dans la chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs peuvent améliorer l'efficacité et la prévisibilité de leur chaîne d'approvisionnement en utilisant l'intelligence artificielle"
+    "why_it_matters": "Amélioration de l'efficacité et de la prévisibilité pour les acheteurs"
   },
   "post_angles": [
     {
-      "pillar": "Procuretech",
-      "hook": "Découvrez comment l'intelligence artificielle révolutionne la chaîne d'approvisionnement !",
+      "pillar": "ProcureTech",
+      "hook": "Découvrez comment l'IA révolutionne la chaîne d'approvisionnement !",
       "format": "texte"
     },
     {
-      "pillar": "Acheteur",
-      "hook": "Comment optimiser votre chaîne d'approvisionnement avec l'intelligence artificielle ?",
+      "pillar": "Acheteurs",
+      "hook": "Comment l'IA peut-elle améliorer vos processus d'approvisionnement ?",
       "format": "question"
     }
   ],
