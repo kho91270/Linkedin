@@ -19,14 +19,14 @@
   },
   "post_angles": [
     {
-      "pillar": "ProcureTech",
-      "hook": "Découvrez comment l'IA révolutionne la chaîne d'approvisionnement",
+      "pillar": "procuretech",
+      "hook": "Découvrez comment l'IA peut révolutionner votre chaîne d'approvisionnement",
       "format": "texte"
     },
     {
-      "pillar": "Achats",
-      "hook": "Comment l'IA peut améliorer vos processus d'approvisionnement ?",
-      "format": "question"
+      "pillar": "acheteur",
+      "hook": "Comment l'IA peut améliorer votre stratégie d'approvisionnement",
+      "format": "carrousel"
     }
   ],
   "sources": [
