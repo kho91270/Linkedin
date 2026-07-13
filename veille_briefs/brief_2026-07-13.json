@@ -1,36 +1,37 @@
 {
-  "date": "2024-07-15",
+  "date": "2023-07-13",
   "funding_alert": {
     "startup": null,
     "amount": null,
     "focus": null
   },
   "key_stat": {
-    "value": null,
-    "context": null
+    "value": "11 AM ET",
+    "context": "Heure de début du webinar sur l'approche AI-First en procurement"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "L'adoption de l'intelligence artificielle dans les processus de procurement",
-    "why_it_matters": "Permettre aux acheteurs d'automatiser et d'optimiser leurs processus"
+    "subject": "L'approche AI-First en procurement",
+    "why_it_matters": "L'intelligence artificielle transforme rapidement la fonction achats et les entreprises doivent s'adapter pour rester compétitives"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Découvrez comment l'intelligence artificielle révolutionne la fonction achats !",
+      "hook": "Découvrez comment l'intelligence artificielle révolutionne la fonction achats",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Quels sont les défis et les opportunités de l'adoption de l'IA dans votre équipe achats ?",
-      "format": "question"
+      "hook": "Comment les entreprises comme Amazon intègrent-elles la robotique dans leurs processus logistiques ?",
+      "format": "carrousel"
     }
   ],
   "sources": [
-    "CPO Rising"
+    "CPO Rising",
+    "Supply Chain Dive"
   ],
   "raw_articles": [
     {
@@ -40,6 +41,14 @@
       "summary": "<p>Join Ardent Partners and Ivalua on July 16th (11 AM ET) as they discuss The Path to AI-First Procurement. Artificial intelligence is rapidly transforming procurement, but technology alone is not&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/13/new-webinar-the-path-to-ai-first-procurement/\">NEW WEBINAR: The Path to AI-First Procurement</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a",
       "published": "2026-07-13T10:02:40",
       "relevance_score": 8
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Amazon preps robotics-equipped sorting warehouse in Texas",
+      "link": "https://www.supplychaindive.com/news/amazon-preps-robotics-equipped-sorting-warehouse-in-texas/824978/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/Ee_yDRvqVjW3Xq6JGmmRpE3hu3opnbHOx3MU4FGil_A/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9QaG90b19KdWxfMjZfMjAyM18xXzIxXzExX1BNLmpwZw==.webp\" /></div></figure><p>The site will sit within the e-commerce giant&rsquo;s fulfillment network and further expand its use of automation across the supply chain.</p>",
+      "published": "2026-07-13T14:07:00",
+      "relevance_score": 6
     }
   ]
 }
