@@ -6,26 +6,26 @@
     "focus": null
   },
   "key_stat": {
-    "value": "11 AM ET",
-    "context": "Heure de début du webinar sur l'approche AI-First en procurement"
+    "value": "3 milliards",
+    "context": "General Mills prévoit une réorganisation de sa chaîne d'approvisionnement dans le cadre d'un effort de réduction de coûts de 3 milliards"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "L'approche AI-First en procurement",
-    "why_it_matters": "L'intelligence artificielle transforme rapidement la fonction achats et les entreprises doivent s'adapter pour rester compétitives"
+    "subject": "Intelligence artificielle dans les achats",
+    "why_it_matters": "L'intelligence artificielle peut transformer les processus d'approvisionnement et améliorer l'efficacité"
   },
   "post_angles": [
     {
-      "pillar": "analyste",
-      "hook": "Découvrez comment l'intelligence artificielle révolutionne la fonction achats",
+      "pillar": "procuretech",
+      "hook": "Découvrez comment l'intelligence artificielle peut révolutionner vos processus d'approvisionnement",
       "format": "texte"
     },
     {
-      "pillar": "terrain",
-      "hook": "Comment les entreprises comme Amazon intègrent-elles la robotique dans leurs processus logistiques ?",
+      "pillar": "supply chain",
+      "hook": "Comment General Mills prévoit de réorganiser sa chaîne d'approvisionnement pour réduire les coûts",
       "format": "carrousel"
     }
   ],
@@ -49,6 +49,14 @@
       "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/Ee_yDRvqVjW3Xq6JGmmRpE3hu3opnbHOx3MU4FGil_A/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9QaG90b19KdWxfMjZfMjAyM18xXzIxXzExX1BNLmpwZw==.webp\" /></div></figure><p>The site will sit within the e-commerce giant&rsquo;s fulfillment network and further expand its use of automation across the supply chain.</p>",
       "published": "2026-07-13T14:07:00",
       "relevance_score": 6
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "General Mills plans supply chain revamp as part of $3B cost-cutting effort",
+      "link": "https://www.supplychaindive.com/news/general-mills-plans-supply-chain-revamp-as-part-of-3b-cost-cutting-effort/824889/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/6wxb4vT2WlHqdPaZshgeMl39xVnm6_vy94Sg8NlbTSo/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjQ5ODAxMDU3LmpwZw==.webp\" /></div></figure><p>The upgrade is critical because the consumer packaged goods company&rsquo;s current network was built for a lower-volume era, executives said.</p>",
+      "published": "2026-07-13T15:32:00",
+      "relevance_score": 4
     }
   ]
 }
