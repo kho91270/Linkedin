@@ -1,0 +1,62 @@
+{
+  "date": "2023-07-14",
+  "funding_alert": {
+    "startup": null,
+    "amount": null,
+    "focus": null
+  },
+  "key_stat": {
+    "value": "3 milliards de dollars",
+    "context": "Montant de l'effort de réduction de coûts de General Mills"
+  },
+  "new_tool": {
+    "name": null,
+    "description": null
+  },
+  "hot_topic": {
+    "subject": "L'intelligence artificielle dans les achats",
+    "why_it_matters": "L'IA peut transformer les processus d'approvisionnement et améliorer l'efficacité"
+  },
+  "post_angles": [
+    {
+      "pillar": "procuretech",
+      "hook": "Découvrez comment l'IA peut révolutionner vos processus d'approvisionnement",
+      "format": "texte"
+    },
+    {
+      "pillar": "supply chain",
+      "hook": "Comment General Mills utilise la technologie pour optimiser sa chaîne d'approvisionnement",
+      "format": "carrousel"
+    }
+  ],
+  "sources": [
+    "CPO Rising",
+    "Supply Chain Dive"
+  ],
+  "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "NEW WEBINAR: The Path to AI-First Procurement",
+      "link": "https://cporising.com/2026/07/13/new-webinar-the-path-to-ai-first-procurement/?utm_source=rss&utm_medium=rss&utm_campaign=new-webinar-the-path-to-ai-first-procurement",
+      "summary": "<p>Join Ardent Partners and Ivalua on July 16th (11 AM ET) as they discuss The Path to AI-First Procurement. Artificial intelligence is rapidly transforming procurement, but technology alone is not&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/13/new-webinar-the-path-to-ai-first-procurement/\">NEW WEBINAR: The Path to AI-First Procurement</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a",
+      "published": "2026-07-13T10:02:40",
+      "relevance_score": 8
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Amazon preps robotics-equipped sorting warehouse in Texas",
+      "link": "https://www.supplychaindive.com/news/amazon-preps-robotics-equipped-sorting-warehouse-in-texas/824978/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/Ee_yDRvqVjW3Xq6JGmmRpE3hu3opnbHOx3MU4FGil_A/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9QaG90b19KdWxfMjZfMjAyM18xXzIxXzExX1BNLmpwZw==.webp\" /></div></figure><p>The site will sit within the e-commerce giant&rsquo;s fulfillment network and further expand its use of automation across the supply chain.</p>",
+      "published": "2026-07-13T14:07:00",
+      "relevance_score": 6
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "General Mills plans supply chain revamp as part of $3B cost-cutting effort",
+      "link": "https://www.supplychaindive.com/news/general-mills-plans-supply-chain-revamp-as-part-of-3b-cost-cutting-effort/824889/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/6wxb4vT2WlHqdPaZshgeMl39xVnm6_vy94Sg8NlbTSo/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjQ5ODAxMDU3LmpwZw==.webp\" /></div></figure><p>The upgrade is critical because the consumer packaged goods company&rsquo;s current network was built for a lower-volume era, executives said.</p>",
+      "published": "2026-07-13T15:32:00",
+      "relevance_score": 4
+    }
+  ]
+}
