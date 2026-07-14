@@ -1,5 +1,5 @@
 {
-  "date": "2023-07-14",
+  "date": "2023-12-01",
   "funding_alert": {
     "startup": null,
     "amount": null,
@@ -15,17 +15,17 @@
   },
   "hot_topic": {
     "subject": "Intelligence artificielle dans les achats",
-    "why_it_matters": "L'intelligence artificielle est en train de transformer rapidement les achats, mais la technologie seule ne suffit pas"
+    "why_it_matters": "L'intelligence artificielle peut transformer les processus d'approvisionnement et améliorer l'efficacité"
   },
   "post_angles": [
     {
-      "pillar": "procuretech",
-      "hook": "Découvrez comment l'intelligence artificielle révolutionne les achats !",
+      "pillar": "analyste",
+      "hook": "Découvrez comment l'intelligence artificielle peut révolutionner vos processus d'approvisionnement !",
       "format": "texte"
     },
     {
-      "pillar": "supply chain",
-      "hook": "General Mills réorganise sa chaîne d'approvisionnement pour réduire les coûts",
+      "pillar": "terrain",
+      "hook": "Comment les entreprises comme Amazon et General Mills utilisent-elles la technologie pour optimiser leurs chaînes d'approvisionnement ?",
       "format": "carrousel"
     }
   ],
