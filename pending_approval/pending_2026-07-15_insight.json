@@ -1,0 +1,58 @@
+{
+  "content_fr": "L'IA révolutionne l'approvisionnement !\n\nJe constate que les entreprises intègrent de plus en plus l'intelligence artificielle pour améliorer leurs processus, comme en témoigne la fermeture de l'usine Nature's Bakery par Mars, qui a licencié 345 travailleurs. \n\nMon insight : l'IA peut transformer les processus d'approvisionnement en améliorant l'efficacité et la prise de décision.\n\nComment allez-vous intégrer l'IA dans vos processus pour rester compétitif ?\n\n#Procurement #IntelligenceArtificielle #Approvisionnement 💻📈💡",
+  "content_en": "AI is transforming procurement!\nAs a Category Manager, I've seen it firsthand - the impact of technology on our processes is undeniable. \nI recently learned that Mars laid off 345 workers after closing Nature's Bakery, highlighting the need for efficient decision-making.\nWhat role will AI play in revolutionizing your procurement strategy? \n#ProcurementTechnology #ArtificialIntelligence #SupplyChainManagement 💻💸📈",
+  "content_x_fr": "\"L'IA transforme les processus d'approvisionnement. 345 travailleurs licenciés chez Mars suite à fermeture d'usine. Quel impact sur les RFI/RFP ? #ProcureTech\"",
+  "content_x_en": "\"Mars laid off 345 workers after closing Nature's Bakery. How will AI revolutionize your procurement processes?\" #procurement",
+  "pillar": "insight",
+  "format": "insight",
+  "generated_date": "2026-07-14 17:58",
+  "status": "pending_approval",
+  "lang": "both",
+  "quality_report": {
+    "timestamp": "2026-07-14 17:58",
+    "passed": false,
+    "score_fr": {
+      "total": 65,
+      "details": {
+        "hook": 20,
+        "structure": 7,
+        "longueur": 20,
+        "engagement": 11,
+        "authenticite": 7
+      },
+      "char_count": 271
+    },
+    "unique_fr": true,
+    "hooks_fr": {
+      "original": "L'IA révolutionne l'approvisionnement !",
+      "hook_a": "Je booste mon approvisionnement avec l'IA !",
+      "hook_b": "L'IA change la donne dans mon approvisionnement !"
+    },
+    "score_en": {
+      "total": 71,
+      "details": {
+        "hook": 20,
+        "structure": 17,
+        "longueur": 20,
+        "engagement": 11,
+        "authenticite": 3
+      },
+      "char_count": 298
+    },
+    "unique_en": true,
+    "hooks_en": {
+      "original": "AI revolution ahead!",
+      "hook_a": "I'm automating procurement!",
+      "hook_b": "My procurement game-changer: AI"
+    }
+  },
+  "image": {
+    "status": "complete",
+    "url": "https://cdn.leonardo.ai/users/3d14e72a-e0c9-46d3-a916-e31db4054e4b/generations/e813eca1-1e7d-4d81-846c-4e705b506615/Leonardo_Creative_Generate_an_image_of_a_navy_blue_gear_turnin_0.jpg",
+    "local_path": "generated_images/img_20260714_1759_insight.png",
+    "prompt": "Generate an image of a navy blue gear turning, with light blue sparks and a subtle white glow, surrounded by minimalist, interconnected circles, representing the transformation of procurement processes through artificial intelligence."
+  },
+  "publish_date": "2026-07-15",
+  "approval_status": "pending",
+  "created_at": "2026-07-14 17:59"
+}
