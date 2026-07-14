@@ -1,31 +1,31 @@
 {
-  "date": "2023-12-14",
+  "date": "2024-07-16",
   "funding_alert": {
     "startup": null,
     "amount": null,
     "focus": null
   },
   "key_stat": {
-    "value": "3 milliards",
-    "context": "General Mills prévoit une réorganisation de sa chaîne d'approvisionnement dans le cadre d'un effort de réduction de coûts de 3 milliards de dollars"
+    "value": "345",
+    "context": "Nombre de travailleurs licenciés par Mars à la suite de la fermeture de l'usine Nature's Bakery"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "L'intelligence artificielle dans les achats",
-    "why_it_matters": "L'intelligence artificielle est en train de transformer rapidement les achats, mais la technologie seule ne suffit pas pour atteindre l'excellence"
+    "subject": "L'impact de l'intelligence artificielle sur les processus d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent comprendre comment l'IA peut transformer leurs processus pour améliorer l'efficacité et la prise de décision"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'intelligence artificielle va-t-elle changer vos processus d'achat ?",
+      "hook": "Comment l'IA va-t-elle révolutionner vos processus d'approvisionnement ?",
       "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Découvrez comment General Mills réorganise sa chaîne d'approvisionnement pour réduire les coûts",
+      "hook": "Découvrez comment les leaders de l'approvisionnement intègrent l'IA pour améliorer leurs résultats",
       "format": "texte"
     }
   ],
@@ -49,6 +49,30 @@
       "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/Ee_yDRvqVjW3Xq6JGmmRpE3hu3opnbHOx3MU4FGil_A/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9QaG90b19KdWxfMjZfMjAyM18xXzIxXzExX1BNLmpwZw==.webp\" /></div></figure><p>The site will sit within the e-commerce giant&rsquo;s fulfillment network and further expand its use of automation across the supply chain.</p>",
       "published": "2026-07-13T14:07:00",
       "relevance_score": 6
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Mars to close Nature’s Bakery plant, lay off 345 workers",
+      "link": "https://www.supplychaindive.com/news/mars-to-close-natures-bakery-plant-lay-off-345-workers/824855/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/LI6grSgPXE5p6RjkOUdpeEqXgUHCUYhF_U1JYc4wcGs/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9TY3JlZW5zaG90XzIwMjQtMDEtMjRfMTAyODUzLmpwZw==.webp\" /></div></figure><p>The closure comes a year after the brand opened a new $237 million production facility to keep up with demand.</p>",
+      "published": "2026-07-14T11:23:00",
+      "relevance_score": 5
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Marzetti taps Schwan supply chain head for CSCO",
+      "link": "https://www.supplychaindive.com/news/marzetti-taps-schwan-supply-chain-head-for-csco/825089/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/GKIVmyOEVEZZMw4PvTQLjgHPWWzzzVUORkeswzsj5vU/g:nowe:0:55/c:2500:1412/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9CYWNoYW5zX0phcGFuZXNlX0JhcmJlY3VlX1NhdWNlLmpwZw==.webp\" /></div></figure><p>Mark Carter will oversee the speciality food maker's continued efforts to simplify its network and improve productivity.</p>",
+      "published": "2026-07-14T17:11:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Strauss, DHL Supply Chain ink end-to-end logistics deal",
+      "link": "https://www.supplychaindive.com/news/strauss-dhl-supply-chain-ink-end-to-end-logistics-deal/825079/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/KatnSQCrp49-tYI3D5JCrZnuKOKaI0-NCHlnby_JjW0/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS8wM19PdXRib3VuZF9wYWNrYWdlLmpwZw==.webp\" /></div></figure><p>The partnership, which covers warehousing, distribution and product customization, aims to streamline order processing and drive faster turnaround times for the workwear brand.</p>",
+      "published": "2026-07-14T14:35:52",
+      "relevance_score": 4
     },
     {
       "source": "Supply Chain Dive",
