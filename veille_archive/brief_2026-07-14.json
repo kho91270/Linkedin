@@ -14,18 +14,18 @@
     "description": null
   },
   "hot_topic": {
-    "subject": "L'impact de l'intelligence artificielle sur les processus d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent comprendre comment l'IA peut transformer leurs processus pour améliorer l'efficacité et la prise de décision"
+    "subject": "L'impact de l'intelligence artificielle sur la fonction achats",
+    "why_it_matters": "Les acheteurs doivent comprendre comment l'IA peut transformer leur fonction pour améliorer l'efficacité et la prise de décision"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'IA va-t-elle révolutionner vos processus d'approvisionnement ?",
+      "hook": "Comment l'IA va-t-elle révolutionner la fonction achats ?",
       "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Découvrez comment les leaders de l'approvisionnement intègrent l'IA pour améliorer leurs résultats",
+      "hook": "Découvrez comment les entreprises comme Amazon et Mars utilisent la technologie pour optimiser leur chaîne d'approvisionnement",
       "format": "texte"
     }
   ],
