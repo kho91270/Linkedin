@@ -6,26 +6,26 @@
     "focus": null
   },
   "key_stat": {
-    "value": "3 milliards de dollars",
-    "context": "Montant de l'effort de réduction de coûts de General Mills"
+    "value": "3 milliards",
+    "context": "General Mills prévoit une réorganisation de sa chaîne d'approvisionnement dans le cadre d'un effort de réduction de coûts de 3 milliards"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "L'intelligence artificielle dans les achats",
-    "why_it_matters": "L'IA peut transformer les processus d'approvisionnement et améliorer l'efficacité"
+    "subject": "Intelligence artificielle dans les achats",
+    "why_it_matters": "L'intelligence artificielle est en train de transformer rapidement les achats, mais la technologie seule ne suffit pas"
   },
   "post_angles": [
     {
       "pillar": "procuretech",
-      "hook": "Découvrez comment l'IA peut révolutionner vos processus d'approvisionnement",
+      "hook": "Découvrez comment l'intelligence artificielle révolutionne les achats !",
       "format": "texte"
     },
     {
       "pillar": "supply chain",
-      "hook": "Comment General Mills utilise la technologie pour optimiser sa chaîne d'approvisionnement",
+      "hook": "General Mills réorganise sa chaîne d'approvisionnement pour réduire les coûts",
       "format": "carrousel"
     }
   ],
