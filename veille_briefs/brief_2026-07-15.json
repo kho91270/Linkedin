@@ -1,5 +1,5 @@
 {
-  "date": "2024-07-16",
+  "date": "2026-07-15",
   "funding_alert": {
     "startup": null,
     "amount": null,
@@ -14,19 +14,19 @@
     "description": null
   },
   "hot_topic": {
-    "subject": "Intelligence artificielle dans les processus d'approvisionnement",
-    "why_it_matters": "L'intégration de l'IA peut améliorer l'efficacité et la précision des processus d'approvisionnement"
+    "subject": "L'impact de l'automatisation sur les chaînes d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent prendre en compte l'impact de l'automatisation sur leurs chaînes d'approvisionnement pour rester compétitifs"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'IA peut-elle révolutionner vos processus d'approvisionnement ?",
-      "format": "texte"
+      "hook": "Comment l'automatisation va-t-elle changer votre chaîne d'approvisionnement ?",
+      "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Quels sont les défis et les opportunités de l'adoption de l'IA dans l'approvisionnement ?",
-      "format": "question"
+      "hook": "Découvrez comment les entreprises leaders comme Amazon et Mars utilisent l'automatisation pour améliorer leurs chaînes d'approvisionnement",
+      "format": "texte"
     }
   ],
   "sources": [
@@ -36,11 +36,11 @@
   "raw_articles": [
     {
       "source": "CPO Rising",
-      "title": "NEW WEBINAR: The Path to AI-First Procurement",
-      "link": "https://cporising.com/2026/07/13/new-webinar-the-path-to-ai-first-procurement/?utm_source=rss&utm_medium=rss&utm_campaign=new-webinar-the-path-to-ai-first-procurement",
-      "summary": "<p>Join Ardent Partners and Ivalua on July 16th (11 AM ET) as they discuss The Path to AI-First Procurement. Artificial intelligence is rapidly transforming procurement, but technology alone is not&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/13/new-webinar-the-path-to-ai-first-procurement/\">NEW WEBINAR: The Path to AI-First Procurement</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a",
-      "published": "2026-07-13T10:02:40",
-      "relevance_score": 8
+      "title": "ProcureTech Pulse — July 15, 2026",
+      "link": "https://cporising.com/2026/07/15/procuretech-pulse-july-15-2026/?utm_source=rss&utm_medium=rss&utm_campaign=procuretech-pulse-july-15-2026",
+      "summary": "<p>CPO Rising&#8217;s ProcureTech Pulse series continues this week with fresh supply management technology news and updates covering a few recent major announcements. If you are a sourcing, procurement, or spend&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/15/procuretech-pulse-july-15-2026/\">ProcureTech Pulse — July 15, 2026</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a>.</p>",
+      "published": "2026-07-15T10:02:09",
+      "relevance_score": 11
     },
     {
       "source": "Supply Chain Dive",
