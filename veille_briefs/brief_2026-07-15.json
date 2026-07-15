@@ -14,18 +14,18 @@
     "description": null
   },
   "hot_topic": {
-    "subject": "gestion de la chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent gérer efficacement leur chaîne d'approvisionnement pour minimiser les coûts et les perturbations"
+    "subject": "la gestion durable de la chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent prendre en compte les coûts et les impacts environnementaux de leur chaîne d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment les entreprises peuvent-elles gérer les coûts élevés de la chaîne d'approvisionnement ?",
+      "hook": "Comment les entreprises peuvent-elles réduire leurs coûts de chaîne d'approvisionnement ?",
       "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Découvrez comment les entreprises comme PepsiCo améliorent leur approvisionnement durable",
+      "hook": "Découvrez comment PepsiCo améliore sa chaîne d'approvisionnement durable",
       "format": "texte"
     }
   ],
