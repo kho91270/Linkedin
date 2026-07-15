@@ -6,26 +6,26 @@
     "focus": null
   },
   "key_stat": {
-    "value": "345",
-    "context": "Nombre de travailleurs licenciés par Mars à la suite de la fermeture de l'usine Nature's Bakery"
+    "value": "coûts élevés de la chaîne d'approvisionnement",
+    "context": "Les coûts élevés de la chaîne d'approvisionnement dépassent les remboursements des tarifs IEEPA"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Gestion de la chaîne d'approvisionnement",
-    "why_it_matters": "Les coûts élevés de la chaîne d'approvisionnement peuvent avoir un impact significatif sur les entreprises, comme le montre l'exemple d'Osprey"
+    "subject": "gestion de la chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent gérer efficacement leur chaîne d'approvisionnement pour minimiser les coûts et les perturbations"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment les entreprises peuvent-elles optimiser leur chaîne d'approvisionnement pour réduire les coûts ?",
+      "hook": "Comment les entreprises peuvent-elles gérer les coûts élevés de la chaîne d'approvisionnement ?",
       "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Découvrez comment General Mills prévoit de réaménager sa chaîne d'approvisionnement pour réduire les coûts",
+      "hook": "Découvrez comment les entreprises comme PepsiCo améliorent leur approvisionnement durable",
       "format": "texte"
     }
   ],
@@ -41,14 +41,6 @@
       "summary": "<p>CPO Rising&#8217;s ProcureTech Pulse series continues this week with fresh supply management technology news and updates covering a few recent major announcements. If you are a sourcing, procurement, or spend&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/15/procuretech-pulse-july-15-2026/\">ProcureTech Pulse — July 15, 2026</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a>.</p>",
       "published": "2026-07-15T10:02:09",
       "relevance_score": 11
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "Mars to close Nature’s Bakery plant, lay off 345 workers",
-      "link": "https://www.supplychaindive.com/news/mars-to-close-natures-bakery-plant-lay-off-345-workers/824855/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/LI6grSgPXE5p6RjkOUdpeEqXgUHCUYhF_U1JYc4wcGs/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9TY3JlZW5zaG90XzIwMjQtMDEtMjRfMTAyODUzLmpwZw==.webp\" /></div></figure><p>The closure comes a year after the brand opened a new $237 million production facility to keep up with demand.</p>",
-      "published": "2026-07-14T11:23:00",
-      "relevance_score": 5
     },
     {
       "source": "Supply Chain Dive",
@@ -80,14 +72,6 @@
       "link": "https://www.supplychaindive.com/news/pepsico-improves-sustainable-sourcing-delays-emissions-reporting/824903/",
       "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/0lcIMvaQDIK9K2IcQgwLaLyGZU0q3PVlDNtBUVLHOk0/g:nowe:0:251/c:2500:1412/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjQwMTYyMTEyLmpwZw==.webp\" /></div></figure><p>The company reported a four percentage point increase in sustainably sourced ingredients in 2025 but will release Scope 3 emissions metrics later this summer.</p>",
       "published": "2026-07-14T13:35:00",
-      "relevance_score": 4
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "General Mills plans supply chain revamp as part of $3B cost-cutting effort",
-      "link": "https://www.supplychaindive.com/news/general-mills-plans-supply-chain-revamp-as-part-of-3b-cost-cutting-effort/824889/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/6wxb4vT2WlHqdPaZshgeMl39xVnm6_vy94Sg8NlbTSo/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjQ5ODAxMDU3LmpwZw==.webp\" /></div></figure><p>The upgrade is critical because the consumer packaged goods company&rsquo;s current network was built for a lower-volume era, executives said.</p>",
-      "published": "2026-07-13T15:32:00",
       "relevance_score": 4
     }
   ]
