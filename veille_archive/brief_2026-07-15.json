@@ -14,18 +14,18 @@
     "description": null
   },
   "hot_topic": {
-    "subject": "L'impact de l'automatisation sur les chaînes d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent prendre en compte l'impact de l'automatisation sur leurs chaînes d'approvisionnement pour rester compétitifs"
+    "subject": "Gestion de la chaîne d'approvisionnement",
+    "why_it_matters": "Les coûts élevés de la chaîne d'approvisionnement peuvent avoir un impact significatif sur les entreprises, comme le montre l'exemple d'Osprey"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'automatisation va-t-elle changer votre chaîne d'approvisionnement ?",
+      "hook": "Comment les entreprises peuvent-elles optimiser leur chaîne d'approvisionnement pour réduire les coûts ?",
       "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Découvrez comment les entreprises leaders comme Amazon et Mars utilisent l'automatisation pour améliorer leurs chaînes d'approvisionnement",
+      "hook": "Découvrez comment General Mills prévoit de réaménager sa chaîne d'approvisionnement pour réduire les coûts",
       "format": "texte"
     }
   ],
@@ -44,19 +44,19 @@
     },
     {
       "source": "Supply Chain Dive",
-      "title": "Amazon preps robotics-equipped sorting warehouse in Texas",
-      "link": "https://www.supplychaindive.com/news/amazon-preps-robotics-equipped-sorting-warehouse-in-texas/824978/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/Ee_yDRvqVjW3Xq6JGmmRpE3hu3opnbHOx3MU4FGil_A/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9QaG90b19KdWxfMjZfMjAyM18xXzIxXzExX1BNLmpwZw==.webp\" /></div></figure><p>The site will sit within the e-commerce giant&rsquo;s fulfillment network and further expand its use of automation across the supply chain.</p>",
-      "published": "2026-07-13T14:07:00",
-      "relevance_score": 6
-    },
-    {
-      "source": "Supply Chain Dive",
       "title": "Mars to close Nature’s Bakery plant, lay off 345 workers",
       "link": "https://www.supplychaindive.com/news/mars-to-close-natures-bakery-plant-lay-off-345-workers/824855/",
       "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/LI6grSgPXE5p6RjkOUdpeEqXgUHCUYhF_U1JYc4wcGs/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9TY3JlZW5zaG90XzIwMjQtMDEtMjRfMTAyODUzLmpwZw==.webp\" /></div></figure><p>The closure comes a year after the brand opened a new $237 million production facility to keep up with demand.</p>",
       "published": "2026-07-14T11:23:00",
       "relevance_score": 5
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Osprey brand owner says high supply chain costs are outpacing IEEPA tariff refunds",
+      "link": "https://www.supplychaindive.com/news/osprey-brand-owner-says-high-supply-chain-costs-are-outpacing-ieepa-tariff/825081/",
+      "summary": "<p>Helen of Troy CFO Brian Grass said there has not been a reliable pattern to the reimbursements, making it difficult to plan investments and offset supply disruptions.</p>",
+      "published": "2026-07-15T13:34:00",
+      "relevance_score": 4
     },
     {
       "source": "Supply Chain Dive",
@@ -78,7 +78,7 @@
       "source": "Supply Chain Dive",
       "title": "PepsiCo improves sustainable sourcing, delays emissions reporting",
       "link": "https://www.supplychaindive.com/news/pepsico-improves-sustainable-sourcing-delays-emissions-reporting/824903/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/0lcIMvaQDIK9K2IcQgwLaLyGZU0q3PVlDNtBUVLHOk0/g:nowe:0:251/c:2500:1412/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjQwMTYyMTEyLmpwZw==.webp\" /></div></figure><p>The company reported a four percentage point increase in sustainably sourced ingredients in 2025 but has yet to document Scope 3 emissions metrics.&nbsp;</p>",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/0lcIMvaQDIK9K2IcQgwLaLyGZU0q3PVlDNtBUVLHOk0/g:nowe:0:251/c:2500:1412/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjQwMTYyMTEyLmpwZw==.webp\" /></div></figure><p>The company reported a four percentage point increase in sustainably sourced ingredients in 2025 but will release Scope 3 emissions metrics later this summer.</p>",
       "published": "2026-07-14T13:35:00",
       "relevance_score": 4
     },
