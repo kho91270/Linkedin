@@ -14,19 +14,19 @@
     "description": null
   },
   "hot_topic": {
-    "subject": "L'intelligence artificielle dans la fonction achats",
-    "why_it_matters": "Les acheteurs doivent se préparer à l'adoption de l'IA pour améliorer leur efficacité et leur stratégie"
+    "subject": "Intelligence artificielle dans les processus d'approvisionnement",
+    "why_it_matters": "L'intégration de l'IA peut améliorer l'efficacité et la précision des processus d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'IA va-t-elle révolutionner la fonction achats ?",
+      "hook": "Comment l'IA peut-elle révolutionner vos processus d'approvisionnement ?",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Quels sont les défis et les opportunités de l'adoption de l'IA dans la chaîne d'approvisionnement ?",
-      "format": "carrousel"
+      "hook": "Quels sont les défis et les opportunités de l'adoption de l'IA dans l'approvisionnement ?",
+      "format": "question"
     }
   ],
   "sources": [
