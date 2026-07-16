@@ -6,26 +6,26 @@
     "focus": null
   },
   "key_stat": {
-    "value": "coûts de chaîne d'approvisionnement élevés",
-    "context": "Les coûts de chaîne d'approvisionnement sont plus élevés que les remboursements des tarifs IEEPA"
+    "value": "Hauteurs des coûts de la chaîne d'approvisionnement",
+    "context": "Les coûts de la chaîne d'approvisionnement dépassent les remboursements des tarifs IEEPA"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "gestion de la chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent gérer efficacement leur chaîne d'approvisionnement pour minimiser les coûts et les risques"
+    "subject": "Gestion de la chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent gérer efficacement leur chaîne d'approvisionnement pour minimiser les coûts et les perturbations"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment les entreprises peuvent-elles optimiser leur chaîne d'approvisionnement ?",
+      "hook": "Comment les entreprises peuvent-elles gérer les coûts de la chaîne d'approvisionnement ?",
       "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Découvrez comment les leaders de la chaîne d'approvisionnement gèrent les coûts et les risques",
+      "hook": "Découvrez comment Marzetti et Strauss ont optimisé leur chaîne d'approvisionnement",
       "format": "texte"
     }
   ],
@@ -64,14 +64,6 @@
       "link": "https://www.supplychaindive.com/news/strauss-dhl-supply-chain-ink-end-to-end-logistics-deal/825079/",
       "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/KatnSQCrp49-tYI3D5JCrZnuKOKaI0-NCHlnby_JjW0/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS8wM19PdXRib3VuZF9wYWNrYWdlLmpwZw==.webp\" /></div></figure><p>The partnership, which covers warehousing, distribution and product customization, aims to streamline order processing and drive faster turnaround times for the workwear brand.</p>",
       "published": "2026-07-14T14:35:52",
-      "relevance_score": 4
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "PepsiCo improves sustainable sourcing, delays emissions reporting",
-      "link": "https://www.supplychaindive.com/news/pepsico-improves-sustainable-sourcing-delays-emissions-reporting/824903/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/0lcIMvaQDIK9K2IcQgwLaLyGZU0q3PVlDNtBUVLHOk0/g:nowe:0:251/c:2500:1412/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjQwMTYyMTEyLmpwZw==.webp\" /></div></figure><p>The company reported a four percentage point increase in sustainably sourced ingredients in 2025 but will release Scope 3 emissions metrics later this summer.</p>",
-      "published": "2026-07-14T13:35:00",
       "relevance_score": 4
     }
   ]
