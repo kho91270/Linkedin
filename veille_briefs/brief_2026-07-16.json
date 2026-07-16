@@ -6,27 +6,27 @@
     "focus": null
   },
   "key_stat": {
-    "value": "coûts élevés de la chaîne d'approvisionnement",
-    "context": "Les coûts élevés de la chaîne d'approvisionnement sont un défi majeur pour les entreprises"
+    "value": "coûts de la chaîne d'approvisionnement élevés",
+    "context": "Les coûts de la chaîne d'approvisionnement sont plus élevés que les remboursements des tarifs IEEPA"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "sustainable sourcing",
-    "why_it_matters": "Les acheteurs doivent prendre en compte les pratiques de sourcing durable pour réduire leur impact environnemental"
+    "subject": "gestion de la chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent gérer efficacement leur chaîne d'approvisionnement pour minimiser les coûts et les perturbations"
   },
   "post_angles": [
     {
-      "pillar": "terrain",
-      "hook": "Comment les entreprises peuvent-elles réduire leurs coûts de chaîne d'approvisionnement ?",
+      "pillar": "analyste",
+      "hook": "Comment les entreprises peuvent-elles optimiser leur chaîne d'approvisionnement ?",
       "format": "question"
     },
     {
-      "pillar": "analyste",
-      "hook": "Découvrez les dernières tendances en matière de sourcing durable et de chaîne d'approvisionnement",
-      "format": "texte"
+      "pillar": "terrain",
+      "hook": "Découvrez comment les leaders de la chaîne d'approvisionnement gèrent les coûts et les perturbations",
+      "format": "carrousel"
     }
   ],
   "sources": [
