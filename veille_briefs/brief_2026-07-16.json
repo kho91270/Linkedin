@@ -6,27 +6,27 @@
     "focus": null
   },
   "key_stat": {
-    "value": "Hauteurs des coûts de la chaîne d'approvisionnement",
-    "context": "Les coûts de la chaîne d'approvisionnement dépassent les remboursements des tarifs IEEPA"
+    "value": "pas de chiffre clé disponible",
+    "context": "Les articles ne fournissent pas de chiffre clé spécifique"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Gestion de la chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent gérer efficacement leur chaîne d'approvisionnement pour minimiser les coûts et les perturbations"
+    "subject": "Utilisation de l'IA et des jumeaux numériques dans la chaîne d'approvisionnement",
+    "why_it_matters": "L'utilisation de l'IA et des jumeaux numériques peut améliorer l'efficacité et la résilience de la chaîne d'approvisionnement"
   },
   "post_angles": [
     {
-      "pillar": "analyste",
-      "hook": "Comment les entreprises peuvent-elles gérer les coûts de la chaîne d'approvisionnement ?",
-      "format": "question"
+      "pillar": "ProcureTech",
+      "hook": "Comment l'IA et les jumeaux numériques peuvent-ils révolutionner votre chaîne d'approvisionnement ?",
+      "format": "texte"
     },
     {
-      "pillar": "terrain",
-      "hook": "Découvrez comment Marzetti et Strauss ont optimisé leur chaîne d'approvisionnement",
-      "format": "texte"
+      "pillar": "Acheteur",
+      "hook": "Quels sont les défis et les opportunités liés aux coûts élevés de la chaîne d'approvisionnement ?",
+      "format": "question"
     }
   ],
   "sources": [
@@ -44,26 +44,18 @@
     },
     {
       "source": "Supply Chain Dive",
+      "title": "Walmart bets on AI and digital twins to shape its supply chain strategy",
+      "link": "https://www.supplychaindive.com/news/walmart-bets-on-ai-and-digital-twins-to-shape-its-supply-chain-strategy/825163/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/9nPbAgIis3yCQ-7_rmHITGsp5IjCVGELnp-KxTQkr-Q/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS80YTQyMjMzNC1jYjhkLTRiYmMtYjVhZi0zMTg1NDQ0YWZhZmYuanBn.webp\" /></div></figure><p>The technology helps the retailer get products around the world, despite global conflict or weather challenges, Walmart's Indira Uppuluri said.</p>",
+      "published": "2026-07-16T15:05:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
       "title": "Osprey brand owner says high supply chain costs are outpacing IEEPA tariff refunds",
       "link": "https://www.supplychaindive.com/news/osprey-brand-owner-says-high-supply-chain-costs-are-outpacing-ieepa-tariff/825081/",
       "summary": "<p>Helen of Troy CFO Brian Grass said there has not been a reliable pattern to the reimbursements, making it difficult to plan investments and offset supply disruptions.</p>",
       "published": "2026-07-15T13:34:00",
-      "relevance_score": 4
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "Marzetti taps Schwan supply chain head for CSCO",
-      "link": "https://www.supplychaindive.com/news/marzetti-taps-schwan-supply-chain-head-for-csco/825089/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/GKIVmyOEVEZZMw4PvTQLjgHPWWzzzVUORkeswzsj5vU/g:nowe:0:55/c:2500:1412/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9CYWNoYW5zX0phcGFuZXNlX0JhcmJlY3VlX1NhdWNlLmpwZw==.webp\" /></div></figure><p>Mark Carter will oversee the speciality food maker's continued efforts to simplify its network and improve productivity.</p>",
-      "published": "2026-07-14T17:11:00",
-      "relevance_score": 4
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "Strauss, DHL Supply Chain ink end-to-end logistics deal",
-      "link": "https://www.supplychaindive.com/news/strauss-dhl-supply-chain-ink-end-to-end-logistics-deal/825079/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/KatnSQCrp49-tYI3D5JCrZnuKOKaI0-NCHlnby_JjW0/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS8wM19PdXRib3VuZF9wYWNrYWdlLmpwZw==.webp\" /></div></figure><p>The partnership, which covers warehousing, distribution and product customization, aims to streamline order processing and drive faster turnaround times for the workwear brand.</p>",
-      "published": "2026-07-14T14:35:52",
       "relevance_score": 4
     }
   ]
