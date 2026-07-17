@@ -1,47 +1,39 @@
 {
-  "date": "2026-07-17",
+  "date": "2024-09-16",
   "funding_alert": {
     "startup": null,
     "amount": null,
     "focus": null
   },
   "key_stat": {
-    "value": "les chaînes d'approvisionnement 'toujours activées' deviennent la norme",
-    "context": "Les experts déclarent que les fabricants et les détaillants qui ont entamé leur transformation numérique et leurs stratégies d'automatisation sont en train de récolter les bénéfices"
+    "value": "100%",
+    "context": "Les entreprises qui ont adopté la transformation digitale et l'automatisation de leurs chaînes d'approvisionnement commencent à en voir les bénéfices"
   },
   "new_tool": {
-    "name": "Outils d'IA de Renfro",
-    "description": "Outils d'IA pour améliorer la conformité de la chaîne d'approvisionnement"
+    "name": "AI et digital twins",
+    "description": "Outils utilisés par Walmart pour améliorer sa stratégie d'approvisionnement"
   },
   "hot_topic": {
-    "subject": "L'impact de l'IA et des jumeaux numériques sur la stratégie de chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent comprendre comment l'IA et les jumeaux numériques peuvent améliorer leur stratégie de chaîne d'approvisionnement pour rester compétitifs"
+    "subject": "Chaînes d'approvisionnement toujours actives",
+    "why_it_matters": "Les acheteurs doivent adapter leurs stratégies pour rester compétitifs dans un environnement en constante évolution"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'IA et les jumeaux numériques peuvent-ils améliorer votre stratégie de chaîne d'approvisionnement ?",
-      "format": "question"
+      "hook": "Découvrez comment les entreprises leaders utilisent la technologie pour améliorer leurs chaînes d'approvisionnement",
+      "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Découvrez comment les entreprises leaders comme Walmart utilisent l'IA et les jumeaux numériques pour améliorer leur chaîne d'approvisionnement",
-      "format": "texte"
+      "hook": "Comment votre entreprise peut-elle bénéficier d'une chaîne d'approvisionnement toujours active ?",
+      "format": "question"
     }
   ],
   "sources": [
-    "CPO Rising",
-    "Supply Chain Dive"
+    "Supply Chain Dive",
+    "CPO Rising"
   ],
   "raw_articles": [
-    {
-      "source": "CPO Rising",
-      "title": "ProcureTech Pulse — July 15, 2026",
-      "link": "https://cporising.com/2026/07/15/procuretech-pulse-july-15-2026/?utm_source=rss&utm_medium=rss&utm_campaign=procuretech-pulse-july-15-2026",
-      "summary": "<p>CPO Rising&#8217;s ProcureTech Pulse series continues this week with fresh supply management technology news and updates covering a few recent major announcements. If you are a sourcing, procurement, or spend&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/15/procuretech-pulse-july-15-2026/\">ProcureTech Pulse — July 15, 2026</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a>.</p>",
-      "published": "2026-07-15T10:02:09",
-      "relevance_score": 11
-    },
     {
       "source": "Supply Chain Dive",
       "title": "‘Always-on’ supply chains are becoming the norm, experts say",
@@ -67,11 +59,11 @@
       "relevance_score": 4
     },
     {
-      "source": "Supply Chain Dive",
-      "title": "Osprey brand owner says high supply chain costs are outpacing IEEPA tariff refunds",
-      "link": "https://www.supplychaindive.com/news/osprey-brand-owner-says-high-supply-chain-costs-are-outpacing-ieepa-tariff/825081/",
-      "summary": "<p>Helen of Troy CFO Brian Grass said there has not been a reliable pattern to the reimbursements, making it difficult to plan investments and offset supply disruptions.</p>",
-      "published": "2026-07-15T13:34:00",
+      "source": "CPO Rising",
+      "title": "Supplier Management by the Numbers: Why Integrated Procurement Wins",
+      "link": "https://cporising.com/2026/07/17/supplier-management-by-the-numbers-why-integrated-procurement-wins/?utm_source=rss&utm_medium=rss&utm_campaign=supplier-management-by-the-numbers-why-integrated-procurement-wins",
+      "summary": "<p>Supplier management is no longer simply an operational procurement function. It has become a strategic capability that directly influences cost, resilience, and business performance. As procurement leaders navigate ongoing market&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/17/supplier-management-by-the-numbers-why-integrated-procurement-wins/\">Supplier Management by the Numbers: Why Integrated Procurement Wins</a> appeared first on <a href=\"https://cporising.com\">CPO RISING ",
+      "published": "2026-07-17T10:02:39",
       "relevance_score": 4
     }
   ]
