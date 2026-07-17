@@ -6,26 +6,26 @@
     "focus": null
   },
   "key_stat": {
-    "value": "les chaînes d'approvisionnement 'toujours actives' deviennent la norme",
-    "context": "selon les experts en chaîne d'approvisionnement"
+    "value": "les chaînes d'approvisionnement 'toujours activées' deviennent la norme",
+    "context": "Les experts déclarent que les fabricants et les détaillants qui ont entamé leur transformation numérique et leurs stratégies d'automatisation sont en train de récolter les bénéfices"
   },
   "new_tool": {
-    "name": null,
-    "description": null
+    "name": "Outils d'IA de Renfro",
+    "description": "Outils d'IA pour améliorer la conformité de la chaîne d'approvisionnement"
   },
   "hot_topic": {
-    "subject": "l'impact des tarifs douaniers et de la géopolitique sur les marchés des matières premières",
-    "why_it_matters": "les acheteurs doivent prendre en compte ces facteurs pour anticiper les fluctuations des prix et des disponibilités"
+    "subject": "L'impact de l'IA et des jumeaux numériques sur la stratégie de chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent comprendre comment l'IA et les jumeaux numériques peuvent améliorer leur stratégie de chaîne d'approvisionnement pour rester compétitifs"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment les tarifs douaniers et la géopolitique influencent-ils vos stratégies d'approvisionnement ?",
+      "hook": "Comment l'IA et les jumeaux numériques peuvent-ils améliorer votre stratégie de chaîne d'approvisionnement ?",
       "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Découvrez comment les entreprises leaders comme Walmart utilisent l'IA et les jumeaux numériques pour optimiser leurs chaînes d'approvisionnement",
+      "hook": "Découvrez comment les entreprises leaders comme Walmart utilisent l'IA et les jumeaux numériques pour améliorer leur chaîne d'approvisionnement",
       "format": "texte"
     }
   ],
@@ -57,14 +57,6 @@
       "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/3chnXEF97B1_Ui-z1rnDFJV_o4NMW48t2FqPg3_rgZU/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9SZW5mcm9Ccm5kc09mZmljZS5qcGc=.webp\" /></div></figure><p><!-- obsidian --></p>\n\n<p>The sock and legwear maker plans to expand its use of Inspectorio products to better manage regulatory needs and measure supplier performance.</p>",
       "published": "2026-07-16T15:35:00",
       "relevance_score": 6
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "4 ways tariffs and geopolitics are impacting commodity markets",
-      "link": "https://www.supplychaindive.com/news/4-ways-tariffs-and-geopolitics-are-impacting-commodity-markets/825482/",
-      "summary": "<p>Metals and plastics experts also offered their perspective on the future of the United States-Mexico-Canada trade agreement during the Supply Chain Outlook event.</p>",
-      "published": "2026-07-16T20:33:00",
-      "relevance_score": 4
     },
     {
       "source": "Supply Chain Dive",
