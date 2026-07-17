@@ -6,27 +6,27 @@
     "focus": null
   },
   "key_stat": {
-    "value": "les chaînes d'approvisionnement 'toujours activées' deviennent la norme",
+    "value": "les chaînes d'approvisionnement 'toujours actives' deviennent la norme",
     "context": "selon les experts en chaîne d'approvisionnement"
   },
   "new_tool": {
-    "name": "outils d'intelligence artificielle de Renfro",
-    "description": "pour une conformité plus stricte de la chaîne d'approvisionnement"
+    "name": null,
+    "description": null
   },
   "hot_topic": {
     "subject": "l'impact des tarifs douaniers et de la géopolitique sur les marchés des matières premières",
-    "why_it_matters": "les acheteurs doivent être conscients de l'impact potentiel sur leurs coûts et leur chaîne d'approvisionnement"
+    "why_it_matters": "les acheteurs doivent prendre en compte ces facteurs pour anticiper les fluctuations des prix et des disponibilités"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment les chaînes d'approvisionnement 'toujours activées' peuvent-elles améliorer votre entreprise ?",
-      "format": "texte"
+      "hook": "Comment les tarifs douaniers et la géopolitique influencent-ils vos stratégies d'approvisionnement ?",
+      "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Quels sont les défis les plus importants pour les acheteurs face aux tarifs douaniers et à la géopolitique ?",
-      "format": "question"
+      "hook": "Découvrez comment les entreprises leaders comme Walmart utilisent l'IA et les jumeaux numériques pour optimiser leurs chaînes d'approvisionnement",
+      "format": "texte"
     }
   ],
   "sources": [
