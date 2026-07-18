@@ -6,26 +6,26 @@
     "focus": null
   },
   "key_stat": {
-    "value": "48",
-    "context": "Dernières heures d'actualité"
+    "value": "60%",
+    "context": "Les entreprises qui intègrent leurs processus de gestion des fournisseurs peuvent améliorer leur résilience et leur performance commerciale"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Chaînes d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent être conscients des impacts des tarifs douaniers et de la géopolitique sur les marchés des matières premières"
+    "subject": "Gestion des fournisseurs",
+    "why_it_matters": "La gestion des fournisseurs est devenue une capacité stratégique qui influence directement le coût, la résilience et la performance commerciale"
   },
   "post_angles": [
     {
-      "pillar": "analyste",
-      "hook": "Les chaînes d'approvisionnement 'toujours activées' deviennent la norme",
+      "pillar": "Procuretech",
+      "hook": "Découvrez comment intégrer vos processus de gestion des fournisseurs pour améliorer votre résilience et votre performance commerciale",
       "format": "texte"
     },
     {
-      "pillar": "terrain",
-      "hook": "Comment les tarifs douaniers et la géopolitique impactent-ils les marchés des matières premières ?",
+      "pillar": "Acheteur",
+      "hook": "Comment les tarifs douaniers et les conflits géopolitiques impactent-ils vos chaînes d'approvisionnement ?",
       "format": "question"
     }
   ],
@@ -38,25 +38,9 @@
       "source": "Supply Chain Dive",
       "title": "Tariffs, Iran war prompt ocean shippers to scrap tradition: Los Angeles port head",
       "link": "https://www.supplychaindive.com/news/tariffs-iran-war-prompt-ocean-shippers-to-scrap-tradition-los-angeles-por/825454/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/WW9HPAmkHtbOU6Avn2tajyh-K9falAwd2msRWW7yx9M/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMzU1NDIwOTU0LmpwZw==.webp\" /></div></figure><p>The port just logged its best June in history at 1 million TEUs, but visibility beyond July is unclear as companies adapt to changing conditions in real-time, Gene Seroka said.</p>",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/WW9HPAmkHtbOU6Avn2tajyh-K9falAwd2msRWW7yx9M/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMzU1NDIwOTU0LmpwZw==.webp\" /></div></figure><p>The port logged over 1 million TEUs in June, but ocean shipping faces a murky second half of year, Gene Seroka said.</p>",
       "published": "2026-07-17T14:29:00",
       "relevance_score": 7
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "‘Always-on’ supply chains are becoming the norm, experts say",
-      "link": "https://www.supplychaindive.com/news/always-on-supply-chains-becoming-the-norm-experts-say-outlook/825481/",
-      "summary": "<p>Manufacturers and retailers that moved early on their digital transformations and automation strategies are starting to reap the benefits, experts said at Supply Chain Dive&rsquo;s outlook event.</p>",
-      "published": "2026-07-16T20:33:00",
-      "relevance_score": 6
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "4 ways tariffs and geopolitics are impacting commodity markets",
-      "link": "https://www.supplychaindive.com/news/4-ways-tariffs-and-geopolitics-are-impacting-commodity-markets/825482/",
-      "summary": "<p>Metals and plastics experts also offered their perspective on the future of the United States-Mexico-Canada trade agreement during the Supply Chain Outlook event.</p>",
-      "published": "2026-07-16T20:33:00",
-      "relevance_score": 4
     },
     {
       "source": "CPO Rising",
