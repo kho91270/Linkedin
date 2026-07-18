@@ -1,32 +1,32 @@
 {
-  "date": "2024-09-16",
+  "date": "2024-02-20",
   "funding_alert": {
     "startup": null,
     "amount": null,
     "focus": null
   },
   "key_stat": {
-    "value": "50%",
-    "context": "Les entreprises qui ont investi dans la transformation digitale et l'automatisation de leurs chaînes d'approvisionnement commencent à voir des bénéfices"
+    "value": "40%",
+    "context": "des entreprises ont déjà adopté des chaînes d'approvisionnement numérisées"
   },
   "new_tool": {
-    "name": "Renfro AI",
+    "name": "AI de Renfro",
     "description": "Outil d'intelligence artificielle pour améliorer la conformité de la chaîne d'approvisionnement"
   },
   "hot_topic": {
-    "subject": "Chaînes d'approvisionnement toujours actives",
-    "why_it_matters": "Les acheteurs doivent s'adapter pour rester compétitifs dans un environnement en constante évolution"
+    "subject": "Chaînes d'approvisionnement numérisées",
+    "why_it_matters": "Les acheteurs doivent adopter des stratégies de chaîne d'approvisionnement numérisées pour rester compétitifs"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Découvrez comment les chaînes d'approvisionnement toujours actives peuvent vous aider à rester compétitif",
-      "format": "texte"
+      "hook": "Comment les tarifs douaniers et la géopolitique impactent-ils vos chaînes d'approvisionnement ?",
+      "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Comment gérez-vous les risques liés aux tarifs douaniers et à la géopolitique dans votre chaîne d'approvisionnement ?",
-      "format": "question"
+      "hook": "Découvrez comment Walmart utilise l'intelligence artificielle pour optimiser sa chaîne d'approvisionnement",
+      "format": "texte"
     }
   ],
   "sources": [
