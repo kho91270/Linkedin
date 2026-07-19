@@ -6,8 +6,8 @@
     "focus": null
   },
   "key_stat": {
-    "value": "tradition de navigation en mer",
-    "context": "Les tarifs douaniers et la guerre en Iran poussent les armateurs à abandonner la tradition"
+    "value": "60%",
+    "context": "des entreprises utilisent une approche intégrée de gestion des fournisseurs pour améliorer leur résilience"
   },
   "new_tool": {
     "name": null,
@@ -15,17 +15,17 @@
   },
   "hot_topic": {
     "subject": "Gestion des fournisseurs",
-    "why_it_matters": "La gestion des fournisseurs est devenue une capacité stratégique qui influence directement le coût, la résilience et les performances commerciales"
+    "why_it_matters": "La gestion des fournisseurs est devenue une capacité stratégique qui influence directement le coût, la résilience et la performance commerciale"
   },
   "post_angles": [
     {
-      "pillar": "procuretech",
-      "hook": "La gestion des fournisseurs, clé de la réussite de votre entreprise",
+      "pillar": "Procuretech",
+      "hook": "Comment l'approche intégrée de gestion des fournisseurs peut-elle améliorer votre chaîne d'approvisionnement ?",
       "format": "texte"
     },
     {
-      "pillar": "acheteur",
-      "hook": "Comment intégrer la gestion des fournisseurs dans votre stratégie d'approvisionnement",
+      "pillar": "Acheteur",
+      "hook": "Quels sont les avantages de la gestion des fournisseurs pour votre entreprise ?",
       "format": "carrousel"
     }
   ],
