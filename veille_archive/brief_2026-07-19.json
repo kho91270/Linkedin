@@ -6,8 +6,8 @@
     "focus": null
   },
   "key_stat": {
-    "value": "60%",
-    "context": "des entreprises utilisent une approche intégrée de gestion des fournisseurs pour améliorer leur résilience"
+    "value": "40%",
+    "context": "Les frais de transport maritime ont augmenté de 40% en raison des tensions géopolitiques"
   },
   "new_tool": {
     "name": null,
@@ -15,17 +15,17 @@
   },
   "hot_topic": {
     "subject": "Gestion des fournisseurs",
-    "why_it_matters": "La gestion des fournisseurs est devenue une capacité stratégique qui influence directement le coût, la résilience et la performance commerciale"
+    "why_it_matters": "La gestion des fournisseurs est devenue une capacité stratégique qui influence directement les coûts, la résilience et les performances commerciales"
   },
   "post_angles": [
     {
       "pillar": "Procuretech",
-      "hook": "Comment l'approche intégrée de gestion des fournisseurs peut-elle améliorer votre chaîne d'approvisionnement ?",
+      "hook": "Comment les acheteurs peuvent-ils intégrer la gestion des fournisseurs dans leur stratégie pour améliorer la résilience de la chaîne d'approvisionnement ?",
       "format": "texte"
     },
     {
-      "pillar": "Acheteur",
-      "hook": "Quels sont les avantages de la gestion des fournisseurs pour votre entreprise ?",
+      "pillar": "Supply Chain",
+      "hook": "Les tensions géopolitiques et les tarifs douaniers obligent les transporteurs maritimes à repenser leurs stratégies, quels sont les impacts sur la chaîne d'approvisionnement ?",
       "format": "carrousel"
     }
   ],
