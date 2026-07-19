@@ -6,49 +6,40 @@
     "focus": null
   },
   "key_stat": {
-    "value": "40%",
-    "context": "Les frais de transport maritime ont augmenté de 40% en raison des tensions géopolitiques"
+    "value": "tarifs douaniers",
+    "context": "Les tarifs douaniers et la guerre en Iran poussent les transporteurs maritimes à abandonner les traditions"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Gestion des fournisseurs",
-    "why_it_matters": "La gestion des fournisseurs est devenue une capacité stratégique qui influence directement les coûts, la résilience et les performances commerciales"
+    "subject": "chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent être conscients des impacts des tarifs douaniers et des conflits sur la chaîne d'approvisionnement"
   },
   "post_angles": [
     {
-      "pillar": "Procuretech",
-      "hook": "Comment les acheteurs peuvent-ils intégrer la gestion des fournisseurs dans leur stratégie pour améliorer la résilience de la chaîne d'approvisionnement ?",
-      "format": "texte"
+      "pillar": "terrain",
+      "hook": "Comment les tarifs douaniers et les conflits affectent-ils votre chaîne d'approvisionnement ?",
+      "format": "question"
     },
     {
-      "pillar": "Supply Chain",
-      "hook": "Les tensions géopolitiques et les tarifs douaniers obligent les transporteurs maritimes à repenser leurs stratégies, quels sont les impacts sur la chaîne d'approvisionnement ?",
-      "format": "carrousel"
+      "pillar": "analyste",
+      "hook": "Les transporteurs maritimes doivent s'adapter aux nouvelles réalités de la chaîne d'approvisionnement",
+      "format": "texte"
     }
   ],
   "sources": [
-    "Supply Chain Dive",
-    "CPO Rising"
+    "Supply Chain Dive"
   ],
   "raw_articles": [
     {
       "source": "Supply Chain Dive",
       "title": "Tariffs, Iran war prompt ocean shippers to scrap tradition: Los Angeles port head",
       "link": "https://www.supplychaindive.com/news/tariffs-iran-war-prompt-ocean-shippers-to-scrap-tradition-los-angeles-por/825454/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/WW9HPAmkHtbOU6Avn2tajyh-K9falAwd2msRWW7yx9M/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMzU1NDIwOTU0LmpwZw==.webp\" /></div></figure><p>The port just logged its best June in history at 1 million TEUs, but visibility beyond July is unclear as companies adapt to changing conditions in real-time, Gene Seroka said.</p>",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/WW9HPAmkHtbOU6Avn2tajyh-K9falAwd2msRWW7yx9M/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMzU1NDIwOTU0LmpwZw==.webp\" /></div></figure><p>The port logged over 1 million TEUs in June, but ocean shipping faces a murky second half of year, Gene Seroka said.</p>",
       "published": "2026-07-17T14:29:00",
       "relevance_score": 7
-    },
-    {
-      "source": "CPO Rising",
-      "title": "Supplier Management by the Numbers: Why Integrated Procurement Wins",
-      "link": "https://cporising.com/2026/07/17/supplier-management-by-the-numbers-why-integrated-procurement-wins/?utm_source=rss&utm_medium=rss&utm_campaign=supplier-management-by-the-numbers-why-integrated-procurement-wins",
-      "summary": "<p>Supplier management is no longer simply an operational procurement function. It has become a strategic capability that directly influences cost, resilience, and business performance. As procurement leaders navigate ongoing market&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/17/supplier-management-by-the-numbers-why-integrated-procurement-wins/\">Supplier Management by the Numbers: Why Integrated Procurement Wins</a> appeared first on <a href=\"https://cporising.com\">CPO RISING ",
-      "published": "2026-07-17T10:02:39",
-      "relevance_score": 4
     }
   ]
 }
