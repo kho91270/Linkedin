@@ -15,7 +15,7 @@
   },
   "hot_topic": {
     "subject": "Risques de chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent être conscients des risques potentiels pour leur chaîne d'approvisionnement en raison de facteurs externes tels que les conflits géopolitiques"
+    "why_it_matters": "Les acheteurs doivent être conscients des risques potentiels pour leur chaîne d'approvisionnement, tels que les conflits géopolitiques et les perturbations de la production"
   },
   "post_angles": [
     {
@@ -25,7 +25,7 @@
     },
     {
       "pillar": "terrain",
-      "hook": "Les leçons tirées de la fermeture temporaire de l'usine d'Amazon en Floride",
+      "hook": "Les leçons à tirer de la fermeture temporaire de l'usine d'Amazon en Floride",
       "format": "texte"
     }
   ],
