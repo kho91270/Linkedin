@@ -7,7 +7,7 @@
   },
   "key_stat": {
     "value": "100%",
-    "context": "hausse des coûts d'approvisionnement pour WD-40 en raison de la guerre en Iran"
+    "context": "hausse des coûts d'approvisionnement de WD-40 en raison de la guerre en Iran"
   },
   "new_tool": {
     "name": null,
@@ -15,7 +15,7 @@
   },
   "hot_topic": {
     "subject": "Risques de chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent être conscients des risques potentiels pour leur chaîne d'approvisionnement, tels que les conflits géopolitiques, pour prendre des décisions éclairées"
+    "why_it_matters": "Les acheteurs doivent être conscients des risques potentiels pour leur chaîne d'approvisionnement en raison de facteurs externes tels que les conflits géopolitiques"
   },
   "post_angles": [
     {
@@ -25,7 +25,7 @@
     },
     {
       "pillar": "terrain",
-      "hook": "Les leçons à tirer de la fermeture temporaire de l'usine d'Amazon en Floride",
+      "hook": "Les leçons tirées de la fermeture temporaire de l'usine d'Amazon en Floride",
       "format": "texte"
     }
   ],
