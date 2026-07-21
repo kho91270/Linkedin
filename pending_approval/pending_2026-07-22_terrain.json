@@ -1,0 +1,58 @@
+{
+  "content_fr": "Ruptures d'approvisionnement : la réalité du terrain !\n\nJ'ai vécu plusieurs situations de ruptures d'approvisionnement en tant que Category Manager, et je peux vous dire que cela peut avoir des conséquences dramatiques sur la chaîne d'approvisionnement. Je me souviens d'un cas où l'un de nos fournisseurs clés a connu une grève, ce qui a entraîné une rupture de stock de plusieurs semaines. Nous avons dû agir rapidement pour trouver des alternatives et maintenir la continuité de notre production.\n\nJ'ai appris que la gestion des risques liés aux ruptures d'approvisionnement est essentielle pour maintenir la stabilité de la chaîne d'approvisionnement. Il est important de diversifier nos sources d'approvisionnement, de développer des relations solides avec nos fournisseurs et de mettre en place des plans de contingence pour faire face à ces situations.\n\nQuelles stratégies les entreprises peuvent-elles mettre en place pour atténuer les risques liés aux ruptures d'approvisionnement ?\n\n#approvisionnement #rupturesdapprovisionnement #gestiondesrisques 🚨💡📈",
+  "content_en": "Ruptures in supply chain can be devastating!\nI've seen it firsthand as a Category Manager, when a key supplier faced a 100% hike in certain procurement costs due to the Iran war. \nMy team and I had to act fast to renegotiate contracts and find alternative sources to maintain continuity. \nWe utilized scorecards to evaluate supplier performance and RFI/RFP processes to onboard new partners. \nIn hindsight, I realized that being prepared for such disruptions is crucial. \nWhat strategies can businesses adopt to mitigate supply chain disruption risks? \n#SupplyChainResilience #ProcurementStrategy #RiskManagement 📈💡🔒",
+  "content_x_fr": "\"Ruptures d'approvisionnement : 100% des coûts augmentés pour WD-40. Gestion stratégique de la chaîne d'approvisionnement clé. #Procurement\"",
+  "content_x_en": "\"100% increase in procurement costs due to Iran war. What's your supplier negotiation strategy to mitigate supply chain disruptions?\" #procurement",
+  "pillar": "terrain",
+  "format": "texte",
+  "generated_date": "2026-07-21 18:14",
+  "status": "pending_approval",
+  "lang": "both",
+  "quality_report": {
+    "timestamp": "2026-07-21 18:14",
+    "passed": true,
+    "score_fr": {
+      "total": 91,
+      "details": {
+        "hook": 20,
+        "structure": 25,
+        "longueur": 20,
+        "engagement": 11,
+        "authenticite": 15
+      },
+      "char_count": 1062
+    },
+    "unique_fr": true,
+    "hooks_fr": {
+      "original": "Ruptures d'approvisionnement : la réalité du terrain !",
+      "hook_a": "J'ai vécu l'enfer des ruptures d'appro",
+      "hook_b": "Ma chaîne d'approvisionnement a failli sauter !"
+    },
+    "score_en": {
+      "total": 75,
+      "details": {
+        "hook": 20,
+        "structure": 17,
+        "longueur": 12,
+        "engagement": 11,
+        "authenticite": 15
+      },
+      "char_count": 616
+    },
+    "unique_en": true,
+    "hooks_en": {
+      "original": "Ruptures in supply chain can be devastating!",
+      "hook_a": "I've lived through supply chain chaos!",
+      "hook_b": "My supplier's 100% cost hike was a wake-up call"
+    }
+  },
+  "image": {
+    "status": "complete",
+    "url": "https://cdn.leonardo.ai/users/3d14e72a-e0c9-46d3-a916-e31db4054e4b/generations/374c168a-2889-4c59-9561-de572b0d32c7/Leonardo_Creative_A_fractured_supply_chain_represented_by_a_br_0.jpg",
+    "local_path": "generated_images/img_20260721_1814_terrain.png",
+    "prompt": "A fractured supply chain represented by a broken navy blue chain link with a light blue glow, set against a clean white background, with subtle shadows and minimalist design elements."
+  },
+  "publish_date": "2026-07-22",
+  "approval_status": "pending",
+  "created_at": "2026-07-21 18:14"
+}
