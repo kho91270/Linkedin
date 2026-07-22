@@ -1,5 +1,5 @@
 {
-  "date": "2024-09-16",
+  "date": "2026-07-22",
   "funding_alert": {
     "startup": null,
     "amount": null,
@@ -15,24 +15,33 @@
   },
   "hot_topic": {
     "subject": "Risques de chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent être conscients des risques potentiels liés à la chaîne d'approvisionnement, tels que les augmentations de coûts et les perturbations, pour prendre des décisions éclairées"
+    "why_it_matters": "Les acheteurs doivent être conscients des risques potentiels liés à la chaîne d'approvisionnement, tels que les augmentations de coûts et les perturbations de la production"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment les entreprises peuvent-elles atténuer les risques de chaîne d'approvisionnement ?",
+      "hook": "Comment les acheteurs peuvent-ils atténuer les risques de chaîne d'approvisionnement ?",
       "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Les dernières nominations dans les entreprises de la chaîne d'approvisionnement : qu'est-ce que cela signifie pour l'industrie ?",
-      "format": "texte"
+      "hook": "Les dernières tendances en matière de chaîne d'approvisionnement : qu'est-ce que les acheteurs doivent savoir ?",
+      "format": "carrousel"
     }
   ],
   "sources": [
+    "CPO Rising",
     "Supply Chain Dive"
   ],
   "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "Procurement News — July 22, 2026",
+      "link": "https://cporising.com/2026/07/22/procurement-news-july-22-2026/?utm_source=rss&utm_medium=rss&utm_campaign=procurement-news-july-22-2026",
+      "summary": "<p>Welcome to Procurement News, part of our ongoing aggregate news series covering recent supply management headlines and trends pertinent to Chief Procurement Officers and other procurement leaders! Contact us with&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/22/procurement-news-july-22-2026/\">Procurement News — July 22, 2026</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a>.</p>",
+      "published": "2026-07-22T10:02:53",
+      "relevance_score": 7
+    },
     {
       "source": "Supply Chain Dive",
       "title": "Best Buy names chief fulfillment and operations officer",
