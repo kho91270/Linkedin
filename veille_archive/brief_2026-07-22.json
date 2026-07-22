@@ -7,25 +7,25 @@
   },
   "key_stat": {
     "value": "100%",
-    "context": "hausse des coûts d'approvisionnement de WD-40 en raison de la guerre en Iran"
+    "context": "WD-40 a connu une augmentation de 100% de certains coûts d'approvisionnement en raison de la guerre en Iran"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Résilience de la chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent être préparés à gérer les risques et les perturbations de la chaîne d'approvisionnement pour maintenir la continuité de leur entreprise"
+    "subject": "Risques de chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent être conscients des risques potentiels liés à la chaîne d'approvisionnement, tels que les augmentations de coûts et les perturbations, pour prendre des décisions éclairées"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment les entreprises peuvent-elles renforcer leur chaîne d'approvisionnement face aux risques géopolitiques ?",
+      "hook": "Comment les entreprises peuvent-elles atténuer les risques de chaîne d'approvisionnement ?",
       "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Les dernières nominations dans les entreprises de la chaîne d'approvisionnement : qu'est-ce que cela signifie pour l'avenir de la profession ?",
+      "hook": "Les dernières nominations dans les entreprises de la chaîne d'approvisionnement : qu'est-ce que cela signifie pour l'industrie ?",
       "format": "texte"
     }
   ],
