@@ -6,27 +6,27 @@
     "focus": null
   },
   "key_stat": {
-    "value": "100%",
-    "context": "hausse des coûts d'approvisionnement de WD-40 en raison de la guerre en Iran"
+    "value": "2040",
+    "context": "JBS a abandonné son objectif de neutralité carbone pour 2040 en raison de défis d'exécution importants"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Risques de chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent être vigilants face aux risques de chaîne d'approvisionnement pour éviter les perturbations de production et de livraison"
+    "subject": "les défis de la chaîne d'approvisionnement",
+    "why_it_matters": "les entreprises doivent adapter leurs stratégies pour faire face aux défis de la chaîne d'approvisionnement et assurer la continuité de leurs activités"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment les guerres et les crises géopolitiques impactent-elles vos chaînes d'approvisionnement ?",
+      "hook": "Quels sont les défis les plus importants pour les entreprises dans la gestion de leur chaîne d'approvisionnement ?",
       "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Les entreprises doivent-elles revoir leurs stratégies d'approvisionnement pour faire face aux risques de chaîne d'approvisionnement ?",
-      "format": "carrousel"
+      "hook": "Comment les entreprises peuvent-elles améliorer leur résilience face aux perturbations de la chaîne d'approvisionnement ?",
+      "format": "texte"
     }
   ],
   "sources": [
@@ -52,11 +52,11 @@
     },
     {
       "source": "Supply Chain Dive",
-      "title": "WD-40 hit with 100% spike in some sourcing costs from Iran war",
-      "link": "https://www.supplychaindive.com/news/wd-40-hit-with-100-spike-in-some-sourcing-costs-from-iran-war/825422/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/VZJkNey57YtQ7yenYOIBUFppAjh5NFd2nmqUkhhqq-o/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjcwNDM3OTQ0LmpwZw==.webp\" /></div></figure><p>The maintenance and household products maker said effects from the conflict strained its supply chain last quarter.</p>",
-      "published": "2026-07-20T14:02:38",
-      "relevance_score": 6
+      "title": "Providence names new chief supply chain officer",
+      "link": "https://www.supplychaindive.com/news/providence-names-new-chief-supply-chain-officer/825622/",
+      "summary": "<p>Providence is hoping Amanda Chawla's appointment will bolster its supply chain capabilities during a time of elevated spend.</p>",
+      "published": "2026-07-22T15:13:35",
+      "relevance_score": 4
     },
     {
       "source": "Supply Chain Dive",
