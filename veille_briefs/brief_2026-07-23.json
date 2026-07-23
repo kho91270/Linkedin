@@ -7,25 +7,25 @@
   },
   "key_stat": {
     "value": "2040",
-    "context": "JBS a abandonné son objectif de neutralité carbone pour 2040 en raison de défis d'exécution immenses"
+    "context": "JBS a abandonné son objectif de neutralité carbone pour 2040 en raison de défis d'exécution"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "les défis de la chaîne d'approvisionnement",
-    "why_it_matters": "les acheteurs doivent être conscients des défis potentiels et des changements dans la chaîne d'approvisionnement pour prendre des décisions éclairées"
+    "subject": "Les défis de la chaîne d'approvisionnement",
+    "why_it_matters": "Les entreprises doivent gérer efficacement leurs chaînes d'approvisionnement pour maintenir leur compétitivité"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Quels sont les défis les plus importants pour les acheteurs dans la chaîne d'approvisionnement ?",
+      "hook": "Comment les entreprises peuvent-elles améliorer leur chaîne d'approvisionnement ?",
       "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Découvrez comment les entreprises comme Best Buy et Providence renforcent leurs capacités de chaîne d'approvisionnement",
+      "hook": "Découvrez comment les dernières tendances en chaîne d'approvisionnement peuvent impacter votre entreprise",
       "format": "texte"
     }
   ],
