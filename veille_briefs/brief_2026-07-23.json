@@ -1,0 +1,94 @@
+{
+  "date": "2026-07-24",
+  "funding_alert": {
+    "startup": null,
+    "amount": null,
+    "focus": null
+  },
+  "key_stat": {
+    "value": "2040",
+    "context": "JBS annule son objectif de neutralité carbone pour 2040 en raison de défis d'exécution"
+  },
+  "new_tool": {
+    "name": null,
+    "description": null
+  },
+  "hot_topic": {
+    "subject": "les défis de la chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent être conscients des défis de la chaîne d'approvisionnement pour prendre des décisions éclairées"
+  },
+  "post_angles": [
+    {
+      "pillar": "analyste",
+      "hook": "Quels sont les défis les plus importants pour les acheteurs en ce moment ?",
+      "format": "question"
+    },
+    {
+      "pillar": "terrain",
+      "hook": "Comment les entreprises peuvent-elles améliorer leur chaîne d'approvisionnement ?",
+      "format": "carrousel"
+    }
+  ],
+  "sources": [
+    "Supply Chain Dive",
+    "CPO Rising"
+  ],
+  "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "Procurement News — July 22, 2026",
+      "link": "https://cporising.com/2026/07/22/procurement-news-july-22-2026/?utm_source=rss&utm_medium=rss&utm_campaign=procurement-news-july-22-2026",
+      "summary": "<p>Welcome to Procurement News, part of our ongoing aggregate news series covering recent supply management headlines and trends pertinent to Chief Procurement Officers and other procurement leaders! Contact us with&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/22/procurement-news-july-22-2026/\">Procurement News — July 22, 2026</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a>.</p>",
+      "published": "2026-07-22T10:02:53",
+      "relevance_score": 7
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Best Buy names chief fulfillment and operations officer",
+      "link": "https://www.supplychaindive.com/news/best-buy-names-chief-fulfillment-and-operations-officer/825576/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/JLrznExk2Bx4JPdYQUdMH0F1toXYhs3oHpIIhkXLnpI/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9TY3JlZW5zaG90XzIwMjItMDUtMTJfMi4zMy4zNV9QTS5wbmc=.webp\" /></div></figure><p>Duane Scarboro&nbsp;is responsible for sourcing, supply chain, fulfillment, delivery and service in the new role, which went into effect last week.</p>",
+      "published": "2026-07-21T11:04:00",
+      "relevance_score": 6
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "USPS launches smart locker service for local transactions",
+      "link": "https://www.supplychaindive.com/news/usps-launches-smart-locker-service-for-local-transactions/825787/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/TGC6uBm2GYfb9qHiWcjG6AnpgGV2Rf6MTqpXq8ceSDE/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMjM2MzU0NzE3LmpwZw==.webp\" /></div></figure><p>The offering, called Local XChange, offers a secure package storage option for buyers and sellers on online marketplaces, the agency said.</p>",
+      "published": "2026-07-22T14:47:00",
+      "relevance_score": 5
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Providence names new chief supply chain officer",
+      "link": "https://www.supplychaindive.com/news/providence-names-new-chief-supply-chain-officer/825622/",
+      "summary": "<p>Providence is hoping Amanda Chawla's appointment will bolster its supply chain capabilities during a time of elevated spend.</p>",
+      "published": "2026-07-22T15:13:35",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Taylor Farms lettuce didn’t contain parasite behind diarrhea outbreak, FDA says",
+      "link": "https://www.supplychaindive.com/news/taylor-farms-lettuce-didnt-contain-parasite-behind-diarrhea-outbreak-fda/825804/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/h8rL_8qLN7jNlCk-CokNpILDHVpBaThEypMd-0A9wPU/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjg1OTI3NDgxLmpwZw==.webp\" /></div></figure><p>The agency said a previous finding was &ldquo;a false positive,&rdquo; but the supplier to companies such as Walmart and Taco Bell remains at the heart of an ongoing investigation.</p>",
+      "published": "2026-07-21T20:58:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "JM Smucker snags Hershey exec as SVP of operations, supply chain",
+      "link": "https://www.supplychaindive.com/news/jm-smucker-snags-hershey-exec-as-svp-of-operations-supply-chain/825649/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/PrjTquO3M2HbyLGbtpPB7VnTbbrHyc8BOdzGgckytoo/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9EU0NfNzgwNS5qcGc=.webp\" /></div></figure><p>Douglas Guilherme will step into the role on July 29 with over 30 years of experience, including stints at the chocolate maker and Procter &amp; Gamble.</p>",
+      "published": "2026-07-21T17:07:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "JBS axes 2040 net-zero goal, citing ‘immense’ execution challenges",
+      "link": "https://www.supplychaindive.com/news/jbs-axes-2040-net-zero-goal-citing-immense-execution-challenges/824984/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/wTxa7C6uoEobm3I9x0ekgE5IFjqeRka4JOfulFkgVYs/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjY2NDU1OTcwLmpwZw==.webp\" /></div></figure><p>The meat giant will no longer aim to achieve net-zero greenhouse emissions across its supply chain by 2040 and has also dropped scope 3 reduction targets.</p>",
+      "published": "2026-07-21T14:17:00",
+      "relevance_score": 4
+    }
+  ]
+}
