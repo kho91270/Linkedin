@@ -1,39 +1,47 @@
 {
   "date": "2026-07-24",
   "funding_alert": {
-    "startup": null,
-    "amount": null,
-    "focus": null
+    "startup": "TSMC",
+    "amount": "$100B",
+    "focus": "Investissement aux États-Unis"
   },
   "key_stat": {
-    "value": "2040",
-    "context": "JBS a annulé son objectif de neutralité carbone pour 2040 en raison de défis d'exécution importants"
+    "value": "$100B",
+    "context": "Investissement de TSMC aux États-Unis"
   },
   "new_tool": {
-    "name": null,
-    "description": null
+    "name": "USPS Smart Locker",
+    "description": "Service de casiers intelligents pour les transactions locales"
   },
   "hot_topic": {
-    "subject": "La chaîne d'approvisionnement durable",
-    "why_it_matters": "Les acheteurs doivent prendre en compte les défis environnementaux et les objectifs de neutralité carbone dans leurs stratégies d'approvisionnement"
+    "subject": "Investissements dans la chaîne d'approvisionnement",
+    "why_it_matters": "Amélioration de la résilience et de la flexibilité de la chaîne d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Quels sont les défis les plus importants pour les entreprises qui cherchent à atteindre la neutralité carbone ?",
+      "hook": "Quels sont les défis et les opportunités liés aux investissements dans la chaîne d'approvisionnement ?",
       "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Comment les entreprises peuvent-elles intégrer la durabilité dans leur chaîne d'approvisionnement ?",
-      "format": "carrousel"
+      "hook": "Comment les entreprises peuvent-elles tirer parti des investissements dans la chaîne d'approvisionnement pour améliorer leur compétitivité ?",
+      "format": "texte"
     }
   ],
   "sources": [
-    "CPO Rising",
-    "Supply Chain Dive"
+    "Supply Chain Dive",
+    "CPO Rising"
   ],
   "raw_articles": [
+    {
+      "source": "Supply Chain Dive",
+      "title": "TSMC makes another $100B US investment",
+      "link": "https://www.supplychaindive.com/news/tsmc-100B-US-semiconductor-investment-supply-chain/825599/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/CXfRMlEXmO4GdSwOLinwwW0lmksBIdT398HLY6PpyYA/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjEwODU1MTAyLmpwZw==.webp\" /></div></figure><p>The funding will result in four additional advanced semiconductor manufacturing facilities, bringing the company&rsquo;s total in the U.S. to 12, the National Institute of Standards and Technology said.</p>",
+      "published": "2026-07-23T14:08:00",
+      "relevance_score": 7
+    },
     {
       "source": "CPO Rising",
       "title": "Procurement News — July 22, 2026",
@@ -64,22 +72,6 @@
       "link": "https://www.supplychaindive.com/news/taylor-farms-lettuce-didnt-contain-parasite-behind-diarrhea-outbreak-fda/825804/",
       "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/h8rL_8qLN7jNlCk-CokNpILDHVpBaThEypMd-0A9wPU/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjg1OTI3NDgxLmpwZw==.webp\" /></div></figure><p>The agency said a previous finding was &ldquo;a false positive,&rdquo; but the supplier to companies such as Walmart and Taco Bell remains at the heart of an ongoing investigation.</p>",
       "published": "2026-07-21T20:58:00",
-      "relevance_score": 4
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "JM Smucker snags Hershey exec as SVP of operations, supply chain",
-      "link": "https://www.supplychaindive.com/news/jm-smucker-snags-hershey-exec-as-svp-of-operations-supply-chain/825649/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/PrjTquO3M2HbyLGbtpPB7VnTbbrHyc8BOdzGgckytoo/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9EU0NfNzgwNS5qcGc=.webp\" /></div></figure><p>Douglas Guilherme will step into the role on July 29 with over 30 years of experience, including stints at the chocolate maker and Procter &amp; Gamble.</p>",
-      "published": "2026-07-21T17:07:00",
-      "relevance_score": 4
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "JBS axes 2040 net-zero goal, citing ‘immense’ execution challenges",
-      "link": "https://www.supplychaindive.com/news/jbs-axes-2040-net-zero-goal-citing-immense-execution-challenges/824984/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/wTxa7C6uoEobm3I9x0ekgE5IFjqeRka4JOfulFkgVYs/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjY2NDU1OTcwLmpwZw==.webp\" /></div></figure><p>The meat giant will no longer aim to achieve net-zero greenhouse emissions across its supply chain by 2040 and has also dropped scope 3 reduction targets.</p>",
-      "published": "2026-07-21T14:17:00",
       "relevance_score": 4
     }
   ]
