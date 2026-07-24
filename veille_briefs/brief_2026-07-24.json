@@ -1,32 +1,32 @@
 {
-  "date": "2026-07-24",
+  "date": "2024-09-16",
   "funding_alert": {
     "startup": "TSMC",
-    "amount": "$100B",
+    "amount": "100B",
     "focus": "Investissement aux États-Unis"
   },
   "key_stat": {
-    "value": "$100B",
+    "value": "100B",
     "context": "Investissement de TSMC aux États-Unis"
   },
   "new_tool": {
-    "name": "Smart Locker Service",
-    "description": "Service de casiers intelligents pour les transactions locales de USPS"
+    "name": "Smart Locker",
+    "description": "Service de locker intelligent pour les transactions locales"
   },
   "hot_topic": {
-    "subject": "Chaînes d'approvisionnement durables",
-    "why_it_matters": "Les entreprises comme Mondelēz visent à atteindre des objectifs de sourcing durable"
+    "subject": "Intelligence Artificielle",
+    "why_it_matters": "L'IA est en train de devenir une priorité pour les entreprises dans le domaine de la procurement"
   },
   "post_angles": [
     {
-      "pillar": "analyste",
-      "hook": "Quels sont les défis de la mise en place de chaînes d'approvisionnement durables ?",
-      "format": "question"
+      "pillar": "Procurement",
+      "hook": "L'avenir de la procurement est-il dans l'IA ?",
+      "format": "texte"
     },
     {
-      "pillar": "terrain",
-      "hook": "Découvrez comment les entreprises comme TSMC et Mondelēz investissent dans les chaînes d'approvisionnement",
-      "format": "texte"
+      "pillar": "Supply Chain",
+      "hook": "Comment les nouvelles technologies vont-elles changer la supply chain ?",
+      "format": "carrousel"
     }
   ],
   "sources": [
@@ -52,11 +52,11 @@
     },
     {
       "source": "CPO Rising",
-      "title": "Procurement News — July 22, 2026",
-      "link": "https://cporising.com/2026/07/22/procurement-news-july-22-2026/?utm_source=rss&utm_medium=rss&utm_campaign=procurement-news-july-22-2026",
-      "summary": "<p>Welcome to Procurement News, part of our ongoing aggregate news series covering recent supply management headlines and trends pertinent to Chief Procurement Officers and other procurement leaders! Contact us with&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/22/procurement-news-july-22-2026/\">Procurement News — July 22, 2026</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a>.</p>",
-      "published": "2026-07-22T10:02:53",
-      "relevance_score": 7
+      "title": "Five Metrics Defining Procurement’s AI Future",
+      "link": "https://cporising.com/2026/07/24/five-metrics-defining-procurements-ai-future/?utm_source=rss&utm_medium=rss&utm_campaign=five-metrics-defining-procurements-ai-future",
+      "summary": "<p>Artificial intelligence is rapidly moving from experimentation to enterprise priority across procurement. While most organizations expect to deploy agentic AI capabilities within the next few years, many remain in the&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/24/five-metrics-defining-procurements-ai-future/\">Five Metrics Defining Procurement&#8217;s AI Future</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LE",
+      "published": "2026-07-24T10:02:10",
+      "relevance_score": 6
     },
     {
       "source": "Supply Chain Dive",
