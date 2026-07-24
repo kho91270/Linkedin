@@ -1,31 +1,31 @@
 {
   "date": "2026-07-24",
   "funding_alert": {
-    "startup": null,
-    "amount": null,
-    "focus": null
+    "startup": "TSMC",
+    "amount": "$100B",
+    "focus": "Investissement aux États-Unis"
   },
   "key_stat": {
-    "value": "100 milliards de dollars",
+    "value": "$100B",
     "context": "Investissement de TSMC aux États-Unis"
   },
   "new_tool": {
-    "name": null,
-    "description": null
+    "name": "Smart Locker Service",
+    "description": "Service de casiers intelligents pour les transactions locales de USPS"
   },
   "hot_topic": {
-    "subject": "Chaînes d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent être conscients des changements dans les chaînes d'approvisionnement pour anticiper les perturbations et les coûts"
+    "subject": "Chaînes d'approvisionnement durables",
+    "why_it_matters": "Les entreprises comme Mondelēz visent à atteindre des objectifs de sourcing durable"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Quels sont les défis majeurs auxquels les chaînes d'approvisionnement sont confrontées ?",
+      "hook": "Quels sont les défis de la mise en place de chaînes d'approvisionnement durables ?",
       "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Comment les surcharges du canal de Panama affectent-elles vos coûts ?",
+      "hook": "Découvrez comment les entreprises comme TSMC et Mondelēz investissent dans les chaînes d'approvisionnement",
       "format": "texte"
     }
   ],
