@@ -1,31 +1,31 @@
 {
-  "date": "2024-09-16",
+  "date": "2024-02-20",
   "funding_alert": {
     "startup": "TSMC",
-    "amount": "100B",
-    "focus": "Investissement aux États-Unis"
+    "amount": "100 milliards de dollars",
+    "focus": "Investissement dans les États-Unis"
   },
   "key_stat": {
-    "value": "100B",
+    "value": "100 milliards de dollars",
     "context": "Investissement de TSMC aux États-Unis"
   },
   "new_tool": {
     "name": "Smart Locker",
-    "description": "Service de locker intelligent pour les transactions locales"
+    "description": "Service de locker intelligent pour les transactions locales du USPS"
   },
   "hot_topic": {
-    "subject": "Intelligence Artificielle",
-    "why_it_matters": "L'IA est en train de devenir une priorité pour les entreprises dans le domaine de la procurement"
+    "subject": "Intelligence artificielle dans les achats",
+    "why_it_matters": "L'IA transforme les processus d'approvisionnement et améliore l'efficacité"
   },
   "post_angles": [
     {
-      "pillar": "Procurement",
-      "hook": "L'avenir de la procurement est-il dans l'IA ?",
+      "pillar": "analyste",
+      "hook": "L'avenir des achats est dans l'IA !",
       "format": "texte"
     },
     {
-      "pillar": "Supply Chain",
-      "hook": "Comment les nouvelles technologies vont-elles changer la supply chain ?",
+      "pillar": "terrain",
+      "hook": "Les géants de la logistique investissent dans l'innovation",
       "format": "carrousel"
     }
   ],
