@@ -14,19 +14,19 @@
     "description": null
   },
   "hot_topic": {
-    "subject": "Résilience de la chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent être conscients de l'impact des facteurs externes sur leur chaîne d'approvisionnement"
+    "subject": "Intelligence artificielle dans les achats",
+    "why_it_matters": "L'IA va définir l'avenir des achats et des processus de procurement"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment les entreprises peuvent-elles améliorer la résilience de leur chaîne d'approvisionnement ?",
-      "format": "question"
+      "hook": "Comment l'IA va-t-elle révolutionner vos processus de procurement ?",
+      "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "L'impact de la guerre en Iran sur les chaînes d'approvisionnement en plastique",
-      "format": "texte"
+      "hook": "Conagra investit $125M pour renforcer sa chaîne d'approvisionnement, qu'est-ce que cela signifie pour vous ?",
+      "format": "carrousel"
     }
   ],
   "sources": [
