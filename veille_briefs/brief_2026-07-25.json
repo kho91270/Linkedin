@@ -7,7 +7,7 @@
   },
   "key_stat": {
     "value": "225 millions",
-    "context": "Conagra et TSMC investissent respectivement 125M$ et 100M$ dans leur chaîne d'approvisionnement"
+    "context": "Conagra et TSMC investissent respectivement 125M$ et 100M$ dans la résilience de leur chaîne d'approvisionnement"
   },
   "new_tool": {
     "name": null,
@@ -15,17 +15,17 @@
   },
   "hot_topic": {
     "subject": "Résilience de la chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent être conscients des investissements nécessaires pour assurer la résilience de leur chaîne d'approvisionnement"
+    "why_it_matters": "Les acheteurs doivent être attentifs aux investissements dans la résilience de la chaîne d'approvisionnement pour garantir la stabilité de leurs fournitures"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment les entreprises peuvent-elles renforcer leur chaîne d'approvisionnement ?",
+      "hook": "Quels sont les facteurs clés pour une chaîne d'approvisionnement résiliente ?",
       "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Les derniers investissements de Conagra et TSMC prouvent que la résilience de la chaîne d'approvisionnement est une priorité",
+      "hook": "Comment les investissements dans la résilience de la chaîne d'approvisionnement peuvent-ils impacter votre entreprise ?",
       "format": "texte"
     }
   ],
