@@ -1,0 +1,86 @@
+{
+  "date": "2024-09-16",
+  "funding_alert": {
+    "startup": null,
+    "amount": null,
+    "focus": null
+  },
+  "key_stat": {
+    "value": "225 millions",
+    "context": "Conagra et TSMC investissent respectivement 125M$ et 100M$ dans leur chaîne d'approvisionnement"
+  },
+  "new_tool": {
+    "name": null,
+    "description": null
+  },
+  "hot_topic": {
+    "subject": "Résilience de la chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent être attentifs aux investissements dans la chaîne d'approvisionnement pour garantir la stabilité de leurs fournitures"
+  },
+  "post_angles": [
+    {
+      "pillar": "analyste",
+      "hook": "Comment les investissements dans la chaîne d'approvisionnement peuvent-ils impacter votre entreprise ?",
+      "format": "question"
+    },
+    {
+      "pillar": "terrain",
+      "hook": "Découvrez comment Conagra et TSMC améliorent leur chaîne d'approvisionnement",
+      "format": "texte"
+    }
+  ],
+  "sources": [
+    "Supply Chain Dive",
+    "CPO Rising"
+  ],
+  "raw_articles": [
+    {
+      "source": "Supply Chain Dive",
+      "title": "Conagra to invest $125M in supply chain resilience",
+      "link": "https://www.supplychaindive.com/news/conagra-to-invest-125m-in-supply-chain-resilience/825796/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/cVUYCCM5fkK_OkyvRjhpV3yvZEioS9Yhqe76gHa9fm0/g:nowe:0:0/c:3632:2052/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9JTUdfMjc3NC5qcGc=.webp\" /></div></figure><p>The food manufacturer intends to maintain high service levels, reassess its product mix and reduce days of inventory, executives said.</p>",
+      "published": "2026-07-24T13:56:00",
+      "relevance_score": 9
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "TSMC makes another $100B US investment",
+      "link": "https://www.supplychaindive.com/news/tsmc-100B-US-semiconductor-investment-supply-chain/825599/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/CXfRMlEXmO4GdSwOLinwwW0lmksBIdT398HLY6PpyYA/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjEwODU1MTAyLmpwZw==.webp\" /></div></figure><p>The funding will result in four additional advanced semiconductor manufacturing facilities, bringing the company&rsquo;s total in the U.S. to 12, the National Institute of Standards and Technology said.</p>",
+      "published": "2026-07-23T14:08:00",
+      "relevance_score": 7
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "MSC, CMA CGM introduce fresh Panama Canal surcharges",
+      "link": "https://www.supplychaindive.com/news/msc-cma-cgm-introduce-fresh-panama-canal-surcharges/825941/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/qbwG07BYc7ZU7HqeSt0ENosUz91DLlwgkceWTA7DEs4/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjIxOTMzMTcxLmpwZw==.webp\" /></div></figure><p>The ocean carriers said the fees were necessary due to operational constraints and lower water levels at the major waterway.</p>",
+      "published": "2026-07-23T11:58:00",
+      "relevance_score": 7
+    },
+    {
+      "source": "CPO Rising",
+      "title": "Five Metrics Defining Procurement’s AI Future",
+      "link": "https://cporising.com/2026/07/24/five-metrics-defining-procurements-ai-future/?utm_source=rss&utm_medium=rss&utm_campaign=five-metrics-defining-procurements-ai-future",
+      "summary": "<p>Artificial intelligence is rapidly moving from experimentation to enterprise priority across procurement. While most organizations expect to deploy agentic AI capabilities within the next few years, many remain in the&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/24/five-metrics-defining-procurements-ai-future/\">Five Metrics Defining Procurement&#8217;s AI Future</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LE",
+      "published": "2026-07-24T10:02:10",
+      "relevance_score": 6
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Iran war escalation rankles plastic supply chains",
+      "link": "https://www.supplychaindive.com/news/iran-war-escalation-rankles-plastic-supply-chains/826055/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/_epSEoIsxhAVeS7l59y82a_2LZU_tAtB6CyFpD-gAkU/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9QRV9iYWdfbWFraW5nLmpwZw==.webp\" /></div></figure><p>July fighting squashed the promise of a June ceasefire and the Strait of Hormuz reopening, creating a &ldquo;stop-start recovery&rdquo; for the flow of virgin materials as&nbsp;prices rise.&nbsp;</p>",
+      "published": "2026-07-24T13:58:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Mondelēz shows uneven gains on 2025 sustainable sourcing goals",
+      "link": "https://www.supplychaindive.com/news/mondelez-shows-uneven-gains-on-2025-sustainable-sourcing-goals/825659/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/gmiMKVcqqjonmP2U4pP9ZZKjcIAPKEU0TquKavDJbdM/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS8ySzRLWTVNLmpwZw==.webp\" /></div></figure><p><!-- obsidian --></p>\n\n<p><!-- obsidian --></p>\n\n<p>The Oreo and Ritz maker reported 100% certified sourcing for palm oil and cocoa.</p>",
+      "published": "2026-07-23T13:06:00",
+      "relevance_score": 4
+    }
+  ]
+}
