@@ -7,25 +7,25 @@
   },
   "key_stat": {
     "value": "$125M",
-    "context": "Investissement de Conagra pour améliorer sa chaîne d'approvisionnement"
+    "context": "Investissement de Conagra pour améliorer la résilience de sa chaîne d'approvisionnement"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Résilience de la chaîne d'approvisionnement et intelligence artificielle",
-    "why_it_matters": "Les acheteurs doivent être conscients de l'impact de la guerre et de l'intelligence artificielle sur leurs chaînes d'approvisionnement"
+    "subject": "Résilience de la chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent être conscients de l'importance de la résilience de la chaîne d'approvisionnement pour faire face aux perturbations mondiales"
   },
   "post_angles": [
     {
       "pillar": "procuretech",
-      "hook": "Comment l'intelligence artificielle va-t-elle changer votre approche d'achat ?",
+      "hook": "Comment les entreprises peuvent-elles améliorer la résilience de leur chaîne d'approvisionnement ?",
       "format": "question"
     },
     {
-      "pillar": "supply chain",
-      "hook": "La guerre en Iran affecte-t-elle votre chaîne d'approvisionnement en plastique ?",
+      "pillar": "analyse de marché",
+      "hook": "L'investissement de Conagra dans la résilience de la chaîne d'approvisionnement : un signal pour les acheteurs ?",
       "format": "texte"
     }
   ],
