@@ -2,12 +2,12 @@
   "date": "2024-02-20",
   "funding_alert": {
     "startup": null,
-    "amount": "$125M",
-    "focus": "investissement dans la résilience de la chaîne d'approvisionnement de Conagra"
+    "amount": null,
+    "focus": null
   },
   "key_stat": {
-    "value": "$125M",
-    "context": "Investissement de Conagra pour améliorer la résilience de sa chaîne d'approvisionnement"
+    "value": "125M",
+    "context": "Conagra investit 125 millions de dollars pour renforcer la résilience de sa chaîne d'approvisionnement"
   },
   "new_tool": {
     "name": null,
@@ -15,23 +15,22 @@
   },
   "hot_topic": {
     "subject": "Résilience de la chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent être conscients de l'importance de la résilience de la chaîne d'approvisionnement pour faire face aux perturbations mondiales"
+    "why_it_matters": "Les acheteurs doivent être conscients des risques potentiels pour leur chaîne d'approvisionnement, tels que les conflits et les perturbations, et prendre des mesures pour les atténuer"
   },
   "post_angles": [
     {
-      "pillar": "procuretech",
-      "hook": "Comment les entreprises peuvent-elles améliorer la résilience de leur chaîne d'approvisionnement ?",
+      "pillar": "terrain",
+      "hook": "Comment renforcer la résilience de votre chaîne d'approvisionnement ?",
       "format": "question"
     },
     {
-      "pillar": "analyse de marché",
-      "hook": "L'investissement de Conagra dans la résilience de la chaîne d'approvisionnement : un signal pour les acheteurs ?",
+      "pillar": "analyste",
+      "hook": "Les investissements dans la résilience de la chaîne d'approvisionnement sont-ils une priorité pour votre entreprise ?",
       "format": "texte"
     }
   ],
   "sources": [
-    "Supply Chain Dive",
-    "CPO Rising"
+    "Supply Chain Dive"
   ],
   "raw_articles": [
     {
@@ -41,14 +40,6 @@
       "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/cVUYCCM5fkK_OkyvRjhpV3yvZEioS9Yhqe76gHa9fm0/g:nowe:0:0/c:3632:2052/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9JTUdfMjc3NC5qcGc=.webp\" /></div></figure><p>The food manufacturer intends to maintain high service levels, reassess its product mix and reduce days of inventory, executives said.</p>",
       "published": "2026-07-24T13:56:00",
       "relevance_score": 9
-    },
-    {
-      "source": "CPO Rising",
-      "title": "Five Metrics Defining Procurement’s AI Future",
-      "link": "https://cporising.com/2026/07/24/five-metrics-defining-procurements-ai-future/?utm_source=rss&utm_medium=rss&utm_campaign=five-metrics-defining-procurements-ai-future",
-      "summary": "<p>Artificial intelligence is rapidly moving from experimentation to enterprise priority across procurement. While most organizations expect to deploy agentic AI capabilities within the next few years, many remain in the&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/24/five-metrics-defining-procurements-ai-future/\">Five Metrics Defining Procurement&#8217;s AI Future</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LE",
-      "published": "2026-07-24T10:02:10",
-      "relevance_score": 6
     },
     {
       "source": "Supply Chain Dive",
