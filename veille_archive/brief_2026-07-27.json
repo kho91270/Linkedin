@@ -14,18 +14,18 @@
     "description": null
   },
   "hot_topic": {
-    "subject": "Intelligence artificielle dans la chaîne d'approvisionnement",
-    "why_it_matters": "Amélioration de l'efficacité et de la stabilité de la chaîne d'approvisionnement"
+    "subject": "Intelligence artificielle dans la procurement",
+    "why_it_matters": "Amélioration de l'efficacité et de la prise de décision stratégique"
   },
   "post_angles": [
     {
-      "pillar": "procurement",
-      "hook": "L'intelligence artificielle révolutionne la chaîne d'approvisionnement !",
+      "pillar": "analyste",
+      "hook": "L'intelligence artificielle révolutionne la procurement !",
       "format": "texte"
     },
     {
-      "pillar": "supply chain",
-      "hook": "Stabiliser la chaîne d'approvisionnement grâce à l'orchestration",
+      "pillar": "terrain",
+      "hook": "Comment stabiliser votre chaîne d'approvisionnement ?",
       "format": "carrousel"
     }
   ],
