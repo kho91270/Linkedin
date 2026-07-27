@@ -14,18 +14,18 @@
     "description": null
   },
   "hot_topic": {
-    "subject": "Intelligence artificielle dans la chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent comprendre comment l'IA peut améliorer leur processus de prise de décision et de gestion des fournisseurs"
+    "subject": "Intelligence artificielle dans les achats",
+    "why_it_matters": "L'IA peut améliorer l'efficacité et la prise de décision stratégique dans les achats"
   },
   "post_angles": [
     {
-      "pillar": "procuretech",
+      "pillar": "analyste",
       "hook": "Comment l'IA va-t-elle changer votre fonction achats ?",
       "format": "texte"
     },
     {
-      "pillar": "supply chain",
-      "hook": "Quels sont les avantages de l'orchestration de la chaîne d'approvisionnement ?",
+      "pillar": "terrain",
+      "hook": "3 conseils pour les acheteurs face à la révision de l'USMCA",
       "format": "carrousel"
     }
   ],
@@ -36,9 +36,9 @@
   "raw_articles": [
     {
       "source": "CPO Rising",
-      "title": "AI Rising 2026 (State of Procurement Series): Transition to AI-First Procurement",
-      "link": "https://cporising.com/2026/07/27/ai-rising-2026-state-of-procurement-series-transition-to-ai-first-procurement/?utm_source=rss&utm_medium=rss&utm_campaign=ai-rising-2026-state-of-procurement-series-transition-to-ai-first-procurement",
-      "summary": "<p>Artificial intelligence is no longer a future concept for procurement. It is rapidly reshaping how organizations source, manage suppliers, analyze data, and make strategic decisions. As procurement enters its next&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/27/ai-rising-2026-state-of-procurement-series-transition-to-ai-first-procurement/\">AI Rising 2026 (State of Procurement Series): Transition to AI-First Procurement</a> appeared first on <a href=\"https://cporising.com\">CPO",
+      "title": "AI Rising 2026 Pt. 1 (State of Procurement Series): Transition to AI-First Procurement",
+      "link": "https://cporising.com/2026/07/27/ai-rising-2026-pt-1-state-of-procurement-series-transition-to-ai-first-procurement/?utm_source=rss&utm_medium=rss&utm_campaign=ai-rising-2026-pt-1-state-of-procurement-series-transition-to-ai-first-procurement",
+      "summary": "<p>Artificial intelligence is no longer a future concept for procurement. It is rapidly reshaping how organizations source, manage suppliers, analyze data, and make strategic decisions. As procurement enters its next&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/27/ai-rising-2026-pt-1-state-of-procurement-series-transition-to-ai-first-procurement/\">AI Rising 2026 Pt. 1 (State of Procurement Series): Transition to AI-First Procurement</a> appeared first on <a href=\"https://cporisi",
       "published": "2026-07-27T10:02:37",
       "relevance_score": 13
     },
