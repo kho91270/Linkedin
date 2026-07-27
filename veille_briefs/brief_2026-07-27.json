@@ -1,4 +1,54 @@
 {
-  "date": "2026-07-27",
-  "status": "NO_NEWS"
+  "date": "2024-02-20",
+  "funding_alert": {
+    "startup": null,
+    "amount": null,
+    "focus": null
+  },
+  "key_stat": {
+    "value": "100%",
+    "context": "Adoption de l'intelligence artificielle dans les processus de procurement"
+  },
+  "new_tool": {
+    "name": null,
+    "description": null
+  },
+  "hot_topic": {
+    "subject": "Intelligence artificielle dans la chaîne d'approvisionnement",
+    "why_it_matters": "Amélioration de l'efficacité et de la stabilité de la chaîne d'approvisionnement"
+  },
+  "post_angles": [
+    {
+      "pillar": "procurement",
+      "hook": "L'intelligence artificielle révolutionne la chaîne d'approvisionnement !",
+      "format": "texte"
+    },
+    {
+      "pillar": "supply chain",
+      "hook": "Stabiliser la chaîne d'approvisionnement grâce à l'orchestration",
+      "format": "carrousel"
+    }
+  ],
+  "sources": [
+    "CPO Rising",
+    "Supply Chain Dive"
+  ],
+  "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "AI Rising 2026 (State of Procurement Series): Transition to AI-First Procurement",
+      "link": "https://cporising.com/2026/07/27/ai-rising-2026-state-of-procurement-series-transition-to-ai-first-procurement/?utm_source=rss&utm_medium=rss&utm_campaign=ai-rising-2026-state-of-procurement-series-transition-to-ai-first-procurement",
+      "summary": "<p>Artificial intelligence is no longer a future concept for procurement. It is rapidly reshaping how organizations source, manage suppliers, analyze data, and make strategic decisions. As procurement enters its next&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/27/ai-rising-2026-state-of-procurement-series-transition-to-ai-first-procurement/\">AI Rising 2026 (State of Procurement Series): Transition to AI-First Procurement</a> appeared first on <a href=\"https://cporising.com\">CPO",
+      "published": "2026-07-27T10:02:37",
+      "relevance_score": 13
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Beyond more tools: Building supply chain stability through orchestration",
+      "link": "https://www.supplychaindive.com/spons/beyond-more-tools-building-supply-chain-stability-through-orchestration/825855/",
+      "summary": "<p>Achieve supply chain stability by unifying your operations with a single, accountable partner.</p>",
+      "published": "2026-07-27T09:00:00",
+      "relevance_score": 4
+    }
+  ]
 }
