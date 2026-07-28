@@ -1,0 +1,62 @@
+{
+  "date": "2026-07-28",
+  "funding_alert": {
+    "startup": null,
+    "amount": null,
+    "focus": null
+  },
+  "key_stat": {
+    "value": "AI-First Procurement",
+    "context": "L'intelligence artificielle est en train de révolutionner la fonction achats"
+  },
+  "new_tool": {
+    "name": null,
+    "description": null
+  },
+  "hot_topic": {
+    "subject": "Intelligence artificielle dans les achats",
+    "why_it_matters": "L'IA peut améliorer l'efficacité et la prise de décision dans les processus d'achat"
+  },
+  "post_angles": [
+    {
+      "pillar": "analyste",
+      "hook": "L'avenir des achats est-il déjà là ?",
+      "format": "texte"
+    },
+    {
+      "pillar": "terrain",
+      "hook": "Comment l'IA peut-elle améliorer votre chaîne d'approvisionnement ?",
+      "format": "carrousel"
+    }
+  ],
+  "sources": [
+    "CPO Rising",
+    "Supply Chain Dive"
+  ],
+  "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "AI Rising 2026 Pt. 1 (State of Procurement Series): Transition to AI-First Procurement",
+      "link": "https://cporising.com/2026/07/27/ai-rising-2026-pt-1-state-of-procurement-series-transition-to-ai-first-procurement/?utm_source=rss&utm_medium=rss&utm_campaign=ai-rising-2026-pt-1-state-of-procurement-series-transition-to-ai-first-procurement",
+      "summary": "<p>Artificial intelligence is no longer a future concept for procurement. It is rapidly reshaping how organizations source, manage suppliers, analyze data, and make strategic decisions. As procurement enters its next&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/27/ai-rising-2026-pt-1-state-of-procurement-series-transition-to-ai-first-procurement/\">AI Rising 2026 Pt. 1 (State of Procurement Series): Transition to AI-First Procurement</a> appeared first on <a href=\"https://cporisi",
+      "published": "2026-07-27T10:02:37",
+      "relevance_score": 13
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "3 tips for shippers watching the USMCA review",
+      "link": "https://www.supplychaindive.com/news/3-tips-for-shippers-watching-the-usmca-review/825979/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/J6Admovfk9SIuTZbtVimUOzTo_It4Ohx5CrhHS-0iXA/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9TY3JlZW5zaG90XzIwMjYtMDctMTVfMTE1MTE4LnBuZw==.webp\" /></div></figure><p>As trade priorities change, companies need to ensure their supply chains are optimized to pivot, experts said during a panel hosted by Supply Chain Dive.</p>",
+      "published": "2026-07-27T12:30:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Beyond more tools: Building supply chain stability through orchestration",
+      "link": "https://www.supplychaindive.com/spons/beyond-more-tools-building-supply-chain-stability-through-orchestration/825855/",
+      "summary": "<p>Achieve supply chain stability by unifying your operations with a single, accountable partner.</p>",
+      "published": "2026-07-27T09:00:00",
+      "relevance_score": 4
+    }
+  ]
+}
