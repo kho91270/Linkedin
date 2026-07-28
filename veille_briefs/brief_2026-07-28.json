@@ -20,13 +20,13 @@
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'intelligence artificielle va-t-elle changer vos processus d'achat ?",
-      "format": "question"
+      "hook": "L'intelligence artificielle révolutionne les achats !",
+      "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Découvrez comment Gap a atteint ses objectifs de sourcing de tissus pour 2025",
-      "format": "texte"
+      "hook": "Comment les entreprises comme Gap intègrent-elles l'intelligence artificielle dans leurs stratégies d'approvisionnement ?",
+      "format": "question"
     }
   ],
   "sources": [
@@ -56,14 +56,6 @@
       "link": "https://www.supplychaindive.com/news/3-tips-for-shippers-watching-the-usmca-review/825979/",
       "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/J6Admovfk9SIuTZbtVimUOzTo_It4Ohx5CrhHS-0iXA/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9TY3JlZW5zaG90XzIwMjYtMDctMTVfMTE1MTE4LnBuZw==.webp\" /></div></figure><p>As trade priorities change, companies need to ensure their supply chains are optimized to pivot, experts said during a panel hosted by Supply Chain Dive.</p>",
       "published": "2026-07-27T12:30:00",
-      "relevance_score": 4
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "Beyond more tools: Building supply chain stability through orchestration",
-      "link": "https://www.supplychaindive.com/spons/beyond-more-tools-building-supply-chain-stability-through-orchestration/825855/",
-      "summary": "<p>Achieve supply chain stability by unifying your operations with a single, accountable partner.</p>",
-      "published": "2026-07-27T09:00:00",
       "relevance_score": 4
     }
   ]
