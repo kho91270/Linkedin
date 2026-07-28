@@ -1,5 +1,5 @@
 {
-  "date": "2026-07-28",
+  "date": "2024-02-20",
   "funding_alert": {
     "startup": null,
     "amount": null,
@@ -14,19 +14,19 @@
     "description": null
   },
   "hot_topic": {
-    "subject": "Intelligence artificielle dans les achats",
-    "why_it_matters": "L'intelligence artificielle transforme la façon dont les organisations gèrent leurs achats et leurs fournisseurs"
+    "subject": "Intelligence Artificielle dans les achats",
+    "why_it_matters": "L'IA va révolutionner la façon dont les organisations gèrent leurs achats et leurs fournisseurs"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "L'intelligence artificielle révolutionne les achats !",
+      "hook": "L'avenir des achats est déjà là ! Découvrez comment l'IA va changer votre travail",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Comment les entreprises comme Gap intègrent-elles l'intelligence artificielle dans leurs stratégies d'approvisionnement ?",
-      "format": "question"
+      "hook": "Comment les géants de la distribution comme Amazon utilisent l'IA pour optimiser leurs chaînes d'approvisionnement",
+      "format": "carrousel"
     }
   ],
   "sources": [
@@ -44,18 +44,18 @@
     },
     {
       "source": "Supply Chain Dive",
-      "title": "Gap meets 2025 fabric sourcing goals, emissions cuts uneven",
-      "link": "https://www.supplychaindive.com/news/gap-meets-2025-fabric-sourcing-goals-emissions-cuts-uneven/826142/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/Uey3YkXp9lltacIVhifK5n62ruMZlSosq7ibpUW-9bU/g:nowe:0:88/c:1024:578/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjY0OTc1ODk0LmpwZw==.webp\" /></div></figure><p>The retailer procured 100% of its cotton from sustainable sources in fiscal 2025 but certain emissions increased from the prior year, per its annual environmental report.</p>",
-      "published": "2026-07-28T13:40:03",
+      "title": "Amazon to add supply chain facilities in New York, Texas",
+      "link": "https://www.supplychaindive.com/news/amazon-to-add-supply-chain-facilities-in-new-york-texas/826256/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/_lo4Jyn4hP_7AXjBy7qDasW8uZcnxCCPAnvBjkYc64o/g:nowe:168:2016/c:5382:3041/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9MaW5lX0hhdWxfYXRfRFMuanBn.webp\" /></div></figure><p>The e-commerce giant is in the early stages of building a distribution center in the Lone Star State while prepping a Long Island operations site, the company told Supply Chain Dive.</p>",
+      "published": "2026-07-28T17:45:00",
       "relevance_score": 4
     },
     {
       "source": "Supply Chain Dive",
-      "title": "3 tips for shippers watching the USMCA review",
-      "link": "https://www.supplychaindive.com/news/3-tips-for-shippers-watching-the-usmca-review/825979/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/J6Admovfk9SIuTZbtVimUOzTo_It4Ohx5CrhHS-0iXA/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9TY3JlZW5zaG90XzIwMjYtMDctMTVfMTE1MTE4LnBuZw==.webp\" /></div></figure><p>As trade priorities change, companies need to ensure their supply chains are optimized to pivot, experts said during a panel hosted by Supply Chain Dive.</p>",
-      "published": "2026-07-27T12:30:00",
+      "title": "Gap meets 2025 fabric sourcing goals, emissions cuts uneven",
+      "link": "https://www.supplychaindive.com/news/gap-meets-2025-fabric-sourcing-goals-emissions-cuts-uneven/826142/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/Uey3YkXp9lltacIVhifK5n62ruMZlSosq7ibpUW-9bU/g:nowe:0:88/c:1024:578/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjY0OTc1ODk0LmpwZw==.webp\" /></div></figure><p>The retailer procured 100% of its cotton from sustainable sources in fiscal 2025 but certain emissions increased from the prior year, per its annual environmental report.</p>",
+      "published": "2026-07-28T13:40:03",
       "relevance_score": 4
     }
   ]
