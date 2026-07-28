@@ -6,27 +6,27 @@
     "focus": null
   },
   "key_stat": {
-    "value": "100%",
-    "context": "Adoption de l'intelligence artificielle dans les processus de procurement"
+    "value": "AI-First Procurement",
+    "context": "L'intelligence artificielle est en train de révolutionner la fonction achats"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Intelligence artificielle dans la procurement",
-    "why_it_matters": "Pour améliorer l'efficacité et la prise de décision dans les processus d'approvisionnement"
+    "subject": "L'intelligence artificielle dans la fonction achats",
+    "why_it_matters": "Les acheteurs doivent intégrer l'IA pour améliorer leur efficacité et leur prise de décision"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "L'intelligence artificielle révolutionne la procurement !",
+      "hook": "Comment l'IA va-t-elle changer votre fonction achats ?",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Comment l'IA peut améliorer votre chaîne d'approvisionnement ?",
-      "format": "question"
+      "hook": "Quels sont les avantages de l'orchestration de la chaîne d'approvisionnement ?",
+      "format": "carrousel"
     }
   ],
   "sources": [
