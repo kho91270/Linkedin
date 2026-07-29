@@ -7,7 +7,7 @@
   },
   "key_stat": {
     "value": "2025",
-    "context": "Gap a atteint ses objectifs de sourcing de tissus pour l'année 2025"
+    "context": "Gap a atteint ses objectifs de sourcing de tissus pour 2025"
   },
   "new_tool": {
     "name": null,
@@ -15,17 +15,17 @@
   },
   "hot_topic": {
     "subject": "Intelligence Artificielle dans les achats",
-    "why_it_matters": "L'IA est en train de révolutionner la façon dont les organisations gèrent leurs achats et leurs fournisseurs"
+    "why_it_matters": "L'IA transforme la façon dont les organisations gèrent leurs fournisseurs et prennent des décisions stratégiques"
   },
   "post_angles": [
     {
-      "pillar": "analyste",
-      "hook": "L'avenir des achats est déjà là ! Découvrez comment l'IA va changer votre travail",
+      "pillar": "procuretech",
+      "hook": "L'IA révolutionne les achats !",
       "format": "texte"
     },
     {
-      "pillar": "terrain",
-      "hook": "Comment les entreprises comme Amazon et Gap utilisent-elles l'IA pour améliorer leurs chaînes d'approvisionnement ?",
+      "pillar": "supply chain",
+      "hook": "Gap atteint ses objectifs de sourcing de tissus pour 2025, mais les réductions d'émissions sont inégales",
       "format": "carrousel"
     }
   ],
