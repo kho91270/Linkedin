@@ -14,34 +14,25 @@
     "description": null
   },
   "hot_topic": {
-    "subject": "Intelligence Artificielle dans les achats",
-    "why_it_matters": "L'IA transforme la façon dont les organisations gèrent leurs fournisseurs et prennent des décisions stratégiques"
+    "subject": "La chaîne d'approvisionnement durable",
+    "why_it_matters": "Les acheteurs doivent prendre en compte l'impact environnemental de leurs décisions d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "procuretech",
-      "hook": "L'IA révolutionne les achats !",
+      "hook": "Comment les entreprises comme Amazon et Gap réinventent-elles leur chaîne d'approvisionnement ?",
       "format": "texte"
     },
     {
-      "pillar": "supply chain",
-      "hook": "Gap atteint ses objectifs de sourcing de tissus pour 2025, mais les réductions d'émissions sont inégales",
-      "format": "carrousel"
+      "pillar": "acheteur",
+      "hook": "Quels sont les défis et les opportunités de la chaîne d'approvisionnement durable pour les acheteurs ?",
+      "format": "question"
     }
   ],
   "sources": [
-    "CPO Rising",
     "Supply Chain Dive"
   ],
   "raw_articles": [
-    {
-      "source": "CPO Rising",
-      "title": "AI Rising 2026 Pt. 1 (State of Procurement Series): Transition to AI-First Procurement",
-      "link": "https://cporising.com/2026/07/27/ai-rising-2026-pt-1-state-of-procurement-series-transition-to-ai-first-procurement/?utm_source=rss&utm_medium=rss&utm_campaign=ai-rising-2026-pt-1-state-of-procurement-series-transition-to-ai-first-procurement",
-      "summary": "<p>Artificial intelligence is no longer a future concept for procurement. It is rapidly reshaping how organizations source, manage suppliers, analyze data, and make strategic decisions. As procurement enters its next&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/27/ai-rising-2026-pt-1-state-of-procurement-series-transition-to-ai-first-procurement/\">AI Rising 2026 Pt. 1 (State of Procurement Series): Transition to AI-First Procurement</a> appeared first on <a href=\"https://cporisi",
-      "published": "2026-07-27T10:02:37",
-      "relevance_score": 13
-    },
     {
       "source": "Supply Chain Dive",
       "title": "Amazon to add supply chain facilities in New York, Texas",
