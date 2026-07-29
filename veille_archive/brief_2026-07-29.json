@@ -6,33 +6,50 @@
     "focus": null
   },
   "key_stat": {
-    "value": "2025",
-    "context": "Gap a atteint ses objectifs de sourcing de tissus pour 2025"
+    "value": "2026",
+    "context": "Année cible pour l'adoption de l'IA dans la fonction achat"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "La chaîne d'approvisionnement durable",
-    "why_it_matters": "Les acheteurs doivent prendre en compte l'impact environnemental de leurs décisions d'approvisionnement"
+    "subject": "Intelligence Artificielle (IA) dans la fonction achat",
+    "why_it_matters": "L'IA peut améliorer l'efficacité et la précision des processus d'achat"
   },
   "post_angles": [
     {
-      "pillar": "procuretech",
-      "hook": "Comment les entreprises comme Amazon et Gap réinventent-elles leur chaîne d'approvisionnement ?",
+      "pillar": "analyste",
+      "hook": "L'IA révolutionne la fonction achat !",
       "format": "texte"
     },
     {
-      "pillar": "acheteur",
-      "hook": "Quels sont les défis et les opportunités de la chaîne d'approvisionnement durable pour les acheteurs ?",
+      "pillar": "terrain",
+      "hook": "Comment l'IA peut améliorer vos processus d'achat ?",
       "format": "question"
     }
   ],
   "sources": [
+    "CPO Rising",
     "Supply Chain Dive"
   ],
   "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "AI Rising 2026 Pt. 2 (State of Procurement Series): AI Maturity Curve — What It is, What It Means",
+      "link": "https://cporising.com/2026/07/29/ai-rising-2026-pt-2-state-of-procurement-series-ai-maturity-curve-what-it-is-what-it-means/?utm_source=rss&utm_medium=rss&utm_campaign=ai-rising-2026-pt-2-state-of-procurement-series-ai-maturity-curve-what-it-is-what-it-means",
+      "summary": "<p>Our new weekly series brings industry insights around Ardent Partners&#8217; AI Rising 2026: The State of Procurement AI report, sponsored by ORO Labs and Fairmarkit, examining how CPOs and senior&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/29/ai-rising-2026-pt-2-state-of-procurement-series-ai-maturity-curve-what-it-is-what-it-means/\">AI Rising 2026 Pt. 2 (State of Procurement Series): AI Maturity Curve — What It is, What It Means</a> appeared first on <a href=\"https://cpori",
+      "published": "2026-07-29T10:02:30",
+      "relevance_score": 13
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Cup Noodles maker taps AI to sharpen planning, reduce costs",
+      "link": "https://www.supplychaindive.com/news/cup-noodles-maker-taps-ai-to-sharpen-planning-reduce-costs/826381/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/i-f0zed_xj5vE7F-s1A1QrwIDs3p8TIftpQ06ET030U/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS8yNV9UUl9Ib3RQb3RfRWNvbV9TaG9vdF9KYXBhbmVzZV9HYXJsaWNfVG9ua290c3VfUG9ya19Qcm9kdWN0LmpwZw==.webp\" /></div></figure><p>Nissin Foods expects to record increased fill rates and improved forecasting accuracy by using an artificial intelligence-powered demand and supply planning tool.</p>",
+      "published": "2026-07-29T13:32:37",
+      "relevance_score": 4
+    },
     {
       "source": "Supply Chain Dive",
       "title": "Amazon to add supply chain facilities in New York, Texas",
