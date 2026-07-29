@@ -1,0 +1,62 @@
+{
+  "date": "2024-02-20",
+  "funding_alert": {
+    "startup": null,
+    "amount": null,
+    "focus": null
+  },
+  "key_stat": {
+    "value": "2025",
+    "context": "Gap a atteint ses objectifs de sourcing de tissus pour l'année 2025"
+  },
+  "new_tool": {
+    "name": null,
+    "description": null
+  },
+  "hot_topic": {
+    "subject": "Intelligence Artificielle dans les achats",
+    "why_it_matters": "L'IA est en train de révolutionner la façon dont les organisations gèrent leurs achats et leurs fournisseurs"
+  },
+  "post_angles": [
+    {
+      "pillar": "analyste",
+      "hook": "L'avenir des achats est déjà là ! Découvrez comment l'IA va changer votre travail",
+      "format": "texte"
+    },
+    {
+      "pillar": "terrain",
+      "hook": "Comment les entreprises comme Amazon et Gap utilisent-elles l'IA pour améliorer leurs chaînes d'approvisionnement ?",
+      "format": "carrousel"
+    }
+  ],
+  "sources": [
+    "CPO Rising",
+    "Supply Chain Dive"
+  ],
+  "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "AI Rising 2026 Pt. 1 (State of Procurement Series): Transition to AI-First Procurement",
+      "link": "https://cporising.com/2026/07/27/ai-rising-2026-pt-1-state-of-procurement-series-transition-to-ai-first-procurement/?utm_source=rss&utm_medium=rss&utm_campaign=ai-rising-2026-pt-1-state-of-procurement-series-transition-to-ai-first-procurement",
+      "summary": "<p>Artificial intelligence is no longer a future concept for procurement. It is rapidly reshaping how organizations source, manage suppliers, analyze data, and make strategic decisions. As procurement enters its next&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/27/ai-rising-2026-pt-1-state-of-procurement-series-transition-to-ai-first-procurement/\">AI Rising 2026 Pt. 1 (State of Procurement Series): Transition to AI-First Procurement</a> appeared first on <a href=\"https://cporisi",
+      "published": "2026-07-27T10:02:37",
+      "relevance_score": 13
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Amazon to add supply chain facilities in New York, Texas",
+      "link": "https://www.supplychaindive.com/news/amazon-to-add-supply-chain-facilities-in-new-york-texas/826256/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/_lo4Jyn4hP_7AXjBy7qDasW8uZcnxCCPAnvBjkYc64o/g:nowe:168:2016/c:5382:3041/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9MaW5lX0hhdWxfYXRfRFMuanBn.webp\" /></div></figure><p>The e-commerce giant is in the early stages of building a distribution center in the Lone Star State while prepping a Long Island operations site, the company told Supply Chain Dive.</p>",
+      "published": "2026-07-28T17:45:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Gap meets 2025 fabric sourcing goals, emissions cuts uneven",
+      "link": "https://www.supplychaindive.com/news/gap-meets-2025-fabric-sourcing-goals-emissions-cuts-uneven/826142/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/Uey3YkXp9lltacIVhifK5n62ruMZlSosq7ibpUW-9bU/g:nowe:0:88/c:1024:578/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjY0OTc1ODk0LmpwZw==.webp\" /></div></figure><p>The retailer procured 100% of its cotton from sustainable sources in fiscal 2025 but certain emissions increased from the prior year, per its annual environmental report.</p>",
+      "published": "2026-07-28T13:40:03",
+      "relevance_score": 4
+    }
+  ]
+}
