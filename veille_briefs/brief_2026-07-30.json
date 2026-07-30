@@ -14,18 +14,18 @@
     "description": null
   },
   "hot_topic": {
-    "subject": "Intelligence Artificielle dans la chaîne d'approvisionnement",
-    "why_it_matters": "L'IA peut aider les acheteurs à limiter les perturbations météorologiques et à améliorer l'efficacité de la chaîne d'approvisionnement"
+    "subject": "Intelligence artificielle dans la chaîne d'approvisionnement",
+    "why_it_matters": "L'IA peut aider les acheteurs à limiter les perturbations météorologiques et à améliorer l'efficacité de leur chaîne d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'IA révolutionne la chaîne d'approvisionnement ?",
+      "hook": "Comment l'IA peut-elle révolutionner votre chaîne d'approvisionnement ?",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Quels sont les défis et les opportunités de la consolidation des sources d'approvisionnement pour les marques de mode ?",
+      "hook": "Les marques de mode vont-elles réussir à consolider leurs sources d'approvisionnement dans les 2 prochaines années ?",
       "format": "question"
     }
   ],
