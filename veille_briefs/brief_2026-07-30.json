@@ -1,5 +1,5 @@
 {
-  "date": "2024-09-16",
+  "date": "2026-02-20",
   "funding_alert": {
     "startup": null,
     "amount": null,
@@ -25,8 +25,8 @@
     },
     {
       "pillar": "terrain",
-      "hook": "Les marques de mode vont-elles réussir à consolider leurs sources d'approvisionnement dans les 2 prochaines années ?",
-      "format": "question"
+      "hook": "Les marques de mode consolident leurs sources d'approvisionnement : qu'est-ce que cela signifie pour vous ?",
+      "format": "carrousel"
     }
   ],
   "sources": [
