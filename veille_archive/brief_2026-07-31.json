@@ -7,7 +7,7 @@
   },
   "key_stat": {
     "value": "2 ans",
-    "context": "Délai prévu par les marques de mode pour consolider leurs sources d'approvisionnement"
+    "context": "Délai prévu pour la consolidation de la chaîne d'approvisionnement par les marques de mode"
   },
   "new_tool": {
     "name": null,
@@ -15,18 +15,18 @@
   },
   "hot_topic": {
     "subject": "Résilience de la chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent être en mesure de gérer les risques et les perturbations pour maintenir la continuité de leur entreprise"
+    "why_it_matters": "Les acheteurs doivent être en mesure de gérer les risques et les perturbations pour maintenir la continuité de leur activité"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment les entreprises comme General Motors et Walmart utilisent l'IA pour améliorer leur résilience?",
-      "format": "texte"
+      "hook": "Comment les marques de mode peuvent-elles renforcer leur chaîne d'approvisionnement ?",
+      "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Quels sont les défis les plus importants pour les acheteurs dans la gestion de la chaîne d'approvisionnement?",
-      "format": "question"
+      "hook": "Découvrez comment General Motors améliore la résilience de sa chaîne d'approvisionnement",
+      "format": "texte"
     }
   ],
   "sources": [
