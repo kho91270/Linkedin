@@ -7,7 +7,7 @@
   },
   "key_stat": {
     "value": "2 ans",
-    "context": "Délai prévu pour la consolidation de la chaîne d'approvisionnement par les marques de mode"
+    "context": "Délai pendant lequel les marques de mode prévoient de consolider leurs sources d'approvisionnement"
   },
   "new_tool": {
     "name": null,
@@ -20,28 +20,19 @@
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment les marques de mode peuvent-elles renforcer leur chaîne d'approvisionnement ?",
+      "hook": "Comment les entreprises peuvent-elles renforcer leur chaîne d'approvisionnement ?",
       "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Découvrez comment General Motors améliore la résilience de sa chaîne d'approvisionnement",
+      "hook": "Découvrez comment General Motors et Walmart utilisent les technologies pour améliorer leur résilience",
       "format": "texte"
     }
   ],
   "sources": [
-    "CPO Rising",
     "Supply Chain Dive"
   ],
   "raw_articles": [
-    {
-      "source": "CPO Rising",
-      "title": "AI Rising 2026 Pt. 2 (State of Procurement Series): AI Maturity Curve — What It is, What It Means",
-      "link": "https://cporising.com/2026/07/29/ai-rising-2026-pt-2-state-of-procurement-series-ai-maturity-curve-what-it-is-what-it-means/?utm_source=rss&utm_medium=rss&utm_campaign=ai-rising-2026-pt-2-state-of-procurement-series-ai-maturity-curve-what-it-is-what-it-means",
-      "summary": "<p>Our new weekly series brings industry insights around Ardent Partners&#8217; AI Rising 2026: The State of Procurement AI report, sponsored by ORO Labs and Fairmarkit, examining how CPOs and senior&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/07/29/ai-rising-2026-pt-2-state-of-procurement-series-ai-maturity-curve-what-it-is-what-it-means/\">AI Rising 2026 Pt. 2 (State of Procurement Series): AI Maturity Curve — What It is, What It Means</a> appeared first on <a href=\"https://cpori",
-      "published": "2026-07-29T10:02:30",
-      "relevance_score": 13
-    },
     {
       "source": "Supply Chain Dive",
       "title": "General Motors is driving toward supply chain resiliency",
