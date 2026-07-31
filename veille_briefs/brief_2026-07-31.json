@@ -6,26 +6,26 @@
     "focus": null
   },
   "key_stat": {
-    "value": "75%",
-    "context": "Des entreprises comme General Motors et Johnson & Johnson se concentrent sur la résilience de la chaîne d'approvisionnement"
+    "value": "2026",
+    "context": "Année cible pour les objectifs des directeurs des achats"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Résilience de la chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent être proactifs pour gérer les risques et les perturbations de la chaîne d'approvisionnement"
+    "subject": "Intelligence Artificielle dans les achats",
+    "why_it_matters": "Amélioration de l'efficacité et de la prise de décision"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment les entreprises peuvent-elles renforcer leur chaîne d'approvisionnement ?",
+      "hook": "Quels sont les défis majeurs pour les directeurs des achats en 2026 ?",
       "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Découvrez comment Johnson & Johnson et General Motors améliorent leur chaîne d'approvisionnement",
+      "hook": "Comment l'intelligence artificielle peut-elle améliorer la chaîne d'approvisionnement ?",
       "format": "texte"
     }
   ],
