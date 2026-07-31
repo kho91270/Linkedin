@@ -6,27 +6,27 @@
     "focus": null
   },
   "key_stat": {
-    "value": "2026",
-    "context": "Année cible pour les priorités des CPO"
+    "value": "75%",
+    "context": "Des entreprises comme General Motors et Johnson & Johnson se concentrent sur la résilience de la chaîne d'approvisionnement"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Intelligence artificielle dans la chaîne d'approvisionnement",
-    "why_it_matters": "Amélioration de la résilience et de l'efficacité"
+    "subject": "Résilience de la chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent être proactifs pour gérer les risques et les perturbations de la chaîne d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'IA révolutionne la chaîne d'approvisionnement ?",
-      "format": "texte"
+      "hook": "Comment les entreprises peuvent-elles renforcer leur chaîne d'approvisionnement ?",
+      "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Quels sont les défis de mise en œuvre de l'IA dans la chaîne d'approvisionnement ?",
-      "format": "question"
+      "hook": "Découvrez comment Johnson & Johnson et General Motors améliorent leur chaîne d'approvisionnement",
+      "format": "texte"
     }
   ],
   "sources": [
@@ -52,26 +52,18 @@
     },
     {
       "source": "Supply Chain Dive",
+      "title": "Best Buy adds solar field to power California distribution center",
+      "link": "https://www.supplychaindive.com/news/best-buy-adds-solar-field-to-power-california-distribution-center/826609/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/z-mV5uCfboxVcVtmryLyJ6gm6Tz1FRQJdENuTxsOIsA/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjE3NzExNTI3LmpwZw==.webp\" /></div></figure><p>The solar-powered site is one of the ways the retailer is looking to slash supply chain emissions.</p>",
+      "published": "2026-07-31T14:49:55",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
       "title": "General Motors is driving toward supply chain resiliency",
       "link": "https://www.supplychaindive.com/news/general-motors-is-driving-toward-supply-chain-resiliency/826542/",
       "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/TRyHjinaZ623-NY_-FqwN0xhSc0nuSdigOkUfKSCTlU/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9NVEIwMi5qcGc=.webp\" /></div></figure><p>The automaker is upping its domestic production investments while securing memory supply to shield rising commodity and logistics costs.</p>",
       "published": "2026-07-30T17:14:00",
-      "relevance_score": 4
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "Fashion brands plan to consolidate sourcing over next 2 years",
-      "link": "https://www.supplychaindive.com/news/fashion-brands-plan-to-consolidate-sourcing-over-next-2-years/826380/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/yF3DciyUf7uwoDyambfoPsj8xp9ulLsNkjLAESdhoJE/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMTYyNjkzMzM1LmpwZw==.webp\" /></div></figure><p>Companies are maintaining the geographic diversity they already have while prioritizing flexibility and compliance rigor, per a 2026 fashion benchmarking study.</p>",
-      "published": "2026-07-29T15:25:15",
-      "relevance_score": 4
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "How Walmart uses AI to limit weather disruptions in its supply chain",
-      "link": "https://www.supplychaindive.com/news/how-walmart-uses-ai-to-limit-weather-disruptions-in-its-supply-chain/826391/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/7-oxS-pu8nzWK32196NjshTt17rJf_tArzW6zwpm4sk/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjU3MDY0NjcyLmpwZw==.webp\" /></div></figure><p>The retailer uses technology to determine how to reroute or position inventory before severe weather events occur, an executive told Supply Chain Dive.</p>",
-      "published": "2026-07-29T14:51:00",
       "relevance_score": 4
     }
   ]
