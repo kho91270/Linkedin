@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-01",
+  "date": "2026-02-20",
   "funding_alert": {
     "startup": null,
     "amount": null,
@@ -7,7 +7,7 @@
   },
   "key_stat": {
     "value": "2026",
-    "context": "Année ciblée par les CPO pour atteindre leurs objectifs"
+    "context": "Année cible pour les priorités des CPO"
   },
   "new_tool": {
     "name": null,
@@ -15,17 +15,17 @@
   },
   "hot_topic": {
     "subject": "Intelligence Artificielle dans la chaîne d'approvisionnement",
-    "why_it_matters": "Amélioration de la résilience et de l'efficacité de la chaîne d'approvisionnement"
+    "why_it_matters": "Amélioration de l'efficacité et de la résilience de la chaîne d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'IA va-t-elle révolutionner votre chaîne d'approvisionnement ?",
+      "hook": "Comment l'IA va-t-elle révolutionner la chaîne d'approvisionnement ?",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Découvrez comment les entreprises leaders comme Johnson & Johnson et General Motors améliorent leur chaîne d'approvisionnement",
+      "hook": "Quels sont les défis et les opportunités de la mise en œuvre de l'IA dans la chaîne d'approvisionnement ?",
       "format": "carrousel"
     }
   ],
