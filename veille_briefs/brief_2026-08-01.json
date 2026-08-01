@@ -7,7 +7,7 @@
   },
   "key_stat": {
     "value": "2026",
-    "context": "Année cible pour les priorités des CPO"
+    "context": "Année ciblée par les DAF pour atteindre des objectifs de procurement"
   },
   "new_tool": {
     "name": null,
@@ -20,12 +20,12 @@
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'IA va-t-elle révolutionner la chaîne d'approvisionnement ?",
+      "hook": "Comment l'IA va-t-elle révolutionner votre chaîne d'approvisionnement ?",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Les entreprises leaders comme Johnson & Johnson et General Motors investissent dans la résilience de leur chaîne d'approvisionnement",
+      "hook": "Découvrez comment les entreprises comme Johnson & Johnson et General Motors utilisent l'IA pour améliorer leur chaîne d'approvisionnement",
       "format": "carrousel"
     }
   ],
