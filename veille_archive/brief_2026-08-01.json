@@ -1,5 +1,5 @@
 {
-  "date": "2026-02-20",
+  "date": "2026-08-01",
   "funding_alert": {
     "startup": null,
     "amount": null,
@@ -15,7 +15,7 @@
   },
   "hot_topic": {
     "subject": "Intelligence Artificielle dans la chaîne d'approvisionnement",
-    "why_it_matters": "Amélioration de l'efficacité et de la résilience de la chaîne d'approvisionnement"
+    "why_it_matters": "L'IA peut améliorer l'efficacité et la résilience de la chaîne d'approvisionnement"
   },
   "post_angles": [
     {
@@ -25,7 +25,7 @@
     },
     {
       "pillar": "terrain",
-      "hook": "Quels sont les défis et les opportunités de la mise en œuvre de l'IA dans la chaîne d'approvisionnement ?",
+      "hook": "Les entreprises leaders comme Johnson & Johnson et General Motors investissent dans la résilience de leur chaîne d'approvisionnement",
       "format": "carrousel"
     }
   ],
