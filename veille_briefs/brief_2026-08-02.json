@@ -15,18 +15,18 @@
   },
   "hot_topic": {
     "subject": "Intelligence Artificielle dans la chaîne d'approvisionnement",
-    "why_it_matters": "L'IA peut améliorer l'efficacité et la prise de décision dans les processus d'approvisionnement"
+    "why_it_matters": "L'IA peut améliorer l'efficacité et la prise de décision dans la chaîne d'approvisionnement"
   },
   "post_angles": [
     {
-      "pillar": "analyste",
-      "hook": "Quels sont les défis et les opportunités pour les CPO en 2026 ?",
+      "pillar": "Procuretech",
+      "hook": "Comment l'IA va-t-elle révolutionner la chaîne d'approvisionnement ?",
       "format": "question"
     },
     {
-      "pillar": "terrain",
-      "hook": "Comment les entreprises comme Johnson & Johnson et Best Buy intègrent-elles l'innovation dans leur chaîne d'approvisionnement ?",
-      "format": "carrousel"
+      "pillar": "Acheteur",
+      "hook": "Découvrez comment les CPO priorisent leurs objectifs en 2026",
+      "format": "texte"
     }
   ],
   "sources": [
