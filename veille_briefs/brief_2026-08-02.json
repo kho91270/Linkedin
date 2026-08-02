@@ -1,5 +1,5 @@
 {
-  "date": "2026-02-20",
+  "date": "2026-08-02",
   "funding_alert": {
     "startup": null,
     "amount": null,
@@ -7,7 +7,7 @@
   },
   "key_stat": {
     "value": "2026",
-    "context": "Année cible pour les priorités des CPO"
+    "context": "Année ciblée pour les priorités des CPO"
   },
   "new_tool": {
     "name": null,
@@ -19,13 +19,13 @@
   },
   "post_angles": [
     {
-      "pillar": "procuretech",
+      "pillar": "analyste",
       "hook": "Comment l'IA va-t-elle révolutionner la chaîne d'approvisionnement ?",
       "format": "question"
     },
     {
-      "pillar": "acheteur",
-      "hook": "Découvrez les priorités des CPO en 2026 et comment elles impactent votre stratégie d'approvisionnement",
+      "pillar": "terrain",
+      "hook": "Découvrez comment Johnson & Johnson réorganise sa chaîne d'approvisionnement pour améliorer son efficacité",
       "format": "texte"
     }
   ],
