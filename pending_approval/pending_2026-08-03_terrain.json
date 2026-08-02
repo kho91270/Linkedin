@@ -1,0 +1,58 @@
+{
+  "content_fr": "Je viens de sauver 1,2M€ en 6 mois de negociations !\n\nJ'ai passé les derniers mois à évaluer les fournisseurs de mon portefeuille de categories, à négocier les contrats et à mettre en place des scorecards pour mesurer leur performance. J'ai également lancé plusieurs RFI/RFP pour comparer les offres et trouver les meilleures options pour mon entreprise. \n\nMais ce qui m'a vraiment permis d'obtenir ces économies, c'est lorsque j'ai identifié une erreur dans nos processus de passation de marchés. Nous avions tendance à nous concentrer sur les coûts à court terme, plutôt que de considérer les coûts totaux de possession. En changeant cette approche, j'ai pu négocier des contrats plus avantageux et obtenir des remises importantes.\n\nJe me demande maintenant, quels autres leviers pourrais-je actionner pour améliorer encore nos processus de procurement et obtenir des économies supplémentaires ? \n\n#procurement #categorymanagement #negociation 📈💡👍",
+  "content_en": "I survived a $10M contract disaster!\n \nAs a Category Manager, I've had my fair share of experiences with supplier evaluation, negotiation, and scorecard management. One particular instance that comes to mind is when I was tasked with renegotiating a contract with a key supplier. I had sent out an RFI/RFP, and after careful evaluation, we selected a supplier that seemed to tick all the right boxes.\n\nHowever, it wasn't until after the contract was signed that we realized the supplier had made some significant promises that they couldn't keep. The quality of their products was subpar, and their lead times were much longer than expected. This resulted in significant delays and costs for our company, totaling over $10M in losses.\n\nLooking back, I realize that I had relied too heavily on the supplier's sales pitch and hadn't done enough due diligence. I had also failed to include sufficient penalty clauses in the contract to protect our company's interests.\n\nWhat can you do to avoid similar mistakes in your own procurement processes? \n\n#procurement #suppliermanagement #categorymanagement 💼📈💔",
+  "content_x_fr": "\"Negociation fournisseur : 30% d'economies via RFI/RFP ciblee, scorecard mensuel. 2 mois de delai pour mise en place #procuretech\"",
+  "content_x_en": "Negotiated 25+ supplier contracts, 15% avg cost savings. RFP/RFI process optimized with data-driven scorecards. #procurement",
+  "pillar": "terrain",
+  "format": "texte",
+  "generated_date": "2026-08-02 17:59",
+  "status": "pending_approval",
+  "lang": "both",
+  "quality_report": {
+    "timestamp": "2026-08-02 17:59",
+    "passed": false,
+    "score_fr": {
+      "total": 96,
+      "details": {
+        "hook": 25,
+        "structure": 25,
+        "longueur": 20,
+        "engagement": 11,
+        "authenticite": 15
+      },
+      "char_count": 1035
+    },
+    "unique_fr": true,
+    "hooks_fr": {
+      "original": "Je me souviens encore de la négociation la plus difficile de ma carrière !",
+      "hook_a": "J'ai failli me faire piéger !",
+      "hook_b": "Ma négociation la plus intense"
+    },
+    "score_en": {
+      "total": 79,
+      "details": {
+        "hook": 15,
+        "structure": 18,
+        "longueur": 20,
+        "engagement": 11,
+        "authenticite": 15
+      },
+      "char_count": 970
+    },
+    "unique_en": false,
+    "hooks_en": {
+      "original": "I've lost millions in procurement deals due to poor supplier evaluation.",
+      "hook_a": "I've been burned by bad suppliers",
+      "hook_b": "My procurement mistakes cost millions"
+    }
+  },
+  "image": {
+    "status": "complete",
+    "url": "https://cdn.leonardo.ai/users/3d14e72a-e0c9-46d3-a916-e31db4054e4b/generations/9f49ce77-3d94-49d0-bfe8-a2bffa720ba8/Leonardo_Creative_A_navy_blue_globe_with_a_light_blue_puzzle_p_0.jpg",
+    "local_path": "generated_images/img_20260802_1759_terrain.png",
+    "prompt": "A navy blue globe with a light blue puzzle piece fitting into place, surrounded by subtle white contract silhouettes and a few light blue arrows, on a clean white background."
+  },
+  "publish_date": "2026-08-03",
+  "approval_status": "pending",
+  "created_at": "2026-08-02 17:59"
+}
