@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-02",
+  "date": "2026-02-20",
   "funding_alert": {
     "startup": null,
     "amount": null,
@@ -15,18 +15,18 @@
   },
   "hot_topic": {
     "subject": "Intelligence Artificielle dans la chaîne d'approvisionnement",
-    "why_it_matters": "L'IA peut améliorer l'efficacité et la prise de décision dans la chaîne d'approvisionnement"
+    "why_it_matters": "L'IA peut améliorer l'efficacité et la prise de décision dans les processus d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'IA va-t-elle révolutionner la chaîne d'approvisionnement ?",
+      "hook": "Quels sont les défis et les opportunités pour les CPO en 2026 ?",
       "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Découvrez comment Johnson & Johnson réorganise sa chaîne d'approvisionnement pour améliorer son efficacité",
-      "format": "texte"
+      "hook": "Comment les entreprises comme Johnson & Johnson et Best Buy intègrent-elles l'innovation dans leur chaîne d'approvisionnement ?",
+      "format": "carrousel"
     }
   ],
   "sources": [
