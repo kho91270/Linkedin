@@ -1,4 +1,54 @@
 {
   "date": "2026-08-03",
-  "status": "NO_NEWS"
+  "funding_alert": {
+    "startup": null,
+    "amount": null,
+    "focus": null
+  },
+  "key_stat": {
+    "value": "AI Rising 2026",
+    "context": "Rapport sur l'état de l'IA dans les achats"
+  },
+  "new_tool": {
+    "name": null,
+    "description": null
+  },
+  "hot_topic": {
+    "subject": "Intégration de l'IA dans les processus d'approvisionnement",
+    "why_it_matters": "Amélioration de l'efficacité et de la prise de décision dans les achats"
+  },
+  "post_angles": [
+    {
+      "pillar": "analyste",
+      "hook": "L'IA révolutionne les achats !",
+      "format": "texte"
+    },
+    {
+      "pillar": "terrain",
+      "hook": "Comment les entreprises réinventent leurs chaînes d'approvisionnement ?",
+      "format": "carrousel"
+    }
+  ],
+  "sources": [
+    "CPO Rising",
+    "Supply Chain Dive"
+  ],
+  "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "AI Rising 2026 Pt. 4 (State of Procurement Series): How CPOs View AI: The Lens Matters",
+      "link": "https://cporising.com/2026/08/03/ai-rising-2026-pt-4-state-of-procurement-series-how-cpos-view-ai-the-lens-matters/?utm_source=rss&utm_medium=rss&utm_campaign=ai-rising-2026-pt-4-state-of-procurement-series-how-cpos-view-ai-the-lens-matters",
+      "summary": "<p>Our new weekly series brings industry insights around Ardent Partners&#8217; AI Rising 2026: The State of Procurement AI report, sponsored by ORO Labs and Fairmarkit, examining how CPOs and senior&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/08/03/ai-rising-2026-pt-4-state-of-procurement-series-how-cpos-view-ai-the-lens-matters/\">AI Rising 2026 Pt. 4 (State of Procurement Series): How CPOs View AI: The Lens Matters</a> appeared first on <a href=\"https://cporising.com\">CPO RISING",
+      "published": "2026-08-03T12:12:54",
+      "relevance_score": 13
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Chocolate makers rethink supply chains in face of cocoa price swings",
+      "link": "https://www.supplychaindive.com/news/chocolate-makers-rethink-supply-chains-in-face-of-cocoa-price-swings/826772/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/9mfmM6pfjiwqQnxEyzOjWTLblFdWbfyZBapYIUk9FEA/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy03MTI4MjAyMi5qcGc=.webp\" /></div></figure><p>Mondelēz International and Hershey are relying on innovation and sourcing diversification to shield themselves from volatility.</p>",
+      "published": "2026-08-03T14:09:40",
+      "relevance_score": 6
+    }
+  ]
 }
