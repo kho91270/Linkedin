@@ -1,0 +1,58 @@
+{
+  "content_fr": "Tarifs douaniers : la bombe à retardement de vos chaînes d'approvisionnement ?\n\nEn tant que Category Manager en procurement, j'ai souvent eu à gérer les implications des tarifs douaniers sur nos chaînes d'approvisionnement. Récemment, j'ai eu à analyser l'impact de ces tarifs sur nos coûts et délais de livraison. Les tarifs douaniers peuvent avoir un impact significatif sur notre business, voire même mettre en péril certains de nos projets.\n\nJ'ai découvert que des entreprises comme Amazon prévoient d'utiliser des fonds importants, notamment 600 millions, pour absorber les coûts liés aux tarifs douaniers et ainsi maintenir des prix compétitifs pour leurs acheteurs. Cela montre l'importance de bien gérer ces tarifs pour rester compétitif.\n\nMais qu'en est-il de vous ? Comment gérez-vous les tarifs douaniers dans vos chaînes d'approvisionnement ? Prenez-vous en compte ces coûts lors de vos processus de sourcing et de négociation avec vos fournisseurs ?\n\n#TarifsDouaniers #ChaînesDApprovisionnement #Procurement #Logistique 🚚💰📈",
+  "content_en": "Tariffs: friend or foe?\nAs a Category Manager, I've seen firsthand how tariffs can disrupt supply chains. Recently, I worked with a team to assess the impact of new tariffs on our company's procurement costs. \nThe insight that struck me was how a small change in tariffs can have a ripple effect, leading to significant cost increases or delays. \nCan tariffs ever be a strategic advantage for companies, or are they always a hindrance? \n#procurement #supplychain #tariffs 🤔💰📈",
+  "content_x_fr": "\"Tarifs douaniers : 600 millions pour Amazon, mais quels impacts sur vos chaînes d'approvisionnement ? #procurement\"",
+  "content_x_en": "\"Amazon to use $600M to cut buyer prices. How will tariffs affect your supply chain?\" #procurement",
+  "pillar": "conversation",
+  "format": "question",
+  "generated_date": "2026-08-04 18:25",
+  "status": "pending_approval",
+  "lang": "both",
+  "quality_report": {
+    "timestamp": "2026-08-04 18:25",
+    "passed": false,
+    "score_fr": {
+      "total": 75,
+      "details": {
+        "hook": 20,
+        "structure": 25,
+        "longueur": 0,
+        "engagement": 15,
+        "authenticite": 15
+      },
+      "char_count": 1135
+    },
+    "unique_fr": true,
+    "hooks_fr": {
+      "original": "Les tarifs douaniers vont-ils détruire votre chaîne d'approvisionnement ?",
+      "hook_a": "Je vois mon coût d'approvisionnement exploser ?",
+      "hook_b": "Ma chaîne d'approvisionnement est-elle en danger ?"
+    },
+    "score_en": {
+      "total": 66,
+      "details": {
+        "hook": 15,
+        "structure": 17,
+        "longueur": 12,
+        "engagement": 15,
+        "authenticite": 7
+      },
+      "char_count": 675
+    },
+    "unique_en": true,
+    "hooks_en": {
+      "original": "Tariffs: friend or foe?",
+      "hook_a": "I've fought tariffs",
+      "hook_b": "Tariffs hit me hard"
+    }
+  },
+  "image": {
+    "status": "complete",
+    "url": "https://cdn.leonardo.ai/users/3d14e72a-e0c9-46d3-a916-e31db4054e4b/generations/7f450a3a-c211-471f-b843-2e107ac6cc13/Leonardo_Creative_A_minimalist_illustration_of_a_supply_chain_0.jpg",
+    "local_path": "generated_images/img_20260804_1825_conversation.png",
+    "prompt": "\"A minimalist illustration of a supply chain as a puzzle, with navy blue and light blue gears and cogs, and a white clock in the background, surrounded by subtle wave patterns, on a navy blue background, conveying complexity and timing.\""
+  },
+  "publish_date": "2026-08-05",
+  "approval_status": "pending",
+  "created_at": "2026-08-04 18:25"
+}
