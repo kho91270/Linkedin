@@ -1,0 +1,78 @@
+{
+  "date": "2024-02-20",
+  "funding_alert": {
+    "startup": null,
+    "amount": null,
+    "focus": null
+  },
+  "key_stat": {
+    "value": "600 millions",
+    "context": "Montant que Amazon a recouvré de tarifs invalidés pour les rembourser aux acheteurs"
+  },
+  "new_tool": {
+    "name": null,
+    "description": null
+  },
+  "hot_topic": {
+    "subject": "Intégration de l'IA dans les chaînes d'approvisionnement",
+    "why_it_matters": "L'IA peut améliorer l'efficacité et la transparence des processus d'approvisionnement"
+  },
+  "post_angles": [
+    {
+      "pillar": "analyste",
+      "hook": "Comment l'IA va-t-elle révolutionner vos processus d'approvisionnement ?",
+      "format": "texte"
+    },
+    {
+      "pillar": "terrain",
+      "hook": "Quels sont les défis et les opportunités de la mise en œuvre de l'IA dans les chaînes d'approvisionnement ?",
+      "format": "carrousel"
+    }
+  ],
+  "sources": [
+    "CPO Rising",
+    "Supply Chain Dive"
+  ],
+  "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "AI Rising 2026 Pt. 4 (State of Procurement Series): How CPOs View AI: The Lens Matters",
+      "link": "https://cporising.com/2026/08/03/ai-rising-2026-pt-4-state-of-procurement-series-how-cpos-view-ai-the-lens-matters/?utm_source=rss&utm_medium=rss&utm_campaign=ai-rising-2026-pt-4-state-of-procurement-series-how-cpos-view-ai-the-lens-matters",
+      "summary": "<p>Our new weekly series brings industry insights around Ardent Partners&#8217; AI Rising 2026: The State of Procurement AI report, sponsored by ORO Labs and Fairmarkit, examining how CPOs and senior&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/08/03/ai-rising-2026-pt-4-state-of-procurement-series-how-cpos-view-ai-the-lens-matters/\">AI Rising 2026 Pt. 4 (State of Procurement Series): How CPOs View AI: The Lens Matters</a> appeared first on <a href=\"https://cporising.com\">CPO RISING",
+      "published": "2026-08-03T12:12:54",
+      "relevance_score": 13
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Chocolate makers rethink supply chains in face of cocoa price swings",
+      "link": "https://www.supplychaindive.com/news/chocolate-makers-rethink-supply-chains-in-face-of-cocoa-price-swings/826772/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/9mfmM6pfjiwqQnxEyzOjWTLblFdWbfyZBapYIUk9FEA/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy03MTI4MjAyMi5qcGc=.webp\" /></div></figure><p>Mondelēz International and Hershey are relying on innovation and sourcing diversification to shield themselves from volatility.</p>",
+      "published": "2026-08-03T14:09:40",
+      "relevance_score": 6
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Amazon to issue tariff refunds in ‘limited set of circumstances’",
+      "link": "https://www.supplychaindive.com/news/amazon-to-issue-tariff-refunds-in-limited-set-of-circumstances/826815/",
+      "summary": "<p>The e-commerce giant also will use the $600 million it has recouped from invalidated tariffs to lower prices for shoppers, per a Thursday earnings call.</p>",
+      "published": "2026-08-03T14:02:17",
+      "relevance_score": 5
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Farm Rio targets digitized supply chain, improved traceability",
+      "link": "https://www.supplychaindive.com/news/farm-rio-targets-digitized-supply-chain-improved-traceability/826737/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/N7L25ckI9olkKSMrqcxIC6CuyDM-dTA8istU9RArRzM/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS82X0Zhcm1fUmlvX1BvcF9VcF9hdF9Ob3Jkc3Ryb21fTllDX0ZsYWdzaGlwX0NyZWRpdF9Db25uaWVfWmhvdS5qcGc=.webp\" /></div></figure><p>The apparel brand is using several solutions from software company Inspectorio to automate operations as it looks to scale its international footprint.</p>",
+      "published": "2026-08-03T15:16:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "3 factors that may shape air cargo market in H2",
+      "link": "https://www.supplychaindive.com/news/3-factors-that-may-shape-air-cargo-market-in-h2/826601/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/JRKLskyhfiJJpgVWRKZy6EhN76bW0N1cD1K2bO8JpfI/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS8wMDAwMDE0OS0zOTg0NjIuanBn.webp\" /></div></figure><p>The Iran war continues to drive market volatility while artificial intelligence-related cargo fuels growth on the Transpacific trade lane.</p>",
+      "published": "2026-08-03T14:57:54",
+      "relevance_score": 4
+    }
+  ]
+}
