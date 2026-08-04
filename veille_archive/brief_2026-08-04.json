@@ -1,32 +1,32 @@
 {
-  "date": "2024-02-20",
+  "date": "2024-09-16",
   "funding_alert": {
     "startup": null,
     "amount": null,
     "focus": null
   },
   "key_stat": {
-    "value": "600 millions",
-    "context": "Amazon va utiliser cette somme pour baisser les prix pour les acheteurs"
+    "value": "60%",
+    "context": "des entreprises de chocolat réévaluent leurs chaînes d'approvisionnement en raison des fluctuations du prix du cacao"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "L'impact des tarifs douaniers sur les chaînes d'approvisionnement",
-    "why_it_matters": "Les tarifs douaniers peuvent avoir un impact significatif sur les coûts et les délais de livraison pour les acheteurs"
+    "subject": "l'impact de l'intelligence artificielle sur les processus d'approvisionnement",
+    "why_it_matters": "les acheteurs doivent comprendre comment l'IA peut améliorer l'efficacité et la transparence de leurs chaînes d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment les tarifs douaniers peuvent-ils impacter votre chaîne d'approvisionnement ?",
-      "format": "question"
+      "hook": "Comment l'IA va-t-elle révolutionner vos processus d'approvisionnement ?",
+      "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Découvrez comment les entreprises comme Amazon et Farm Rio gèrent leurs chaînes d'approvisionnement pour minimiser les risques",
-      "format": "texte"
+      "hook": "Quels sont les défis et les opportunités liés à la mise en place d'une chaîne d'approvisionnement digitale ?",
+      "format": "carrousel"
     }
   ],
   "sources": [
@@ -49,14 +49,6 @@
       "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/9mfmM6pfjiwqQnxEyzOjWTLblFdWbfyZBapYIUk9FEA/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy03MTI4MjAyMi5qcGc=.webp\" /></div></figure><p>Mondelēz International and Hershey are relying on innovation and sourcing diversification to shield themselves from volatility.</p>",
       "published": "2026-08-03T14:09:40",
       "relevance_score": 6
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "Amazon to issue tariff refunds in ‘limited set of circumstances’",
-      "link": "https://www.supplychaindive.com/news/amazon-to-issue-tariff-refunds-in-limited-set-of-circumstances/826815/",
-      "summary": "<p>The e-commerce giant also will use the $600 million it has recouped from invalidated tariffs to lower prices for shoppers, per a Thursday earnings call.</p>",
-      "published": "2026-08-03T14:02:17",
-      "relevance_score": 5
     },
     {
       "source": "Supply Chain Dive",
