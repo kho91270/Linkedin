@@ -1,5 +1,5 @@
 {
-  "date": "2024-02-26",
+  "date": "2026-08-04",
   "funding_alert": {
     "startup": null,
     "amount": null,
@@ -7,25 +7,25 @@
   },
   "key_stat": {
     "value": "600 millions",
-    "context": "Montant que Amazon a recouvré d'invalidations de tarifs"
+    "context": "Le montant que Amazon a recouvré des tarifs invalidés pour les utiliser pour baisser les prix"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Intégration de l'IA dans les processus d'approvisionnement",
-    "why_it_matters": "Les CPO doivent comprendre comment l'IA peut améliorer l'efficacité et la prise de décision dans les processus d'approvisionnement"
+    "subject": "L'impact de l'intelligence artificielle sur la chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent comprendre comment l'IA peut améliorer l'efficacité et la transparence de leur chaîne d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment les CPO perçoivent l'IA dans les processus d'approvisionnement ?",
+      "hook": "Comment l'IA va-t-elle révolutionner votre chaîne d'approvisionnement ?",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Les défis de la chaîne d'approvisionnement du cacao face aux fluctuations de prix",
+      "hook": "Quels sont les défis et les opportunités de la mise en œuvre de l'IA dans la chaîne d'approvisionnement ?",
       "format": "carrousel"
     }
   ],
