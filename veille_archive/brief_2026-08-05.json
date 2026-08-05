@@ -15,17 +15,17 @@
   },
   "hot_topic": {
     "subject": "Intelligence Artificielle dans la chaîne d'approvisionnement",
-    "why_it_matters": "L'IA peut améliorer l'efficacité et la transparence dans les processus d'approvisionnement"
+    "why_it_matters": "L'IA peut améliorer l'efficacité et la prise de décision dans la chaîne d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'IA va-t-elle révolutionner votre chaîne d'approvisionnement ?",
+      "hook": "L'IA révolutionne la chaîne d'approvisionnement !",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Les 3 facteurs clés qui façonneront le marché du fret aérien dans la deuxième moitié de l'année",
+      "hook": "Les entreprises réinventent leurs chaînes d'approvisionnement pour mieux résister aux fluctuations du marché",
       "format": "carrousel"
     }
   ],
