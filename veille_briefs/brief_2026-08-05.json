@@ -1,55 +1,38 @@
 {
-  "date": "2026-08-05",
+  "date": "2024-02-20",
   "funding_alert": {
     "startup": null,
     "amount": null,
     "focus": null
   },
   "key_stat": {
-    "value": "48",
-    "context": "Dernières heures d'actualité"
+    "value": "3 facteurs",
+    "context": "qui pourraient façonner le marché du fret aérien dans la deuxième moitié de l'année"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Intelligence Artificielle dans la chaîne d'approvisionnement",
-    "why_it_matters": "L'IA peut améliorer l'efficacité et la transparence dans les processus d'approvisionnement"
+    "subject": "La chaîne d'approvisionnement digitale",
+    "why_it_matters": "pour améliorer la traçabilité et la résilience de la chaîne d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'IA va-t-elle révolutionner votre chaîne d'approvisionnement ?",
-      "format": "texte"
+      "hook": "Comment la digitalisation de la chaîne d'approvisionnement peut-elle améliorer la traçabilité ?",
+      "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Quels sont les défis de mise en œuvre de l'IA dans la chaîne d'approvisionnement ?",
-      "format": "question"
+      "hook": "Découvrez comment Farm Rio améliore sa chaîne d'approvisionnement grâce à la digitalisation",
+      "format": "texte"
     }
   ],
   "sources": [
-    "CPO Rising",
     "Supply Chain Dive"
   ],
   "raw_articles": [
-    {
-      "source": "CPO Rising",
-      "title": "AI Rising 2026 Pt. 4 (State of Procurement Series): How CPOs View AI: The Lens Matters",
-      "link": "https://cporising.com/2026/08/03/ai-rising-2026-pt-4-state-of-procurement-series-how-cpos-view-ai-the-lens-matters/?utm_source=rss&utm_medium=rss&utm_campaign=ai-rising-2026-pt-4-state-of-procurement-series-how-cpos-view-ai-the-lens-matters",
-      "summary": "<p>Our new weekly series brings industry insights around Ardent Partners&#8217; AI Rising 2026: The State of Procurement AI report, sponsored by ORO Labs and Fairmarkit, examining how CPOs and senior&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/08/03/ai-rising-2026-pt-4-state-of-procurement-series-how-cpos-view-ai-the-lens-matters/\">AI Rising 2026 Pt. 4 (State of Procurement Series): How CPOs View AI: The Lens Matters</a> appeared first on <a href=\"https://cporising.com\">CPO RISING",
-      "published": "2026-08-03T12:12:54",
-      "relevance_score": 13
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "Chocolate makers rethink supply chains in face of cocoa price swings",
-      "link": "https://www.supplychaindive.com/news/chocolate-makers-rethink-supply-chains-in-face-of-cocoa-price-swings/826772/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/9mfmM6pfjiwqQnxEyzOjWTLblFdWbfyZBapYIUk9FEA/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy03MTI4MjAyMi5qcGc=.webp\" /></div></figure><p>Mondelēz International and Hershey are relying on innovation and sourcing diversification to shield themselves from volatility.</p>",
-      "published": "2026-08-03T14:09:40",
-      "relevance_score": 6
-    },
     {
       "source": "Supply Chain Dive",
       "title": "Trump has another tariff plan to reshore generic drug production. Will it work?",
