@@ -7,7 +7,7 @@
   },
   "key_stat": {
     "value": "2 nouveaux articles",
-    "context": "Publication de 2 nouveaux articles sur Supply Chain Dive"
+    "context": "Publiés dans les 48 dernières heures sur Supply Chain Dive"
   },
   "new_tool": {
     "name": null,
@@ -20,13 +20,13 @@
   "post_angles": [
     {
       "pillar": "Procuretech",
-      "hook": "La rélocalisation de la production de médicaments génériques, une opportunité pour les acheteurs ?",
+      "hook": "Découvrez comment les entreprises réagissent aux nouvelles politiques tarifaires",
       "format": "texte"
     },
     {
-      "pillar": "Supply Chain",
-      "hook": "Gymshark nomme un nouveau responsable de la chaîne d'approvisionnement, qu'est-ce que cela signifie pour l'industrie ?",
-      "format": "carrousel"
+      "pillar": "Acheteur",
+      "hook": "Comment la rélocalisation de la production de médicaments génériques peut-elle impacter vos stratégies d'approvisionnement ?",
+      "format": "question"
     }
   ],
   "sources": [
