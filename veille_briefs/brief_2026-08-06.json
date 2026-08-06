@@ -7,7 +7,7 @@
   },
   "key_stat": {
     "value": "2 nouveaux articles",
-    "context": "Publiés dans les 48 dernières heures sur Supply Chain Dive"
+    "context": "Nouveaux articles sur la chaîne d'approvisionnement"
   },
   "new_tool": {
     "name": null,
@@ -15,18 +15,18 @@
   },
   "hot_topic": {
     "subject": "Rélocalisation de la production de médicaments génériques",
-    "why_it_matters": "Impact potentiel sur les chaînes d'approvisionnement et les coûts pour les acheteurs"
+    "why_it_matters": "Impact potentiel sur la chaîne d'approvisionnement et les coûts pour les acheteurs"
   },
   "post_angles": [
     {
-      "pillar": "Procuretech",
-      "hook": "Découvrez comment les entreprises réagissent aux nouvelles politiques tarifaires",
-      "format": "texte"
+      "pillar": "acheteur",
+      "hook": "La rélocalisation de la production de médicaments génériques peut-elle réellement fonctionner ?",
+      "format": "question"
     },
     {
-      "pillar": "Acheteur",
-      "hook": "Comment la rélocalisation de la production de médicaments génériques peut-elle impacter vos stratégies d'approvisionnement ?",
-      "format": "question"
+      "pillar": "analyse",
+      "hook": "Découvrez comment les dernières annonces sur la chaîne d'approvisionnement peuvent impacter vos stratégies d'achat",
+      "format": "texte"
     }
   ],
   "sources": [
