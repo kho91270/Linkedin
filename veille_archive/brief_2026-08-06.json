@@ -15,18 +15,18 @@
   },
   "hot_topic": {
     "subject": "Rélocalisation de la production de médicaments génériques",
-    "why_it_matters": "Les acheteurs doivent être attentifs aux changements de tarifs douaniers et à leur impact sur la chaîne d'approvisionnement"
+    "why_it_matters": "Impact potentiel sur les chaînes d'approvisionnement et les coûts pour les acheteurs"
   },
   "post_angles": [
     {
-      "pillar": "procuretech",
-      "hook": "La rélocalisation de la production de médicaments génériques, une opportunité pour les entreprises ?",
+      "pillar": "Procuretech",
+      "hook": "La rélocalisation de la production de médicaments génériques, une opportunité pour les acheteurs ?",
       "format": "texte"
     },
     {
-      "pillar": "supply chain",
-      "hook": "Comment les changements de tarifs douaniers affectent-ils votre chaîne d'approvisionnement ?",
-      "format": "question"
+      "pillar": "Supply Chain",
+      "hook": "Gymshark nomme un nouveau responsable de la chaîne d'approvisionnement, qu'est-ce que cela signifie pour l'industrie ?",
+      "format": "carrousel"
     }
   ],
   "sources": [
