@@ -7,7 +7,7 @@
   },
   "key_stat": {
     "value": "O'Reilly Automotive partage les avantages de remboursement de droits de douane avec ses fournisseurs",
-    "context": "Un exemple de collaboration entre les entreprises et leurs fournisseurs pour gérer les coûts des droits de douane"
+    "context": "Un exemple de collaboration entre une entreprise et ses fournisseurs pour gérer les coûts de douane"
   },
   "new_tool": {
     "name": null,
@@ -15,18 +15,18 @@
   },
   "hot_topic": {
     "subject": "Gestion de la chaîne d'approvisionnement",
-    "why_it_matters": "La nomination d'un nouveau directeur de la chaîne d'approvisionnement chez Gymshark souligne l'importance de cette fonction pour les entreprises"
+    "why_it_matters": "La nomination d'un nouveau responsable de la chaîne d'approvisionnement chez Gymshark souligne l'importance de cette fonction pour les entreprises"
   },
   "post_angles": [
     {
-      "pillar": "procuretech",
-      "hook": "Comment les entreprises peuvent-elles collaborer avec leurs fournisseurs pour gérer les coûts ?",
-      "format": "texte"
+      "pillar": "terrain",
+      "hook": "Comment les entreprises peuvent-elles collaborer avec leurs fournisseurs pour gérer les coûts de douane ?",
+      "format": "question"
     },
     {
-      "pillar": "acheteur",
-      "hook": "Quels sont les avantages de la nomination d'un directeur de la chaîne d'approvisionnement pour les entreprises ?",
-      "format": "carrousel"
+      "pillar": "analyste",
+      "hook": "La nomination d'un nouveau responsable de la chaîne d'approvisionnement chez Gymshark : qu'est-ce que cela signifie pour l'industrie ?",
+      "format": "texte"
     }
   ],
   "sources": [
