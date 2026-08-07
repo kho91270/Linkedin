@@ -1,0 +1,53 @@
+{
+  "date": "2024-02-20",
+  "funding_alert": {
+    "startup": null,
+    "amount": null,
+    "focus": null
+  },
+  "key_stat": {
+    "value": "O'Reilly Automotive partage les avantages de remboursement des tarifs douaniers avec ses fournisseurs",
+    "context": "Un exemple de collaboration entre un détaillant et ses fournisseurs pour gérer les coûts des tarifs douaniers"
+  },
+  "new_tool": {
+    "name": null,
+    "description": null
+  },
+  "hot_topic": {
+    "subject": "Gestion de la chaîne d'approvisionnement",
+    "why_it_matters": "La nomination d'un nouveau responsable de la chaîne d'approvisionnement chez Gymshark souligne l'importance de cette fonction pour les entreprises"
+  },
+  "post_angles": [
+    {
+      "pillar": "terrain",
+      "hook": "Comment les entreprises peuvent-elles collaborer avec leurs fournisseurs pour gérer les coûts ?",
+      "format": "texte"
+    },
+    {
+      "pillar": "analyste",
+      "hook": "Quels sont les avantages de la nomination d'un responsable de la chaîne d'approvisionnement pour les entreprises ?",
+      "format": "carrousel"
+    }
+  ],
+  "sources": [
+    "Supply Chain Dive"
+  ],
+  "raw_articles": [
+    {
+      "source": "Supply Chain Dive",
+      "title": "O’Reilly Automotive, suppliers sharing tariff refund benefits",
+      "link": "https://www.supplychaindive.com/news/oreilly-automotive-suppliers-sharing-tariff-refund-benefits/827111/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/iSOwmNNlwEDdOpAW686786GYTH1T6nL2egt8DFYVdic/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMzI2NDU5MTk0LmpwZw==.webp\" /></div></figure><p>The auto parts retailer hasn&rsquo;t paid a lot of direct tariffs, as its sourcing model primarily depends on suppliers as the importer of record, per an earnings call.</p>",
+      "published": "2026-08-06T19:47:00",
+      "relevance_score": 6
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Gymshark names new chief supply chain officer",
+      "link": "https://www.supplychaindive.com/news/gymshark-names-new-chief-supply-chain-officer/826891/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/8mYFeFQgfajQt6Y3yOtWbyQQYN1hH1sssKyGEI28sT0/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xNDIyOTAyMjIzX3lZenljaEguanBn.webp\" /></div></figure><p>Matt Rogers joined the fitness apparel brand in 2023 and previously held the role of global supply chain director.</p>",
+      "published": "2026-08-05T15:19:00",
+      "relevance_score": 4
+    }
+  ]
+}
