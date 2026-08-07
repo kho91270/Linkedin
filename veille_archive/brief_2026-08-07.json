@@ -1,38 +1,47 @@
 {
-  "date": "2024-02-20",
+  "date": "2026-08-07",
   "funding_alert": {
     "startup": null,
     "amount": null,
     "focus": null
   },
   "key_stat": {
-    "value": "O'Reilly Automotive partage les avantages de remboursement de droits de douane avec ses fournisseurs",
-    "context": "Un exemple de collaboration entre une entreprise et ses fournisseurs pour gérer les coûts de douane"
+    "value": "2026",
+    "context": "Année de référence pour les défis des directeurs des achats"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Gestion de la chaîne d'approvisionnement",
-    "why_it_matters": "La nomination d'un nouveau responsable de la chaîne d'approvisionnement chez Gymshark souligne l'importance de cette fonction pour les entreprises"
+    "subject": "Intelligence artificielle dans les achats",
+    "why_it_matters": "Amélioration de l'efficacité et de la prise de décision dans les processus d'achat"
   },
   "post_angles": [
     {
-      "pillar": "terrain",
-      "hook": "Comment les entreprises peuvent-elles collaborer avec leurs fournisseurs pour gérer les coûts de douane ?",
+      "pillar": "analyste",
+      "hook": "Quels sont les défis majeurs pour les directeurs des achats en 2026 ?",
       "format": "question"
     },
     {
-      "pillar": "analyste",
-      "hook": "La nomination d'un nouveau responsable de la chaîne d'approvisionnement chez Gymshark : qu'est-ce que cela signifie pour l'industrie ?",
+      "pillar": "terrain",
+      "hook": "Comment l'intelligence artificielle peut-elle aider les équipes d'achat à relever les défis de 2026 ?",
       "format": "texte"
     }
   ],
   "sources": [
+    "CPO Rising",
     "Supply Chain Dive"
   ],
   "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "AI Rising 2026 Pt. 5 (State of Procurement Series): CPO Challenges in 2026: Delivering Under Constraint",
+      "link": "https://cporising.com/2026/08/07/ai-rising-2026-pt-5-state-of-procurement-series-cpo-challenges-in-2026-delivering-under-constraint/?utm_source=rss&utm_medium=rss&utm_campaign=ai-rising-2026-pt-5-state-of-procurement-series-cpo-challenges-in-2026-delivering-under-constraint",
+      "summary": "<p>Our new weekly series brings industry insights around Ardent Partners&#8217; AI Rising 2026: The State of Procurement AI report, sponsored by ORO Labs and Fairmarkit, examining how CPOs and senior&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/08/07/ai-rising-2026-pt-5-state-of-procurement-series-cpo-challenges-in-2026-delivering-under-constraint/\">AI Rising 2026 Pt. 5 (State of Procurement Series): CPO Challenges in 2026: Delivering Under Constraint</a> appeared first on <a href=",
+      "published": "2026-08-07T10:02:51",
+      "relevance_score": 13
+    },
     {
       "source": "Supply Chain Dive",
       "title": "O’Reilly Automotive, suppliers sharing tariff refund benefits",
