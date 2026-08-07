@@ -1,5 +1,5 @@
 {
-  "date": "2026-02-20",
+  "date": "2026-08-07",
   "funding_alert": {
     "startup": null,
     "amount": null,
@@ -7,7 +7,7 @@
   },
   "key_stat": {
     "value": "100 milliards de dollars",
-    "context": "Le CBP a payé 100 milliards de dollars en remboursements de tarifs IEEPA"
+    "context": "Le CBP a payé 100 milliards de dollars en remboursements de droits de douane IEEPA"
   },
   "new_tool": {
     "name": null,
@@ -15,17 +15,17 @@
   },
   "hot_topic": {
     "subject": "L'intelligence artificielle dans les achats",
-    "why_it_matters": "Les directeurs des achats doivent relever les défis de 2026 en délivrant des résultats sous contrainte"
+    "why_it_matters": "Les acheteurs doivent relever les défis de 2026 en délivrant des résultats malgré les contraintes"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'intelligence artificielle peut-elle aider les directeurs des achats à relever les défis de 2026 ?",
+      "hook": "Comment l'intelligence artificielle peut-elle aider les acheteurs à relever les défis de 2026 ?",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Les remboursements de tarifs IEEPA : qu'est-ce que cela signifie pour les entreprises ?",
+      "hook": "Les remboursements de droits de douane IEEPA : comment les entreprises peuvent-elles en bénéficier ?",
       "format": "carrousel"
     }
   ],
