@@ -1,32 +1,32 @@
 {
-  "date": "2026-08-07",
+  "date": "2026-02-20",
   "funding_alert": {
     "startup": null,
     "amount": null,
     "focus": null
   },
   "key_stat": {
-    "value": "2026",
-    "context": "Année de référence pour les défis des directeurs des achats"
+    "value": "100 milliards de dollars",
+    "context": "Le CBP a payé 100 milliards de dollars en remboursements de tarifs IEEPA"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Intelligence artificielle dans les achats",
-    "why_it_matters": "Amélioration de l'efficacité et de la prise de décision dans les processus d'achat"
+    "subject": "L'intelligence artificielle dans les achats",
+    "why_it_matters": "Les directeurs des achats doivent relever les défis de 2026 en délivrant des résultats sous contrainte"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Quels sont les défis majeurs pour les directeurs des achats en 2026 ?",
-      "format": "question"
+      "hook": "Comment l'intelligence artificielle peut-elle aider les directeurs des achats à relever les défis de 2026 ?",
+      "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Comment l'intelligence artificielle peut-elle aider les équipes d'achat à relever les défis de 2026 ?",
-      "format": "texte"
+      "hook": "Les remboursements de tarifs IEEPA : qu'est-ce que cela signifie pour les entreprises ?",
+      "format": "carrousel"
     }
   ],
   "sources": [
@@ -52,11 +52,11 @@
     },
     {
       "source": "Supply Chain Dive",
-      "title": "Gymshark names new chief supply chain officer",
-      "link": "https://www.supplychaindive.com/news/gymshark-names-new-chief-supply-chain-officer/826891/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/8mYFeFQgfajQt6Y3yOtWbyQQYN1hH1sssKyGEI28sT0/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xNDIyOTAyMjIzX3lZenljaEguanBn.webp\" /></div></figure><p>Matt Rogers joined the fitness apparel brand in 2023 and previously held the role of global supply chain director.</p>",
-      "published": "2026-08-05T15:19:00",
-      "relevance_score": 4
+      "title": "CBP has paid $100B in IEEPA tariff refunds",
+      "link": "https://www.supplychaindive.com/news/cbp-has-paid-100b-in-ieepa-tariff-refunds/827257/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/GT4mxBGy_Uan7Vp41wok0X2IDkryDKpjhupx6K2bx-g/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy04ODYyNjUwMDIuanBn.webp\" /></div></figure><p>Despite reaching the milestone, the agency has still yet to launch a capability to process finally liquidated entries as a Department of Justice appeal lingers.</p>",
+      "published": "2026-08-07T14:16:17",
+      "relevance_score": 5
     }
   ]
 }
