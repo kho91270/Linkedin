@@ -1,12 +1,12 @@
 {
-  "date": "2026-08-08",
+  "date": "2026-02-20",
   "funding_alert": {
     "startup": null,
     "amount": null,
     "focus": null
   },
   "key_stat": {
-    "value": "100B",
+    "value": "100 milliards de dollars",
     "context": "Le CBP a payé 100 milliards de dollars en remboursements de tarifs IEEPA"
   },
   "new_tool": {
@@ -14,19 +14,19 @@
     "description": null
   },
   "hot_topic": {
-    "subject": "L'intelligence artificielle dans les achats",
-    "why_it_matters": "Les acheteurs doivent relever les défis de 2026 en utilisant l'IA pour améliorer les processus"
+    "subject": "L'impact des tarifs et des remboursements sur la chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent comprendre l'impact des tarifs et des remboursements sur leur chaîne d'approvisionnement pour prendre des décisions éclairées"
   },
   "post_angles": [
     {
-      "pillar": "analyste",
-      "hook": "Comment l'IA peut-elle aider les acheteurs à relever les défis de 2026 ?",
-      "format": "texte"
+      "pillar": "procurement",
+      "hook": "Comment les tarifs et les remboursements affectent-ils votre chaîne d'approvisionnement ?",
+      "format": "question"
     },
     {
-      "pillar": "terrain",
-      "hook": "Les remboursements de tarifs IEEPA : comment les entreprises peuvent-elles en bénéficier ?",
-      "format": "carrousel"
+      "pillar": "supply chain",
+      "hook": "Découvrez comment O'Reilly Automotive partage les avantages des remboursements de tarifs avec ses fournisseurs",
+      "format": "texte"
     }
   ],
   "sources": [
