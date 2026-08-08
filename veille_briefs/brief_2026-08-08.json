@@ -15,17 +15,17 @@
   },
   "hot_topic": {
     "subject": "L'intelligence artificielle dans les achats",
-    "why_it_matters": "Les directeurs des achats doivent relever des défis importants en 2026, notamment la livraison sous contrainte, et l'IA peut les aider"
+    "why_it_matters": "Les acheteurs doivent comprendre comment l'IA peut les aider à relever les défis de 2026, tels que la livraison sous contrainte"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'IA peut-elle aider les directeurs des achats à relever les défis de 2026 ?",
+      "hook": "Comment l'IA peut aider les acheteurs à relever les défis de 2026 ?",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Les remboursements de tarifs IEEPA : qu'est-ce que cela signifie pour les entreprises ?",
+      "hook": "Les remboursements de tarifs IEEPA : comment les entreprises peuvent-elles en bénéficier ?",
       "format": "carrousel"
     }
   ],
