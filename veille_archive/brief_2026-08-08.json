@@ -6,7 +6,7 @@
     "focus": null
   },
   "key_stat": {
-    "value": "100 milliards de dollars",
+    "value": "100B",
     "context": "Le CBP a payé 100 milliards de dollars en remboursements de tarifs IEEPA"
   },
   "new_tool": {
@@ -15,17 +15,17 @@
   },
   "hot_topic": {
     "subject": "L'intelligence artificielle dans les achats",
-    "why_it_matters": "Les acheteurs doivent comprendre comment l'IA peut les aider à relever les défis de 2026, notamment la livraison sous contrainte"
+    "why_it_matters": "Les acheteurs doivent relever les défis de 2026 en utilisant l'IA pour améliorer les processus"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Découvrez comment les CPO peuvent relever les défis de 2026 avec l'IA",
+      "hook": "Comment l'IA peut-elle aider les acheteurs à relever les défis de 2026 ?",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Les remboursements de tarifs IEEPA : comment les entreprises peuvent en bénéficier",
+      "hook": "Les remboursements de tarifs IEEPA : comment les entreprises peuvent-elles en bénéficier ?",
       "format": "carrousel"
     }
   ],
