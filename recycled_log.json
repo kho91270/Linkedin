@@ -1,0 +1,11 @@
+{
+  "recycled": [
+    {
+      "date": "2026-08-09",
+      "original_filename": "post_2026-06-21_conversation.json",
+      "new_format": "carrousel",
+      "strategy": "Reformuler avec nouveau contexte"
+    }
+  ],
+  "blacklist": []
+}
