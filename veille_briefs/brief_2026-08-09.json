@@ -1,45 +1,4 @@
 {
-  "date": "2024-02-20",
-  "funding_alert": {
-    "startup": null,
-    "amount": null,
-    "focus": null
-  },
-  "key_stat": {
-    "value": "100 milliards de dollars",
-    "context": "Le CBP a payé 100 milliards de dollars en remboursements de droits de douane IEEPA"
-  },
-  "new_tool": {
-    "name": null,
-    "description": null
-  },
-  "hot_topic": {
-    "subject": "Remboursements de droits de douane IEEPA",
-    "why_it_matters": "Les acheteurs doivent être conscients des évolutions réglementaires pour optimiser leurs stratégies d'approvisionnement"
-  },
-  "post_angles": [
-    {
-      "pillar": "Supply Chain",
-      "hook": "Découvrez comment les remboursements de droits de douane IEEPA impactent votre chaîne d'approvisionnement",
-      "format": "texte"
-    },
-    {
-      "pillar": "Procurement",
-      "hook": "Comment les acheteurs peuvent-ils profiter des remboursements de droits de douane IEEPA ?",
-      "format": "question"
-    }
-  ],
-  "sources": [
-    "Supply Chain Dive"
-  ],
-  "raw_articles": [
-    {
-      "source": "Supply Chain Dive",
-      "title": "CBP has paid $100B in IEEPA tariff refunds",
-      "link": "https://www.supplychaindive.com/news/cbp-has-paid-100b-in-ieepa-tariff-refunds/827257/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/GT4mxBGy_Uan7Vp41wok0X2IDkryDKpjhupx6K2bx-g/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy04ODYyNjUwMDIuanBn.webp\" /></div></figure><p>Despite reaching the milestone, the agency has still yet to launch a capability to process finally liquidated entries as a Department of Justice appeal lingers.</p>",
-      "published": "2026-08-07T14:16:17",
-      "relevance_score": 5
-    }
-  ]
+  "date": "2026-08-09",
+  "status": "NO_NEWS"
 }
