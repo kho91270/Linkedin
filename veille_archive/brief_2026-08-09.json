@@ -1,5 +1,5 @@
 {
-  "date": "2026-02-20",
+  "date": "2026-03-08",
   "funding_alert": {
     "startup": null,
     "amount": null,
@@ -25,8 +25,8 @@
     },
     {
       "pillar": "terrain",
-      "hook": "Les 100 milliards de dollars de remboursements de tarifs IEEPA : qu'est-ce que cela signifie pour les acheteurs ?",
-      "format": "carrousel"
+      "hook": "Quels sont les défis les plus importants pour les acheteurs en 2026 ?",
+      "format": "question"
     }
   ],
   "sources": [
