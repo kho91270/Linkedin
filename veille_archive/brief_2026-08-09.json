@@ -1,5 +1,5 @@
 {
-  "date": "2026-03-08",
+  "date": "2026-08-09",
   "funding_alert": {
     "startup": null,
     "amount": null,
@@ -14,19 +14,19 @@
     "description": null
   },
   "hot_topic": {
-    "subject": "L'intelligence artificielle dans les achats",
-    "why_it_matters": "Les acheteurs doivent comprendre comment l'IA peut aider à relever les défis de livraison sous contrainte"
+    "subject": "Intelligence artificielle dans les achats",
+    "why_it_matters": "L'intelligence artificielle peut aider les acheteurs à relever les défis de livraison sous contrainte"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'IA peut aider les acheteurs à relever les défis de livraison sous contrainte ?",
+      "hook": "Comment l'intelligence artificielle peut-elle aider les acheteurs à relever les défis de livraison sous contrainte ?",
       "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Quels sont les défis les plus importants pour les acheteurs en 2026 ?",
-      "format": "question"
+      "hook": "Découvrez comment les entreprises utilisent l'intelligence artificielle pour améliorer leurs processus d'achat",
+      "format": "carrousel"
     }
   ],
   "sources": [
