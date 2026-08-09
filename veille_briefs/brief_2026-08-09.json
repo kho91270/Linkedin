@@ -1,47 +1,38 @@
 {
-  "date": "2026-08-09",
+  "date": "2024-02-20",
   "funding_alert": {
     "startup": null,
     "amount": null,
     "focus": null
   },
   "key_stat": {
-    "value": "100B",
-    "context": "Le CBP a payé 100 milliards de dollars en remboursements de tarifs IEEPA"
+    "value": "100 milliards de dollars",
+    "context": "Le CBP a payé 100 milliards de dollars en remboursements de droits de douane IEEPA"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Intelligence artificielle dans les achats",
-    "why_it_matters": "L'intelligence artificielle peut aider les acheteurs à relever les défis de livraison sous contrainte"
+    "subject": "Remboursements de droits de douane IEEPA",
+    "why_it_matters": "Les acheteurs doivent être conscients des évolutions réglementaires pour optimiser leurs stratégies d'approvisionnement"
   },
   "post_angles": [
     {
-      "pillar": "analyste",
-      "hook": "Comment l'intelligence artificielle peut-elle aider les acheteurs à relever les défis de livraison sous contrainte ?",
+      "pillar": "Supply Chain",
+      "hook": "Découvrez comment les remboursements de droits de douane IEEPA impactent votre chaîne d'approvisionnement",
       "format": "texte"
     },
     {
-      "pillar": "terrain",
-      "hook": "Découvrez comment les entreprises utilisent l'intelligence artificielle pour améliorer leurs processus d'achat",
-      "format": "carrousel"
+      "pillar": "Procurement",
+      "hook": "Comment les acheteurs peuvent-ils profiter des remboursements de droits de douane IEEPA ?",
+      "format": "question"
     }
   ],
   "sources": [
-    "CPO Rising",
     "Supply Chain Dive"
   ],
   "raw_articles": [
-    {
-      "source": "CPO Rising",
-      "title": "AI Rising 2026 Pt. 5 (State of Procurement Series): CPO Challenges in 2026: Delivering Under Constraint",
-      "link": "https://cporising.com/2026/08/07/ai-rising-2026-pt-5-state-of-procurement-series-cpo-challenges-in-2026-delivering-under-constraint/?utm_source=rss&utm_medium=rss&utm_campaign=ai-rising-2026-pt-5-state-of-procurement-series-cpo-challenges-in-2026-delivering-under-constraint",
-      "summary": "<p>Our new weekly series brings industry insights around Ardent Partners&#8217; AI Rising 2026: The State of Procurement AI report, sponsored by ORO Labs and Fairmarkit, examining how CPOs and senior&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/08/07/ai-rising-2026-pt-5-state-of-procurement-series-cpo-challenges-in-2026-delivering-under-constraint/\">AI Rising 2026 Pt. 5 (State of Procurement Series): CPO Challenges in 2026: Delivering Under Constraint</a> appeared first on <a href=",
-      "published": "2026-08-07T10:02:51",
-      "relevance_score": 13
-    },
     {
       "source": "Supply Chain Dive",
       "title": "CBP has paid $100B in IEEPA tariff refunds",
