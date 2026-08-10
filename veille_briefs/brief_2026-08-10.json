@@ -1,4 +1,45 @@
 {
-  "date": "2026-08-10",
-  "status": "NO_NEWS"
+  "date": "2024-02-20",
+  "funding_alert": {
+    "startup": null,
+    "amount": null,
+    "focus": null
+  },
+  "key_stat": {
+    "value": "SAP Business Network",
+    "context": "Réseau d'entreprise pour transactions et collaboration fournisseurs"
+  },
+  "new_tool": {
+    "name": "BTP et Agentic AI",
+    "description": "Outils pour redefinir la connectivité d'entreprise"
+  },
+  "hot_topic": {
+    "subject": "Réseau d'entreprise pour la passation des marchés",
+    "why_it_matters": "Amélioration de la collaboration et de la connectivité entre les entreprises et les fournisseurs"
+  },
+  "post_angles": [
+    {
+      "pillar": "Procurement",
+      "hook": "Découvrez comment le SAP Business Network révolutionne la passation des marchés",
+      "format": "texte"
+    },
+    {
+      "pillar": "Technologie",
+      "hook": "Comment BTP et Agentic AI transforment la connectivité d'entreprise ?",
+      "format": "carrousel"
+    }
+  ],
+  "sources": [
+    "CPO Rising"
+  ],
+  "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "The Next SAP Business Network (Pt. One): How BTP and Agentic AI Are Redefining Enterprise Connectivity",
+      "link": "https://cporising.com/2026/08/10/the-next-sap-business-network-pt-one-how-btp-and-agentic-ai-are-redefining-enterprise-connectivity/?utm_source=rss&utm_medium=rss&utm_campaign=the-next-sap-business-network-pt-one-how-btp-and-agentic-ai-are-redefining-enterprise-connectivity",
+      "summary": "<p>For most of its history, the SAP Business Network and its predecessor, the Ariba Supplier Network, served as procurement&#8217;s central hub for transactions and supplier collaboration, expanding over time to&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/08/10/the-next-sap-business-network-pt-one-how-btp-and-agentic-ai-are-redefining-enterprise-connectivity/\">The Next SAP Business Network (Pt. One): How BTP and Agentic AI Are Redefining Enterprise Connectivity</a> appeared first ",
+      "published": "2026-08-10T11:55:05",
+      "relevance_score": 6
+    }
+  ]
 }
