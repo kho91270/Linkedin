@@ -1,5 +1,5 @@
 {
-  "date": "2024-02-20",
+  "date": "2024-09-16",
   "funding_alert": {
     "startup": null,
     "amount": null,
@@ -7,7 +7,7 @@
   },
   "key_stat": {
     "value": "200M",
-    "context": "Clorox prévoit un impact inflationniste de 200M$ lié aux coûts de la chaîne d'approvisionnement"
+    "context": "Clorox prévoit un impact inflationniste de 200 millions de dollars, en partie dû aux coûts de la chaîne d'approvisionnement"
   },
   "new_tool": {
     "name": "SAP Business Network",
@@ -15,7 +15,7 @@
   },
   "hot_topic": {
     "subject": "Inflation et chaîne d'approvisionnement",
-    "why_it_matters": "Les acheteurs doivent être conscients de l'impact de l'inflation sur les coûts de la chaîne d'approvisionnement"
+    "why_it_matters": "Les acheteurs doivent être conscients de l'impact de l'inflation sur leurs coûts et leur chaîne d'approvisionnement"
   },
   "post_angles": [
     {
