@@ -7,26 +7,26 @@
   },
   "key_stat": {
     "value": "200M",
-    "context": "Clorox prévoit un impact inflationniste de 200M$ sur ses coûts de chaîne d'approvisionnement"
+    "context": "Clorox prévoit un impact inflationniste de 200M$ lié aux coûts de la chaîne d'approvisionnement"
   },
   "new_tool": {
     "name": "SAP Business Network",
-    "description": "plateforme de connectivité d'entreprise rénovée avec BTP et Agentic AI"
+    "description": "Plateforme de connexion d'entreprise révolutionnée par BTP et Agentic AI"
   },
   "hot_topic": {
-    "subject": "l'automatisation de la chaîne d'approvisionnement",
-    "why_it_matters": "pour améliorer l'efficacité et réduire les coûts"
+    "subject": "Inflation et chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent être conscients de l'impact de l'inflation sur les coûts de la chaîne d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'inflation affecte-t-elle vos coûts de chaîne d'approvisionnement ?",
-      "format": "question"
+      "hook": "L'inflation frappe la chaîne d'approvisionnement !",
+      "format": "texte"
     },
     {
       "pillar": "terrain",
-      "hook": "Découvrez comment les entreprises comme FedEx et Amazon utilisent les bras robotiques pour améliorer leur chaîne d'approvisionnement",
-      "format": "texte"
+      "hook": "Comment les entreprises comme Clorox et Ahold Delhaize s'adaptent-elles à l'inflation ?",
+      "format": "carrousel"
     }
   ],
   "sources": [
