@@ -1,0 +1,58 @@
+{
+  "content_fr": "L'inflation frappe la chaîne d'approvisionnement !\n\nEn tant que Category Manager, j'ai constaté que les coûts liés à la chaîne d'approvisionnement peuvent avoir un impact significatif sur les résultats financiers d'une entreprise. Par exemple, Clorox prévoit un impact de 200M$ en raison de l'inflation et des coûts de la chaîne d'approvisionnement.\n\nC'est pourquoi je pense qu'il est essentiel d'avoir une vision claire de la chaîne d'approvisionnement pour anticiper les risques et optimiser les coûts. \n\nComment les entreprises peuvent-elles renforcer leur chaîne d'approvisionnement face à l'inflation ?\n \n#RésilienceDeLaChaîneDapprovisionnement #Inflation #Procuretech 💡📈🔍",
+  "content_en": "Inflation hits hard! \nAs a Category Manager, I've seen companies like Clorox forecast a $200M impact due to inflation and supply chain costs. \nMy insight: proactive supply chain management is crucial to mitigate these risks. \nHow can we leverage tools like SAP Business Network to boost resilience? \n#SupplyChainResilience #ProcurementStrategy #RiskManagement 💡📈💻",
+  "content_x_fr": "\"Clorox prévoit 200M$ d'impact en raison de l'inflation. Comment renforcer la chaîne d'approvisionnement face à ces risques ? #procuretech\"",
+  "content_x_en": "\"Clorox expects $200M impact from inflation & supply chain costs. How can businesses bolster their supply chains?\" #resilience",
+  "pillar": "insight",
+  "format": "insight",
+  "generated_date": "2026-08-11 17:55",
+  "status": "pending_approval",
+  "lang": "both",
+  "quality_report": {
+    "timestamp": "2026-08-11 17:55",
+    "passed": false,
+    "score_fr": {
+      "total": 67,
+      "details": {
+        "hook": 20,
+        "structure": 17,
+        "longueur": 12,
+        "engagement": 11,
+        "authenticite": 7
+      },
+      "char_count": 484
+    },
+    "unique_fr": true,
+    "hooks_fr": {
+      "original": "L'inflation menace la chaîne d'approvisionnement !",
+      "hook_a": "J'ai peur pour mes coûts !",
+      "hook_b": "Mon budget explose !"
+    },
+    "score_en": {
+      "total": 70,
+      "details": {
+        "hook": 15,
+        "structure": 17,
+        "longueur": 20,
+        "engagement": 11,
+        "authenticite": 7
+      },
+      "char_count": 361
+    },
+    "unique_en": true,
+    "hooks_en": {
+      "original": "Inflation hits hard!",
+      "hook_a": "I'm feeling the pinch!",
+      "hook_b": "My costs are soaring!"
+    }
+  },
+  "image": {
+    "status": "complete",
+    "url": "https://cdn.leonardo.ai/users/3d14e72a-e0c9-46d3-a916-e31db4054e4b/generations/c360ad74-1088-49fd-8784-9ec43fa551ce/Leonardo_Creative_A_navy_blue_supply_chain_link_breaking_with_0.jpg",
+    "local_path": "generated_images/img_20260811_1755_insight.png",
+    "prompt": "A navy blue supply chain link breaking, with light blue accents and white fragments scattering, set against a subtle gradient background, conveying disruption and financial impact."
+  },
+  "publish_date": "2026-08-12",
+  "approval_status": "pending",
+  "created_at": "2026-08-11 17:55"
+}
