@@ -7,20 +7,20 @@
   },
   "key_stat": {
     "value": "300M",
-    "context": "Nintendo recoupe 300M$ en remboursement de droits de douane"
+    "context": "Nintendo recoupe 300M$ de remboursements de droits de douane"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Intelligence Artificielle dans la chaîne d'approvisionnement",
-    "why_it_matters": "L'IA peut améliorer l'efficacité et la résilience de la chaîne d'approvisionnement"
+    "subject": "L'impact de l'intelligence artificielle sur la chaîne d'approvisionnement",
+    "why_it_matters": "Les acheteurs doivent comprendre comment l'IA peut améliorer l'efficacité et la résilience de leur chaîne d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'IA peut-elle révolutionner votre chaîne d'approvisionnement ?",
+      "hook": "Comment l'IA va-t-elle révolutionner votre chaîne d'approvisionnement ?",
       "format": "texte"
     },
     {
@@ -36,9 +36,9 @@
   "raw_articles": [
     {
       "source": "CPO Rising",
-      "title": "AI Rising 2026 Pt. 6 (State of Procurement Series): What Is Driving the AI Agenda",
+      "title": "AI Rising 2026 Pt. 6 (State of Procurement AI Series): What Is Driving the AI Agenda",
       "link": "https://cporising.com/2026/08/12/ai-rising-2026-pt-6-state-of-procurement-series-what-is-driving-the-ai-agenda/?utm_source=rss&utm_medium=rss&utm_campaign=ai-rising-2026-pt-6-state-of-procurement-series-what-is-driving-the-ai-agenda",
-      "summary": "<p>Our new weekly series brings industry insights around Ardent Partners&#8217; AI Rising 2026: The State of Procurement AI report, sponsored by ORO Labs and Fairmarkit, examining how CPOs and senior&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/08/12/ai-rising-2026-pt-6-state-of-procurement-series-what-is-driving-the-ai-agenda/\">AI Rising 2026 Pt. 6 (State of Procurement Series): What Is Driving the AI Agenda</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SI",
+      "summary": "<p>Our new weekly series brings industry insights around Ardent Partners&#8217; AI Rising 2026: The State of Procurement AI report, sponsored by ORO Labs and Fairmarkit, examining how CPOs and senior&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/08/12/ai-rising-2026-pt-6-state-of-procurement-series-what-is-driving-the-ai-agenda/\">AI Rising 2026 Pt. 6 (State of Procurement AI Series): What Is Driving the AI Agenda</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE",
       "published": "2026-08-12T10:02:59",
       "relevance_score": 13
     },
@@ -68,26 +68,18 @@
     },
     {
       "source": "Supply Chain Dive",
+      "title": "Walmart flags fewer supplier standard violations",
+      "link": "https://www.supplychaindive.com/news/walmart-flags-fewer-supplier-standard-violations/827562/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/dpiVgKtlIMKJFC4tCdas8ADiOeoCJE5WEtYsN5tMbSw/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjU5Nzg0MzIwLmpwZw==.webp\" /></div></figure><p>The retailer logged 754 cases in fiscal 2026, down 35% year over year, according to its latest ESG report.</p>",
+      "published": "2026-08-12T14:30:34",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
       "title": "Nintendo recoups $300M in tariff refunds as memory crunch intensifies",
       "link": "https://www.supplychaindive.com/news/nintendo-recoups-300m-in-tariff-refunds-as-memory-crunch-intensifies/827380/",
       "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/LsFycnwy1c61NBKGGDqiavkQQ9R6LSdx9y8p89O5Sng/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjE4NzAwMDI5LmpwZw==.webp\" /></div></figure><p>The video game console maker said it absorbed most duties last year, but it faces another supply chain hurdle as memory prices continue to rise.&nbsp;</p>",
       "published": "2026-08-11T13:58:00",
-      "relevance_score": 4
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "Ahold Delhaize winds down plans for 2 automated frozen warehouses",
-      "link": "https://www.supplychaindive.com/news/ahold-delhaize-winds-down-plans-for-2-automated-frozen-warehouses/827086/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/8S7VIFx1Y8n9rwqbCyvdJfsJFDTjrDehBjIC2CjzQPk/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9mb29kLWxpb24tc3RvcmUtZXh0ZXJpb3IuanBn.webp\" /></div></figure><p>The grocer and supply chain solutions company Americold are closing a facility in Pennsylvania and halting plans for one&nbsp;in Connecticut.&nbsp;</p>",
-      "published": "2026-08-10T14:00:00",
-      "relevance_score": 4
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "FedEx, Amazon pursue expanded use of robotic arms",
-      "link": "https://www.supplychaindive.com/news/fedex-amazon-pursue-expanded-use-of-robotic-arms/827221/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/wlBlMfLPkQYxqS_kv19SpaVvW09u4pXl3Yssfi_Sn3I/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9ibG9nLWZlZGV4LWhhZ2Vyc3Rvd24uanBn.webp\" /></div></figure><p>FedEx has deployed trailer loading systems at a Maryland hub, while Amazon aims to double its robotic arms fleet this year amid an industry push for automation.</p>",
-      "published": "2026-08-10T13:49:00",
       "relevance_score": 4
     }
   ]
