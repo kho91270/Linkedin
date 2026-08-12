@@ -7,7 +7,7 @@
   },
   "key_stat": {
     "value": "200M",
-    "context": "Clorox prévoit un impact de l'inflation de 200M$ sur ses coûts de chaîne d'approvisionnement"
+    "context": "Clorox prévoit un impact de l'inflation de 200M$"
   },
   "new_tool": {
     "name": null,
@@ -15,17 +15,17 @@
   },
   "hot_topic": {
     "subject": "Résilience de la chaîne d'approvisionnement",
-    "why_it_matters": "Les entreprises comme GE Appliances et Clorox prennent des mesures pour renforcer leur chaîne d'approvisionnement face à l'inflation et aux perturbations"
+    "why_it_matters": "Les entreprises doivent adapter leur stratégie d'approvisionnement pour faire face aux défis de la chaîne d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment les entreprises peuvent-elles renforcer leur chaîne d'approvisionnement face à l'inflation ?",
+      "hook": "Comment les entreprises peuvent-elles renforcer leur chaîne d'approvisionnement ?",
       "format": "question"
     },
     {
       "pillar": "terrain",
-      "hook": "Découvrez comment Walmart et FedEx utilisent la technologie pour améliorer leur chaîne d'approvisionnement",
+      "hook": "Découvrez comment Clorox améliore sa chaîne d'approvisionnement grâce à une transition ERP",
       "format": "texte"
     }
   ],
