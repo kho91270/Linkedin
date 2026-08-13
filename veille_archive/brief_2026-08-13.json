@@ -7,7 +7,7 @@
   },
   "key_stat": {
     "value": "300M",
-    "context": "Nintendo recoupe 300M$ en remboursements de droits de douane"
+    "context": "Nintendo recoupe 300M$ en remboursement de tarifs douaniers"
   },
   "new_tool": {
     "name": null,
@@ -20,7 +20,7 @@
   "post_angles": [
     {
       "pillar": "analyste",
-      "hook": "Comment l'IA peut-elle transformer votre chaîne d'approvisionnement ?",
+      "hook": "Comment l'IA peut-elle révolutionner votre chaîne d'approvisionnement ?",
       "format": "texte"
     },
     {
