@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-13",
+  "date": "2024-03-16",
   "funding_alert": {
     "startup": null,
     "amount": null,
@@ -7,7 +7,7 @@
   },
   "key_stat": {
     "value": "moins de violations des normes des fournisseurs",
-    "context": "Walmart signale une diminution des violations des normes des fournisseurs"
+    "context": "Walmart a signalé une diminution des violations des normes des fournisseurs"
   },
   "new_tool": {
     "name": null,
@@ -15,7 +15,7 @@
   },
   "hot_topic": {
     "subject": "Intelligence Artificielle dans les achats",
-    "why_it_matters": "L'IA peut améliorer l'efficacité et la prise de décision dans les processus d'achat"
+    "why_it_matters": "L'IA peut améliorer les processus d'achat et de gestion des fournisseurs"
   },
   "post_angles": [
     {
@@ -24,8 +24,8 @@
       "format": "texte"
     },
     {
-      "pillar": "analyse de marché",
-      "hook": "Quels sont les défis et les opportunités de l'adoption de l'IA dans les achats ?",
+      "pillar": "acheteur",
+      "hook": "Quels sont les avantages de l'adoption de l'IA dans les équipes d'achat ?",
       "format": "carrousel"
     }
   ],
