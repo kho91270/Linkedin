@@ -1,31 +1,31 @@
 {
-  "date": "2024-02-20",
+  "date": "2026-08-13",
   "funding_alert": {
     "startup": null,
     "amount": null,
     "focus": null
   },
   "key_stat": {
-    "value": "300M",
-    "context": "Nintendo recoupe 300M$ en remboursement de tarifs douaniers"
+    "value": "moins de violations des normes des fournisseurs",
+    "context": "Walmart signale une diminution des violations des normes des fournisseurs"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Intelligence Artificielle dans la chaîne d'approvisionnement",
-    "why_it_matters": "L'IA peut améliorer l'efficacité et la résilience de la chaîne d'approvisionnement"
+    "subject": "Intelligence Artificielle dans les achats",
+    "why_it_matters": "L'IA peut améliorer l'efficacité et la prise de décision dans les processus d'achat"
   },
   "post_angles": [
     {
-      "pillar": "analyste",
-      "hook": "Comment l'IA peut-elle révolutionner votre chaîne d'approvisionnement ?",
+      "pillar": "procuretech",
+      "hook": "Comment l'IA va-t-elle révolutionner les achats ?",
       "format": "texte"
     },
     {
-      "pillar": "terrain",
-      "hook": "Quels sont les défis et les opportunités de l'adoption de l'IA dans la chaîne d'approvisionnement ?",
+      "pillar": "analyse de marché",
+      "hook": "Quels sont les défis et les opportunités de l'adoption de l'IA dans les achats ?",
       "format": "carrousel"
     }
   ],
@@ -44,42 +44,10 @@
     },
     {
       "source": "Supply Chain Dive",
-      "title": "Clorox says ERP transition will provide supply chain gains this year",
-      "link": "https://www.supplychaindive.com/news/clorox-says-erp-transition-will-provide-supply-chain-gains-this-year/827589/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/jqgP-vuTNL8kyyZWXccMZZL9GeiR8AxGJSwV0L7GyOo/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMDkwMTI0NjYuanBn.webp\" /></div></figure><p><!-- obsidian --></p>\n\n<p>The household cleaning and consumer products maker expects improvements through better planning, lower inventory levels and more automation.</p>",
-      "published": "2026-08-11T16:39:00",
-      "relevance_score": 11
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "Walmart proposes fulfillment warehouse in New York",
-      "link": "https://www.supplychaindive.com/news/walmart-proposes-fulfillment-warehouse-in-new-york/827440/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/g2HYZ9Ow1CnpJsCWS1pp17UtdormJN5E4RLGjYo6L7c/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9kYWxsYXMtZm9ydC13b3J0aC1kaXN0cmlidXRpb24tY2VudGVyLXBhY2thZ2luZy1jb252ZXlvcl85NURmZHlaLmpwZw==.webp\" /></div></figure><p>The retailer filed a request to build a 1.5 million-square-foot facility in Wallkill, Orange County, in July.</p>",
-      "published": "2026-08-11T13:52:00",
-      "relevance_score": 7
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "GE Appliances deepens Texas Instruments sourcing for resilience",
-      "link": "https://www.supplychaindive.com/news/ge-appliances-deepens-texas-instruments-sourcing-for-resilience/827455/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/ksxMnn5g7Eaw6ETZHrF8CbUwZ8CYCD38pvxZJYWmkFU/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HRUFwcGxpYW5jZVRJUGFydG5lcnNoaXBfMS5qcGVn.webp\" /></div></figure><p><!-- obsidian --></p>\n\n<p>The appliance manufacturer aims to maintain continuity of supply by boosting spend with the semiconductor firm, an executive told Supply Chain Dive.</p>",
-      "published": "2026-08-11T15:13:24",
-      "relevance_score": 6
-    },
-    {
-      "source": "Supply Chain Dive",
       "title": "Walmart flags fewer supplier standard violations",
       "link": "https://www.supplychaindive.com/news/walmart-flags-fewer-supplier-standard-violations/827562/",
       "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/dpiVgKtlIMKJFC4tCdas8ADiOeoCJE5WEtYsN5tMbSw/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjU5Nzg0MzIwLmpwZw==.webp\" /></div></figure><p>The retailer logged 754 cases in fiscal 2026, down 35% year over year, according to its latest ESG report.</p>",
       "published": "2026-08-12T14:30:34",
-      "relevance_score": 4
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "Nintendo recoups $300M in tariff refunds as memory crunch intensifies",
-      "link": "https://www.supplychaindive.com/news/nintendo-recoups-300m-in-tariff-refunds-as-memory-crunch-intensifies/827380/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/LsFycnwy1c61NBKGGDqiavkQQ9R6LSdx9y8p89O5Sng/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjE4NzAwMDI5LmpwZw==.webp\" /></div></figure><p>The video game console maker said it absorbed most duties last year, but it faces another supply chain hurdle as memory prices continue to rise.&nbsp;</p>",
-      "published": "2026-08-11T13:58:00",
       "relevance_score": 4
     }
   ]
