@@ -15,17 +15,17 @@
   },
   "hot_topic": {
     "subject": "Intelligence Artificielle dans les achats",
-    "why_it_matters": "L'IA peut améliorer l'efficacité et la prise de décision dans les processus d'achat"
+    "why_it_matters": "L'IA peut améliorer l'efficacité et la prise de décision dans les processus d'approvisionnement"
   },
   "post_angles": [
     {
-      "pillar": "analyste",
-      "hook": "Comment l'IA va-t-elle révolutionner les achats ?",
+      "pillar": "procuretech",
+      "hook": "Comment l'IA révolutionne les achats ?",
       "format": "texte"
     },
     {
-      "pillar": "terrain",
-      "hook": "Quels sont les avantages de l'utilisation de l'IA dans les processus d'achat ?",
+      "pillar": "analyse de marché",
+      "hook": "Quels sont les défis et les opportunités de l'IA dans les achats ?",
       "format": "carrousel"
     }
   ],
