@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-14",
+  "date": "2024-03-16",
   "funding_alert": {
     "startup": null,
     "amount": null,
@@ -14,18 +14,18 @@
     "description": null
   },
   "hot_topic": {
-    "subject": "Intelligence Artificielle dans les achats",
-    "why_it_matters": "L'IA peut améliorer l'efficacité et la prise de décision dans les processus d'approvisionnement"
+    "subject": "Intelligence artificielle dans les achats",
+    "why_it_matters": "L'intelligence artificielle peut améliorer l'efficacité et la transparence dans les processus d'approvisionnement"
   },
   "post_angles": [
     {
       "pillar": "procuretech",
-      "hook": "Comment l'IA révolutionne les achats ?",
-      "format": "texte"
+      "hook": "Comment l'intelligence artificielle va-t-elle révolutionner les achats ?",
+      "format": "question"
     },
     {
       "pillar": "analyse de marché",
-      "hook": "Quels sont les défis et les opportunités de l'IA dans les achats ?",
+      "hook": "Découvrez les dernières tendances en matière d'intelligence artificielle dans les achats",
       "format": "carrousel"
     }
   ],
