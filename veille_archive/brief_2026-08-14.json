@@ -1,5 +1,5 @@
 {
-  "date": "2024-03-16",
+  "date": "2024-02-20",
   "funding_alert": {
     "startup": null,
     "amount": null,
@@ -15,18 +15,18 @@
   },
   "hot_topic": {
     "subject": "Intelligence artificielle dans les achats",
-    "why_it_matters": "L'intelligence artificielle peut améliorer l'efficacité et la transparence dans les processus d'approvisionnement"
+    "why_it_matters": "L'intelligence artificielle peut améliorer l'efficacité et la prise de décision dans les processus d'achat"
   },
   "post_angles": [
     {
-      "pillar": "procuretech",
-      "hook": "Comment l'intelligence artificielle va-t-elle révolutionner les achats ?",
-      "format": "question"
+      "pillar": "ProcureTech",
+      "hook": "L'avenir des achats est dans l'intelligence artificielle !",
+      "format": "texte"
     },
     {
-      "pillar": "analyse de marché",
-      "hook": "Découvrez les dernières tendances en matière d'intelligence artificielle dans les achats",
-      "format": "carrousel"
+      "pillar": "Achats",
+      "hook": "Comment l'intelligence artificielle peut améliorer vos processus d'achat ?",
+      "format": "question"
     }
   ],
   "sources": [
@@ -36,11 +36,11 @@
   "raw_articles": [
     {
       "source": "CPO Rising",
-      "title": "AI Rising 2026 Pt. 6 (State of Procurement AI Series): What Is Driving the AI Agenda",
-      "link": "https://cporising.com/2026/08/12/ai-rising-2026-pt-6-state-of-procurement-series-what-is-driving-the-ai-agenda/?utm_source=rss&utm_medium=rss&utm_campaign=ai-rising-2026-pt-6-state-of-procurement-series-what-is-driving-the-ai-agenda",
-      "summary": "<p>Our new weekly series brings industry insights around Ardent Partners&#8217; AI Rising 2026: The State of Procurement AI report, sponsored by ORO Labs and Fairmarkit, examining how CPOs and senior&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/08/12/ai-rising-2026-pt-6-state-of-procurement-series-what-is-driving-the-ai-agenda/\">AI Rising 2026 Pt. 6 (State of Procurement AI Series): What Is Driving the AI Agenda</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE",
-      "published": "2026-08-12T10:02:59",
-      "relevance_score": 13
+      "title": "The Path to AI-First Procurement, Pt.1: What Does AI First Mean?",
+      "link": "https://cporising.com/2026/08/14/the-path-to-ai-first-procurement-pt-1-what-does-ai-first-mean/?utm_source=rss&utm_medium=rss&utm_campaign=the-path-to-ai-first-procurement-pt-1-what-does-ai-first-mean",
+      "summary": "<p>Procurement is entering a decisive shift. While enthusiasm for artificial intelligence is high, most organizations struggle with a fundamental challenge: bridging the gap between ambition and operational readiness. Teams remain&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/08/14/the-path-to-ai-first-procurement-pt-1-what-does-ai-first-mean/\">The Path to AI-First Procurement, Pt.1: What Does AI First Mean?</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE",
+      "published": "2026-08-14T10:02:40",
+      "relevance_score": 6
     },
     {
       "source": "Supply Chain Dive",
