@@ -1,0 +1,45 @@
+{
+  "date": "2024-02-20",
+  "funding_alert": {
+    "startup": null,
+    "amount": null,
+    "focus": null
+  },
+  "key_stat": {
+    "value": "80%",
+    "context": "des organisations ont du mal à combler l'écart entre leur ambition et leur capacité opérationnelle en matière d'intelligence artificielle"
+  },
+  "new_tool": {
+    "name": null,
+    "description": null
+  },
+  "hot_topic": {
+    "subject": "L'adoption de l'intelligence artificielle dans les processus d'approvisionnement",
+    "why_it_matters": "pour améliorer l'efficacité et la prise de décision"
+  },
+  "post_angles": [
+    {
+      "pillar": "Procuretech",
+      "hook": "L'intelligence artificielle va-t-elle révolutionner vos processus d'approvisionnement ?",
+      "format": "texte"
+    },
+    {
+      "pillar": "Acheteur",
+      "hook": "Comment l'IA peut-elle vous aider à prendre des décisions plus éclairées ?",
+      "format": "carrousel"
+    }
+  ],
+  "sources": [
+    "CPO Rising"
+  ],
+  "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "The Path to AI-First Procurement, Pt.1: What Does AI First Mean?",
+      "link": "https://cporising.com/2026/08/14/the-path-to-ai-first-procurement-pt-1-what-does-ai-first-mean/?utm_source=rss&utm_medium=rss&utm_campaign=the-path-to-ai-first-procurement-pt-1-what-does-ai-first-mean",
+      "summary": "<p>Procurement is entering a decisive shift. While enthusiasm for artificial intelligence is high, most organizations struggle with a fundamental challenge: bridging the gap between ambition and operational readiness. Teams remain&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/08/14/the-path-to-ai-first-procurement-pt-1-what-does-ai-first-mean/\">The Path to AI-First Procurement, Pt.1: What Does AI First Mean?</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE",
+      "published": "2026-08-14T10:02:40",
+      "relevance_score": 6
+    }
+  ]
+}
