@@ -19,13 +19,13 @@
   },
   "post_angles": [
     {
-      "pillar": "Procuretech",
-      "hook": "Comment l'IA peut révolutionner votre fonction procurement ?",
+      "pillar": "analyste",
+      "hook": "L'intelligence artificielle révolutionne la fonction procurement !",
       "format": "texte"
     },
     {
-      "pillar": "Analyse de marché",
-      "hook": "Quels sont les défis et les opportunités de l'adoption de l'IA dans la procurement ?",
+      "pillar": "terrain",
+      "hook": "Comment l'IA peut améliorer vos processus de procurement ?",
       "format": "carrousel"
     }
   ],
