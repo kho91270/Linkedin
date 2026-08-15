@@ -7,26 +7,26 @@
   },
   "key_stat": {
     "value": "80%",
-    "context": "Des organisations utilisent l'intelligence artificielle pour améliorer leurs processus de procurement"
+    "context": "des organisations ont du mal à combler l'écart entre leur ambition et leur capacité opérationnelle en matière d'intelligence artificielle"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "L'adoption de l'intelligence artificielle dans la fonction procurement",
-    "why_it_matters": "Permettre aux acheteurs de prendre des décisions éclairées et d'automatiser les tâches répétitives"
+    "subject": "L'adoption de l'intelligence artificielle dans les processus de procurement",
+    "why_it_matters": "pour améliorer l'efficacité et la prise de décision"
   },
   "post_angles": [
     {
-      "pillar": "analyste",
-      "hook": "L'intelligence artificielle révolutionne la fonction procurement !",
-      "format": "texte"
+      "pillar": "procuretech",
+      "hook": "L'intelligence artificielle va-t-elle révolutionner vos processus de procurement ?",
+      "format": "question"
     },
     {
-      "pillar": "terrain",
-      "hook": "Comment l'IA peut améliorer vos processus de procurement ?",
-      "format": "carrousel"
+      "pillar": "acheteur",
+      "hook": "Comment l'adoption de l'IA peut améliorer vos résultats en matière d'approvisionnement ?",
+      "format": "texte"
     }
   ],
   "sources": [
