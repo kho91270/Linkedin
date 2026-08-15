@@ -14,19 +14,19 @@
     "description": null
   },
   "hot_topic": {
-    "subject": "L'intelligence artificielle dans la procurement",
-    "why_it_matters": "Les acheteurs peuvent améliorer leur efficacité et prendre des décisions plus éclairées"
+    "subject": "L'adoption de l'intelligence artificielle dans la fonction procurement",
+    "why_it_matters": "Les acheteurs peuvent améliorer leur efficacité et leur prise de décision grâce à l'IA"
   },
   "post_angles": [
     {
-      "pillar": "Procurement",
-      "hook": "Découvrez comment l'intelligence artificielle révolutionne la procurement !",
+      "pillar": "ProcureTech",
+      "hook": "Comment l'IA va-t-elle révolutionner votre fonction procurement ?",
       "format": "texte"
     },
     {
-      "pillar": "Technologie",
-      "hook": "Quels sont les défis et les opportunités de l'adoption de l'intelligence artificielle dans la procurement ?",
-      "format": "question"
+      "pillar": "Analyse de marché",
+      "hook": "Quels sont les défis et les opportunités de l'adoption de l'IA dans la procurement ?",
+      "format": "carrousel"
     }
   ],
   "sources": [
