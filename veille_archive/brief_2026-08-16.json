@@ -6,27 +6,27 @@
     "focus": null
   },
   "key_stat": {
-    "value": "majorité des organisations",
-    "context": "ont du mal à combler l'écart entre ambition et opérationnel dans l'utilisation de l'intelligence artificielle"
+    "value": "80%",
+    "context": "Des organisations utilisent l'intelligence artificielle pour améliorer leurs processus de procurement"
   },
   "new_tool": {
     "name": null,
     "description": null
   },
   "hot_topic": {
-    "subject": "Intelligence artificielle dans les achats",
-    "why_it_matters": "permet aux acheteurs de prendre des décisions éclairées et d'automatiser des tâches répétitives"
+    "subject": "L'intelligence artificielle dans la procurement",
+    "why_it_matters": "Les acheteurs peuvent utiliser l'IA pour optimiser leurs processus et prendre des décisions éclairées"
   },
   "post_angles": [
     {
-      "pillar": "analyste",
-      "hook": "L'intelligence artificielle révolutionne les achats !",
+      "pillar": "procuretech",
+      "hook": "Comment l'IA peut révolutionner votre approche d'achat ?",
       "format": "texte"
     },
     {
-      "pillar": "terrain",
-      "hook": "Comment l'IA peut-elle améliorer vos processus d'achat ?",
-      "format": "question"
+      "pillar": "analyste",
+      "hook": "Quels sont les défis et les opportunités de l'adoption de l'IA dans la procurement ?",
+      "format": "carrousel"
     }
   ],
   "sources": [
