@@ -15,16 +15,16 @@
   },
   "hot_topic": {
     "subject": "L'intelligence artificielle dans la procurement",
-    "why_it_matters": "Les acheteurs peuvent utiliser l'IA pour optimiser leurs processus et prendre des décisions éclairées"
+    "why_it_matters": "L'adoption de l'IA peut aider les acheteurs à prendre des décisions plus éclairées et à améliorer l'efficacité de leurs processus"
   },
   "post_angles": [
     {
-      "pillar": "procuretech",
-      "hook": "Comment l'IA peut révolutionner votre approche d'achat ?",
+      "pillar": "Procurement",
+      "hook": "Comment l'IA va-t-elle révolutionner la fonction achats ?",
       "format": "texte"
     },
     {
-      "pillar": "analyste",
+      "pillar": "Technologie",
       "hook": "Quels sont les défis et les opportunités de l'adoption de l'IA dans la procurement ?",
       "format": "carrousel"
     }
