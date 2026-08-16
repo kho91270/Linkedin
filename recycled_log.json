@@ -5,6 +5,12 @@
       "original_filename": "post_2026-06-21_conversation.json",
       "new_format": "carrousel",
       "strategy": "Reformuler avec nouveau contexte"
+    },
+    {
+      "date": "2026-08-16",
+      "original_filename": "post_2026-07-02_conversation.json",
+      "new_format": "texte",
+      "strategy": "Reformuler avec nouveau contexte"
     }
   ],
   "blacklist": []
