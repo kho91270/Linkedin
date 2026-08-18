@@ -1,0 +1,23 @@
+{
+  "date": "2026-08-18",
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "The Next SAP Business Network (Pt. Two): What SAP’s AI Strategy Means for Procurement",
+      "link": "https://cporising.com/2026/08/17/the-next-sap-business-network-pt-two-what-saps-ai-strategy-means-for-procurement/?utm_source=rss&utm_medium=rss&utm_campaign=the-next-sap-business-network-pt-two-what-saps-ai-strategy-means-for-procurement",
+      "summary": "<p>For most of its history, the SAP Business Network and its predecessor, the Ariba Supplier Network, served as procurement&#8217;s central hub for transactions and supplier collaboration, expanding over time to&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/08/17/the-next-sap-business-network-pt-two-what-saps-ai-strategy-means-for-procurement/\">The Next SAP Business Network (Pt. Two): What SAP’s AI Strategy Means for Procurement</a> appeared first on <a href=\"https://cporising.com\">",
+      "published": "2026-08-17T10:02:16",
+      "relevance_score": 6
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Contract workers could be the supply chain’s end-of-year advantage",
+      "link": "https://www.supplychaindive.com/spons/contract-workers-could-be-the-supply-chains-end-of-year-advantage/827301/",
+      "summary": "<p>When demand spikes, contract workers can help supply chains avoid costly delays.</p>",
+      "published": "2026-08-17T09:00:00",
+      "relevance_score": 4
+    }
+  ]
+}
