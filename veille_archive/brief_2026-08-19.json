@@ -1,0 +1,63 @@
+{
+  "date": "2026-08-19",
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "Supply Chain Dive",
+      "title": "3 ways Kimberly-Clark is using technology to boost supply chain efficiency",
+      "link": "https://www.supplychaindive.com/news/3-ways-kimberly-clark-is-using-technology-to-boost-supply-chain-efficiency/828037/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/rurgfp73rTxTrKA02NlefgFVFTdSHnh-2TPBtgy6xgc/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjQ0ODMzNjE4LmpwZw==.webp\" /></div></figure><p>The CPG maker is leveraging newly installed global procurement software, AI agents and a skill-based training program to unlock improvements.</p>",
+      "published": "2026-08-18T13:55:00",
+      "relevance_score": 11
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Panama Canal continues draft restrictions, ocean carriers up fees",
+      "link": "https://www.supplychaindive.com/news/panama-canal-continues-draft-restrictions-ocean-carriers-up-fees/828039/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/xCmUhUmG_z6ByeFIgeSaHrxE3lFI_1o7ifFa4SwfsLk/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xNjk2MTY0ODY2LmpwZw==.webp\" /></div></figure><p>MSC and CMA CGM are among the liners raising surcharges as the major waterway continues to monitor water levels and adjust water draft restrictions.</p>",
+      "published": "2026-08-18T14:12:40",
+      "relevance_score": 7
+    },
+    {
+      "source": "CPO Rising",
+      "title": "The Next SAP Business Network (Pt. Two): What SAP’s AI Strategy Means for Procurement",
+      "link": "https://cporising.com/2026/08/17/the-next-sap-business-network-pt-two-what-saps-ai-strategy-means-for-procurement/?utm_source=rss&utm_medium=rss&utm_campaign=the-next-sap-business-network-pt-two-what-saps-ai-strategy-means-for-procurement",
+      "summary": "<p>For most of its history, the SAP Business Network and its predecessor, the Ariba Supplier Network, served as procurement&#8217;s central hub for transactions and supplier collaboration, expanding over time to&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/08/17/the-next-sap-business-network-pt-two-what-saps-ai-strategy-means-for-procurement/\">The Next SAP Business Network (Pt. Two): What SAP’s AI Strategy Means for Procurement</a> appeared first on <a href=\"https://cporising.com\">",
+      "published": "2026-08-17T10:02:16",
+      "relevance_score": 6
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Amazon preps 1M-square-foot distribution center in Connecticut",
+      "link": "https://www.supplychaindive.com/news/amazon-preps-1m-square-foot-distribution-center-in-connecticut/828085/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/0nzaiXLaQlLfm26SXgeH5E9KT7LH7Aeo1HaZux9n5xw/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9JTUdfOTM4NS5KUEc=.webp\" /></div></figure><p>The Norwich facility would store, pick, pack and ship goods to sortations centers and localized delivery centers further downstream the supply chain.</p>",
+      "published": "2026-08-18T19:11:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Honeywell Aerospace targets supplier bottlenecks to boost output",
+      "link": "https://www.supplychaindive.com/news/honeywell-aerospace-targets-supplier-bottlenecks-to-boost-output/827975/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/QKXjPBreh8zCW88vqTegB7X2oblnL4MZlhasHGQrTUg/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMzI4MzY3LmpwZw==.webp\" /></div></figure><p><!-- obsidian --></p>\n\n<p>A significant share of the company's 3,000 suppliers underperformed in the first half of the year, President and CEO James Currier said.</p>",
+      "published": "2026-08-18T14:38:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Glossier supply chain leader champions self mastery, stronger representation",
+      "link": "https://www.supplychaindive.com/news/glossier-supply-chain-leader-champions-self-mastery-stronger-representatio/828041/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/3MHq1WFapNQ05tZdiVfLCDmt4upnzV3S45VQurXjYaM/g:nowe:0:4/c:1280:723/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9JTUdfMjY5Ni5qcGVn.webp\" /></div></figure><p>&ldquo;When I go through the door, I want to kick the door off the hinges &mdash; I don&rsquo;t want to be the last Black woman that&rsquo;s invited in the room,&rdquo; VP of Supply Chain and Operations Kinta Gates said.</p>",
+      "published": "2026-08-18T12:17:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Contract workers could be the supply chain’s end-of-year advantage",
+      "link": "https://www.supplychaindive.com/spons/contract-workers-could-be-the-supply-chains-end-of-year-advantage/827301/",
+      "summary": "<p>When demand spikes, contract workers can help supply chains avoid costly delays.</p>",
+      "published": "2026-08-17T09:00:00",
+      "relevance_score": 4
+    }
+  ]
+}
