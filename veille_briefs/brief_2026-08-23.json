@@ -1,15 +1,4 @@
 {
   "date": "2026-08-23",
-  "status": "ERROR",
-  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
-  "raw_articles": [
-    {
-      "source": "Supply Chain Dive",
-      "title": "US to temporarily relieve ground beef tariffs in bid to lower prices",
-      "link": "https://www.supplychaindive.com/news/us-beef-prices-tariff-relief-trump/828510/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/JAeGUu_wL4B7n5rws5oN9nl2XEOydf9NCZQlSp3TQ2o/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjc3NzM3MjQzLmpwZw==.webp\" /></div></figure><p>President Donald Trump said he will allow 300,000 metric tons of product to enter the country duty-free for the next 90 days as domestic production is set to hit the lowest level since 1970.</p>",
-      "published": "2026-08-21T16:27:00",
-      "relevance_score": 7
-    }
-  ]
+  "status": "NO_NEWS"
 }
