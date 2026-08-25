@@ -1,0 +1,23 @@
+{
+  "date": "2026-08-25",
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "AI Rising 2026 Pt. 7 (State of Procurement AI Series): Under Pressure: The Next Phase of SaaS",
+      "link": "https://cporising.com/2026/08/24/ai-rising-2026-pt-7-state-of-procurement-ai-series-under-pressure-the-next-phase-of-saas/?utm_source=rss&utm_medium=rss&utm_campaign=ai-rising-2026-pt-7-state-of-procurement-ai-series-under-pressure-the-next-phase-of-saas",
+      "summary": "<p>Our new weekly series brings industry insights around Ardent Partners&#8217; AI Rising 2026: The State of Procurement AI report, sponsored by ORO Labs and Fairmarkit, examining how CPOs and senior&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/08/24/ai-rising-2026-pt-7-state-of-procurement-ai-series-under-pressure-the-next-phase-of-saas/\">AI Rising 2026 Pt. 7 (State of Procurement AI Series): Under Pressure: The Next Phase of SaaS</a> appeared first on <a href=\"https://cporising.c",
+      "published": "2026-08-24T10:02:57",
+      "relevance_score": 13
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Solving organized retail theft starts with better supply chain data integrity",
+      "link": "https://www.supplychaindive.com/spons/solving-organized-retail-theft-starts-with-better-supply-chain-data-integri/827522/",
+      "summary": "<p>Cargo theft hit $131M in Q1 alone. Why RFID and serialization are retailers' best defense.</p>",
+      "published": "2026-08-24T09:00:00",
+      "relevance_score": 6
+    }
+  ]
+}
