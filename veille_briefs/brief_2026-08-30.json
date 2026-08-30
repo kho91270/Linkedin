@@ -1,15 +1,4 @@
 {
   "date": "2026-08-30",
-  "status": "ERROR",
-  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
-  "raw_articles": [
-    {
-      "source": "Supply Chain Dive",
-      "title": "Jim Beam maker chooses next chief supply chain officer",
-      "link": "https://www.supplychaindive.com/news/jim-beam-maker-chooses-next-chief-supply-chain-officer/828859/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/Alm6xXhRF5dfxEtHqGRIlwagMWQZ0hS2tfmDTYoqVbk/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjczOTUzOTY2LmpwZw==.webp\" /></div></figure><p>Manuel Caba&ntilde;as has been with Suntory Global Spirits since 2000 and will now oversee manufacturing, distribution, quality, sourcing and operations across the company&rsquo;s global network.</p>",
-      "published": "2026-08-28T13:58:00",
-      "relevance_score": 6
-    }
-  ]
+  "status": "NO_NEWS"
 }
