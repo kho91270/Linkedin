@@ -4,14 +4,6 @@
   "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
   "raw_articles": [
     {
-      "source": "CPO Rising",
-      "title": "The Path to AI-First Procurement, Pt.3: The Operational Reality Gap",
-      "link": "https://cporising.com/2026/08/28/the-path-to-ai-first-procurement-pt-3-the-operational-reality-gap/?utm_source=rss&utm_medium=rss&utm_campaign=the-path-to-ai-first-procurement-pt-3-the-operational-reality-gap",
-      "summary": "<p>Our new article series, &#8220;The Path to AI-First Procurement: Closing the Gap Between AI Ambition and Execution,&#8221; based on new research from Ardent Partners and sponsored by Ivalua, continues today&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/08/28/the-path-to-ai-first-procurement-pt-3-the-operational-reality-gap/\">The Path to AI-First Procurement, Pt.3: The Operational Reality Gap</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PRO",
-      "published": "2026-08-28T10:02:34",
-      "relevance_score": 11
-    },
-    {
       "source": "Supply Chain Dive",
       "title": "Jim Beam maker chooses next chief supply chain officer",
       "link": "https://www.supplychaindive.com/news/jim-beam-maker-chooses-next-chief-supply-chain-officer/828859/",
