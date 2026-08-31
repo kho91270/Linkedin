@@ -1,4 +1,55 @@
 {
   "date": "2026-08-31",
-  "status": "NO_NEWS"
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "AI Rising 2026 Pt. 8 (State of Procurement AI Series): The State of ProcureTech: A Market in Transition",
+      "link": "https://cporising.com/2026/08/31/ai-rising-2026-pt-8-state-of-procurement-ai-series-the-state-of-procuretech-a-market-in-transition/?utm_source=rss&utm_medium=rss&utm_campaign=ai-rising-2026-pt-8-state-of-procurement-ai-series-the-state-of-procuretech-a-market-in-transition",
+      "summary": "<p>Our new weekly series brings industry insights around Ardent Partners&#8217; AI Rising 2026: The State of Procurement AI report, sponsored by ORO Labs and Fairmarkit, examining how CPOs and senior&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/08/31/ai-rising-2026-pt-8-state-of-procurement-ai-series-the-state-of-procuretech-a-market-in-transition/\">AI Rising 2026 Pt. 8 (State of Procurement AI Series): The State of ProcureTech: A Market in Transition</a> appeared first on <a href=",
+      "published": "2026-08-31T10:02:11",
+      "relevance_score": 15
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Williams-Sonoma to spread tariff refunds to vendors, employees",
+      "link": "https://www.supplychaindive.com/news/williams-sonoma-to-spread-tariff-refunds-to-vendors-employees/829090/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/51qZPPAyc8DbrQWHURdjcL_oAc9mcv2X2tisIxnp298/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjE3NTUyMjMyLmpwZw==.webp\" /></div></figure><p>The kitchenware retailer is funneling $10 million toward the retirement accounts of workers who helped it navigate tariffs while also reimbursing vendors for discounts.&nbsp;</p>",
+      "published": "2026-08-31T13:53:00",
+      "relevance_score": 7
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Network flexibility: The key to maintaining service in volatile markets",
+      "link": "https://www.supplychaindive.com/spons/network-flexibility-the-key-to-maintaining-service-in-volatile-markets/828670/",
+      "summary": "<p>Why resilient networks leverage scale, multimodal flexibility and coordinated execution.</p>",
+      "published": "2026-08-31T09:00:00",
+      "relevance_score": 7
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Dollar General deploys AI across distribution centers, stores",
+      "link": "https://www.supplychaindive.com/news/dollar-general-deploys-ai-across-distribution-centers-stores/828966/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/omDUoQqftnNa4NDoi-zn9ga94wPUWiJA2XEgVlcMlxw/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS8yUkY1RUhKLmpwZw==.webp\" /></div></figure><p>The retailer is using Relex Solutions&rsquo; supply chain platform to manage ordering schedules, lead times, supplier coordination and fulfillment methods.</p>",
+      "published": "2026-08-31T14:27:21",
+      "relevance_score": 6
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Heritage Grocers appoints logistics executive",
+      "link": "https://www.supplychaindive.com/news/heritage-grocers-appoints-logistics-executive/829073/",
+      "summary": "<p>As chief logistics officer, Adrian Casta&ntilde;eda will lead transportation, distribution and supply chain operations for the Hispanic and ethnic food retailer.</p>",
+      "published": "2026-08-31T14:12:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Nvidia says supply shortages are limiting AI revenue growth",
+      "link": "https://www.supplychaindive.com/news/nvidia-says-supply-shortages-are-limiting-ai-revenue-growth/829115/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/3qGJZ4RSLc7O2lsZnlk1p6wAJRRLv2VZbTemJuO09Vs/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xNDk0NjIzMzk5X2tLTjl3NVguanBn.webp\" /></div></figure><p>The company increased its supply commitments in Q2 by $160 billion compared with the previous quarter, but it still faces a sourcing bottleneck.</p>",
+      "published": "2026-08-31T11:24:00",
+      "relevance_score": 4
+    }
+  ]
 }
