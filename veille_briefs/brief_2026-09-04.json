@@ -1,0 +1,47 @@
+{
+  "date": "2026-09-04",
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "ProcureTech Pulse: AI in Review",
+      "link": "https://cporising.com/2026/09/02/procuretech-pulse-ai-in-review/?utm_source=rss&utm_medium=rss&utm_campaign=procuretech-pulse-ai-in-review",
+      "summary": "<p>CPO Rising’s ProcureTech Pulse series continues this week with a look back at the most important AI-related ProcureTech news, announcements, and developments from the first half of the year. From&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/09/02/procuretech-pulse-ai-in-review/\">ProcureTech Pulse: AI in Review</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a>.</p>",
+      "published": "2026-09-02T10:02:43",
+      "relevance_score": 11
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "What off-price retailers are saying about tariff refunds",
+      "link": "https://www.supplychaindive.com/news/what-off-price-retailers-are-saying-about-tariff-refunds/829450/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/UdtyMZBHE7Qo0kKT6QtMw7QL7QAtNJSCdO-rQiHcYgU/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9CdXJsaW5ndG9uX1N0b3JlZnJvbnRfSW1hZ2VfMS5qcGc=.webp\" /></div></figure><p>TJX said its $331 million reimbursement was partially offset by supply chain investments, while Burlington's $55 million return will be used to boost customer value.</p>",
+      "published": "2026-09-03T15:36:57",
+      "relevance_score": 9
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Gap, Kohl’s among retailers adding DoorDash delivery option",
+      "link": "https://www.supplychaindive.com/news/gap-kohls-among-retailers-adding-doordash-delivery-option/829329/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/EoPd-SII5iKpz2nXKHQicMNUy25i6KXruzZ4vBIjgIg/g:nowe:0:123/c:1280:723/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9nYXAyLmpwZWc=.webp\" /></div></figure><p>With the new partnerships, DoorDash said it now has more than half a million products eligible for sub-hour delivery.</p>",
+      "published": "2026-09-02T14:06:43",
+      "relevance_score": 7
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Temu owner invests in local fulfillment in face of de minimis changes",
+      "link": "https://www.supplychaindive.com/news/temu-owner-invests-in-local-fulfillment-in-face-of-de-minimis-changes/829446/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/LD147hfI1Cmd9UHsO3PtGAs4VDA42kZnMUqKW1V9AYw/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS8yVDBINDk2LmpwZw==.webp\" /></div></figure><p>With the European Union joining the U.S. in cracking down on low-cost imports, PDD Holdings is bolstering its supply chain infrastructure in affected markets.</p>",
+      "published": "2026-09-03T14:16:01",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "The perfect mix: How convenience stores can balance human ideas and AI in SKU planning",
+      "link": "https://www.supplychaindive.com/news/ai-can-help-c-stores-get-their-product-mix-right-but-merchants-still-have/829277/",
+      "summary": "<p>The right technology can spot sales patterns and flag gaps, but supply chain leaders still need to make the final call about adding and cutting items, one expert said.&nbsp;</p>",
+      "published": "2026-09-02T14:39:00",
+      "relevance_score": 4
+    }
+  ]
+}
