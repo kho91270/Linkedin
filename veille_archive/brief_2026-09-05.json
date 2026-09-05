@@ -1,0 +1,39 @@
+{
+  "date": "2026-09-05",
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "The Path to AI-First Procurement, Pt.4: The Foundation Problem",
+      "link": "https://cporising.com/2026/09/04/the-path-to-ai-first-procurement-pt-4-the-foundation-problem/?utm_source=rss&utm_medium=rss&utm_campaign=the-path-to-ai-first-procurement-pt-4-the-foundation-problem",
+      "summary": "<p>Our new article series, &#8220;The Path to AI-First Procurement: Closing the Gap Between AI Ambition and Execution,&#8221; based on new research from Ardent Partners and sponsored by Ivalua, continues today&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/09/04/the-path-to-ai-first-procurement-pt-4-the-foundation-problem/\">The Path to AI-First Procurement, Pt.4: The Foundation Problem</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT O",
+      "published": "2026-09-04T10:02:15",
+      "relevance_score": 11
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "What off-price retailers are saying about tariff refunds",
+      "link": "https://www.supplychaindive.com/news/what-off-price-retailers-are-saying-about-tariff-refunds/829450/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/UdtyMZBHE7Qo0kKT6QtMw7QL7QAtNJSCdO-rQiHcYgU/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9CdXJsaW5ndG9uX1N0b3JlZnJvbnRfSW1hZ2VfMS5qcGc=.webp\" /></div></figure><p>TJX said its $331 million reimbursement was partially offset by supply chain investments, while Burlington's $55 million return will be used to boost customer value.</p>",
+      "published": "2026-09-03T15:36:57",
+      "relevance_score": 9
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Urban Outfitters’ Nuuly pursues more fulfillment center automation",
+      "link": "https://www.supplychaindive.com/news/urban-outfitters-nuuly-pursues-more-fulfillment-center-automation/829575/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/gFigHuTBMWAaRsz2npcoNAX2CkjATJ7x2WSU1VX0jBQ/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9OLTQ1MTEuanBn.webp\" /></div></figure><p>The rental subscription service aims to launch an automated order sortation system and picking solution at its Kansas City-area facility.</p>",
+      "published": "2026-09-04T14:26:02",
+      "relevance_score": 7
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Temu owner invests in local fulfillment in face of de minimis changes",
+      "link": "https://www.supplychaindive.com/news/temu-owner-invests-in-local-fulfillment-in-face-of-de-minimis-changes/829446/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/LD147hfI1Cmd9UHsO3PtGAs4VDA42kZnMUqKW1V9AYw/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS8yVDBINDk2LmpwZw==.webp\" /></div></figure><p>With the European Union joining the U.S. in cracking down on low-cost imports, PDD Holdings is bolstering its supply chain infrastructure in affected markets.</p>",
+      "published": "2026-09-03T14:16:01",
+      "relevance_score": 4
+    }
+  ]
+}
