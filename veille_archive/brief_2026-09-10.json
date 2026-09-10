@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-10",
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "Supply Chain Dive",
+      "title": "Sportsman’s Warehouse says SKU cuts, inventory timing tweaks pay off",
+      "link": "https://www.supplychaindive.com/news/sportsmans-warehouse-says-sku-cuts-inventory-timing-tweaks-pay-off/829582/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/kC71Vos1-ToD6kXK4Rxy1XPsldrgutqxs1mkVnQjN94/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xNjc1Njc0MzkzLmpwZw==.webp\" /></div></figure><p>&ldquo;Our core in-stocks are significantly improved, and our category level inventory is the healthiest it has been in many years,&rdquo; CEO Paul Stone said.</p>",
+      "published": "2026-09-08T11:38:00",
+      "relevance_score": 7
+    },
+    {
+      "source": "CPO Rising",
+      "title": "Procurement News — September 9, 2026",
+      "link": "https://cporising.com/2026/09/09/procurement-news-september-9-2026/?utm_source=rss&utm_medium=rss&utm_campaign=procurement-news-september-9-2026",
+      "summary": "<p>Welcome to Procurement News, part of our ongoing aggregate news series covering recent supply management headlines and trends pertinent to Chief Procurement Officers and other procurement leaders! Contact us with&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/09/09/procurement-news-september-9-2026/\">Procurement News — September 9, 2026</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a>.",
+      "published": "2026-09-09T10:02:11",
+      "relevance_score": 7
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Ocean freight rates cool despite continued price elevation",
+      "link": "https://www.supplychaindive.com/news/ocean-freight-rates-cool-despite-continued-price-elevation/829800/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/OH20NRxHnSKZmCya4G83ZbroX9b8Ny_G9r9cry4y73I/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjA5NTk2NzEwLmpwZw==.webp\" /></div></figure><p>Although prices have gone down slightly, they are roughly in line with 2024 peak season levels during Red Sea and East Coast labor disruptions.</p>",
+      "published": "2026-09-09T20:04:00",
+      "relevance_score": 5
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Feces in the food supply: What’s next after summer of Cyclospora",
+      "link": "https://www.supplychaindive.com/news/feces-in-the-food-supply-whats-next-after-summer-of-cyclospora/829546/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/c5g-aeBpQbQ5i1sT15yrUJQaNZ0we-kKP5PHrvmMvtU/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9pY2ViZXJnLWxldHR1Y2UuanBn.webp\" /></div></figure><p>The parasite is hard to trace and harder to kill. With recent cuts to food safety regulators, restaurants and food manufacturers will be hard pressed to keep their supply chains clean.</p>",
+      "published": "2026-09-08T14:26:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "CBP wants stakeholder input on supply chain visibility push",
+      "link": "https://www.supplychaindive.com/news/cbp-wants-stakeholder-input-on-supply-chain-visibility-push/829687/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/HrOGSQQNfH7xh0sww5Zoy56erxrWIrKZQPgcjuOmtKw/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy02ODU0NDk0ODJfMS5qcGc=.webp\" /></div></figure><p>The use of traceability technology and potential export documentation collection are among the topics stakeholders can comment on.</p>",
+      "published": "2026-09-08T14:22:52",
+      "relevance_score": 4
+    },
+    {
+      "source": "CPO Rising",
+      "title": "NEW WEBINAR: From AP Automation to AP Intelligence: How AI Is Driving Autonomy, Preventing Fraud, and Improving Financial Visibility",
+      "link": "https://cporising.com/2026/09/08/new-webinar-from-ap-automation-to-ap-intelligence-how-ai-is-driving-autonomy-preventing-fraud-and-improving-financial-visibility/?utm_source=rss&utm_medium=rss&utm_campaign=new-webinar-from-ap-automation-to-ap-intelligence-how-ai-is-driving-autonomy-preventing-fraud-and-improving-financial-visibility",
+      "summary": "<p>Join Ardent Partners and Medius on September 24th (2 PM ET) for a discussion titled &#8220;From AP Automation to AP Intelligence: How AI Is Driving Autonomy, Preventing Fraud, and Improving Financial&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/09/08/new-webinar-from-ap-automation-to-ap-intelligence-how-ai-is-driving-autonomy-preventing-fraud-and-improving-financial-visibility/\">NEW WEBINAR: From AP Automation to AP Intelligence: How AI Is Driving Autonomy, Preventing Fraud, and",
+      "published": "2026-09-08T10:02:14",
+      "relevance_score": 4
+    }
+  ]
+}
