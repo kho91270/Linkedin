@@ -1,4 +1,23 @@
 {
   "date": "2026-09-14",
-  "status": "NO_NEWS"
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "Supply Chain Dive",
+      "title": "Your supply chain has a visibility problem. Your executives have a decision problem.",
+      "link": "https://www.supplychaindive.com/spons/your-supply-chain-has-a-visibility-problem-your-executives-have-a-decision-1/829873/",
+      "summary": "<p>Supply chain leaders have more data than ever and less clarity. The gap is costing them.</p>",
+      "published": "2026-09-14T09:00:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Monitor, recommend, execute: How AI creates a more responsive supply chain",
+      "link": "https://www.supplychaindive.com/spons/monitor-recommend-execute-how-ai-creates-a-more-responsive-supply-chain/830003/",
+      "summary": "<p>AI purpose-built for transportation understands the industry&rsquo;s unique network, systems and constraints.</p>",
+      "published": "2026-09-14T09:00:00",
+      "relevance_score": 4
+    }
+  ]
 }
