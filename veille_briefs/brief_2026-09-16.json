@@ -1,0 +1,55 @@
+{
+  "date": "2026-09-16",
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "The Path to AI-First Procurement, Pt.6: The Data Problem Underneath Procurement’s AI Ambition",
+      "link": "https://cporising.com/2026/09/14/the-path-to-ai-first-procurement-pt-6-the-data-problem-underneath-procurements-ai-ambition/?utm_source=rss&utm_medium=rss&utm_campaign=the-path-to-ai-first-procurement-pt-6-the-data-problem-underneath-procurements-ai-ambition",
+      "summary": "<p>Our new article series, &#8220;The Path to AI-First Procurement: Closing the Gap Between AI Ambition and Execution,&#8221; based on new research from Ardent Partners and sponsored by Ivalua, looks at&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/09/14/the-path-to-ai-first-procurement-pt-6-the-data-problem-underneath-procurements-ai-ambition/\">The Path to AI-First Procurement, Pt.6: The Data Problem Underneath Procurement&#8217;s AI Ambition</a> appeared first on <a href=\"https://",
+      "published": "2026-09-14T10:02:16",
+      "relevance_score": 11
+    },
+    {
+      "source": "CPO Rising",
+      "title": "NEW WEBINAR: How Agentic AI Helps Procurement Stop Savings Leakage Before It Happens",
+      "link": "https://cporising.com/2026/09/15/new-webinar-how-agentic-ai-helps-procurement-stop-savings-leakage-before-it-happens/?utm_source=rss&utm_medium=rss&utm_campaign=new-webinar-how-agentic-ai-helps-procurement-stop-savings-leakage-before-it-happens",
+      "summary": "<p>Join Ardent Partners and GEP on September 30th (2 PM ET) for a discussion titled &#8220;How Agentic AI Helps Procurement Stop Savings Leakage Before It Happens.&#8221; Procurement teams work hard&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/09/15/new-webinar-how-agentic-ai-helps-procurement-stop-savings-leakage-before-it-happens/\">NEW WEBINAR: How Agentic AI Helps Procurement Stop Savings Leakage Before It Happens</a> appeared first on <a href=\"https://cporising.com\">CPO RISING ",
+      "published": "2026-09-15T10:02:08",
+      "relevance_score": 6
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "McCain Foods taps PepsiCo supply chain exec to head operations",
+      "link": "https://www.supplychaindive.com/news/mccain-foods-taps-pepsico-supply-chain-exec-to-head-operations/829776/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/-IvofDL-3FWq1PH8relBu_aSBJXc6CqedUTn-3Mw5Sw/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9NY0NhaW5fRm9vZHNfZnJlbmNoX2ZyaWVzLkpQRw==.webp\" /></div></figure><p>Victoriano Perez Mies joins the frozen food producer as chief manufacturing and operations officer, a role that includes supply chain oversight.</p>",
+      "published": "2026-09-15T13:10:16",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "HPE combats memory constraints with supplier help, better forecasting",
+      "link": "https://www.supplychaindive.com/news/hpe-combats-memory-constraints-with-supplier-help-better-forecasting/830199/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/wf5HmtIsnxhVx3L_Xk6AdYfr_ek1pG5SL5ij0tlyBMo/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xNDQ1Nzg5MTY0LmpwZw==.webp\" /></div></figure><p>The company is pushing to meet AI server demand by signing multiyear pacts to reduce lead times and improve backlog conversion, EVP and CFO Marie Myers said.</p>",
+      "published": "2026-09-15T11:15:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Google helps roll out 25 electric trucks in Texas",
+      "link": "https://www.supplychaindive.com/news/google-helps-roll-out-25-electric-trucks-in-texas/830251/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/29_4B6VKzW7cNAWQ4-JQv2VD3mZIAxdoGoMzUHHnTps/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9uZXZveWFldHJ1Y2sucG5n.webp\" /></div></figure><p>The tech giant is joining a coalition working to accelerate electric carrier Nevoya&rsquo;s deployment and to reduce its supply chain emissions.</p>",
+      "published": "2026-09-14T14:34:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Your supply chain has a visibility problem. Your executives have a decision problem.",
+      "link": "https://www.supplychaindive.com/spons/your-supply-chain-has-a-visibility-problem-your-executives-have-a-decision-1/829873/",
+      "summary": "<p>Supply chain leaders have more data than ever and less clarity. The gap is costing them.</p>",
+      "published": "2026-09-14T09:00:00",
+      "relevance_score": 4
+    }
+  ]
+}
