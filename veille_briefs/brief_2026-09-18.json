@@ -1,0 +1,47 @@
+{
+  "date": "2026-09-18",
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "ProcureTech Pulse — September 16, 2026",
+      "link": "https://cporising.com/2026/09/16/procuretech-pulse-september-16-2026/?utm_source=rss&utm_medium=rss&utm_campaign=procuretech-pulse-september-16-2026",
+      "summary": "<p>CPO Rising&#8217;s ProcureTech Pulse series continues this week with fresh supply management technology news and updates covering a few recent major announcements. If you are a sourcing, procurement, or spend&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/09/16/procuretech-pulse-september-16-2026/\">ProcureTech Pulse — September 16, 2026</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a>.",
+      "published": "2026-09-16T10:02:32",
+      "relevance_score": 11
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "UNFI consolidates Midwest facilities to leverage automation",
+      "link": "https://www.supplychaindive.com/news/unfi-consolidates-midwest-facilities-to-leverage-automation/830616/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/CHAQ5D8QXJtVCJuZr0d4upfKO2oQeMO9tHcOn87vplE/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9VTkZJX2VsZWN0cmljX3NlbWl0cnVjay5qcGc=.webp\" /></div></figure><p>The grocery wholesaler's latest move to shrink its network comes alongside the implementation of lean daily management at 44 distribution centers.</p>",
+      "published": "2026-09-17T11:51:00",
+      "relevance_score": 9
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Macy’s rolls out AI inventory replenishment tool",
+      "link": "https://www.supplychaindive.com/news/macys-rolls-out-ai-inventory-replenishment-tool/830441/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/rdBz8mSTjusTLf6IfQwVYgP822GrAzGMZI4xlKr_iJY/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy03Mjg4MTY3Ni5qcGc=.webp\" /></div></figure><p>The forecasting capability is moving from pilot to broader implementation as the retailer targets improved in-stock levels and operational efficiencies.</p>",
+      "published": "2026-09-16T14:35:52",
+      "relevance_score": 7
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Munchkin taps 20-year industry veteran as first chief supply chain officer",
+      "link": "https://www.supplychaindive.com/news/munchkin-taps-20-year-industry-veteran-as-first-chief-supply-chain-officer/830446/",
+      "summary": "<p>Former Thrasio and Walmart executive&nbsp;Kunal Thakkar joined the baby product maker last month to lead global operations and sourcing, among other functions.&nbsp;</p>",
+      "published": "2026-09-16T15:16:00",
+      "relevance_score": 6
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Good Culture names COO to scale supply chain",
+      "link": "https://www.supplychaindive.com/news/good-culture-names-coo-to-scale-supply-chain/830360/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/vBSbbQWKz8tZAvaGK5e5BMT1gKzZ9lljeuwtrTJJ1eE/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9Hb29kQ3VsdHVyZV9fT3JnYW5pY19MYWN0b3NlX0ZyZWVfQ290dGFnZV9DaGVlc2UuanBn.webp\" /></div></figure><p>Kirk Jensen will focus on strengthening supply chain and manufacturing operations at Good Culture to improve availability and speed to shelf for retail partners, CEO Jesse Merrill said.</p>",
+      "published": "2026-09-16T12:18:00",
+      "relevance_score": 4
+    }
+  ]
+}
