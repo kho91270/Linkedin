@@ -1,15 +1,4 @@
 {
   "date": "2026-09-20",
-  "status": "ERROR",
-  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
-  "raw_articles": [
-    {
-      "source": "CPO Rising",
-      "title": "Is Your AP Team Ready for the Next Wave of AI?",
-      "link": "https://cporising.com/2026/09/18/is-your-ap-team-ready-for-the-next-wave-of-ai/?utm_source=rss&utm_medium=rss&utm_campaign=is-your-ap-team-ready-for-the-next-wave-of-ai",
-      "summary": "<p>Artificial intelligence is fundamentally revolutionizing Accounts Payable. Financial workflows are progressing past traditional invoice digitization, turning toward cognitive systems that automatically spot irregularities, block fraud, handle exceptions, and surface immediate&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/09/18/is-your-ap-team-ready-for-the-next-wave-of-ai/\">Is Your AP Team Ready for the Next Wave of AI?</a> appeared first on <a href=\"https://cporising.com\">CPO RI",
-      "published": "2026-09-18T19:42:18",
-      "relevance_score": 4
-    }
-  ]
+  "status": "NO_NEWS"
 }
