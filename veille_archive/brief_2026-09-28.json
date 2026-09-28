@@ -1,4 +1,15 @@
 {
   "date": "2026-09-28",
-  "status": "NO_NEWS"
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "Supply Chain Dive",
+      "title": "How supply chains can achieve resiliency with quantum optimization",
+      "link": "https://www.supplychaindive.com/spons/how-supply-chains-can-achieve-resiliency-with-quantum-optimization/831267/",
+      "summary": "<p>If your supply chain is drowning in variables, constraints and constant change, quantum optimization may offer a smarter way forward.</p>",
+      "published": "2026-09-28T09:00:00",
+      "relevance_score": 4
+    }
+  ]
 }
