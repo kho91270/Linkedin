@@ -1,0 +1,39 @@
+{
+  "date": "2026-09-30",
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "Supply Chain Dive",
+      "title": "Electrolux appoints chief procurement officer",
+      "link": "https://www.supplychaindive.com/news/electrolux-appoints-chief-procurement-officer/831536/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/IM6U7M4hfFfxnav6A2pLxUe8GwcAD8CzeEHv06_EQ5E/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy00NTQ5NjY5MTIuanBn.webp\" /></div></figure><p>Daniele Rossi will lead sourcing with a focus on working with direct-material suppliers to co-develop sustainable products, the home appliance manufacturer said.</p>",
+      "published": "2026-09-29T14:00:49",
+      "relevance_score": 8
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "3 CPGs discuss automation, sourcing and logistics risks",
+      "link": "https://www.supplychaindive.com/news/3-cpgs-discuss-automation-sourcing-and-logistics-risks/831400/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/9FDMjfU1gRdTAP8f1To_OsdVNgG6oaC9X2YC1Z3dyfg/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMjgxMzE1MTgzLmpwZw==.webp\" /></div></figure><p>At a Barclays conference this month, Colgate-Palmolive and Kimberly-Clark flagged rising material and freight costs, while Procter &amp; Gamble gave a Supply Chain 3.0 update.</p>",
+      "published": "2026-09-29T13:49:00",
+      "relevance_score": 8
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Ross plans 1.75M-square-foot distribution center in California",
+      "link": "https://www.supplychaindive.com/news/ross-plans-175m-square-foot-distribution-center-in-california/831523/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/k8dmGhQGnq540lpRE9Ng0_XgJjg6GdG9FZEA2OYcbeg/g:nowe:0:102/c:3000:1694/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy04NTI0OTk0Ni5qcGc=.webp\" /></div></figure><p>The $500 million investment, which is set to break ground in 2027, is the retailer&rsquo;s 10th distribution center.</p>",
+      "published": "2026-09-29T17:48:00",
+      "relevance_score": 7
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "How supply chains can achieve resiliency with quantum optimization",
+      "link": "https://www.supplychaindive.com/spons/how-supply-chains-can-achieve-resiliency-with-quantum-optimization/831267/",
+      "summary": "<p>If your supply chain is drowning in variables, constraints and constant change, quantum optimization may offer a smarter way forward.</p>",
+      "published": "2026-09-28T09:00:00",
+      "relevance_score": 4
+    }
+  ]
+}
