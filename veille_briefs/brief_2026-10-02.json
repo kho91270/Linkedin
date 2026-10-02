@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-02",
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "Procurement News — September 30, 2026",
+      "link": "https://cporising.com/2026/09/30/procurement-news-september-30-2026/?utm_source=rss&utm_medium=rss&utm_campaign=procurement-news-september-30-2026",
+      "summary": "<p>Welcome to Procurement News, part of our ongoing aggregate news series covering recent supply management headlines and trends pertinent to Chief Procurement Officers and other procurement leaders! Contact us with&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/09/30/procurement-news-september-30-2026/\">Procurement News — September 30, 2026</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a",
+      "published": "2026-09-30T10:02:05",
+      "relevance_score": 7
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Mars hikes sustainably sourced cocoa but falls short of 2025 100% goal",
+      "link": "https://www.supplychaindive.com/news/mars-hikes-sustainably-sourced-cocoa-but-falls-short-of-2025-100-goal/831689/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/memxY4o-4i9tkhMkQH1r3Y_fUgmZlwY4FKDZ42zmv4I/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy01MzQwMjc2Ml9yMVdrc2NDLmpwZw==.webp\" /></div></figure><p>The candy and pet care maker&rsquo;s suppliers sourced 98% of cocoa through a responsible sourcing program in 2025.</p>",
+      "published": "2026-09-30T15:06:00",
+      "relevance_score": 6
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Walmart to build Ohio fulfillment center for oversized goods",
+      "link": "https://www.supplychaindive.com/news/walmart-to-build-ohio-fulfillment-center-for-oversized-goods/831792/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/0dW2IayRlU32wZ487gdKU02cJZ40Tw95SP7HxAbo4Zw/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS93YWxtYXJ0LWZ1bGxmaWxsbWVudC53ZWJw.webp\" /></div></figure><p>The $300 million investment near Cincinnati will specialize in handling larger, non-sortable items, including televisions and furniture.</p>",
+      "published": "2026-10-01T14:08:16",
+      "relevance_score": 5
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Beyond tariffs, a storm of pressures is hampering SMB supply chains",
+      "link": "https://www.supplychaindive.com/news/beyond-tariffs-a-storm-of-pressures-is-hampering-smb-supply-chains/831880/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/s7kzoCfuVchcCIA-6y27IgyiRUdlVrxaBrRLI7G7YiE/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjk1ODA0NzgyX0xQZ2JhVzYuanBn.webp\" /></div></figure><p>With several variables shifting at once, this has turned out to be a year of chaos for inventory planning.</p>",
+      "published": "2026-10-01T11:40:00",
+      "relevance_score": 4
+    }
+  ]
+}
