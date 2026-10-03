@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-03",
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "Supply Chain Dive",
+      "title": "Walmart to build Ohio fulfillment center for oversized goods",
+      "link": "https://www.supplychaindive.com/news/walmart-to-build-ohio-fulfillment-center-for-oversized-goods/831792/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/0dW2IayRlU32wZ487gdKU02cJZ40Tw95SP7HxAbo4Zw/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS93YWxtYXJ0LWZ1bGxmaWxsbWVudC53ZWJw.webp\" /></div></figure><p>The $300 million investment near Cincinnati will specialize in handling larger, non-sortable items, including televisions and furniture.</p>",
+      "published": "2026-10-01T14:08:16",
+      "relevance_score": 5
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Beyond tariffs, a storm of pressures is hampering SMB supply chains",
+      "link": "https://www.supplychaindive.com/news/beyond-tariffs-a-storm-of-pressures-is-hampering-smb-supply-chains/831880/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/s7kzoCfuVchcCIA-6y27IgyiRUdlVrxaBrRLI7G7YiE/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjk1ODA0NzgyX0xQZ2JhVzYuanBn.webp\" /></div></figure><p>With several variables shifting at once, this has turned out to be a year of chaos for inventory planning.</p>",
+      "published": "2026-10-01T11:40:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "CPO Rising",
+      "title": "Procurement Rising Returns – Episode 401",
+      "link": "https://cporising.com/2026/10/02/procurement-rising-returns-episode-401/?utm_source=rss&utm_medium=rss&utm_campaign=procurement-rising-returns-episode-401",
+      "summary": "<p>The Procurement Rising Podcast is Back!!!! This popular podcast, that began during COVID has returned with a brand new season that kicks off with Episode 401 &#8211; AI Rising 2026: The&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/10/02/procurement-rising-returns-episode-401/\">Procurement Rising Returns &#8211; Episode 401</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a>.</p>",
+      "published": "2026-10-02T15:23:07",
+      "relevance_score": 4
+    }
+  ]
+}
