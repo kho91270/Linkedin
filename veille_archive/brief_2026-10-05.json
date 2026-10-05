@@ -1,4 +1,31 @@
 {
   "date": "2026-10-05",
-  "status": "NO_NEWS"
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "Supply Chain Dive",
+      "title": "Supply chain resilience starts before disruption: Why collaboration and visibility matter",
+      "link": "https://www.supplychaindive.com/spons/supply-chain-resilience-starts-before-disruption-why-collaboration-and-vis/831228/",
+      "summary": "<p>Stronger supplier intelligence helps manufacturers identify risk and respond faster to disruption.</p>",
+      "published": "2026-10-05T09:00:00",
+      "relevance_score": 6
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Why supply chain visibility works best when data is shared",
+      "link": "https://www.supplychaindive.com/spons/why-supply-chain-visibility-works-best-when-data-is-shared/831227/",
+      "summary": "<p>See how shared product data can close supply chain visibility gaps.</p>",
+      "published": "2026-10-05T09:00:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "CPO Rising",
+      "title": "The AI Gap Isn’t What You Think It Is",
+      "link": "https://cporising.com/2026/10/05/the-ai-gap-isnt-what-you-think-it-is/?utm_source=rss&utm_medium=rss&utm_campaign=the-ai-gap-isnt-what-you-think-it-is",
+      "summary": "<p>Like most of you, I have learned to be suspicious whenever the market reaches near-unanimous agreement on anything. Except Gangnam Style (and its 6B+ YouTube views). Since starting in the industry&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/10/05/the-ai-gap-isnt-what-you-think-it-is/\">The AI Gap Isn&#8217;t What You Think It Is</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a>.</p>",
+      "published": "2026-10-05T10:02:01",
+      "relevance_score": 4
+    }
+  ]
 }
