@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-07",
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "Supply Chain Dive",
+      "title": "Levi’s, Marks & Spencer launch renewable energy initiative for fashion suppliers",
+      "link": "https://www.supplychaindive.com/news/levis-marks-spencer-launch-renewable-energy-initiative-for-fashion-supp/832004/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/hhbs7aVxvqSC1j__47dwmw6OgcQ1EdNYTfGBa4EKFtA/g:nowe:0:0/c:3200:1807/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xOTcxMDg3ODQ4LmpwZw==.webp\" /></div></figure><p>The apparel giants launched the &ldquo;Fashion Renewable Collective&rdquo; in collaboration with Schneider Electric to help suppliers across fashion supply chains adopt renewable electricity at scale.</p>",
+      "published": "2026-10-06T11:44:00",
+      "relevance_score": 9
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Top supply chain conferences of 2027",
+      "link": "https://www.supplychaindive.com/news/top-supply-chain-conferences-of-2027/832190/",
+      "summary": "<p>Next year&rsquo;s trade shows will spotlight artificial intelligence and technology insights, sustainability strategies, and how to navigate trade and logistics risks.</p>",
+      "published": "2026-10-06T11:53:00",
+      "relevance_score": 6
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Supply chain resilience starts before disruption: Why collaboration and visibility matter",
+      "link": "https://www.supplychaindive.com/spons/supply-chain-resilience-starts-before-disruption-why-collaboration-and-vis/831228/",
+      "summary": "<p>Stronger supplier intelligence helps manufacturers identify risk and respond faster to disruption.</p>",
+      "published": "2026-10-05T09:00:00",
+      "relevance_score": 6
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "How restaurants can mitigate rising fuel costs",
+      "link": "https://www.supplychaindive.com/news/how-restaurants-can-mitigate-rising-fuel-costs/832023/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/Yvb6mcmKalar7m98_ObbiaDzixpZ2F2X2EnvNApspAg/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9TY3JlZW5zaG90XzIwMjYtMTAtMDJfMTE0MTU3X2xrc2RqYWxrc2pkLnBuZw==.webp\" /></div></figure><p>Evaluating delivery frequency and leveraging route optimization and scenario planning can help brands combat higher transportation expenses, experts say.</p>",
+      "published": "2026-10-05T12:01:00",
+      "relevance_score": 5
+    },
+    {
+      "source": "CPO Rising",
+      "title": "The AI Gap Isn’t What You Think It Is",
+      "link": "https://cporising.com/2026/10/05/the-ai-gap-isnt-what-you-think-it-is/?utm_source=rss&utm_medium=rss&utm_campaign=the-ai-gap-isnt-what-you-think-it-is",
+      "summary": "<p>Like most of you, I have learned to be suspicious whenever the market reaches near-unanimous agreement on anything. Except Gangnam Style (and its 6B+ YouTube views). Since starting in the industry&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/10/05/the-ai-gap-isnt-what-you-think-it-is/\">The AI Gap Isn&#8217;t What You Think It Is</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a>.</p>",
+      "published": "2026-10-05T10:02:01",
+      "relevance_score": 4
+    }
+  ]
+}
