@@ -4,6 +4,14 @@
   "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
   "raw_articles": [
     {
+      "source": "CPO Rising",
+      "title": "AI Rising 2026 Pt. 9 (State of Procurement AI Series): Procurement AI in Action",
+      "link": "https://cporising.com/2026/10/07/ai-rising-2026-pt-9-state-of-procurement-ai-series-procurement-ai-in-action/?utm_source=rss&utm_medium=rss&utm_campaign=ai-rising-2026-pt-9-state-of-procurement-ai-series-procurement-ai-in-action",
+      "summary": "<p>Our new weekly series brings industry insights around Ardent Partners&#8217; AI Rising 2026: The State of Procurement AI report, sponsored by ORO Labs and Fairmarkit, examining how CPOs and senior&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/10/07/ai-rising-2026-pt-9-state-of-procurement-ai-series-procurement-ai-in-action/\">AI Rising 2026 Pt. 9 (State of Procurement AI Series): Procurement AI in Action</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE F",
+      "published": "2026-10-07T10:02:46",
+      "relevance_score": 13
+    },
+    {
       "source": "Supply Chain Dive",
       "title": "Levi’s, Marks & Spencer launch renewable energy initiative for fashion suppliers",
       "link": "https://www.supplychaindive.com/news/levis-marks-spencer-launch-renewable-energy-initiative-for-fashion-supp/832004/",
@@ -13,35 +21,19 @@
     },
     {
       "source": "Supply Chain Dive",
+      "title": "Tractor Supply opens Idaho distribution center with automation, dedicated AI team",
+      "link": "https://www.supplychaindive.com/news/tractor-supply-opens-idaho-distribution-center-with-automation-dedicated-a/831883/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/QMoT68YwCedmtoLoWe8Tu6rP4n1XBLzBMDri6yUWjio/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9SNV82NjYxLmpwZw==.webp\" /></div></figure><p>The retailer's site in Nampa will distribute inventory to 123 stores and includes a group that aims to &quot;apply practical artificial intelligence to operational needs.&quot;</p>",
+      "published": "2026-10-07T14:15:46",
+      "relevance_score": 6
+    },
+    {
+      "source": "Supply Chain Dive",
       "title": "Top supply chain conferences of 2027",
       "link": "https://www.supplychaindive.com/news/top-supply-chain-conferences-of-2027/832190/",
       "summary": "<p>Next year&rsquo;s trade shows will spotlight artificial intelligence and technology insights, sustainability strategies, and how to navigate trade and logistics risks.</p>",
       "published": "2026-10-06T11:53:00",
       "relevance_score": 6
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "Supply chain resilience starts before disruption: Why collaboration and visibility matter",
-      "link": "https://www.supplychaindive.com/spons/supply-chain-resilience-starts-before-disruption-why-collaboration-and-vis/831228/",
-      "summary": "<p>Stronger supplier intelligence helps manufacturers identify risk and respond faster to disruption.</p>",
-      "published": "2026-10-05T09:00:00",
-      "relevance_score": 6
-    },
-    {
-      "source": "Supply Chain Dive",
-      "title": "How restaurants can mitigate rising fuel costs",
-      "link": "https://www.supplychaindive.com/news/how-restaurants-can-mitigate-rising-fuel-costs/832023/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/Yvb6mcmKalar7m98_ObbiaDzixpZ2F2X2EnvNApspAg/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9TY3JlZW5zaG90XzIwMjYtMTAtMDJfMTE0MTU3X2xrc2RqYWxrc2pkLnBuZw==.webp\" /></div></figure><p>Evaluating delivery frequency and leveraging route optimization and scenario planning can help brands combat higher transportation expenses, experts say.</p>",
-      "published": "2026-10-05T12:01:00",
-      "relevance_score": 5
-    },
-    {
-      "source": "CPO Rising",
-      "title": "The AI Gap Isn’t What You Think It Is",
-      "link": "https://cporising.com/2026/10/05/the-ai-gap-isnt-what-you-think-it-is/?utm_source=rss&utm_medium=rss&utm_campaign=the-ai-gap-isnt-what-you-think-it-is",
-      "summary": "<p>Like most of you, I have learned to be suspicious whenever the market reaches near-unanimous agreement on anything. Except Gangnam Style (and its 6B+ YouTube views). Since starting in the industry&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/10/05/the-ai-gap-isnt-what-you-think-it-is/\">The AI Gap Isn&#8217;t What You Think It Is</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a>.</p>",
-      "published": "2026-10-05T10:02:01",
-      "relevance_score": 4
     }
   ]
 }
