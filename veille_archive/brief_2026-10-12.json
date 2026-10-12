@@ -1,4 +1,31 @@
 {
   "date": "2026-10-12",
-  "status": "NO_NEWS"
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "Supply Chain Dive",
+      "title": "BD strikes supply chain pact with Trump administration",
+      "link": "https://www.supplychaindive.com/news/bd-strikes-supply-chain-pact-with-trump-administration/832653/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/3B7GjWZD4I76ESM2a50wiyySQdB2rhgyFSc-bWlScN4/g:nowe:0:0/c:800:451/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9CRC1pcy10aGUtbmF0aW9ucy1sYXJnZXN0LW1hbnVmYWN0dXJlci1vZi1lc3NlbnRpYWwtbWVkaWNhbC1jb25zdW1hYmxlcy5qcGc=.webp\" /></div></figure><p>BD plans to increase U.S. production of essential medical consumables in exchange for relief from future tariffs on its products.</p>",
+      "published": "2026-10-12T13:36:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "2026’s most overrated and underrated supply chain priorities",
+      "link": "https://www.supplychaindive.com/spons/2026s-most-overrated-and-underrated-supply-chain-priorities/832074/",
+      "summary": "<p>Rethink the supply chain wish list to predict less, recover faster and automate smarter.</p>",
+      "published": "2026-10-12T09:00:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "5 steps to a resilient supply chain",
+      "link": "https://www.supplychaindive.com/spons/5-steps-to-a-resilient-supply-chain/831849/",
+      "summary": "<p>Strong supply chains aren't lucky. They're built for resilience. Here's how you can be too.</p>",
+      "published": "2026-10-12T09:00:00",
+      "relevance_score": 4
+    }
+  ]
 }
