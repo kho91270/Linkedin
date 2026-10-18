@@ -1,23 +1,4 @@
 {
   "date": "2026-10-18",
-  "status": "ERROR",
-  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
-  "raw_articles": [
-    {
-      "source": "Supply Chain Dive",
-      "title": "From library to logistics: Cathy Morrow Roberson shares career insights",
-      "link": "https://www.supplychaindive.com/news/from-library-to-logistics-cathy-morrow-roberson-shares-career-insights/833023/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/rvfJeMPhee9TUtOuHEkW-ZxyM0p3E_MXZXcDdO9J_-U/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMzA3MjMwMDc0XzEuanBn.webp\" /></div></figure><p>&ldquo;There are so many more opportunities today than there were when I started my business,&quot; the managing director of Logistics Trends &amp; Insights told Supply Chain Dive.</p>",
-      "published": "2026-10-16T14:34:00",
-      "relevance_score": 4
-    },
-    {
-      "source": "CPO Rising",
-      "title": "Peak Procurement: Zycus Charts a Path Toward Autonomous Outcomes",
-      "link": "https://cporising.com/2026/10/16/peak-procurement-zycus-charts-a-path-toward-autonomous-outcomes/?utm_source=rss&utm_medium=rss&utm_campaign=peak-procurement-zycus-charts-a-path-toward-autonomous-outcomes",
-      "summary": "<p>Last month, Zycus held its annual user conference, Horizon 2026 in Beaver Creek, Colorado, bringing together hundreds of customers, partners, and sponsors for the two day event. Finely curated (as&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/10/16/peak-procurement-zycus-charts-a-path-toward-autonomous-outcomes/\">Peak Procurement: Zycus Charts a Path Toward Autonomous Outcomes</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICE",
-      "published": "2026-10-16T10:02:28",
-      "relevance_score": 4
-    }
-  ]
+  "status": "NO_NEWS"
 }
