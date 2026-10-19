@@ -1,4 +1,23 @@
 {
   "date": "2026-10-19",
-  "status": "NO_NEWS"
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "Supply Chain Dive",
+      "title": "Unlocking the autonomous supply chain: Why execution data has to feed the plan",
+      "link": "https://www.supplychaindive.com/spons/unlocking-the-autonomous-supply-chain-why-execution-data-has-to-feed-the-p/833263/",
+      "summary": "<p>Ditch the war room. Build a supply chain that learns and adapts autonomously.</p>",
+      "published": "2026-10-19T09:00:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Supply chain visibility tells you what happened. Can you see what it cost?",
+      "link": "https://www.supplychaindive.com/spons/supply-chain-visibility-tells-you-what-happened-can-you-see-what-it-cost/832819/",
+      "summary": "<p>Supply chain visibility can tell you what happened. Transportation Financial Intelligence&trade; helps explain what it cost, why it happened and what should happen next.</p>",
+      "published": "2026-10-19T09:00:00",
+      "relevance_score": 4
+    }
+  ]
 }
