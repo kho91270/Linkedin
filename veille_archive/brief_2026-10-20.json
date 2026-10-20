@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-20",
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "The Path to AI-First Procurement, Pt.8: Governance,Trust, and AI Control",
+      "link": "https://cporising.com/2026/10/19/the-path-to-ai-first-procurement-pt-8-governancetrust-and-ai-control/?utm_source=rss&utm_medium=rss&utm_campaign=the-path-to-ai-first-procurement-pt-8-governancetrust-and-ai-control",
+      "summary": "<p>Our article series, &#8220;The Path to AI-First Procurement: Closing the Gap Between AI Ambition and Execution,&#8221; based on new research from Ardent Partners and sponsored by Ivalua, continues today with&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/10/19/the-path-to-ai-first-procurement-pt-8-governancetrust-and-ai-control/\">The Path to AI-First Procurement, Pt.8: Governance,Trust, and AI Control</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR ",
+      "published": "2026-10-19T10:02:31",
+      "relevance_score": 11
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Few major apparel brands pay garment workers a living wage: report",
+      "link": "https://www.supplychaindive.com/news/few-major-apparel-brands-pay-garment-workers-a-living-wage-report/833275/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/k5Ss3Rxncu6AcUfk_ffihgp1lBw4jjhIHSqnH2xYNMQ/g:nowe:0:154/c:2160:1220/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xNDcwMzIzMDIuanBn.webp\" /></div></figure><p>Out of 110 clothing brands &mdash; including Adidas, Chanel and Zara &mdash; only four disclose workers&rsquo; wage levels at garment factories in their supply chains, a new report from Clean Clothes Campaign found.</p>",
+      "published": "2026-10-19T14:02:00",
+      "relevance_score": 9
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Port of Savannah to build 3.5M TEU container terminal",
+      "link": "https://www.supplychaindive.com/news/port-of-savannah-to-build-35m-teu-container-terminal/833246/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/IA7UtHgxhF6oL30pi7wmKCCP_alx0tP3acFhPUlzGjQ/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9odHRwc19fX2dhcG9ydHMuY29tX3dwLWNvbnRlbnRfdXBsb2Fkc18yMDI2XzEwXzI2MTAxNC1HUEEtU0NULVJlbmRlci5qcGc=.webp\" /></div></figure><p>The port expects to be able to handle 12 million TEUs annually once construction is complete.</p>",
+      "published": "2026-10-19T13:55:00",
+      "relevance_score": 7
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Unlocking the autonomous supply chain: Why execution data has to feed the plan",
+      "link": "https://www.supplychaindive.com/spons/unlocking-the-autonomous-supply-chain-why-execution-data-has-to-feed-the-p/833263/",
+      "summary": "<p>Ditch the war room. Build a supply chain that learns and adapts autonomously.</p>",
+      "published": "2026-10-19T09:00:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Supply chain visibility tells you what happened. Can you see what it cost?",
+      "link": "https://www.supplychaindive.com/spons/supply-chain-visibility-tells-you-what-happened-can-you-see-what-it-cost/832819/",
+      "summary": "<p>Supply chain visibility can tell you what happened. Transportation Financial Intelligence&trade; helps explain what it cost, why it happened and what should happen next.</p>",
+      "published": "2026-10-19T09:00:00",
+      "relevance_score": 4
+    }
+  ]
+}
