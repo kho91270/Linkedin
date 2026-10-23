@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-23",
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "Supply Chain Dive",
+      "title": "Hydro Flask maker aims tariff refunds at inventory, packaging",
+      "link": "https://www.supplychaindive.com/news/hydro-flask-maker-aims-tariff-refunds-at-inventory-packaging/833631/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/tPh-xveEhtimdot7AcIi16kCSbn8l8ih75DKZwJSp3U/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjU5MzExMjYwLmpwZw==.webp\" /></div></figure><p>Helen of Troy plans to spend a portion of its expected $80.5 million refund to clean&nbsp;stock and refresh packaging design.&nbsp;</p>",
+      "published": "2026-10-22T12:09:00",
+      "relevance_score": 7
+    },
+    {
+      "source": "CPO Rising",
+      "title": "Procurement News — October 21, 2026",
+      "link": "https://cporising.com/2026/10/21/procurement-news-october-21-2026/?utm_source=rss&utm_medium=rss&utm_campaign=procurement-news-october-21-2026",
+      "summary": "<p>Welcome to Procurement News, part of our ongoing aggregate news series covering recent supply management headlines and trends pertinent to Chief Procurement Officers and other procurement leaders! Contact us with&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/10/21/procurement-news-october-21-2026/\">Procurement News — October 21, 2026</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a>.</",
+      "published": "2026-10-21T10:02:39",
+      "relevance_score": 7
+    }
+  ]
+}
