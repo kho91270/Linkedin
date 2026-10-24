@@ -1,0 +1,31 @@
+{
+  "date": "2026-10-24",
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "Supply Chain Dive",
+      "title": "Hydro Flask maker aims tariff refunds at inventory, packaging",
+      "link": "https://www.supplychaindive.com/news/hydro-flask-maker-aims-tariff-refunds-at-inventory-packaging/833631/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/tPh-xveEhtimdot7AcIi16kCSbn8l8ih75DKZwJSp3U/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjU5MzExMjYwLmpwZw==.webp\" /></div></figure><p>Helen of Troy plans to spend a portion of its expected $80.5 million refund to clean&nbsp;stock and refresh packaging design.&nbsp;</p>",
+      "published": "2026-10-22T12:09:00",
+      "relevance_score": 7
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Medtech execs share secrets to building resilient supply chains",
+      "link": "https://www.supplychaindive.com/news/medtech-execs-share-secrets-to-building-resilient-supply-chains/833585/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/GNg2mY0KeC6a3ZFQmJxda5SDnocs_URtavv5Rrz526w/g:nowe:0:84/c:960:542/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9TY3JlZW5zaG90LTIwMjYtMDYtMjMtYXQtMy40Mi4yMy1QTS5wbmcud2VicA==.webp\" /></div></figure><p>At AdvaMed&rsquo;s The MedTech Conference, company executives said they&rsquo;re bracing for disruption by investing in inventory, scenario planning and their relationships with chip suppliers.&nbsp;</p>",
+      "published": "2026-10-23T11:17:00",
+      "relevance_score": 6
+    },
+    {
+      "source": "CPO Rising",
+      "title": "The AI Value Gap: Why Human Judgment Still Matters in Procurement",
+      "link": "https://cporising.com/2026/10/23/the-ai-value-gap-why-human-judgment-still-matters-in-procurement/?utm_source=rss&utm_medium=rss&utm_campaign=the-ai-value-gap-why-human-judgment-still-matters-in-procurement",
+      "summary": "<p>As AI agents take root and automate what I call the “manual middle” of procurement, we&#8217;ll see a significant productivity dividend. As that operational capacity opens up, CFOs and other&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/10/23/the-ai-value-gap-why-human-judgment-still-matters-in-procurement/\">The AI Value Gap: Why Human Judgment Still Matters in Procurement</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &",
+      "published": "2026-10-23T10:02:10",
+      "relevance_score": 4
+    }
+  ]
+}
