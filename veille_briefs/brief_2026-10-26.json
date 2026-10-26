@@ -1,4 +1,15 @@
 {
   "date": "2026-10-26",
-  "status": "NO_NEWS"
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "Your AI Risk is Greater than Your AI Value … without Strong Governance",
+      "link": "https://cporising.com/2026/10/26/your-ai-risk-is-greater-than-your-ai-value-without-strong-governance/?utm_source=rss&utm_medium=rss&utm_campaign=your-ai-risk-is-greater-than-your-ai-value-without-strong-governance",
+      "summary": "<p>The faster an aircraft moves, the more important its control systems become. Speed creates possibility, but it also compresses reaction time, magnifies mistakes, and raises the consequences when something goes&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/10/26/your-ai-risk-is-greater-than-your-ai-value-without-strong-governance/\">Your AI Risk is Greater than Your AI Value … without Strong Governance</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR ",
+      "published": "2026-10-26T10:02:17",
+      "relevance_score": 7
+    }
+  ]
 }
