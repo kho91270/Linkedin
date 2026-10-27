@@ -4,6 +4,14 @@
   "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
   "raw_articles": [
     {
+      "source": "Supply Chain Dive",
+      "title": "Kroger taps RFID, computer vision data to boost inventory management",
+      "link": "https://www.supplychaindive.com/news/kroger-taps-rfid-computer-vision-data-to-boost-inventory-management/872819/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/aM7OQ4Ba-DClfBkAhmJpDr65kVRSYbpmw3fD9uyYz3Q/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0yMjQwMDMxNjI1LmpwZw==.webp\" /></div></figure><p>The grocery chain is providing machine learning insights to suppliers to improve availability while piloting radio frequency identification at 1,500 store bakeries.</p>",
+      "published": "2026-10-27T17:49:36",
+      "relevance_score": 8
+    },
+    {
       "source": "CPO Rising",
       "title": "Your AI Risk is Greater than Your AI Value … without Strong Governance",
       "link": "https://cporising.com/2026/10/26/your-ai-risk-is-greater-than-your-ai-value-without-strong-governance/?utm_source=rss&utm_medium=rss&utm_campaign=your-ai-risk-is-greater-than-your-ai-value-without-strong-governance",
@@ -18,6 +26,14 @@
       "summary": "<p>MAAP joins Walmart, Pacsun and others who have teamed with technology vendor Bamboo Rose to enhance supply chain operations.</p>",
       "published": "2026-10-27T13:43:00",
       "relevance_score": 6
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Supply Chain AI Has an Execution Problem",
+      "link": "https://www.supplychaindive.com/spons/supply-chain-ai-has-an-execution-problem/872776/",
+      "summary": "<p>AI is everywhere in supply chain software now&mdash;but does it actually improve decisions? Here's why language models need a decision engine underneath, and the test every planner should run before trusting an AI recommendation.</p>",
+      "published": "2026-10-27T03:00:00",
+      "relevance_score": 4
     }
   ]
 }
