@@ -4,14 +4,6 @@
   "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
   "raw_articles": [
     {
-      "source": "Supply Chain Dive",
-      "title": "Unilever ramps up pricing to offset higher commodity costs",
-      "link": "https://www.supplychaindive.com/news/unilever-ramps-up-pricing-to-offset-higher-commodity-costs/873793/",
-      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/x_VUUVh_zafozKx9yAGGvCHZFjjxDZ-s7VyNBogAjdg/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9VbmlsZXZlci1Ib21lLUNhcmUucG5n.webp\" /></div></figure><p>Improved visibility over supply of key inputs gave the CPG clarity to implement hikes after keeping prices flat during the first half of the year.</p>",
-      "published": "2026-11-05T20:09:00",
-      "relevance_score": 5
-    },
-    {
       "source": "CPO Rising",
       "title": "AI Readiness for Today’s CPO",
       "link": "https://cporising.com/2026/11/06/ai-readiness-for-todays-cpo/?utm_source=rss&utm_medium=rss&utm_campaign=ai-readiness-for-todays-cpo",
