@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-07",
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "Supply Chain Dive",
+      "title": "Logitech launches supply chain decarbonization program",
+      "link": "https://www.supplychaindive.com/news/logitech-launches-supply-chain-decarbonization-program/873778/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/V_hB4XM60R5nLkmD_1ydkbPMLCklbaSCj7bIFkEVYb8/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xODE0NTUxNjMuanBn.webp\" /></div></figure><p>The computer peripheral manufacturer&rsquo;s Chain Reaction initiative will start with 17 suppliers pooling purchasing power to collectively buy renewable electricity.</p>",
+      "published": "2026-11-05T12:44:00",
+      "relevance_score": 9
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Unilever ramps up pricing to offset higher commodity costs",
+      "link": "https://www.supplychaindive.com/news/unilever-ramps-up-pricing-to-offset-higher-commodity-costs/873793/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/x_VUUVh_zafozKx9yAGGvCHZFjjxDZ-s7VyNBogAjdg/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9VbmlsZXZlci1Ib21lLUNhcmUucG5n.webp\" /></div></figure><p>Improved visibility over supply of key inputs gave the CPG clarity to implement hikes after keeping prices flat during the first half of the year.</p>",
+      "published": "2026-11-05T20:09:00",
+      "relevance_score": 5
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Urban Outfitters seeks material cost visibility from expanded technology suite",
+      "link": "https://www.supplychaindive.com/news/urban-outfitters-seeks-material-cost-visibility-from-expanded-technology-su/873642/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/OIevACgdusuA2fZQvSw0ZAl4pck_qZg1WnZdK_G6ols/g:nowe:0:43/c:640:361/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9iZW5kX3JldGFpbF8tXzguanBlZw==.webp\" /></div></figure><p>The parent of several retail brands&nbsp;is tacking on additional features to its current production lifecycle management platform to improve supply chain efficiency.&nbsp;</p>",
+      "published": "2026-11-05T15:00:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "CPO Rising",
+      "title": "AI Readiness for Today’s CPO",
+      "link": "https://cporising.com/2026/11/06/ai-readiness-for-todays-cpo/?utm_source=rss&utm_medium=rss&utm_campaign=ai-readiness-for-todays-cpo",
+      "summary": "<p>With AI now embedded in daily conversations among executives, technology leaders, and procurement teams, the real debate isn’t whether AI will matter but rather how fast and how effectively procurement&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/11/06/ai-readiness-for-todays-cpo/\">AI Readiness for Today&#8217;s CPO</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a>.</p>",
+      "published": "2026-11-06T11:02:05",
+      "relevance_score": 4
+    }
+  ]
+}
