@@ -1,15 +1,4 @@
 {
   "date": "2026-11-08",
-  "status": "ERROR",
-  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
-  "raw_articles": [
-    {
-      "source": "CPO Rising",
-      "title": "AI Readiness for Today’s CPO",
-      "link": "https://cporising.com/2026/11/06/ai-readiness-for-todays-cpo/?utm_source=rss&utm_medium=rss&utm_campaign=ai-readiness-for-todays-cpo",
-      "summary": "<p>With AI now embedded in daily conversations among executives, technology leaders, and procurement teams, the real debate isn’t whether AI will matter but rather how fast and how effectively procurement&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/11/06/ai-readiness-for-todays-cpo/\">AI Readiness for Today&#8217;s CPO</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a>.</p>",
-      "published": "2026-11-06T11:02:05",
-      "relevance_score": 4
-    }
-  ]
+  "status": "NO_NEWS"
 }
