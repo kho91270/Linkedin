@@ -1,4 +1,47 @@
 {
   "date": "2026-11-16",
-  "status": "NO_NEWS"
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "The Path to AI-First Procurement, Pt.12: The AI-First Procurement Playbook (Exploratory Organizations)",
+      "link": "https://cporising.com/2026/11/16/the-path-to-ai-first-procurement-pt-12-the-ai-first-procurement-playbook-exploratory-organizations/?utm_source=rss&utm_medium=rss&utm_campaign=the-path-to-ai-first-procurement-pt-12-the-ai-first-procurement-playbook-exploratory-organizations",
+      "summary": "<p>Our article series, &#8220;The Path to AI-First Procurement: Closing the Gap Between AI Ambition and Execution,&#8221; based on new research from Ardent Partners and sponsored by Ivalua, continues today with&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/11/16/the-path-to-ai-first-procurement-pt-12-the-ai-first-procurement-playbook-exploratory-organizations/\">The Path to AI-First Procurement, Pt.12: The AI-First Procurement Playbook (Exploratory Organizations)</a> appeared first o",
+      "published": "2026-11-16T11:02:10",
+      "relevance_score": 11
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "AI-backed tools power Reformation’s inventory management",
+      "link": "https://www.supplychaindive.com/news/ai-backed-tools-power-reformations-inventory-management/874645/",
+      "summary": "<p>The apparel company is leveraging the technology to monitor demand and make informed production decisions.</p>",
+      "published": "2026-11-16T15:40:00",
+      "relevance_score": 7
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "FedEx launches China-US air capacity ahead of peak season",
+      "link": "https://www.supplychaindive.com/news/fedex-launches-china-us-air-capacity-ahead-of-peak-season/874590/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/jnTOuebJXeu9N2IR6p-KLbuK9U2knMKmr9pqJh6OKk0/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9GZWRFeF9lOFNMNWpHLmpwZw==.webp\" /></div></figure><p>Weekly routes will connect manufacturing hubs in Shanghai and Guangzhou to U.S. destinations to support artificial intelligence-driven demand.</p>",
+      "published": "2026-11-16T12:25:00",
+      "relevance_score": 7
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "From cost center to growth engine: The supply chain value shift",
+      "link": "https://www.supplychaindive.com/spons/from-cost-center-to-growth-engine-the-supply-chain-value-shift/874220/",
+      "summary": "<p>The resilience era is over. Learn how leading companies are converting supply chain investments into margin, market share and growth.</p>",
+      "published": "2026-11-16T10:00:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Business continuity starts before supply chain disruption",
+      "link": "https://www.supplychaindive.com/spons/business-continuity-starts-before-supply-chain-disruption/874344/",
+      "summary": "<p>Discover how Crisis24 AiiA helps leaders anticipate supply chain risks and make informed business continuity decisions.</p>",
+      "published": "2026-11-16T10:00:00",
+      "relevance_score": 4
+    }
+  ]
 }
