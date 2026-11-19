@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-19",
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "ProcureTech Pulse — November 18, 2026",
+      "link": "https://cporising.com/2026/11/18/procuretech-pulse-november-18-2026/?utm_source=rss&utm_medium=rss&utm_campaign=procuretech-pulse-november-18-2026",
+      "summary": "<p>CPO Rising&#8217;s ProcureTech Pulse series continues this week with fresh supply management technology news and updates covering a few recent major announcements. If you are a sourcing, procurement, or spend&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/11/18/procuretech-pulse-november-18-2026/\">ProcureTech Pulse — November 18, 2026</a> appeared first on <a href=\"https://cporising.com\">CPO RISING - THE SITE FOR CHIEF PROCUREMENT OFFICERS &amp; LEADERS IN SUPPLY MANAGEMENT</a>.</",
+      "published": "2026-11-18T11:02:04",
+      "relevance_score": 11
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Wrangler parent company plans to beef up inventory spending",
+      "link": "https://www.supplychaindive.com/news/wrangler-parent-company-plans-to-beef-up-inventory-spending/874783/",
+      "summary": "<p>Kontoor Brands said it will invest $50 million to recover from a bumpy Q3 for its supply chain that saw inventory fall 6% year over year.</p>",
+      "published": "2026-11-17T15:08:00",
+      "relevance_score": 9
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Starbucks inventory availability at ‘all-time high’ with daily deliveries, CEO says",
+      "link": "https://www.supplychaindive.com/news/starbucks-inventory-availability-at-all-time-high-with-daily-deliveries/874923/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/gVltV22MjcVlkUXZn9q8iv_Z0sxZHUSZK1aW6KGjFuM/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9FdmVyZ3JlZW5fQXNzZXRfQ29mZmVlaG91c2VfMi5qcGc=.webp\" /></div></figure><p>The coffeehouse chain has been testing a 24-hour operating model to improve inventory availability and build a faster, more reliable supply chain.</p>",
+      "published": "2026-11-18T15:38:15",
+      "relevance_score": 4
+    }
+  ]
+}
