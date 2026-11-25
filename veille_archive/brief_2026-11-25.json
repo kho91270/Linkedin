@@ -1,0 +1,63 @@
+{
+  "date": "2026-11-25",
+  "status": "ERROR",
+  "error": "Error code: 404 - {'error': {'message': 'The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.', 'type': 'invalid_request_error', 'code': 'model_not_found'}}",
+  "raw_articles": [
+    {
+      "source": "CPO Rising",
+      "title": "The Path to AI-First Procurement, Pt.13: The AI-First Procurement Playbook (Piloting Organizations)",
+      "link": "https://cporising.com/2026/11/23/the-path-to-ai-first-procurement-pt-13-the-ai-first-procurement-playbook-piloting-organizations/?utm_source=rss&utm_medium=rss&utm_campaign=the-path-to-ai-first-procurement-pt-13-the-ai-first-procurement-playbook-piloting-organizations",
+      "summary": "<p>Our article series, &#8220;The Path to AI-First Procurement: Closing the Gap Between AI Ambition and Execution,&#8221; based on new research from Ardent Partners and sponsored by Ivalua, continues today with&#8230;</p>\n<p>The post <a href=\"https://cporising.com/2026/11/23/the-path-to-ai-first-procurement-pt-13-the-ai-first-procurement-playbook-piloting-organizations/\">The Path to AI-First Procurement, Pt.13: The AI-First Procurement Playbook (Piloting Organizations)</a> appeared first on <a h",
+      "published": "2026-11-23T11:02:40",
+      "relevance_score": 11
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Procter & Gamble plans supply chain workforce cuts as automation expands",
+      "link": "https://www.supplychaindive.com/news/procter-gamble-plans-supply-chain-workforce-cuts-as-automation-expands/875533/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/EX8QWHEjTJkzK_fmYR8YQ0VZ0RlGLUGulzWs9KK1D3E/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy04MTk0NTE2OF9YMU9JUEV0LmpwZw==.webp\" /></div></figure><p>The CPG company expects to eliminate as much as 30% of its product-supply headcount by 2030.</p>",
+      "published": "2026-11-24T17:11:00",
+      "relevance_score": 6
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Walgreens scales micro-fulfillment strategy with Pennsylvania site",
+      "link": "https://www.supplychaindive.com/news/walgreens-scales-micro-fulfillment-strategy-with-pennsylvania-site/875245/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/S4s5bD6okwAca5z-TyL3nE1CfTKkg5ICKxMqsZi1Lss/g:nowe:0:0/c:1024:578/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xOTA3NzI4Mzk0X1pPcElvNkEuanBn.webp\" /></div></figure><p>The 68,000-square-foot Allentown facility can process more than 28 million prescriptions annually and will serve nearly 650 Walgreens stores.</p>",
+      "published": "2026-11-23T15:19:16",
+      "relevance_score": 5
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Under Armour continues efforts to trim SKUs, lead times",
+      "link": "https://www.supplychaindive.com/news/under-armour-continues-efforts-to-trim-skus-lead-times/875483/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/Q362hREujBXZzgBahZGMc7A7zHvyDtNRGEPVoxiyd6w/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9HZXR0eUltYWdlcy0xMzUxMTU1MTg5LmpwZw==.webp\" /></div></figure><p>The brand, which cleared a 25% reduction goal earlier this year, now aims to cut its assortment in half to simplify decisions and invest in its strongest products.</p>",
+      "published": "2026-11-24T15:36:03",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Tropical Smoothie powers expansion with strong supplier relationships, data strategy",
+      "link": "https://www.supplychaindive.com/news/tropical-smoothie-powers-expansion-with-strong-supplier-relationships-data/875588/",
+      "summary": "<p>The smoothie chain aims to go beyond transactional purchasing and account manager connections to drive new products and mitigate risk.</p>",
+      "published": "2026-11-24T15:01:00",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Best Buy taps AI platform for supplier insights",
+      "link": "https://www.supplychaindive.com/news/best-buy-taps-ai-platform-for-supplier-insights/875211/",
+      "summary": "<figure><div><img src=\"https://imgproxy.divecdn.com/JLrznExk2Bx4JPdYQUdMH0F1toXYhs3oHpIIhkXLnpI/g:ce/rs:fill:1600:900:1/Z3M6Ly9kaXZlc2l0ZS1zdG9yYWdlL2RpdmVpbWFnZS9TY3JlZW5zaG90XzIwMjItMDUtMTJfMi4zMy4zNV9QTS5wbmc=.webp\" /></div></figure><p>The retailer is teaming up with Circana to gain visibility for more effective planning and informed decisions.</p>",
+      "published": "2026-11-23T16:05:59",
+      "relevance_score": 4
+    },
+    {
+      "source": "Supply Chain Dive",
+      "title": "Peak season optimization is out, year-round optimization is in",
+      "link": "https://www.supplychaindive.com/spons/peak-season-optimization-is-out-year-round-optimization-is-in/875297/",
+      "summary": "<p>Retailers with strong, flexible supply chains that can absorb the unexpected will win peak season.</p>",
+      "published": "2026-11-23T10:00:00",
+      "relevance_score": 4
+    }
+  ]
+}
